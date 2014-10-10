@@ -1,0 +1,132 @@
+/* ::::: https://s1-f.scribdassets.com/aggregated/css/base.css?1412913525 ::::: */
+
+/* ::::: https://s1-f.scribdassets.com/aggregated/css/embeds.css?1412913540 ::::: */
+
+body { color: rgb(0, 0, 0); background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td { margin: 0px; padding: 0px; }
+table { border-collapse: collapse; border-spacing: 0px; }
+fieldset, img { border: 0px none; }
+@font-face {
+	font-family: "Proxima Nova";
+	font-style: normal;
+	font-weight: normal;
+	src: url('proximanova-reg-webfont.eot') format("embedded-opentype"), url('proximanova-reg-webfont.woff') format("woff"), url('proximanova-reg-webfont.ttf') format("truetype"), url('proximanova-reg-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "Proxima Nova";
+	font-style: normal;
+	font-weight: bold;
+	src: url('proximanova-bold-webfont.eot') format("embedded-opentype"), url('proximanova-bold-webfont.woff') format("woff"), url('proximanova-bold-webfont.ttf') format("truetype"), url('proximanova-bold-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "Proxima Nova";
+	font-style: normal;
+	font-weight: 200;
+	src: url('proximanova-light-webfont.eot') format("embedded-opentype"), url('proximanova-light-webfont.woff') format("woff"), url('proximanova-light-webfont.ttf') format("truetype"), url('proximanova-light-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "Proxima Nova";
+	font-style: italic;
+	font-weight: normal;
+	src: url('proximanova-regit-webfont.eot') format("embedded-opentype"), url('proximanova-regit-webfont.woff') format("woff"), url('proximanova-regit-webfont.ttf') format("truetype"), url('proximanova-regit-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "Proxima Nova";
+	font-style: italic;
+	font-weight: bold;
+	src: url('proximanova-boldit-webfont.eot') format("embedded-opentype"), url('proximanova-boldit-webfont.woff') format("woff"), url('proximanova-boldit-webfont.ttf') format("truetype"), url('proximanova-boldit-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "Proxima Nova";
+	font-style: normal;
+	font-weight: 100;
+	src: url('proximanova-thin-webfont.eot') format("embedded-opentype"), url('proximanova-thin-webfont.woff') format("woff"), url('proximanova-thin-webfont.ttf') format("truetype"), url('proximanova-thin-webfont.svg') format("svg");
+}
+body { font-family: Sofia Pro,sans-serif; color: rgb(68, 68, 68); font-size: 16px; }
+a, .pseudoLink { color: rgb(26, 123, 186); outline: medium none; text-decoration: none; cursor: pointer; }
+a:hover, .pseudoLink:hover { color: rgb(106, 198, 226); }
+.lightbox { position: absolute; text-align: left; background: none no-repeat scroll 0px 0px white; box-shadow: 0px 0px 12px rgb(34, 34, 34); margin-bottom: 60px; }
+.lightbox .content { border-top: 1px solid rgb(225, 225, 225); padding: 40px; }
+.lightbox .wrapper { overflow: hidden; position: relative; }
+.autogen_class_views_embeds_content_inner { text-align: center; height: 100%; }
+.autogen_class_views_embeds_content_inner .outer_page { border: 1px solid rgb(170, 170, 170); margin: 15px auto; overflow: hidden; }
+.autogen_class_views_embeds_content_inner #document_container { border: 0px none; padding: 0px; margin: 0px; width: 100%; height: 100%; }
+.autogen_class_views_embeds_content_inner #document_container tr td { vertical-align: middle; }
+.autogen_class_views_embeds_content_inner #left_hotspot, .autogen_class_views_embeds_content_inner #right_hotspot { z-index: 1; cursor: pointer; width: 25%; height: 100%; position: fixed; top: 0px; }
+.autogen_class_views_embeds_content_inner #left_hotspot { left: 0px; }
+.autogen_class_views_embeds_content_inner #right_hotspot { right: 0px; }
+div.ff0 span { font-family: ff0,Comic Sans MS,Comic Sans MS5,cursive; font-weight: bold; font-style: normal; }
+div.ff1 span { font-family: ff1,Arial,Arial,Helvetica,sans-serif; font-weight: normal; font-style: normal; }
+div.ff2 span { font-family: ff2,Comic Sans MS,Comic Sans MS5,cursive; font-weight: bold; font-style: normal; }
+div.ff3 span { font-family: ff3,Comic Sans MS,Comic Sans MS5,cursive; font-weight: normal; font-style: normal; }
+div.ff4 span { font-family: ff4,Comic Sans MS,Comic Sans MS5,cursive; font-weight: normal; font-style: normal; }
+div.ff5 span { font-family: ff5,Arial,Arial,Helvetica,sans-serif; font-weight: normal; font-style: normal; }
+.ff0, .ff1, .ff2, .ff3, .ff4, .ff5 { display: none; }
+#font_preload_bed span { display: block; visibility: hidden; }
+/* ::::: https://html2-f.scribdassets.com/7kfef8sgw042zzse/1,3,4,5,b0,b2/12/ttfs.css ::::: */
+
+@font-face {
+	font-family: "ff0";
+	font-style: normal;
+	font-weight: bold;
+	src: url('undefined') format("truetype");
+}
+@font-face {
+	font-family: "ff1";
+	font-style: normal;
+	font-weight: normal;
+	src: url('undefined') format("truetype");
+}
+@font-face {
+	font-family: "ff2";
+	font-style: normal;
+	font-weight: bold;
+	src: url('undefined') format("truetype");
+}
+@font-face {
+	font-family: "ff3";
+	font-style: normal;
+	font-weight: normal;
+	src: url('undefined') format("truetype");
+}
+@font-face {
+	font-family: "ff4";
+	font-style: normal;
+	font-weight: normal;
+	src: url('undefined') format("truetype");
+}
+@font-face {
+	font-family: "ff5";
+	font-style: normal;
+	font-weight: normal;
+	src: url('undefined') format("truetype");
+}
+div.ff1, p.ff1 { display: block; }
+div.ff3, p.ff3 { display: block; }
+div.ff4, p.ff4 { display: block; }
+div.ff5, p.ff5 { display: block; }
+div.ff0, p.ff0 { display: block; }
+div.ff2, p.ff2 { display: block; }
+/* ::::: https://html2-f.scribdassets.com/static/4gen.css?1412804942 ::::: */
+
+body { font-size: 100%; width: 100%; margin: 0px; padding: 0px; border: medium none; }
+div.outer_page { position: relative; display: block; font-size: 16px; margin: 10px 10px 20px; }
+.absimg { position: absolute; border: medium none; }
+div.outer_page_container { position: relative; }
+div.newpage { white-space: nowrap; position: relative; top: 0px; left: 0px; text-rendering: auto; color: rgb(0, 0, 0); }
+div.image_layer { width: 0px; height: 0px; position: absolute; top: 0px; left: 0px; }
+div.image_layer .absimg { position: absolute; border: medium none; left: 0px; }
+div.link_layer { width: 0px; height: 0px; position: absolute; top: 0px; left: 0px; }
+div.text_layer div { white-space: nowrap; padding: 0px; margin: 0px; border: medium none; line-height: 1; }
+div.text_layer span { white-space: nowrap; padding: 0px; margin: 0px; border: medium none; height: 1px; line-height: 1; }
+span.g { position: absolute; border: medium none; left: 0px; }
+.text_layer span.w { white-space: nowrap; padding: 0px; margin: 0px; border: medium none; height: 1px; line-height: 1; display: inline-block; }
+.text_layer a.ll { position: static; display: inline; color: inherit; text-decoration: none; }
+.text_layer span.l6 { white-space: nowrap; padding: 0px; margin: 0px 0px 0px -6px; border: medium none; height: 1px; line-height: 1; display: inline; }
+.text_layer span.w6 { white-space: nowrap; padding: 0px; margin: 0px; border: medium none; height: 1px; line-height: 1; width: 6px; display: inline-block; }
+.text_layer span.w8 { white-space: nowrap; padding: 0px; margin: 0px; border: medium none; height: 1px; line-height: 1; width: 8px; display: inline-block; }
+/* ::::: https://html1-f.scribdassets.com/static/4gen_non_ie.css?1412804942 ::::: */
+
+a.ll { display: block; position: absolute; }
+div.text_layer { position: absolute; top: 0px; left: 0px; width: 0px; height: 0px; transform: scale(0.2); transform-origin: left top 0px; }
+span.a { position: absolute; border: medium none; left: 0px; }

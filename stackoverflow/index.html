@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html itemtype="http://schema.org/QAPage" itemscope="">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    <title>database design - Need help modeling a fact table - Stack Overflow</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon image_src" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png?v=fd7230a85918">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com">
+    <meta property="og:type" content="website">
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon@2.png?v=fde65a5a78c6">
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="Need help modeling a fact table">
+    <meta name="twitter:description" property="og:description" itemprop="description" content="I'm moving my first steps into datawarehousing.    
+
+I've bought the excellent book &quot;The Data Warehouse Toolkit - Third Edition&quot; by Kimball &amp;amp; Ross, which explained me how to grasp the fundamental ">
+    <meta property="og:url" content="http://stackoverflow.com/questions/26300860/need-help-modeling-a-fact-table">
+    <link rel="canonical" href="http://stackoverflow.com/questions/26300860/need-help-modeling-a-fact-table">
+
+    
+    
+    
+    
+    
+    
+    <link rel="alternate" type="application/atom+xml" title="Feed for question 'Need help modeling a fact table'" href="http://stackoverflow.com/feeds/question/26300860">
+    
+
+
+    
+    
+        
+    
+    
+
+<link rel="stylesheet" type="text/css" href="index.css" media="all">
+</head>
+<body class="question-page new-topbar">
+    
+    <div id="notify-container"></div>
+    <div id="overlay-header"></div>
+    <div id="custom-header"></div>
+<div class="topbar">
+    <div class="topbar-wrapper">
+        
+        <div class="js-topbar-dialog-corral">
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="http://stackoverflow.com/">current community</a></h3>
+    </div>
+    <div class="modal-content current-site-container">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+            <a href="http://chat.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:6 })">chat</a>
+                    <a href="http://blog.stackoverflow.com/" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:7 })">blog</a>
+            </div>
+
+
+
+
+    <a href="http://stackoverflow.com/" class="current-site-link site-link js-gps-track" data-id="1" data-gps-track="
+        site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    
+
+
+
+    <a href="http://meta.stackoverflow.com/" class="site-link js-gps-track" data-id="552" data-gps-track="
+            site.switch({ target_site:552, item_type:3 }),
+        site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                </li>
+                            <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    <a class="site-link js-gps-track" href="http://careers.stackoverflow.com/?utm_source=stackoverflow.com&amp;utm_medium=site-ui&amp;utm_campaign=multicollider" data-gps-track="site_switcher.click({ item_type:9 })">
+                        <div class="site-icon favicon favicon-careers" title="Stack Overflow Careers"></div>
+                        Stack Overflow Careers
+                    </a>
+                </li>
+        </ul>
+    </div>
+    
+    <div class="header" id="your-communities-header">
+        <h3>
+your communities        </h3>
+            
+    </div>
+    <div class="modal-content" id="your-communities-section">
+            
+            <div class="call-to-login">
+                        <a href="https://stackoverflow.com/users/signup?returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f26300860%2fneed-help-modeling-a-fact-table" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:10 })">Sign up</a>
+                    or
+                    <a href="https://stackoverflow.com/users/login?returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f26300860%2fneed-help-modeling-a-fact-table" class="js-gps-track" data-gps-track="site_switcher.click({ item_type:11 })">log in</a>
+
+                    to customize your list.
+            </div>
+    </div>
+    
+    <div class="header">
+        <h3><a href="http://stackexchange.com/sites">more stack exchange communities</a></h3>
+    </div>
+    <div class="modal-content">
+            <div class="child-content"></div>
+    </div>
+</div>
+        </div>
+
+        <div class="network-items">
+            
+            <a href="http://stackexchange.com/" class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 130 Stack Exchange sites">
+                <span class="hidden-text">Stack Exchange</span>
+            </a>
+            
+        </div>
+
+        <div class="topbar-links">
+            
+                <div class="links-container">
+                    <span class="topbar-menu-links">
+                            <a href="https://stackoverflow.com/users/signup?returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f26300860%2fneed-help-modeling-a-fact-table" class="login-link">sign up</a>
+                            <a href="https://stackoverflow.com/users/login?returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f26300860%2fneed-help-modeling-a-fact-table" class="login-link">log in</a>
+                            <a href="http://stackoverflow.com/tour">tour</a>
+
+                            <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+        help
+        <span class="triangle"></span>
+    </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="http://stackoverflow.com/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="http://stackoverflow.com/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="http://meta.stackoverflow.com/" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                            Meta
+                            <span class="item-summary">
+                                Discuss the workings and policies of this site
+                            </span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+
+                            <a href="http://careers.stackoverflow.com/">stack overflow careers</a>
+                    </span>
+                </div>
+
+			<div class="search-container">
+                <form id="search" action="http://stackoverflow.com/search" method="get" autocomplete="off">
+                    <input name="q" placeholder="search" value="" tabindex="1" autocomplete="off" maxlength="240" type="text">
+                </form>
+			</div>
+            	
+        </div>      
+    </div> 
+</div>
+
+    <div class="container">
+        <div id="header" class="headeranon">
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="http://stackoverflow.com/">
+                    Stack Overflow
+                </a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs mainnavsanon">
+                    <ul>
+                        <li class="youarehere"><a id="nav-questions" href="http://stackoverflow.com/questions">Questions</a></li>
+                        <li><a id="nav-tags" href="http://stackoverflow.com/tags">Tags</a></li>
+                        <li><a id="nav-users" href="http://stackoverflow.com/users">Users</a></li>
+                        <li><a id="nav-badges" href="http://stackoverflow.com/help/badges">Badges</a></li>
+                        <li><a id="nav-unanswered" href="http://stackoverflow.com/unanswered">Unanswered</a></li>
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion" href="http://stackoverflow.com/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div id="content" class="snippet-hidden">
+            
+
+<div itemscope="" itemtype="http://schema.org/Question">
+	<link itemprop="image" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png">
+			<!--googleoff: all-->
+
+<div id="herobox-mini">
+    <div id="hero-content">
+        <span id="controls">
+            <a href="http://stackoverflow.com/tour" id="tell-me-more" class="button">Take the 2-minute tour</a>
+            <span id="close"><a title="click to dismiss">×</a></span>
+        </span>
+        <div id="blurb">
+            Stack Overflow is a question and answer site for professional and enthusiast programmers. It's 100% free, no registration required.
+        </div>        
+    </div>
+    
+</div>
+			<!--googleon: all-->
+			
+			<div id="question-header">
+			<h1 itemprop="name"><a href="http://stackoverflow.com/questions/26300860/need-help-modeling-a-fact-table" class="question-hyperlink">Need help modeling a fact table</a></h1>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="26300860" id="question">
+
+    
+            <div class="everyonelovesstackoverflow adzerk-vote" id="adzerk1475147872"><a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6NCwiYnQiOjAsImNtIjo4NDcsImNoIjoxMTc4LCJjciI6NTkxNiwiZGkiOiIzYmZlN2ZkNWMwM2U0YjNiYWMwZThkZWM5NGMwMGRjNyIsImRtIjoxLCJmYyI6ODgwMiwiZmwiOjI0NDQsImlwIjoiMTI3LjAuMC4xIiwia3ciOiJkYXRhYmFzZS1kZXNpZ24sZGF0YS1tb2RlbGluZyxkYXRhLXdhcmVob3VzZSIsIm53IjoyMiwicGMiOjAsInByIjoxNTY4LCJydCI6MSwicmYiOiJodHRwOi8vc3RhY2tvdmVyZmxvdy5jb20vcXVlc3Rpb25zLzI2MzAwODYwL25lZWQtaGVscC1tb2RlbGluZy1hLWZhY3QtdGFibGUiLCJzdCI6ODI3NywidWsiOiJ1ZTEtNzM0NDRjMTU4ODc2NDRmNmEwYTQxOGM2YTYxM2VkMjQiLCJ6biI6NDMsInRzIjoxNDEyOTUwNTI2MjM0LCJ1ciI6Imh0dHA6Ly9jYXJlZXJzLnN0YWNrb3ZlcmZsb3cuY29tP3V0bV9zb3VyY2U9c3RhY2tleGNoYW5nZS5jb20mdXRtX21lZGl1bT1hZCZ1dG1fY2FtcGFpZ249aG91c2UtYWRzLWNhdGNoLWFsbC1hbGwtc2l0ZXMmdXRtX2NvbnRlbnQ9bGItYml0LWJ1Y2tldCJ9&amp;s=JWTNiajqLM5JZpgB-WQsWPrb1k4" rel="nofollow" target="_top" title=""><img src="d31c8d7d3cf640a6b29d9ad71788dd4a.png" title="" alt="" height="90" width="728" border="0"></a><div class="adzerk-vote-controls" style="display: none;"><div class="adzerk-vote-option adzerk-vote-up"><div class="adzerk-vote-icon"></div></div><div class="adzerk-vote-option adzerk-vote-down"><div class="adzerk-vote-icon"></div></div></div><div class="adzerk-vote-survey" style="display: none;"><form action="http://stackoverflow.com/questions/26300860/need-help-modeling-a-fact-table?lastactivity"><span>No problem. We won't show you that ad again. Why didn't you like it?</span><ul><li><label><input value="12" name="downvoteReason" type="radio">Uninteresting</label></li><li><label><input value="13" name="downvoteReason" type="radio">Misleading</label></li><li><label><input value="14" name="downvoteReason" type="radio">Offensive</label></li><li><label><input value="15" name="downvoteReason" type="radio">Repetitive</label></li></ul><a href="#" class="adzerk-vote-cancel">Oops! I didn't mean to do this.</a></form></div><img src="i.gif" style="position: absolute;" height="0px" width="0px" border="0"></div>    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input name="_id_" value="26300860" type="hidden">
+    <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+    <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+    <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+    
+    <a class="star-off" href="#" title="This is a favorite question (click again to undo)">favorite</a>
+    <div class="favoritecount"><b></b></div>   
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+        <p>I'm moving my first steps into datawarehousing.    </p>
+
+<p>I've bought the excellent book "The Data Warehouse Toolkit - Third Edition" by Kimball &amp; Ross, which explained me how to grasp the fundamental concepts.<br>
+Today I've started designing my second data mart, but I'm already stuck with a (maybe stupid) problem. Suppose I'm modeling a simple sales event: a trivial fact table would be:    </p>
+
+<pre><code>DATE_ID | CUSTOMER_ID | PRODUCT_ID | QUANTITY
+</code></pre>
+
+<p>every dimension has a many-to-many relationship with the others, as explained in the book and on the web.<br>
+Next, I'd like to add some more dimensions, like the carrier:</p>
+
+<pre><code>DATE_ID | CUSTOMER_ID | PRODUCT_ID | CARRIER_ID | QUANTITY
+</code></pre>
+
+<p>the dimensions are still in a many-to-many relation.<br>
+Now, I'm asked to add a lot (maybe a dozen or more) of details about the delivery, like a bunch of dates, routing, number of boxes and pallets, various flags etc, so I was thinking about a DELIVERY dimension table. My first attempt was:    </p>
+
+<pre><code>DATE_ID | CUSTOMER_ID | PRODUCT_ID | CARRIER_ID | DELIVERY_ID | QUANTITY
+</code></pre>
+
+<p>but... surprise, the fact table now it's not in a many-to-many relationship anymore. So I thought: "well, I could refactor it, because now the other dimensions are in fact attributes of the delivery", but it would become     </p>
+
+<pre><code>DELIVERY_ID | PRODUCT_ID | QUANTITY
+</code></pre>
+
+<p>and my fact table would just have 2 dimensions.<br>
+Now, in other situations I would treat the delivery as a degenerate dimension, but since I have to associate to it a lot of attibutes, I don't which route to follow:    </p>
+
+<ul>
+<li>create a DELIVERY dimension and refactor the fact table? </li>
+<li>throw them in the fact table? </li>
+<li>create a DELIVERY dimension and put the DELIVERY_ID in the fact table pretending that it's only a degenerate dimension?</li>
+</ul>
+
+<p>Maybe it's not so simple to choose between dimensions and facts</p>
+
+    </div>
+    <div class="post-taglist">
+        <a href="http://stackoverflow.com/questions/tagged/database-design" class="post-tag js-gps-track" title="show questions tagged 'database-design'" rel="tag">database-design</a> <a href="http://stackoverflow.com/questions/tagged/data-modeling" class="post-tag js-gps-track" title="show questions tagged 'data-modeling'" rel="tag">data-modeling</a> <a href="http://stackoverflow.com/questions/tagged/data-warehouse" class="post-tag js-gps-track" title="show questions tagged 'data-warehouse'" rel="tag">data-warehouse</a> 
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/q/26300860" title="short permalink to this question" class="short-link" id="link-post-26300860">share</a><span class="lsep">|</span><a href="http://stackoverflow.com/posts/26300860/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td class="post-signature owner">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2014-10-10 13:40:10Z" class="relativetime">34 mins ago</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/1933110/roy-dafoss"><div class="gravatar-wrapper-32"><img src="592a755fb7281f75958fd770f9050f25" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/1933110/roy-dafoss">Roy Dafoss</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">26</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+</td>
+        </tr>
+                
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-26300860" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+            <div id="comments-link-26300860" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span><a class="js-show-link comments-link dno" title="expand to show all comments on this post, or add one of your own" href="#" onclick=""></a>
+            </div>
+    </td>
+</tr>        </tbody></table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								1 Answer
+                                <span style="display: none;" itemprop="answerCount">1</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="http://stackoverflow.com/questions/26300860/need-help-modeling-a-fact-table?answertab=active#tab-top" title="Answers with the latest activity first">active</a>
+        <a href="http://stackoverflow.com/questions/26300860/need-help-modeling-a-fact-table?answertab=oldest#tab-top" title="Answers in the order they were provided">oldest</a>
+        <a class="youarehere" href="http://stackoverflow.com/questions/26300860/need-help-modeling-a-fact-table?answertab=votes#tab-top" title="Answers with the highest score first">votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="26301477"></a>
+<div id="answer-26301477" class="answer" data-answerid="26301477" itemscope="" itemtype="http://schema.org/Answer">
+    <table>
+        <tbody><tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+    <input name="_id_" value="26301477" type="hidden">
+    <a class="vote-up-off" title="This answer is useful">up vote</a>
+    <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+    <a class="vote-down-off" title="This answer is not useful">down vote</a>
+    
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>As you describe it, <strong>delivery</strong> is a separate event in respect to the <strong>sale</strong>. So delivery should be a separate fact table. </p>
+
+<p>Of course you could always "project" (so to speak) a fact in a dimension, if you do not need the added complexity. For example, say that you only need to know some simple fact about delivery: for example the carrier and the date of delivery. Then you could use a DELIVERY_ID in SALES and register these information in the DELIVERY dimension.</p>
+
+<p>But if you have to register the full complexity of a delivery (there could be two or more deliveries relative to one sale, and two or more sales relative to one delivery) you need two fact tables.</p>
+    </div>
+    <table class="fw">
+    <tbody><tr>
+    <td class="vt">
+<div class="post-menu"><a href="http://stackoverflow.com/a/26301477" title="short permalink to this answer" class="short-link" id="link-post-26301477">share</a></div>                    </td>
+            
+
+
+    <td class="post-signature" align="right">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2014-10-10 14:13:32Z" class="relativetime">1 min ago</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="http://stackoverflow.com/users/203692/momobo"><div class="gravatar-wrapper-32"><img src="2d8fa8ed2d6342351d282ceee3c150bb" alt="" height="32" width="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="http://stackoverflow.com/users/203692/momobo">momobo</a><br>
+        <span class="reputation-score" title="reputation score " dir="ltr">1,277</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="6 silver badges"><span class="badge2"></span><span class="badgecount">6</span></span><span title="10 bronze badges"><span class="badge3"></span><span class="badgecount">10</span></span>
+    </div>
+</div>
+    </td>
+    </tr>
+    </tbody></table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-26301477" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+            <div id="comments-link-26301477" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span><a class="js-show-link comments-link dno" title="expand to show all comments on this post, or add one of your own" href="#" onclick=""></a>
+            </div>
+    </td>
+</tr>    </tbody></table>
+</div>
+									<a name="new-answer"></a>
+						<form id="post-form" action="http://stackoverflow.com/questions/26300860/answer/submit" method="post" class="post-form">
+						    <input id="post-id" value="26300860" type="hidden">
+                            <input id="qualityBanWarningShown" name="qualityBanWarningShown" value="false" type="hidden">
+                            <input name="referrer" value="http://stackoverflow.com/" type="hidden">
+							<h2 class="space">Your Answer</h2>
+
+
+
+            
+    
+
+
+
+
+<div id="post-editor" class="post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"><ul id="wmd-button-row" class="wmd-button-row"><li style="left: 0px;" class="wmd-button" id="wmd-bold-button"><span style="background-position: 0px -20px;"></span></li><li style="left: 25px;" class="wmd-button" id="wmd-italic-button"><span style="background-position: -20px -20px;"></span></li><li style="left: 50px;" class="wmd-spacer" id="wmd-spacer1"><span style="background-position: -40px -20px;"></span></li><li style="left: 75px;" class="wmd-button" id="wmd-link-button"><span style="background-position: -40px -20px;"></span></li><li style="left: 100px;" class="wmd-button" id="wmd-quote-button"><span style="background-position: -60px -20px;"></span></li><li style="left: 125px;" class="wmd-button" id="wmd-code-button"><span style="background-position: -80px -20px;"></span></li><li style="left: 150px;" class="wmd-button" id="wmd-image-button"><span style="background-position: -100px -20px;"></span></li><li style="left: 175px;" class="wmd-spacer" id="wmd-spacer2"><span style="background-position: -120px -20px;"></span></li><li style="left: 200px;" class="wmd-button" id="wmd-olist-button"><span style="background-position: -120px -20px;"></span></li><li style="left: 225px;" class="wmd-button" id="wmd-ulist-button"><span style="background-position: -140px -20px;"></span></li><li style="left: 250px;" class="wmd-button" id="wmd-heading-button"><span style="background-position: -160px -20px;"></span></li><li style="left: 275px;" class="wmd-button" id="wmd-hr-button"><span style="background-position: -180px -20px;"></span></li><li style="left: 300px;" class="wmd-spacer" id="wmd-spacer3"><span style="background-position: -200px -20px;"></span></li><li style="left: 325px;" class="wmd-button" id="wmd-undo-button"><span style="background-position: -200px -20px;"></span></li><li style="left: 350px;" class="wmd-button" id="wmd-redo-button"><span style="background-position: -220px -20px;"></span></li></ul></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height: 24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height: 24px; display: none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height: 24px; display: none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" value="3f051de161ba33ddcf3f0c866347773c" type="hidden">
+        <input value="" id="author" name="author" type="text">
+    </div>
+</div>
+							<div style="position: relative;">
+								
+            <div class="form-item new-post-login">
+        
+                <div class="new-login-form">
+                    <div class="new-login-left">
+                        <h3>Sign up or <a id="login-link" href="http://stackoverflow.com/users/login?returnurl=%2fquestions%2f26300860%2fneed-help-modeling-a-fact-table%23new-answer">log in</a></h3>
+                        
+                        <div class="preferred-login google-login">
+                            <p><span class="icon"></span><span>Sign up using Google</span></p>
+                        </div>
+                        <div class="preferred-login facebook-login">
+                            <p><span class="icon"></span><span>Sign up using Facebook</span></p>
+                        </div>
+                        <div class="preferred-login stackexchange-login">
+                            <p><span class="icon"></span><span>Sign up using Stack Exchange</span></p>
+                        </div>
+                    </div>
+                    <input name="manual-openid" class="manual-openid" type="hidden">
+                    <input name="use-facebook" class="use-facebook" value="false" type="hidden">
+                    <input name="use-google-oauth2" class="use-google-oauth2" value="false" type="hidden">
+                    <input class="submit-openid" value="Submit" style="display: none;" type="button">
+                    <div class="new-login-right">
+                                <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tbody><tr>
+                    
+            <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" size="30" maxlength="30" value="" tabindex="105" type="text">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" size="30" maxlength="100" value="" tabindex="106" type="text">
+                    <span class="edit-field-overlay">required, but not shown</span>
+                </div>
+            </td>
+        </tr>
+        </tbody></table>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            
+            
+							</div>
+           
+															<div class="form-submit cbt">
+									<input id="submit-button" value="Post Your Answer" tabindex="110" type="submit">
+									<a href="#" class="discard-answer dno">discard</a>
+
+<p class="privacy-policy-agreement">
+By posting your answer, you agree to the <a href="http://stackexchange.com/legal/privacy-policy" target="_top">privacy policy</a> and <a href="http://stackexchange.com/legal/terms-of-service" target="_top">terms of service</a>.</p>
+<input name="legalLinksShown" value="1" type="hidden">								</div>
+						</form>
+
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you're looking for?							Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/database-design" class="post-tag" title="show questions tagged 'database-design'" rel="tag">database-design</a> <a href="http://stackoverflow.com/questions/tagged/data-modeling" class="post-tag" title="" rel="tag">data-modeling</a> <a href="http://stackoverflow.com/questions/tagged/data-warehouse" class="post-tag" title="show questions tagged 'data-warehouse'" rel="tag">data-warehouse</a>  or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tbody><tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px;">
+			                    <p class="label-key" title="2014-10-10 13:40:10Z"><b>today</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px;">
+			                    <p class="label-key">
+			                        <b>7 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px;">
+			                        <p class="label-key"><b><a href="http://stackoverflow.com/questions/26300860/need-help-modeling-a-fact-table?lastactivity" class="lastactivity-link" title="2014-10-10 14:13:32Z">today</a></b></p>
+			                    </td>
+			                </tr>
+			        </tbody></table>
+			    </div>
+			<div class="module community-bulletin" data-tracker="cb=1">
+    <div class="related">
+                <div class="bulletin-title">
+                    Blog
+                </div>
+                <hr>
+    <div class="spacer">
+        <div class="bulletin-item-type">
+                <a href="http://blog.stackoverflow.com/2014/10/new-editing-badges-and-enhancements-to-suggested-edits/?cb=1" class="question-hyperlink">
+<div class="favicon favicon-stackexchangemeta" title="Meta Stack Exchange"></div>                </a>
+            </div>
+                <div class="bulletin-item-content">
+                    <a href="http://blog.stackoverflow.com/2014/10/new-editing-badges-and-enhancements-to-suggested-edits/?cb=1" class="question-hyperlink">Editing is essential: new badges and review enhancements</a>
+                </div>
+                <br class="cbt">
+            </div>
+    </div>
+</div>			
+			
+              
+        <div class=" blue looking tagged" id="hireme">  <a href="http://careers.stackoverflow.com/?a=2YMRG&amp;utm_source=stackoverflow.com&amp;utm_medium=ad&amp;utm_campaign=jobs-large-sidebar-blue-looking" class="top" target="_top"> <span>Looking for a job?</span> </a> <ul class="jobs"> <li> <a href="http://careers.stackoverflow.com/jobs/69625/d%C3%A9veloppeur-ruby-on-rails-je-r%C3%AAve-dune-maison?a=5ECqYqT18B&amp;utm_source=stackoverflow.com&amp;utm_medium=ad&amp;utm_campaign=jobs-large-sidebar-blue-looking" target="_top" title="Développeur Ruby on Rails at Je rêve d'une maison. Click to learn more."> <span class="title">Développeur Ruby on Rails</span> <span class="company">Je rêve d'une maison</span> <span class="location">Paris, France</span> <span class="post-tag">ruby-on-rails</span> <span class="post-tag">postgresql</span> </a> </li> <li> <a href="http://careers.stackoverflow.com/jobs/68472/qa-engineer-for-a-360-video-vr-software-videostitch?a=5yOrKQp0Hw&amp;utm_source=stackoverflow.com&amp;utm_medium=ad&amp;utm_campaign=jobs-large-sidebar-blue-looking" target="_top" title="QA engineer for a 360 Video VR software at VideoStitch. Click to learn more."> <span class="title">QA engineer for a 360 Video VR software</span> <span class="company">VideoStitch</span> <span class="location">Paris, France / relocation</span> <span class="post-tag">qt</span> <span class="post-tag">python</span> </a> </li> <li> <a href="http://careers.stackoverflow.com/jobs/64238/devops-engineer-remote-contractors-welcome-leadformance?a=5dumldyW1Z&amp;utm_source=stackoverflow.com&amp;utm_medium=ad&amp;utm_campaign=jobs-large-sidebar-blue-looking" target="_top" title="DevOps Engineer - Remote Contractors Welcome at Leadformance. Click to learn more."> <span class="title">DevOps Engineer - Remote Contractors Welcome</span> <span class="company">Leadformance</span> <span class="location">Savoie, France / remote</span> <span class="post-tag">ruby</span> <span class="post-tag">linux</span> </a> </li> <li> <a href="http://careers.stackoverflow.com/jobs/67251/d%C3%A9veloppeur-php-vigicorp?a=5sF4xSdnX6&amp;utm_source=stackoverflow.com&amp;utm_medium=ad&amp;utm_campaign=jobs-large-sidebar-blue-looking" target="_top" title="Développeur PHP at VIGICORP. Click to learn more."> <span class="title">Développeur PHP</span> <span class="company">VIGICORP</span> <span class="location">Saint-Herblain, France</span> <span class="post-tag">php</span> <span class="post-tag">mysql</span> </a> </li> </ul> <img alt="" class="impression" src="5ecqyqt18b-5yorkqp0hw-5dumldyw1z-5sf4xsdnx6-2ymrg" style="display: none;"></div>
+			  
+    
+            
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/149871?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/149871/how-to-design-a-fact-table-for-delivery-data?rq=1" class="question-hyperlink">How to design a fact table for delivery data</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/3738647?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">1
+    </div>
+</a><a href="http://stackoverflow.com/questions/3738647/datawarehouse-fact-table-question?rq=1" class="question-hyperlink">Datawarehouse Fact table question</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/3918604?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/3918604/fact-table-with-different-update-schedules?rq=1" class="question-hyperlink">Fact Table with Different Update Schedules</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/5714680?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/5714680/differences-between-data-vault-and-dimensional-modeling?rq=1" class="question-hyperlink">Differences between Data Vault and Dimensional modeling?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/9480409?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/9480409/fact-table-design-suggestions?rq=1" class="question-hyperlink">Fact Table Design Suggestions</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/11198736?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">2
+    </div>
+</a><a href="http://stackoverflow.com/questions/11198736/fact-and-dimension-tables-one-to-one-relationship?rq=1" class="question-hyperlink">Fact and Dimension Tables: One-to-One Relationship</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/11430423?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">1
+    </div>
+</a><a href="http://stackoverflow.com/questions/11430423/how-to-model-a-fact-table?rq=1" class="question-hyperlink">How to model a fact table</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/11728539?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes default">3
+    </div>
+</a><a href="http://stackoverflow.com/questions/11728539/snowflake-schema-fact-table-with-foreign-key-to-a-sub-dimension?rq=1" class="question-hyperlink">Snowflake schema: fact table with foreign key to a sub dimension?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/14967534?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/14967534/what-dw-model-is-appropriate-when-theres-no-measure?rq=1" class="question-hyperlink">What dw model is appropriate when there's no measure?</a>
+</div>
+<div class="spacer js-gps-track">
+<a href="http://stackoverflow.com/q/23697028?rq=1" title="Vote score (upvotes - downvotes)">
+    <div class="answer-votes answered-accepted default">0
+    </div>
+</a><a href="http://stackoverflow.com/questions/23697028/data-warehouse-multidimensional-model-fact-table-is-smaller-than-dimension-t?rq=1" class="question-hyperlink">Data Warehouse - Multidimensional Model - Fact Table is Smaller than Dimension Table</a>
+</div>
+
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="http://stackexchange.com/questions?tab=hot" class="js-gps-track" data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li>
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/966255/why-do-some-mathematical-ideas-seem-counter-intuitive" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why do some mathematical ideas seem counter-intuitive?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-graphicdesign" title="Graphic Design Stack Exchange"></div><a href="http://graphicdesign.stackexchange.com/questions/39616/is-it-frowned-upon-as-a-designer-if-you-dont-use-top-software" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:174 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is it frowned upon as a designer if you don't use "top" software?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-gis" title="Geographic Information Systems Stack Exchange"></div><a href="http://gis.stackexchange.com/questions/116849/unable-to-edit-legend-in-arcgis-layout-view" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:79 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Unable to edit legend in ArcGIS layout view
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="http://tex.stackexchange.com/questions/205425/what-is-the-right-choice-of-coordinates-for-a-given-tikz-picture" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the right choice of coordinates for a given TikZ picture?
+                </a>
+
+            </li>
+            <li>
+                <div class="favicon favicon-wordpress" title="WordPress Development Stack Exchange"></div><a href="http://wordpress.stackexchange.com/questions/164032/how-to-compare-two-meta-fields" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:110 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to Compare Two Meta Fields
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="http://superuser.com/questions/823326/difference-between-ethernet-and-ethernet-cables" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:3 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Difference between ethernet and ethernet cables?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/49239/i-failed-to-open-a-lock-now-what" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    I failed to open a lock. Now what?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/69386/why-the-dearth-of-wishes-at-the-end-of-aladdin" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why the Dearth of Wishes at the end of Aladdin?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-askubuntu" title="Ask Ubuntu"></div><a href="http://askubuntu.com/questions/534448/cron-job-creation" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:89 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Cron Job Creation
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="http://movies.stackexchange.com/questions/25190/reccuring-dialogue-thats-what-she-said" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:367 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Reccuring dialogue "That's what she said"?
+                </a>
+
+            </li>
+            <li style="display: list-item;" class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/26295216/using-this-pointer-causes-strange-deoptimization-in-hot-loop" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Using this pointer causes strange deoptimization in hot loop
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/635070/active-directory-rename-computer-that-has-been-disconnected" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:2 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Active directory rename computer that has been disconnected
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-serverfault" title="Server Fault"></div><a href="http://serverfault.com/questions/634793/how-do-i-set-up-a-secure-open-resolver" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:2 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How do I set up a "secure" open resolver?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/139545/has-the-gravitational-interaction-of-antimatter-ever-been-examined-experimentall" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:151 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Has the gravitational interaction of antimatter ever been examined experimentally?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-blender" title="Blender Stack Exchange"></div><a href="http://blender.stackexchange.com/questions/16648/command-for-creating-an-object-of-custom-size" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:502 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Command for creating an object of custom size
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/1402/what-kind-of-event-if-any-would-knock-the-moon-off-its-orbit-without-destroyi" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What kind of event, if any, would knock the moon off its orbit, without destroying it?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/2773/men-digging-holes" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Men digging holes
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/37327/is-it-possible-to-manually-release-an-oxygen-mask-on-airplanes" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is it possible to manually release an oxygen mask on airplanes?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/49312/can-you-intentionally-fail-a-skill-check" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can you intentionally fail a skill check?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-physics" title="Physics Stack Exchange"></div><a href="http://physics.stackexchange.com/questions/139664/does-antimatter-exist-as-atoms" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:151 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Does antimatter exist as atoms?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-anime" title="Anime &amp; Manga Stack Exchange"></div><a href="http://anime.stackexchange.com/questions/14364/what-is-the-opposite-of-seme-according-to-otakus" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:477 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What is the opposite of "seme" according to otakus?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/29702/should-i-write-we-or-i-in-my-research-statement" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Should I write "we" or "I" in my research statement?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="http://codegolf.stackexchange.com/questions/38667/prolific-perfect-pangram-programs-pertaining-to-printable-ascii" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Prolific Perfect Pangram Programs Pertaining to Printable ASCII
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-ux" title="User Experience Stack Exchange"></div><a href="http://ux.stackexchange.com/questions/65351/designing-gantt-like-schedule-in-grayscale" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:102 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Designing gantt like schedule in grayscale
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" class="show-more js-show-more js-gps-track" data-gps-track="posts_hot_network.click({ item_type:3, location:11 })">
+            more hot questions
+        </a>
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="http://stackoverflow.com/feeds/question/26300860" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	
+<div style="display: none;" id="prettify-lang"></div></div>
+
+
+
+        </div>
+    </div>
+    <div id="footer" class="categories">
+        <div class="footerwrap">
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                        <a href="http://stackoverflow.com/tour">tour</a>
+                    <a href="http://stackoverflow.com/help">help</a>
+                        <a href="http://stackoverflow.com/help/badges">badges</a>
+                    <a href="http://blog.stackoverflow.com/?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com/">chat</a>
+                    <a href="http://data.stackexchange.com/">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackexchange.com/work-here">work here</a>
+                    <a href="http://stackexchange.com/mediakit">advertising info</a>
+
+                    <a onclick="StackExchange.switchMobile(&quot;on&quot;)">mobile</a>
+                    <b><a href="http://stackoverflow.com/contact">contact us</a></b>
+                        <b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tbody><tr>
+            <th colspan="3">
+                Technology
+            </th>
+            <th>
+                Life / Arts
+            </th>
+            <th>
+                Culture / Recreation
+            </th>
+            <th>
+                Science
+            </th>
+            <th>
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="http://serverfault.com/" title="professional system and network administrators">Server Fault</a></li>
+                        <li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://programmers.stackexchange.com/" title="professional programmers interested in conceptual questions about software development">Programmers</a></li>
+                        <li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems.">Unix &amp; Linux</a></li>
+                        <li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Development</a></li>
+                        <li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="http://security.stackexchange.com/" title="Information security professionals">Information Security</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="http://mathematica.stackexchange.com/" title="users of Mathematica">Mathematica</a></li>
+                        <li><a href="http://salesforce.stackexchange.com/" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (13)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="http://graphicdesign.stackexchange.com/" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="http://money.stackexchange.com/" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                        <li><a href="http://academia.stackexchange.com/" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (10)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                        <li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (21)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="http://stats.stackexchange.com/" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (7)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="http://meta.stackexchange.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="http://careers.stackoverflow.com/?utm_source=stackoverflow.com&amp;utm_medium=site-ui&amp;utm_campaign=footerlink">Stack Overflow Careers</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</tbody></table>
+                </div>
+            </div>
+
+            <div id="copyright">
+                site design / logo © 2014 stack exchange inc; user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a>                   with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2014.10.10.1928
+            </div>
+            
+        </div>
+    </div>
+    
+
+
+
+            
+    
+    
+</body>
+</html>

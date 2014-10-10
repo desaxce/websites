@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en" class="js video no-maskImage placeholder">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta charset="utf-8">
+  <title>nghttp2.org</title>
+  <meta name="author" content="Tatsuhiro Tsujikawa">
+
+  
+  <meta name="description" content="We happily announce immediate availability of nghttp2
+v0.6.2.
+It still implements h2-14 and HPACK-09. This release fixes memory
+leaks. We added …">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+
+  
+  <link rel="canonical" href="https://nghttp2.org/">
+  <link href="favicon.png" rel="icon">
+  
+  <link href="https://nghttp2.org/atom.xml" rel="alternate" title="nghttp2.org" type="application/atom+xml">
+  
+  
+  
+  
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+
+
+
+  
+
+
+<link rel="stylesheet" type="text/css" href="index.css" media="all">
+</head>
+<body data-twttr-rendered="true">
+  <header role="banner"><hgroup>
+  <h1><a href="https://nghttp2.org/">nghttp2.org</a></h1>
+  
+    <h2>HTTP/2 C library and tools</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="https://nghttp2.org/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input name="q" value="site://nghttp2.org" type="hidden">
+    <input value="" class="search" name="q" results="0" placeholder="Search" type="text">
+  </fieldset>
+</form>
+  
+<fieldset class="mobile-nav"><select><option value="">Navigate…</option><option value="https://nghttp2.org/">» Blog</option><option value="https://nghttp2.org/blog/archives">» Archives</option><option value="https://nghttp2.org/documentation">» Documentation</option><option value="https://nghttp2.org/httpbin">» Httpbin</option><option value="https://github.com/tatsuhiro-t/nghttp2/releases">» Releases</option><option value="https://github.com/tatsuhiro-t/nghttp2">» Source Code</option><option value="https://nghttp2.org/atom.xml">» RSS</option></select></fieldset><ul class="main-navigation">
+  <li><a href="https://nghttp2.org/">Blog</a></li>
+  <li><a href="https://nghttp2.org/blog/archives">Archives</a></li>
+  <li><a href="https://nghttp2.org/documentation">Documentation</a></li>
+  <li><a href="https://nghttp2.org/httpbin">Httpbin</a></li>
+  <li><a href="https://github.com/tatsuhiro-t/nghttp2/releases">Releases</a></li>
+  <li><a href="https://github.com/tatsuhiro-t/nghttp2">Source Code</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="https://nghttp2.org/blog/2014/09/28/nghttp2-v0-dot-6-2/">Nghttp2 v0.6.2</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-28T23:45:24+09:00" pubdate="" data-updated="true">Sep 28<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We happily announce immediate availability of nghttp2
+<a href="https://github.com/tatsuhiro-t/nghttp2/releases/tag/v0.6.2">v0.6.2</a>.
+It still implements h2-14 and HPACK-09.  This release fixes memory
+leaks.  We added <code>nghttp2_option_set_recv_client_preface()</code> function.
+Previously, nghttp2 library only handles HTTP/2 frames and does not
+recognize first 24 bytes of client connection preface.  This design
+choice is done due to the fact that server may want to detect the
+application protocol based on first few bytes on clear text
+communication.  But for simple servers which only speak HTTP/2, it is
+easier for developers if nghttp2 library takes care of client
+connection preface as well.  If this option is enabled, nghttp2
+library checks first 24 bytes client connection preface.  If it is not
+a valid one, <code>nghttp2_session_recv()</code> and <code>nghttp2_session_mem_recv()</code>
+will return new error code <code>NGHTTP2_ERR_BAD_PREFACE</code>, which is fatal
+error.  By default, the option is turned off for backward
+compatibility.</p>
+
+<p>The other thing worth mentioning is that now
+<code>nghttp2_stream_resume_deferred_data()</code> does not fail if data is
+deferred by flow control.</p>
+
+<p>Previously processing incoming connection level WINDOW_UPDATE frame is
+quite expensive, but it is fixed and now 2x faster than v0.6.1.</p>
+
+<p>We introduced the experimental libnghttp2_asio C++ library.  It is
+built on top of libnghttp2 and intended to provide higher level APIs
+to build HTTP/2 client/server easily.  Currently, only server APIs are
+provided.  It depends on Boost::Asio and Boost::Thread libraries.  For
+example, the rather useless simple HTTP/2 server which returns “hello,
+world” for any HTTP request is as follows:</p>
+
+<figure class="code"><div class="highlight"><table><tbody><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+</pre></td><td class="code"><pre><code class="cpp"><span class="line"><span class="cp">#include &lt;nghttp2/asio_http2.h&gt;</span>
+</span><span class="line">
+</span><span class="line"><span class="k">using</span> <span class="k">namespace</span> <span class="n">nghttp2</span><span class="o">::</span><span class="n">asio_http2</span><span class="p">;</span>
+</span><span class="line"><span class="k">using</span> <span class="k">namespace</span> <span class="n">nghttp2</span><span class="o">::</span><span class="n">asio_http2</span><span class="o">::</span><span class="n">server</span><span class="p">;</span>
+</span><span class="line">
+</span><span class="line"><span class="kt">int</span> <span class="n">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+</span><span class="line"><span class="p">{</span>
+</span><span class="line">  <span class="n">http2</span> <span class="n">server</span><span class="p">;</span>
+</span><span class="line">
+</span><span class="line">  <span class="n">server</span><span class="p">.</span><span class="n">listen</span>
+</span><span class="line">    <span class="p">(</span><span class="s">"127.0.0.1"</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span>
+</span><span class="line">     <span class="p">[](</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">request</span><span class="o">&gt;</span> <span class="n">req</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">response</span><span class="o">&gt;</span> <span class="n">res</span><span class="p">)</span>
+</span><span class="line">     <span class="p">{</span>
+</span><span class="line">       <span class="n">res</span><span class="o">-&gt;</span><span class="n">write_head</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+</span><span class="line">       <span class="n">res</span><span class="o">-&gt;</span><span class="n">end</span><span class="p">(</span><span class="s">"hello, world"</span><span class="p">);</span>
+</span><span class="line">     <span class="p">});</span>
+</span><span class="line"><span class="p">}</span>
+</span></code></pre></td></tr></tbody></table></div></figure>
+
+
+<p>For more details, consult
+<a href="https://nghttp2.org/documentation/libnghttp2_asio.html">library documentation</a>.</p>
+
+<p>We added examples/tiny-nghttpd server, which is stripped faster
+version of nghttpd.  Its purpose is measure performance bottleneck in
+libnghttp2 code, avoding any overhead in external I/O library.
+Currently it requires epoll, so it can be built only on linux.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="https://nghttp2.org/blog/2014/09/15/host-lucid-erlang-http-slash-2-server/">Host Lucid Erlang HTTP/2 Server</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-15T01:19:18+09:00" pubdate="" data-updated="true">Sep 15<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>nghttp2.org now hosts <a href="https://github.com/tatsuhiro-t/lucid">Lucid</a>
+HTTP/2 server written in Erlang.
+The access endpoint is <a href="https://nghttp2.org:3456/">https://nghttp2.org:3456/</a>.
+Currently it returns simple html content including request headers.
+It only speaks h2-14.</p>
+
+<p>Since Erlang SSL module does not support AEAD cipher suites, Firefox
+nightly refuses to connect to this server.  To workaround this, open
+<code>about:config</code> in Firefox and set
+<code>network.http.spdy.enforce-tls-profile</code> to <code>false</code>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="https://nghttp2.org/blog/2014/09/11/nghttp2-v0-dot-6-1/">Nghttp2 v0.6.1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-11T00:40:16+09:00" pubdate="" data-updated="true">Sep 11<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We just released nghttp2 <a href="https://github.com/tatsuhiro-t/nghttp2/releases/tag/v0.6.1">v0.6.1</a>.
+This release fixes compile error in bundled application code on OSX.
+No library code has been changed since v0.6.0.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="https://nghttp2.org/blog/2014/08/30/nghttp2-v0-dot-6-0/">Nghttp2 v0.6.0</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-30T00:23:56+09:00" pubdate="" data-updated="true">Aug 30<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Finally, we released nghttp2
+<a href="https://github.com/tatsuhiro-t/nghttp2/releases/tag/v0.6.0">v0.6.0</a>!
+It implements
+<a href="http://tools.ietf.org/html/draft-ietf-httpbis-http2-14">h2-14</a> and
+header compression
+<a href="http://tools.ietf.org/html/draft-ietf-httpbis-header-compression-09">HPACK 09</a>.</p>
+
+<p>In this release, we decided to hide the details of
+<code>nghttp2_session_callbacks</code> struct.  The reason of this decision is to
+avoid so name bump each time we add new callback.  Actually, we added
+2 new callbacks in this release.  We expect more to come, so it is a
+good time to make API open for extension.</p>
+
+<p>We successfully performed interop testing with Firefox, Jetty and
+Twitter.</p>
+
+<p>If you are shrpx users from
+<a href="https://github.com/tatsuhiro-t/spdylay">spdylay</a> project, this is a
+good time to migrate to nghttpx, which supports SPDY proxy as well.</p>
+
+<p>Anyway, the every release for OSS project is happy time.  Have fun!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="https://nghttp2.org/blog/2014/07/31/update-to-h2-14/">Update to H2-14</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-31T23:47:21+09:00" pubdate="" data-updated="true">Jul 31<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Today We updated nghttp2 to support latest HTTP/2 draft, h2-14.  The
+source code is available on github.  This server is advertize h2-14
+now.</p>
+
+<p>Here is a quick summary of the changes since h2-13:</p>
+
+<ul>
+<li>Frame length field was expanded to 24 bits.</li>
+<li>The pseudo headers (aka, colon (:) headers) handling is tightened
+up.  Now unexpected pseudo headers are subject to stream error.</li>
+<li>WINDOW_UPDATE with 0 window-size is now treated as error.</li>
+<li><code>END_SEGMENT</code> flag was removed.</li>
+<li><code>SETTINGS_MAX_FRAME_SIZE</code> and <code>SETTINGS_MAX_HEADER_LIST_SIZE</code> were
+added.</li>
+<li>1xx status codes, except for 101, are now supported.</li>
+<li>Removed 0x00 concatenation rule.</li>
+<li>HPACK: reference set was removed.</li>
+<li>HPACK: static header table is now in front of dynamic header table.</li>
+<li>HPACK: No copy when static header table entry is referenced.</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="https://nghttp2.org/blog/2014/07/23/nghttp2-v0-dot-5-1-released/">Nghttp2 v0.5.1 Released</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-23T00:53:01+09:00" pubdate="" data-updated="true">Jul 23<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We happily announce the immediate availability of nghttp2 <a href="https://github.com/tatsuhiro-t/nghttp2/releases/tag/v0.5.1">v0.5.1</a>.
+The supported HTTP/2 protocol remains to <code>h2-13</code>.</p>
+
+<p>This release fixes HPACK integer decoding bug, which occurs when
+encoded integer byte sequence crosses frame boundary or packet.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="https://nghttp2.org/blog/2014/07/18/nghttp2-v0-dot-5-0-released/">Nghttp2 v0.5.0 Released</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-18T21:39:25+09:00" pubdate="" data-updated="true">Jul 18<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We happily announce the immediate availability of nghttp2 <a href="https://github.com/tatsuhiro-t/nghttp2/releases/tag/v0.5.0">v0.5.0</a>.
+The supported HTTP/2 protocol is now <code>h2-13</code>.</p>
+
+<p>The changes since <code>h2-12</code> were described in the previous post.  We
+still supports ALTSVC frame in this release, but it may be removed in
+the future release since it is now in the separate document.  The
+BLOCKED frame was completely removed from the source code.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="https://nghttp2.org/blog/2014/06/18/update-to-h2-13/">Update to H2-13</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-18T13:46:35+09:00" pubdate="" data-updated="true">Jun 18<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>nghttp2 was updated to
+<a href="http://tools.ietf.org/html/draft-ietf-httpbis-http2-13">HTTP/2 draft-13</a>
+and
+<a href="http://tools.ietf.org/html/draft-ietf-httpbis-header-compression-08">HPACK draft-08</a>.</p>
+
+<p>The major changes are:</p>
+
+<ul>
+<li>Simplified padding (Pad High field was removed)</li>
+<li>No padding for CONTINUATION frame.</li>
+<li>ALTSVC and BLOCKED frame was moved to extension.
+The current nghttp2 source code contains ALTSVC and BLOCKED as extension
+based on draft-12.
+But their specification may change and they may be dropped from nghttp2
+public API until their specifications are settled.</li>
+<li>Per-frame compression was removed.</li>
+<li>Huffman code table and static header table were updated.</li>
+</ul>
+
+
+<p>The https endpoint for nghttp2.org now requires TLSv1.2 and DHE or
+EDCHE with GCM cipher suite for HTTP/2 connection.  If HTTP/2 was
+negotiated and these requirements are not met, connection error will
+be issued with the error code INADEQUATE_SECURITY.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="https://nghttp2.org/blog/2014/06/02/nghttp2-v0-dot-4-1-released/">Nghttp2 v0.4.1 Released</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-02T22:51:02+09:00" pubdate="" data-updated="true">Jun 2<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>nghttp2 <a href="https://github.com/tatsuhiro-t/nghttp2/releases/tag/v0.4.1">v0.4.1</a> just released today.  It is mainly a bug fix release.
+The supported HTTP/2 protocol version remains <code>h2-12</code>.</p>
+
+<p>Although this release is tagged as bug fix release, nghttpx got some
+improvements.  Firstly, <code>--npn-list</code> option now works with ALPN.
+Secondly, <code>*</code> is officially allowed as <code>&lt;HOST&gt;</code> parameter in
+<code>--frontend</code> option and it means wildcard address, which can bind to
+both IPv4 and IPv6 addresses.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="https://nghttp2.org/blog/2014/05/27/httpbin-for-http-slash-2-clients/">Httpbin for HTTP/2 Clients</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-27T23:03:08+09:00" pubdate="" data-updated="true">May 27<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="https://httpbin.org/">httpbin</a> is a HTTP Request &amp; Response Service
+developped by
+A <a href="http://kennethreitz.com/pages/open-projects.html">Kenneth Reitz</a> Project.
+Currently it only serves in HTTP/1.1.</p>
+
+<p>nghttp2.org now serves its functionality in HTTP/2 and SPDY.
+You can access the service <a href="https://nghttp2.org/httpbin">here</a>.</p>
+
+<p>Currently, some json elements (e.g., url) are a bit strange due to the
+fact that httpbin service is reverse proxied.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="https://nghttp2.org/blog/page/2/">← Older</a>
+    
+    <a href="https://nghttp2.org/blog/archives">Blog Archives</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="https://nghttp2.org/blog/2014/09/28/nghttp2-v0-dot-6-2/">Nghttp2 v0.6.2</a>
+      </li>
+    
+      <li class="post">
+        <a href="https://nghttp2.org/blog/2014/09/15/host-lucid-erlang-http-slash-2-server/">Host Lucid Erlang HTTP/2 Server</a>
+      </li>
+    
+      <li class="post">
+        <a href="https://nghttp2.org/blog/2014/09/11/nghttp2-v0-dot-6-1/">Nghttp2 v0.6.1</a>
+      </li>
+    
+      <li class="post">
+        <a href="https://nghttp2.org/blog/2014/08/30/nghttp2-v0-dot-6-0/">Nghttp2 v0.6.0</a>
+      </li>
+    
+      <li class="post">
+        <a href="https://nghttp2.org/blog/2014/07/31/update-to-h2-14/">Update to H2-14</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    <span class="toggle-sidebar"></span></div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright © 2014 - Tatsuhiro Tsujikawa -
+  <span class="credit">Powered by <a href="http://octopress.org/">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+</body>
+</html>

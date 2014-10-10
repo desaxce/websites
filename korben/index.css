@@ -1,0 +1,260 @@
+/* ::::: http://korben.info/wp-content/themes/korben2013/style.css ::::: */
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { margin: 0px; padding: 0px; }
+fieldset, img { border: 0px none; }
+ol, ul { list-style: outside none none; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+input, textarea { outline: medium none; }
+html, body { height: 100%; width: 100%; }
+body, button, input, select, textarea { color: rgb(51, 59, 67); font-family: Arial,Verdana,sans-serif; font-size: 14px; line-height: 22px; }
+body { background: url('bg.jpg') repeat scroll 0% 0% transparent; }
+a { color: rgb(51, 59, 67); cursor: pointer; text-decoration: none; position: relative; }
+a:hover { text-decoration: none; color: rgb(255, 145, 3); }
+*::-moz-selection { background: none repeat scroll 0% 0% rgb(255, 145, 3); color: white; }
+.gotop { bottom: 50px; right: 50px; position: fixed; z-index: 1339; }
+.gotop a { font-size: 0px; width: 52px; height: 52px; display: block; text-indent: -13337px; background: url('go-top.png') no-repeat scroll center center transparent; cursor: pointer; }
+blockquote { background-color: rgb(240, 248, 253); padding: 15px 20px 0px; margin-bottom: 20px; border-radius: 4px; border: 1px solid rgb(214, 229, 239); }
+blockquote p { border-left: 3px solid rgb(255, 123, 16); padding-left: 20px; }
+.bold { font-weight: bold; }
+.orange { color: rgb(255, 123, 16) ! important; }
+.orange a { color: rgb(255, 123, 16) ! important; }
+label { cursor: pointer; color: rgb(62, 70, 77); }
+.post-content { float: left; width: 600px; text-align: justify; }
+.side .dsq-widget-list p.dsq-widget-meta { background: url('comment.png') no-repeat scroll left center transparent ! important; padding-left: 15px ! important; color: rgb(158, 158, 158) ! important; }
+a.btn-white, .post-edit-link { background: url('btn-white.jpg') repeat-x scroll left top transparent ! important; border: 1px solid rgb(218, 223, 230) ! important; border-radius: 4px ! important; height: 28px ! important; line-height: 28px ! important; display: inline-block; padding: 0px 10px ! important; font-size: 13px; color: rgb(81, 81, 81); font-weight: bold; }
+a.btn-white:hover, .post-edit-link:hover { border: 1px solid rgb(198, 203, 210) ! important; }
+a.btn-white:active, .post-edit-link:active { border: 1px solid rgb(198, 203, 210) ! important; background: url('btn-white.jpg') repeat-x scroll left bottom transparent ! important; color: rgb(255, 123, 16); }
+.bold { font-weight: bold; }
+.right { float: right; }
+.left { float: left; }
+li { list-style: outside none none; }
+input, textarea { border: 1px solid rgb(186, 190, 196); border-radius: 4px; padding: 4px 10px; font-size: 11px; color: rgb(162, 162, 162); box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2) inset; position: relative; }
+input:focus, textarea:focus { border: 1px solid rgb(255, 117, 5); box-shadow: 0px 0px 5px rgb(255, 232, 213); color: black; }
+input[type="submit"] { border: medium none; border-radius: 0px; color: white; cursor: pointer; box-shadow: none; }
+input[type="text"], input[type="password"] { height: 20px; padding: 5px 10px; line-height: 20px; }
+.search { position: relative; margin-bottom: 20px; margin-top: 5px; }
+.search input[type="text"] { border-radius: 100px; }
+.search #searchsubmit { position: absolute; right: 10px; top: 10px; display: block; cursor: pointer; text-indent: -13337px; font-size: 0px; background: url('search-btn.jpg') no-repeat scroll center center transparent; height: 12px; width: 12px; border: medium none; }
+.popin { background-color: rgb(255, 255, 255); display: none; margin: 0px auto; width: 300px; }
+#popin-mask { background-color: rgba(0, 0, 0, 0.7); }
+#popin-2 { background: none repeat scroll 0% 0% white; padding: 20px; position: absolute; top: 200px; border-radius: 4px; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8); border-top: 3px solid rgb(73, 166, 235); }
+#popin-2 .content.popin-buttons, #popin-2 .popin-inputs { clear: both; }
+#popin-2 h3 { font-weight: bold; font-size: 18px; background: url('post-footer-separator2.jpg') repeat-x scroll center bottom transparent; padding-bottom: 25px; margin-bottom: 25px; }
+#popin-2 .close-popin { display: block; width: 13px; height: 13px; font-size: 0px; background: url('close-btn.png') no-repeat scroll left top transparent; position: absolute; top: 25px; right: 25px; }
+#popin-2 .left { font-size: 12px; margin-top: 10px; }
+#popin-2 .left input { margin-right: 5px; }
+#popin-2 .right { font-size: 11px; margin-top: 10px; }
+#popin-2 .right input { background: url('input-submit.png') repeat-x scroll left top transparent; border-radius: 2px; text-transform: uppercase; font-family: Arial,sans-serif; text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.8); line-height: 26px; width: 100px; height: 32px; margin-top: -5px; }
+#popin-2 input[type="text"], #popin-2 input[type="password"] { width: 278px; margin-bottom: 10px; }
+#popin-2 .ou { background: url('post-footer-separator2.jpg') repeat-x scroll center center transparent; width: 300px; text-align: center; display: block; margin-top: 20px; margin-bottom: 20px; float: left; font-size: 12px; font-weight: bold; }
+#popin-2 .ou span { padding: 5px 10px; background: none repeat scroll 0% 0% white; }
+#popin-2 .content.popin-buttons { margin-bottom: 20px; }
+#popin-2 .content.popin-buttons li { background: url('buttons-connexion.png') no-repeat scroll left top transparent; }
+#popin-2 .content.popin-buttons li a.twitter { background: url('buttons-connexion.png') no-repeat scroll left center transparent; }
+#popin-2 .content.popin-buttons li a.google { background: url('buttons-connexion.png') no-repeat scroll left bottom transparent; }
+#popin-2 .content.popin-buttons li a { height: 34px; line-height: 36px; padding-left: 60px; width: 240px; display: block; margin-bottom: 5px; text-transform: uppercase; font-family: Arial,sans-serif; text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.8); color: white; font-size: 11px; background: url('buttons-connexion.png') no-repeat scroll left top transparent; }
+#popin-2 .popin-password a { background: none repeat scroll 0% 0% rgb(255, 255, 255); text-align: center; display: block; clear: both; font-size: 11px; font-weight: bold; }
+.wrap { padding-left: 10px; padding-right: 10px; position: relative; width: 1070px; margin: -6px auto 0px; }
+.cl, .cr, .cb { display: block ! important; float: none ! important; height: 0px ! important; width: 0px ! important; }
+.cb { clear: both; }
+.wrap { width: 1000px; margin: 0px auto; padding: 0px; }
+.maincontent { float: left; margin-right: 16px; width: 650px; }
+.topbar { width: 100%; background: url('topbar.jpg') repeat-x scroll center top transparent; position: relative; height: 35px; }
+.topbar .links { line-height: 35px; height: 35px; width: 1000px; margin: 0px auto; font-size: 11px; }
+.topbar .links li { float: left; background: url('topbar-separator.jpg') no-repeat scroll right center transparent; padding-right: 10px; margin-right: 10px; }
+.topbar .links li.orange, .topbar .links li.contact { background: none repeat scroll 0% 0% transparent; margin: 0px; }
+.topbar .links li a.rss { padding-left: 20px; background: url('icon-rss.png') no-repeat scroll left center transparent; }
+.topbar .links li a { color: rgb(184, 184, 184); }
+.topbar .links li a:hover { color: white; }
+.topbar .duo-buttons { float: right; }
+.topbar .duo-buttons li { margin: 0px; padding: 0px; }
+.topbar .duo-buttons li a { color: white; font-size: 11px; text-transform: uppercase; font-weight: bold; display: block; width: 100px; height: 34px; text-align: center; text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3); }
+.topbar .duo-buttons .btn-orange { background: url('topbar-inscription.jpg') no-repeat scroll center top transparent; }
+.topbar .duo-buttons .btn-orange:hover { background: url('topbar-inscription.jpg') no-repeat scroll center bottom transparent; }
+.topbar .duo-buttons .btn-blue { background: url('topbar-connexion.jpg') no-repeat scroll center top transparent; }
+.topbar .duo-buttons .btn-blue:hover { background: url('topbar-connexion.jpg') no-repeat scroll center bottom transparent; }
+.top { width: 100%; background: url('header.png') repeat-x scroll center top transparent; position: relative; z-index: 2; }
+.header { position: relative; width: 1000px; margin: 0px auto; height: 105px; }
+.header .baby-korben { background: url('bebe-korben.png') no-repeat scroll left top transparent; width: 545px; height: 103px; position: absolute; left: -50px; z-index: 0; top: -1px; }
+.header .logo { width: 214px; height: 73px; padding-top: 19px; float: left; margin-left: -7px; }
+.header .navigation { float: left; padding-top: 36px; padding-left: 160px; }
+.header .navigation li { display: inline-block; padding-right: 19px; background: url('navigation-sep.png') no-repeat scroll right center transparent; margin-right: 16px; }
+.header .navigation li a { font-size: 16px; text-transform: uppercase; color: white; text-shadow: 1px 1px 1px rgb(0, 12, 26); height: 29px; line-height: 29px; font-family: Arial,sans-serif; }
+.header .navigation li a:hover { text-decoration: none; color: rgb(255, 123, 16); }
+.header .navigation .current-menu-item a { color: rgb(175, 200, 255); background: url('nav-active.png') no-repeat scroll center center transparent; padding: 5px 6px; border-radius: 4px; }
+.header .navigation .current-menu-item a:hover { color: rgb(207, 222, 253); }
+.subnav { background: url('subnav.jpg') repeat-x scroll center center transparent; height: 50px; margin-bottom: 50px; margin-top: -2px; }
+.subnav ul { clear: both; text-align: center; }
+.subnav li { display: inline-block; margin-left: 6px; padding-right: 10px; background: url('subnav-separator.png') no-repeat scroll right center transparent; }
+.subnav li a { color: white; font-size: 12px; text-transform: uppercase; font-family: Arial,sans-serif; text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4); border-top: 3px solid transparent; padding-top: 16px; }
+.subnav li a:hover { border-top: 3px solid rgb(255, 123, 16); color: rgb(255, 123, 16); }
+.subnav li.auhasard { width: 92px; height: 50px; text-align: center; background: url('auhasard.jpg') no-repeat scroll center top transparent; position: relative; z-index: 0; line-height: 50px; padding: 0px; color: white; margin: 0px 10px 0px 0px; }
+.subnav li.auhasard a:hover { border: medium none; padding: 0px; color: white; margin: 0px; }
+.subnav li.domotique { width: 92px; height: 50px; text-align: center; background: url('domotique.jpg') no-repeat scroll center top transparent; position: relative; z-index: 0; line-height: 50px; padding: 0px; color: white; margin: 0px 10px 0px 0px; }
+.subnav li.domotique a:hover { border: medium none; padding: 0px; color: white; margin: 0px; }
+.subnav li.sony { width: 92px; height: 50px; text-align: center; background: url('sony.jpg') no-repeat scroll center top transparent; position: relative; z-index: 0; line-height: 50px; padding: 0px; color: white; margin: 0px 10px 0px 0px; }
+.subnav li.sony a:hover { border: medium none; padding: 0px; color: white; margin: 0px; }
+.subnav .menu, .subnav .menu-sub-nav-container { display: inline-block; line-height: 50px; }
+.edito { background: url('edito-content.png') repeat-y scroll center center transparent; float: left; padding: 25px 25px 0px; width: 600px; border-top: 3px solid rgb(255, 123, 16); border-radius: 2px 2px 0px 0px; margin-bottom: 0px; position: relative; }
+.edito h2 { float: left; }
+.edito .edito-comments { float: right; background: url('commentaires-orange.png') no-repeat scroll 0px 9px transparent; padding-left: 25px; font-size: 18px; font-weight: bold; color: rgb(86, 86, 86); padding-top: 5px; padding-right: 10px; }
+.edito .post-content { clear: both; }
+.edito .post-title { font-size: 22px; font-weight: bold; line-height: 30px; letter-spacing: -0.03em; margin-top: 5px; margin-bottom: 30px; width: 480px; }
+.edito .post-content { position: relative; }
+.edito .post-content p { margin-bottom: 20px; }
+.edito .edito-header { background: url('edito-head.png') no-repeat scroll center top transparent; position: absolute; top: -12px; width: 100px; height: 22px; right: 260px; }
+.edito-footer { background: url('edito-footer.png') no-repeat scroll center bottom transparent; width: 652px; height: 79px; float: left; margin-left: -1px; margin-bottom: 20px; position: relative; z-index: 4; }
+.edito-footer .post-date { padding-left: 25px; padding-top: 20px; font-size: 12px; }
+.action-edito { clear: both ! important; border-radius: 4px; padding: 0px 5px; cursor: pointer; text-align: center; font-size: 18px; position: absolute; bottom: 10px; right: -1px; font-weight: bold; }
+a .btn-moins { width: 20px; height: 20px; display: block; background: url('btn-moins.png') no-repeat scroll left top transparent; text-indent: -1337px; font-size: 0px; }
+.edito-wrap { clear: both ! important; }
+input[type="submit"], .main.connexion input[type="submit"], .main.mdp-oublie input[type="submit"] { background: url('input-submit.png') repeat-x scroll left top transparent; border-radius: 2px; text-transform: uppercase; font-family: Arial,sans-serif; text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.8); line-height: 26px; height: 32px; }
+.main { background: none repeat scroll 0% 0% rgb(255, 255, 255); float: left; padding: 25px; width: 600px; border-top: 3px solid rgb(255, 123, 16); border-radius: 2px; margin-bottom: 25px; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.9); }
+.main .post { clear: both; }
+.main .post-title { font-size: 26px ! important; font-weight: bold; line-height: 30px; letter-spacing: -0.03em; margin-top: 5px; margin-bottom: 30px; }
+.main .post-title a:hover { text-decoration: none; }
+.main .post-content a { color: rgb(255, 123, 16); }
+.main .post-thumbnail { margin-left: -25px; position: relative; width: 650px; height: 200px; margin-bottom: 25px; }
+.main .post-thumbnail .ribbon { background: url('commentaires.png') no-repeat scroll 0px 0px transparent; width: 74px; height: 36px; position: absolute; z-index: 2; top: 20px; left: -7px; }
+.main .post-thumbnail .ribbon a { padding-top: 5px; padding-left: 35px; display: block; color: white; font-weight: bold; font-size: 16px; text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4); }
+.main .post-content { margin-bottom: 20px; position: relative; }
+.main .post-footer { background: url('post-footer-separator2.jpg') repeat-x scroll center bottom transparent; padding-bottom: 10px; margin-bottom: 25px; clear: both; }
+.main .post-content ul { margin-bottom: 20px; }
+.main .post-content img { max-width: 600px; height: auto; }
+.main .post-content iframe { width: 600px; }
+.main p { margin-bottom: 15px; }
+.main .post-footer .post-tags { float: left; }
+.main .post-footer .post-date { float: right; font-size: 12px; color: rgb(96, 96, 96); }
+.main .wp-pagenavi { padding-bottom: 15px; }
+.side { float: right; width: 328px; list-style-type: none; background: none repeat scroll 0% 0% rgb(255, 255, 255); border-radius: 2px; border-top: 3px solid rgb(159, 168, 186); box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.9); margin-bottom: 50px; }
+.side h2 { color: rgb(52, 71, 110); font-size: 13px; text-transform: uppercase; background: url('post-footer-separator2.jpg') repeat-x scroll center bottom transparent; margin-bottom: 15px; padding-bottom: 15px; font-family: Arial,sans-serif; }
+.side .widget { padding-left: 14px; padding-right: 14px; width: 300px; clear: both; }
+.side input[type="text"] { width: 278px; }
+.side .social { width: 293px; margin: 20px auto 0px; height: 52px; }
+.side .social ul { float: left; }
+.side .social li { float: left; margin: 0px; padding: 0px; }
+.side .social a.youtube { background: url('social-youtube-btn.png') no-repeat scroll center top transparent; width: 61px; height: 53px; display: block; font-size: 0px; }
+.side .social a.youtube:hover { background: url('social-youtube-btn.png') no-repeat scroll center center transparent; }
+.side .social a.youtube:active { background: url('social-youtube-btn.png') no-repeat scroll center bottom transparent; }
+.side .social a.twitter { background: url('social-twitter-btn.png') no-repeat scroll center top transparent; width: 59px; height: 53px; display: block; font-size: 0px; margin-left: -1px; }
+.side .social a.twitter:hover { background: url('social-twitter-btn.png') no-repeat scroll center center transparent; }
+.side .social a.twitter:active { background: url('social-twitter-btn.png') no-repeat scroll center bottom transparent; }
+.side .social a.facebook { background: url('social-facebook-btn.png') no-repeat scroll center top transparent; width: 59px; height: 53px; display: block; font-size: 0px; margin-left: -1px; }
+.side .social a.facebook:hover { background: url('social-facebook-btn.png') no-repeat scroll center center transparent; }
+.side .social a.facebook:active { background: url('social-facebook-btn.png') no-repeat scroll center bottom transparent; }
+.side .social a.google { background: url('social-g+-btn.png') no-repeat scroll center top transparent; width: 59px; height: 53px; display: block; font-size: 0px; margin-left: -1px; }
+.side .social a.google:hover { background: url('social-g+-btn.png') no-repeat scroll center center transparent; }
+.side .social a.google:active { background: url('social-g+-btn.png') no-repeat scroll center bottom transparent; }
+.side .social a.instagram { background: url('social-instagram-btn.png') no-repeat scroll center top transparent; width: 59px; height: 53px; display: block; font-size: 0px; margin-left: -1px; }
+.side .social a.instagram:hover { background: url('social-instagram-btn.png') no-repeat scroll center center transparent; }
+.side .social a.instagram:active { background: url('social-instagram-btn.png') no-repeat scroll center bottom transparent; }
+.side .univers-populaire ul.tags { float: left; max-width: 300px; margin-bottom: 25px; }
+.side .univers-populaire ul.tags li { float: left; margin-right: 2px; }
+.side .univers-populaire ul.tags li.last { margin-right: 0px; }
+.side .univers-populaire ul.tags li a { text-transform: uppercase; font-size: 12px; color: white; text-align: center; text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.3); background: url('tag.png') repeat-x scroll 100px 0px transparent; border-radius: 2px; font-weight: bold; height: 20px; padding: 3px 7px; }
+.side .univers-populaire ul.tags li.color1 a:hover { background: url('tag.png') repeat-x scroll 100px -40px transparent; }
+.side .univers-populaire ul.tags li.color2 a:hover { background: url('tag.png') repeat-x scroll 100px -60px transparent; }
+.side .univers-populaire ul.tags li.color3 a:hover { background: url('tag.png') repeat-x scroll 100px -80px transparent; }
+.side .univers-populaire ul.tags li.color4 a:hover { background: url('tag.png') repeat-x scroll 100px -100px transparent; }
+.side .univers-populaire ul.tags li.color5 a:hover { background: url('tag.png') repeat-x scroll 100px -120px transparent; }
+.side .univers-populaire ul.list { float: left; font-size: 12px; font-weight: bold; line-height: 16px; }
+.side .univers-populaire ul.list a { font-weight: normal ! important; line-height: 18px; }
+.side .univers-populaire ul.list .date { margin-left: 5px; margin-top: 3px; font-weight: bold; float: left; text-align: center; margin-right: 15px; }
+.side .univers-populaire ul.list .date .day { font-size: 18px; font-family: Arial,sans-serif; }
+.side .univers-populaire ul.list .date .day, .side .univers-populaire .date .month { display: block; }
+.side .univers-populaire ul.list .date .month { color: rgb(103, 123, 136); }
+.side .univers-populaire ul.list li { margin-bottom: 17px; padding-bottom: 17px; border-bottom: 1px solid rgb(236, 236, 236); float: left; width: 300px; }
+.side .univers-populaire ul.list li.last { padding: 0px; margin: 0px; border: medium none; }
+.side .univers-populaire ul.list .thumbnail { float: left; margin-right: 10px; }
+.side .univers-populaire ul.list .thumbnail img { border: 3px solid rgb(255, 255, 255); box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5); }
+.side .signup { position: relative; }
+.side .signup input[type="submit"] { position: absolute; right: 0px; top: 0px; background: url('input-submit.png') no-repeat scroll left top transparent; width: 41px; height: 32px; border: medium none; display: block; cursor: pointer; color: white; font-weight: bold; text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.8); font-size: 11px; z-index: 4; border-radius: 0px 2px 2px 0px; }
+.side .signup input[type="submit"]:hover { background: url('input-submit.png') no-repeat scroll left bottom transparent; }
+.side .signup input[type="submit"]:active { background: url('input-submit.png') no-repeat scroll left top transparent; }
+.side .bashfr { font-size: 13px; }
+.wp-pagenavi a, .wp-pagenavi .current { background: url('btn-white.jpg') repeat-x scroll left top transparent ! important; border: 1px solid rgb(218, 223, 230) ! important; border-radius: 4px ! important; height: 28px ! important; line-height: 28px ! important; display: inline-block; padding: 0px 10px ! important; font-size: 13px; color: rgb(81, 81, 81); font-weight: bold; }
+.wp-pagenavi a:hover, .wp-pagenavi .current:hover { border: 1px solid rgb(198, 203, 210) ! important; }
+.wp-pagenavi a:active { border: 1px solid rgb(198, 203, 210) ! important; background: url('btn-white.jpg') repeat-x scroll left bottom transparent ! important; }
+.wp-pagenavi .current { color: rgb(255, 90, 0); }
+.wp-pagenavi .nextpostslink { float: right; }
+.wp-pagenavi .extend { border: 0px solid rgb(0, 0, 0); }
+.univers { background: none repeat scroll 0% 0% rgb(255, 255, 255); float: left; padding: 25px; width: 950px; border-radius: 2px; margin-bottom: 30px; box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.9); }
+.univers h3 { float: left; color: rgb(102, 120, 129); font-size: 18px; text-transform: uppercase; font-family: Arial,sans-serif; margin-bottom: 20px; }
+.univers { border-top: 3px solid rgb(213, 34, 76); text-align: center; font-size: 13px; line-height: 18px; font-weight: bold; position: relative; }
+.univers ul { clear: both; }
+.univers ul li { float: left; width: 230px; margin-right: 10px; position: relative; }
+.univers ul li.last { margin: 0px; }
+.univers ul li a img { border: 5px solid rgb(255, 255, 255); box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2); }
+.univers .text { margin-top: 10px; display: block; }
+.univers a.btn-white { margin-top: -7px; }
+.main .post-content li, .main .similar-posts li, .main .blogroll li { padding-left: 20px; background: url('puce.png') no-repeat scroll 0px 5px transparent; margin-left: 20px; margin-bottom: 5px; margin-top: 5px; font-size: 14px; line-height: 24px; }
+.footer { clear: both; background: url('footer.png') repeat-x scroll 0% 0% transparent; height: 45px; border-radius: 2px; padding: 24px 20px 0px; margin-bottom: 30px; color: white; font-size: 13px; }
+.footer .links { float: left; }
+.footer .links li { float: left; margin-right: 10px; padding-right: 10px; background: url('footer-separator.jpg') no-repeat scroll right center transparent; }
+.footer .links li.last { margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; }
+.footer .copyright { float: right; }
+.footer a { color: rgb(255, 255, 255); }
+.footer a:hover { text-decoration: none; color: rgb(255, 145, 3); }
+.footer a.rss { padding-left: 20px; background: url('icon-rss.png') no-repeat scroll left center transparent; }
+.footer .copyright a.steaw { color: rgb(43, 173, 255) ! important; }
+.img-univers { display: block; overflow: hidden; }
+.hide-rss { display: none; }
+.post-share { clear: both; }
+.post-share .left-side { float: left; }
+.post-share .left-side img { display: inline; }
+.post-share .right-side { float: right; }
+#div-gpt-ad-1361297370247-0-oop { height: 0px; }
+.sep-sidebar { background: url('sidebar-footer.jpg') repeat-x scroll center bottom rgb(255, 255, 255); width: 328px; height: 25px; margin-left: -14px; margin-bottom: 25px; }
+.start-sep-sidebar { padding-top: 15px; }
+/* ::::: http://korben.info/wp-content/plugins/cforms/styling/wide_form.css ::::: */
+
+/* ::::: http://korben.info/wp-content/plugins/cforms/styling/calendar.css ::::: */
+
+@media not all {
+}
+@media screen and (max-width: 767px) {
+}
+/* ::::: https://drp60gfj3y9kn.cloudfront.net/assets/widget_common/getsat.loader-0f1003c919b9e0c527656de2031548e9.css ::::: */
+
+.gsfn-widget-tab { position: fixed; margin: 0px; padding: 6px 10px; text-decoration: none; text-align: center; cursor: pointer; font-size: 14px; font-weight: bold; border-width: 2px; border-style: solid; display: block; z-index: 100000; }
+.gsfn-right, .gsfn-left { transform: rotate(270deg); }
+.gsfn-right { border-bottom: medium none; right: 0px; top: 33%; transform-origin: 100% 100% 0px; }
+/* ::::: http://m.bestofmedia.com/sfp/images/partner/ct/common.css?v=2.164 ::::: */
+
+body, #ctBoc { position: relative; }
+#ctMediaContainer { z-index: 1; top: 0px; height: 100%; width: 100%; cursor: pointer; text-align: center; overflow: hidden; display: block ! important; }
+#ctMedia { margin: 0px auto; cursor: pointer; position: relative; z-index: 1; }
+.page, #container, #mainSection { position: relative; z-index: 2; }
+/* ::::: http://m.bestofmedia.com/sfp/images/partner/ct/wallpaper.css?v=2.164 ::::: */
+
+.ct_wallpaper { background-image: none; }
+div[id*="-oop"], div[id*="-oop"] iframe { display: block; height: 0px ! important; }
+#ctBoc, #ctMediaContainer, #ctMedia { background-position: center top; background-repeat: no-repeat; background-color: transparent; }
+#ctMedia { position: absolute; left: 50%; }
+#ctMedia img { max-width: none ! important; }
+.ct_pos_absolute #ctMediaContainer { position: absolute; }
+/* ::::: http://m.bestofmedia.com/sfp/images/partner/ct/korben.css?v=2.164 ::::: */
+
+.ct_wallpaper .top, .ct_wallpaper .wrap, .ct_wallpaper .header, .ct_wallpaper .navigation { position: relative; margin-left: auto; margin-right: auto; z-index: 2; }
+.ct_wallpaper .topbar { z-index: 2; width: 1000px; margin: auto; padding-left: 5px; }
+.ct_wallpaper .subnav { position: relative; z-index: 2; width: 1005px; margin-left: auto; margin-right: auto; margin-bottom: 0px; height: 100px; background: url('subnav.jpg') repeat-x scroll left top rgb(42, 49, 65); }
+.ct_wallpaper .wrap { background: none repeat scroll 0% 0% transparent; }
+.ct_wallpaper #wrapzone { background: none repeat scroll 0% 0% rgb(42, 49, 65); padding: 0px 1px; }
+.ct_wallpaper .top { width: 1005px; }
+.dsq-widget ul.dsq-widget-list { padding: 0px; margin: 0px; text-align: left; }
+a.dsq-widget-thread { font-weight: bold; }
+p.dsq-widget-meta { clear: both; font-size: 80%; padding: 0px; margin: 0px; }
+li.dsq-widget-item { margin: 15px 0px; list-style-type: none; clear: both; }
+#cookie-notice { display: none; position: fixed; min-width: 100%; height: auto; z-index: 100000; font-size: 10px; line-height: 18px; left: 0px; text-align: center; }
+.cookie-notice-container { padding: 5px; }
+.cn-top { top: 0px; }
+#cookie-notice .button { margin-left: 10px; }
+#cookie-notice .button.bootstrap { font-family: sans-serif; display: inline-block; margin-right: 0.3em; margin-bottom: 0px; line-height: 20px; text-align: center; font-style: normal; vertical-align: middle; cursor: pointer; color: rgb(255, 255, 255); text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25); background-color: rgb(0, 109, 204); background-image: linear-gradient(to bottom, rgb(0, 136, 204), rgb(0, 68, 204)); background-repeat: repeat-x; border-style: solid; border-width: 1px; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2) inset, 0px 1px 2px rgba(0, 0, 0, 0.05); padding: 2px 10px; font-size: 10px; text-decoration: none; border-radius: 3px; outline: medium none; }
+#cookie-notice .button.bootstrap:hover, #cookie-notice .button.bootstrap:focus { color: rgb(255, 255, 255); background-color: rgb(0, 68, 204); background-position: 0px -15px; transition: background-position 0.1s linear 0s; }
+.wp-pagenavi { clear: both; }
+.wp-pagenavi a, .wp-pagenavi span { text-decoration: none; border: 1px solid rgb(191, 191, 191); padding: 3px 5px; margin: 2px; }
+.wp-pagenavi a:hover, .wp-pagenavi span.current { border-color: rgb(0, 0, 0); }
+.wp-pagenavi span.current { font-weight: bold; }
+/* ::::: http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery-ui.css ::::: */
+
+button.ui-button::-moz-focus-inner { border: 0px none; padding: 0px; }

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    <title>HTTP/2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+  
+<link rel="stylesheet" type="text/css" href="index.css" media="all">
+</head>
+<body data-twttr-rendered="true">
+    
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="http://http2.github.io/">HTTP/2</a>
+  </div>
+  
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      
+      
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Specifications<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://tools.ietf.org/html/draft-ietf-httpbis-http2/">HTTP/2 (IETF draft)</a></li>
+            <li><a href="http://tools.ietf.org/html/draft-ietf-httpbis-header-compression/">HPACK (IETF draft)</a></li>
+            <li class="divider"></li>
+            <li><a href="http://http2.github.com/http2-spec/">HTTP/2 (editors' copy)</a></li>
+            <li><a href="http://http2.github.com/http2-spec/compression.html">HPACK (editors' copy)</a></li>
+            <li class="divider"></li>
+            <li><a href="https://github.com/http2/http2-spec">Specifications Repository</a></li>            
+          </ul>
+      </li>
+
+      <li><a href="https://github.com/http2/http2-spec/wiki/Implementations">Implementations</a></li>
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Participate<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://lists.w3.org/Archives/Public/ietf-http-wg/">Group Mailing List <span class="glyphicon glyphicon-envelope"></span></a></li>
+            <li><a href="https://www.ietf.org/mailman/listinfo/http-devops/">DevOps Mailing List <span class="glyphicon glyphicon-envelope"></span></a></li>
+            <li><a href="https://github.com/httpwg/wg-materials">Meeting Materials Repository</a></li>
+            <li><a href="http://tools.ietf.org/wg/httpbis/minutes">Official Meeting Minutes</a></li>
+            <li><a href="http://www.ietf.org/jabber/logs/httpbis/">Jabber Logs</a></li>
+          </ul>
+      </li>
+
+      <li><a href="https://github.com/http2/http2-spec/issues">Issues</a></li>
+      <li><a href="http://http2.github.io/faq/">FAQ</a></li>
+      <li><a href="https://twitter.com/http_2"><img src="twitter_logo_blue.png" height="23" width="28"></a></li>
+
+            
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">IETF HTTPbis WG<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://httpwg.github.io/">Home Page</a></li>
+            <li><a href="http://www.ietf.org/html.charters/httpbis-charter.html">Charter</a></li>
+            <li><a href="https://twitter.com/httpbis">on Twitter</a></li>
+          </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+      <div class="container">
+
+        <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 jumbotron">
+      <h2>Working Group Last Call</h2>
+      <p>WGLC has finished for HTTP/2 and HPACK. See the <a href="https://github.com/http2/http2-spec/issues">issues list</a> for our current status.</p>
+    </div>
+    <div data-twttr-id="twttr-sandbox-0" class="col-md-4">
+      <iframe src="index_1.html" title="Twitter Timeline" style="border: medium none; max-width: 100%; min-width: 180px; width: 380px;" class="twitter-timeline twitter-timeline-rendered" allowtransparency="true" scrolling="no" id="twitter-widget-0" frameborder="0" height="250"></iframe>
+      
+    </div>
+  </div>
+</div>
+
+
+        <div class="page-header">  
+          <h1>HTTP/2</h1>
+        </div>
+
+        <p>This is the home page for the effort to define HTTP/2, a major revision of
+the Web’s protocol. It is maintained by the <a href="http://trac.tools.ietf.org/wg/httpbis/trac/wiki">IETF HTTPbis Working
+Group</a>.</p>
+
+<p><em>See also <a href="https://github.com/http2jp">HTTP/2 JP</a>, maintained by the Japanese HTTP/2 community.</em></p>
+
+<h2 id="what-is-http2">What is HTTP/2?</h2>
+
+<p>HTTP/2 is a replacement for how HTTP is expressed “on the wire.” It is
+<strong>not</strong> a ground-up rewrite of the protocol; HTTP methods, status codes and
+semantics will be the same, and it should be possible to use the same APIs as
+HTTP/1.x (possibly with some small additions) to represent the protocol.</p>
+
+<p>The focus of the protocol is on performance; specifically, end-user perceived
+latency, network and server resource usage. One major goal is to allow the use
+of a single connection from browsers to a Web site.</p>
+
+<p>The basis of the work is
+<a href="http://tools.ietf.org/html/draft-mbelshe-httpbis-spdy-00">SPDY</a>. However, we
+will be collecting issues against this document, as well as confirming
+consensus over individual portions.</p>
+
+<p>See <a href="http://datatracker.ietf.org/wg/httpbis/charter/">our charter</a> for more
+details of the scope of the work, as well as our <a href="http://http2.github.io/faq/">Frequently Asked
+Questions</a>.</p>
+
+<h2 id="specifications">Specifications</h2>
+
+<p>Our deliverables include:</p>
+
+<ul>
+  <li>Hypertext Transfer Protocol version 2 - <a href="http://tools.ietf.org/html/draft-ietf-httpbis-http2/">current IETF draft</a>, <a href="http://http2.github.com/http2-spec/">editors’ copy</a></li>
+  <li>HPACK - Header Compression for HTTP/2 - <a href="http://tools.ietf.org/html/draft-ietf-httpbis-header-compression/">current IETF draft</a>, <a href="http://http2.github.com/http2-spec/compression.html">editors’ copy</a></li>
+</ul>
+
+<p>These documents are available in our <a href="https://github.com/http2/http2-spec">specifications repository</a>.</p>
+
+<p>You can track changes to the documents using the <a href="https://github.com/http2/http2-spec/commits/master">commit log</a>, also available in
+<a href="https://github.com/http2/http2-spec/commits/master.atom">Atom</a> and on
+<a href="http://twitter.com/httpbis">Twitter</a>.</p>
+
+<h2 id="implementations">Implementations</h2>
+
+<p>We track <a href="https://github.com/http2/http2-spec/wiki/Implementations">known
+implementations</a> of
+HTTP/2. Right now the protocol is still changing quickly, so we do not expect
+every draft we publish to be implemented; instead we nominate <strong>implementation
+drafts</strong> for interop work.</p>
+
+<p>Our implementation drafts have been:</p>
+
+<ol>
+  <li><a href="http://tools.ietf.org/html/draft-ietf-httpbis-http2-04">draft-04</a> - references <a href="http://tools.ietf.org/html/draft-ietf-httpbis-header-compression-00">HPACK-00</a> (interop in <a href="https://github.com/http2/wg_materials/tree/master/interim-13-08">Hamburg</a>)</li>
+  <li><a href="http://tools.ietf.org/html/draft-ietf-httpbis-http2-06">draft-06</a> - references <a href="http://tools.ietf.org/html/draft-ietf-httpbis-header-compression-02">HPACK-02</a> (interop in <a href="https://github.com/http2/wg_materials/tree/master/interim-13-10">Seattle</a>)</li>
+  <li><a href="http://tools.ietf.org/html/draft-ietf-httpbis-http2-09">draft-09</a> - references <a href="http://tools.ietf.org/html/draft-ietf-httpbis-header-compression-05">HPACK-05</a> (interop was in <a href="https://github.com/http2/wg_materials/tree/master/interim-14-01">Zurich</a>)</li>
+  <li><a href="http://tools.ietf.org/html/draft-ietf-httpbis-http2-12">draft-12</a> - references <a href="http://tools.ietf.org/html/draft-ietf-httpbis-header-compression-07">HPACK-07</a> (interop in <a href="https://github.com/http2/wg_materials/tree/master/interim-14-06">New York</a>)</li>
+  <li><a href="http://tools.ietf.org/html/draft-ietf-httpbis-http2-13">draft-13</a> - references <a href="http://tools.ietf.org/html/draft-ietf-httpbis-header-compression-08">HPACK-08</a></li>
+  <li><a href="http://tools.ietf.org/html/draft-ietf-httpbis-http2-14">draft-14</a> - references <a href="http://tools.ietf.org/html/draft-ietf-httpbis-header-compression-09">HPACK-09</a> (<strong>current</strong>)</li>
+</ol>
+
+<p>See also the <a href="https://github.com/http2/http2-spec/issues?milestone=6&amp;state=open">WGLC milestone</a> for outstanding issues.</p>
+
+<h2 id="participate">Participate</h2>
+
+<p><strong>ALL contributors and participants in the Working Group</strong> (whether on a
+mailing list, in physical meetings or on Github) <strong>MUST read and understand the
+<a href="http://www.ietf.org/NOTEWELL.html">NOTE WELL</a> statement.</strong></p>
+
+<p>As with all IETF Working Groups, almost all discussion and decisions are made
+on our <a href="http://lists.w3.org/Archives/Public/ietf-http-wg/">WG mailing list</a>.
+Joining this list is “joining” the Working Group, and is the best way to
+participate. If you’re new to this, you may also want to read the <a href="http://www.ietf.org/tao.html">Tao of the IETF</a>.</p>
+
+<p>Discussion about implementations and testing takes place on the <a href="https://www.ietf.org/mailman/listinfo/http-devops">DevOps mailing
+list</a>. This list is for
+developers, operators and testers of implementations; discusion of the
+specifications themselves needs to happen on the WG mailing list.</p>
+
+<p>We also meet face-to-face at most <a href="http://www.ietf.org/meeting/">IETF
+meetings</a>, and sometimes in between at “interim”
+meetings. During those meetings, we use an XMPP (Jabber)
+<a href="xmpp://httpbis@jabber.ietf.org?join">channel</a>
+(<a href="http://www.ietf.org/jabber/logs/httpbis/">logs</a>) provided by the IETF.</p>
+
+<p>Meeting records and details of upcoming meetings can be found in our <a href="https://github.com/httpwg/wg-materials">Working Group materials</a> repository.</p>
+
+<h3 id="issues">Issues</h3>
+
+<p>Discussion is most productive when it focuses on identified issues. Our <a href="https://github.com/http2/http2-spec/issues">issues list</a> is kept on Github. Please see
+the <a href="https://github.com/http2/http2-spec/blob/master/README.md#contributing">guidelines for contributing</a> <strong>before</strong> raising an issue.</p>
+
+<p>We have two basic types of issues; “design” and “editorial”.</p>
+
+<p><strong>Design issues</strong> need to be discussed by the Working Group to reach consensus.
+This generally happens on the mailing list when the issue is raised, but the
+editors sometimes incorporate a proposed resolution to a design issue in a
+draft, so that the WG can see it in-situ. Such tickets aren’t fully closed
+until the group confirms the proposal after it is published.</p>
+
+<p><strong>Editorial issues</strong> can be resolved by the editors without consultation with
+the group, although sometimes an editor will poll the group for advice.</p>
+
+<p>Additionally, some issues are marked as <strong>liaison issues</strong>. This means that we
+don’t expect to resolve these on our own, but might reference (or even require)
+the results of work elsewhere.</p>
+
+
+
+      </div>
+
+    
+    
+
+  
+<iframe src="index_2.html" style="display: none;" allowtransparency="true" scrolling="no" id="rufous-sandbox" frameborder="0"></iframe></body>
+</html>

@@ -1,0 +1,888 @@
+#ibox { z-index: 1000000; text-align: left; }
+#ibox_overlay { z-index: 1000000; }
+#ibox_loading { position: absolute; z-index: 1000001; }
+#ibox_wrapper { position: absolute; top: 0px; left: 0px; z-index: 1000001; }
+#ibox_content { z-index: 1000002; }
+/* ::::: http://z.cdn.turner.com/nba/tmpl_asset/static/nba-cms3-desktop/1307/css/pkgThemeDefault-min.css ::::: */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin: 0px; padding: 0px; border: 0px none; outline: 0px none; font-size: 100%; vertical-align: baseline; background: none repeat scroll 0% 0% transparent; }
+body { line-height: 1; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+nav ul { list-style: outside none none; }
+a { margin: 0px; padding: 0px; font-size: 100%; vertical-align: baseline; background: none repeat scroll 0% 0% transparent; }
+table { border-collapse: collapse; border-spacing: 0px; }
+input, select { vertical-align: middle; }
+#accessibilityMenu { background-color: rgb(0, 58, 96); border-bottom: 3px solid rgb(187, 187, 187); color: rgb(255, 255, 255); display: none; height: 0px; overflow: hidden; position: fixed; top: 0px; width: 100%; z-index: 10000; }
+#accessibilityCursor { border-bottom: 6px solid transparent; border-left: 6px solid rgb(149, 215, 116); border-top: 6px solid transparent; display: none; height: 0px; left: 424px; position: absolute; top: 98px; width: 0px; z-index: 10000; }
+#accessibilityTooltip { background-color: rgb(149, 215, 116); border-radius: 3px; box-shadow: 2px 2px 8px 0px rgb(0, 0, 0); left: 205px; line-height: 1; padding: 7px 5px 7px 10px; position: absolute; top: 66px; z-index: 10000; display: none; }
+#accessibilityTooltip div { border-bottom: 8px solid transparent; border-left: 8px solid rgb(149, 215, 116); border-top: 8px solid transparent; display: block; float: right; height: 0px; left: 13px; position: relative; top: -2px; width: 0px; z-index: 10000; }
+#accessibilityTooltip p { display: none; }
+#accessibilityMenu ul { padding: 0px; list-style: outside none none; text-align: center; }
+#accessibilityMenu ul li { color: rgb(255, 255, 255); display: inline-block; font-size: 12px; margin: 0px 2px; padding: 5px 4px 0px 3px; }
+#accessibilityMenu #primary #quickLinks { float: left; margin-left: 5px; }
+#accessibilityMenu #primary #quickLinks li { padding: 5px 3px 0px; }
+#accessibilityMenu #primary #quickLinks li a { font-size: 13px; color: rgb(255, 255, 255); }
+#accessibilityMenu #primary { height: 26px; margin: 0px auto; padding: 1px 0px 0px; width: 974px; }
+#accessibilityMenu #primary #goto { color: rgb(255, 255, 255); float: left; font-size: 12px; font-weight: bold; margin-top: 6px; width: 40px; }
+#accessibilityMenu #primary .hotkeys { margin-left: 29px; float: left; }
+#accessibilityMenu #primary .hotkeys li a { color: rgb(255, 255, 255); font-size: 11px; }
+#accessibilityMenu ul li a { color: rgb(255, 255, 255); }
+#accessibilityMenu ul li span { border: 1px solid rgb(204, 204, 204); background-color: rgb(238, 238, 238); padding: 0px 2px; color: rgb(0, 0, 0); border-radius: 4px; font-size: 10px; }
+body { background: url('homepage-bg.jpg@') repeat scroll 0px 0px rgb(146, 146, 146); font-family: "Helvetica Neue",Helvetica Neue,Helvetica,Arial,Liberation Sans,sans-serif; }
+.nbaPage { width: 1000px; margin: 0px auto; }
+.nbaSectionRow { background-color: rgb(242, 242, 242); min-height: 345px; border-bottom: 5px solid rgb(0, 95, 159); margin-bottom: 8px; box-shadow: 0px 0px 5px rgb(102, 102, 102); }
+.nbaSectionRow.nbaLast { margin-bottom: 0px; }
+.nbaSectionRow.nbaNoBorder { border: 0px none; }
+.nbaSectionRow .nbaRowHeader, .nbaFlexRow .nbaRowHeader { border-bottom: 1px solid rgb(220, 223, 226); font-size: 22px; height: 29px; padding: 11px 10px 5px 30px; background-color: rgb(255, 255, 255); font-weight: bold; }
+.nbaSectionRow .nbaRowHeader h2, .nbaFlexRow .nbaRowHeader h2 { float: left; }
+.nbaSectionRow h3 a:hover, .nbaFlexRow h3 a:hover { color: rgb(0, 0, 0); }
+.nbaSectionRow section { background-color: rgb(242, 242, 242); float: left; height: 303px; margin: 0px 0px 1px 1px; padding: 0px 9px; width: 300px; border-top: 1px solid rgb(255, 255, 255); border-right: 1px solid rgb(220, 223, 226); position: relative; }
+.nbaSectionRow section .nbaSponsorArea { width: 88px; height: 31px; position: absolute; top: -12px; right: 0px; }
+.nbaSectionRow section .nbaSectionContent { margin: 25px 10px 11px; position: relative; }
+.nbaSectionRow .nbaFirst .nbaSectionContent { margin: 25px 0px 11px; }
+.nbaSectionRow .nbaLast .nbaSectionContent { margin: 25px 0px 15px 10px; }
+.nbaSectionRow .nbaLast .nbaSectionContent.nbaNum0 { margin: 25px 0px 11px; }
+.nbaSectionRow section .nbaSectionContent.nbaFlex { padding: 0px; }
+.nbaSectionRow section.nbaFirst { padding: 0px 9px 0px 29px; }
+.nbaSectionRow section.nbaLast { border-right: 1px solid rgb(255, 255, 255); padding: 0px 29px 0px 9px; }
+.nbaPrettyTable_1, .nbaPrettyTable_2 { text-align: left; border-collapse: separate; }
+.nbaPrettyTable_1 thead th { border-bottom: 1px solid rgb(220, 223, 226); text-transform: uppercase; font-size: 0.8125em; padding: 4px; }
+.nbaPrettyTable_1 tbody tr:first-child td { border-top: 1px solid rgb(255, 255, 255); }
+.nbaPrettyTable_1 tbody td { padding: 4px 0px 7px; font-size: 0.6875em; }
+.nbaFlex { width: 300px; height: 250px; padding: 0px; float: left; }
+.nbaSectionRow section .nbaFlex.nbaSectionContent, .nbaFlexRow section .nbaFlex.nbaSectionContent { margin-right: 0px; }
+.nbaSectionRow .nbaSectionContent.nbaFlex.nbaSplit, .nbaFlexRow .nbaSectionContent.nbaFlex.nbaSplit { width: 145px; }
+.nbaFlex a { font-weight: inherit; }
+.nbaFlex a:hover { color: rgb(0, 0, 0); }
+.nbaFlex .nbaFlexPanel .nbaThumbnail img { display: block; height: 124px; width: 296px; }
+.nbaFlex.nbaSplit .nbaFlexPanel .nbaThumbnail img { width: 141px; height: 94px; }
+.nbaFlex .nbaFlexPanel h3 { margin-bottom: 5px; height: 1.2em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nbaFlex .nbaFlexPanel .nbaFlexContent { position: relative; border-width: 1px; border-style: solid; border-color: rgb(220, 223, 226) rgb(220, 223, 226) rgb(211, 211, 211); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; background-color: rgb(255, 255, 255); padding: 1px; height: 222px; }
+.nbaFlex .nbaFlexPanel .nbaFlexContent h4 { font-size: 12px; padding: 8px 4px 2px 8px; line-height: 1.2; height: 1.2em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nbaFlex .nbaFlexPanel .nbaFlexContent h4 a:hover { text-decoration: underline; }
+.nbaFlex.nbaSplit .nbaFlexPanel .nbaFlexContent h4 { height: auto; white-space: normal; max-height: 2.2em; overflow: hidden; }
+.nbaFlex .nbaFlexPanel p { display: block; font-size: 12px; height: 29px; line-height: 1.2; overflow: hidden; padding: 2px 6px 0px 8px; }
+.nbaFlex.nbaSplit .nbaFlexPanel p { height: 44px; }
+.nbaFlex .nbaFlexPanel .nbaSocial { height: 26px; padding-top: 7px; background-color: rgb(244, 244, 244); text-align: center; position: absolute; width: 296px; bottom: 1px; overflow: hidden; }
+.nbaFlex.nbaSplit .nbaFlexPanel .nbaSocial { width: 141px; }
+.nbaFlex .nbaFlexPanel .nbaSocial > div { display: inline-block; }
+.nbaFlex .nbaFlexPanel .nbaSocial .nbaFbLike { margin: 0px 3px 0px 0px; overflow: hidden; width: 49px; height: 21px; }
+.nbaFlex .nbaFlexPanel .nbaSocial .nbaFbLike iframe { border: 0px none; width: 49px; height: 21px; }
+.nbaFlex .nbaFlexPanel .nbaSocial .twitter-share-button { margin: 0px; overflow: hidden; width: 57px; height: 21px; }
+.nbaFlex .nbaFlexPanel .nbaSocial .twitter-share-button iframe { border: 0px none; width: 57px; height: auto; }
+.nbaPager { list-style-type: none; }
+.nbaPagerContent { list-style-type: none; }
+.nbaPager li { display: inline; margin: 4px 6px; }
+.nbaPager li.previous, .nbaPager li.next, .nbaPager li.daily { background: url('stats-standings-sprite.png') no-repeat scroll 0px 0px transparent; height: 21px; width: 21px; margin: 4px 3px; }
+.nbaPager li.previous { background-position: -192px -68px; }
+.nbaPager li.previous:hover { background-position: -192px -37px; }
+.nbaPager li.previous:active { background-position: -192px -99px; }
+.nbaPager li.previous.inactive { background-position: -217px -37px; }
+.nbaPager li.previous.inactive a { cursor: default; }
+.nbaPager li.next { background-position: -216px -68px; }
+.nbaPager li.next:hover { background-position: -192px -7px; }
+.nbaPager li.next:active { background-position: -219px -99px; }
+.nbaPager li.daily { background-position: -240px -7px; height: 17px; width: 15px; }
+.nbaPager li.daily.active, .nbaPager li.daily.last.active { background-position: -240px -37px; }
+.nbaPager li.daily.last { background-position: -240px -7px; border-right: 1px solid rgb(204, 204, 204); width: 22px; margin-right: 0px; }
+.nbaPager li.first { border-left: 1px solid rgb(255, 255, 255); height: 17px; margin-left: 0px; width: inherit; padding-left: 9px; }
+.ui-selectmenu-status { font-weight: normal; font-size: 12px; color: rgb(87, 87, 87); }
+a.ui-selectmenu-dropdown { background: url('stats-standings-sprite.png') no-repeat scroll -29px -6px transparent; border: 0px none; height: 27px; }
+a.ui-selectmenu-dropdown .ui-selectmenu-icon { display: none; }
+.ui-widget-content.ui-selectmenu-menu-dropdown { border: 1px solid rgb(204, 204, 204); margin-top: -2px; width: 149px ! important; }
+.nbaAssist { position: absolute ! important; clip: rect(1px, 1px, 1px, 1px); }
+.nbaNoJsAssist { display: none; }
+.nbaClear:before, .nbaClear:after { content: ""; display: table; }
+.nbaClear:after { clear: both; }
+.nbaClear { display: block; }
+.nbaHide { display: none; }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+#nbaHeader { background: url('header-bg.jpg') no-repeat scroll 0px 0px rgb(0, 107, 181); position: relative; height: 139px; margin-bottom: 5px; box-shadow: 0px -1px 1px rgb(5, 5, 5) inset, 0px 1px 4px rgb(71, 71, 71); z-index: 10; }
+#nbaHeader .nbaSocial { height: 56px; position: absolute; top: 12px; left: 86px; }
+#nbaHeader .nbaSocial iframe { border: 0px none transparent; background-color: transparent; height: 30px; overflow: hidden; margin: 0px 0px 0px 14px; padding: 0px; }
+#nbaHeader .nbaSocial > div { float: left; margin: 0px; background: url('header-social-pipe.png') repeat-y scroll right top transparent; height: 35px; }
+#nbaHeader .nbaSocial .nbaLogin { width: 274px; text-align: right; font-size: 0.6875em; color: rgb(255, 255, 255); line-height: 35px; padding-right: 15px; }
+#nbaHeader .nbaSocial .Action { float: right; color: rgb(255, 255, 255); }
+#nbaHeader .nbaSocial .User { float: left; margin-left: 8px; color: rgb(255, 255, 255); }
+#nbaHeader .nbaSocial .nbaLogin a { color: rgb(255, 255, 255); font-weight: normal; font-size: inherit; }
+#nbaHeader .nbaSocial .nbaLogin a:hover { color: rgb(255, 255, 255); text-decoration: underline; }
+#nbaHeader .nbaSocial .nbaFBLike { width: 110px; }
+#nbaHeader .nbaFBLike iframe { width: 94px; margin-top: 6px; margin-right: 0px; }
+#nbaHeader .nbaSocial .nbaTwitterFollow { width: 206px; }
+#nbaHeader .nbaTwitterFollow iframe { margin-top: 6px; width: 190px; }
+#nbaHeader .nbaSocial .nbaGooglePlus { background: none repeat scroll 0px center transparent; padding: 5px 0px 0px 15px; }
+#nbaHeader .nbaLogo { position: absolute; height: 142px; width: 75px; top: 0px; left: 21px; display: block; z-index: 10001; }
+.nbaLogo a { display: block; height: 142px; width: 75px; text-indent: 100%; overflow: hidden; white-space: nowrap; background: url('nba-logo.png') no-repeat scroll 0px 0px transparent; }
+#nbaHeader #nbaGlobalNav { position: relative; top: 56px; padding-left: 110px; z-index: 10000; }
+#nbaHeader #nbaGlobalNav > ul > li { float: left; display: inline-block; list-style: outside none none; margin-right: 15px; height: 40px; line-height: 38px; position: relative; }
+#nbaHeader .nbaSocial .nbaLogin .nbaGlobal { padding-left: 22px; float: left; }
+#nbaHeader .nbaSocial .nbaLogin .nbaDleague { padding-left: 7px; float: left; }
+#nbaHeader .nbaSocial .nbaLogin .nbaWNBA { padding-left: 7px; float: left; }
+#nbaHeader .nbaSocial .nbaLogin #nbaChromeLogin { width: 274px; float: none; padding-top: 0px; }
+#nbaHeader .nbaSocial .nbaLogin .nbaGlobal > a { background: url('header-sprite.png') repeat scroll -9px -45px transparent; text-indent: 100%; width: 25px; overflow: hidden; white-space: nowrap; height: 25px; position: relative; top: 6px; display: block; }
+#nbaHeader .nbaSocial .nbaLogin .nbaDleague > a { background: url('dleagueheader.png') repeat scroll 0% 0% transparent; text-indent: 100%; width: 47px; overflow: hidden; white-space: nowrap; height: 47px; position: relative; top: -6px; display: block; }
+#nbaHeader .nbaSocial .nbaLogin .nbaWNBA > a { background: url('wnbaheader.png') repeat scroll 0% 0% transparent; text-indent: 100%; width: 26px; overflow: hidden; white-space: nowrap; height: 49px; position: relative; top: -7px; display: block; }
+#nbaHeader .nbaSocial .nbaLogin .nbaGlobal > a:hover { background-position: -45px -45px; }
+#nbaHeader #nbaGlobalNav > ul > li > a { color: rgb(255, 255, 255); font-size: 0.75em; display: inline-block; padding: 0px; text-shadow: 0px -1px 0px rgb(0, 0, 0); }
+#nbaHeader #nbaGlobalNav > ul > li.nbaHover:before, #nbaHeader #nbaGlobalNav > ul > li:hover:before { display: block; content: ""; width: 100%; padding: 15px 10px; background: none repeat scroll 0% 0% rgb(255, 255, 255); position: absolute; z-index: 0; top: 7px; left: -10px; border-top-left-radius: 4px; border-top-right-radius: 4px; box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5); }
+#nbaHeader #nbaGlobalNav > ul > li.nbaHover > a, #nbaHeader #nbaGlobalNav > ul > li:hover > a { color: rgb(0, 0, 0); text-shadow: none; position: relative; z-index: 1; }
+#nbaHeader #nbaGlobalNav > ul > li.nbaHover > a:hover, #nbaHeader #nbaGlobalNav > ul > li:hover > a:hover { color: rgb(0, 102, 221); text-decoration: underline; }
+#nbaHeader #nbaGlobalNav > ul > li.nbaSingleton.nbaHover:before, #nbaHeader #nbaGlobalNav > ul > li.nbaSingleton:hover:before { display: none; }
+#nbaHeader #nbaGlobalNav > ul > li.nbaSingleton.nbaHover > a, #nbaHeader #nbaGlobalNav > ul > li.nbaSingleton:hover > a { color: rgb(255, 255, 255); text-shadow: 0px -1px 0px rgb(0, 0, 0); }
+#nbaHeader #nbaGlobalNav .nbaNavDropdown { position: absolute; left: -999em; }
+#nbaHeader #nbaGlobalNav .nbaHover .nbaNavDropdown, #nbaHeader #nbaGlobalNav li:hover .nbaNavDropdown { left: -10px; right: auto; top: 36px; width: 193px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border-bottom: 5px solid rgb(0, 111, 162); box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5); }
+#nbaHeader #nbaGlobalNav .nbaHover.nbaMenuLeft .nbaNavDropdown, #nbaHeader #nbaGlobalNav li.nbaMenuLeft:hover .nbaNavDropdown { left: auto; right: -10px; top: 36px; width: 193px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border-bottom: 5px solid rgb(0, 111, 162); box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5); }
+#nbaHeader #nbaGlobalNav .nbaNavDropdown a { color: rgb(0, 0, 0); text-shadow: none; font-weight: normal; font-size: 0.8125em; display: block; margin: 0.8em 0px; line-height: 1.3; }
+#nbaHeader #nbaGlobalNav .nbaNavDropdown a:hover { color: rgb(0, 102, 221); text-decoration: underline; }
+#nbaHeader #nbaGlobalNav .nbaTeams .nbaNavDropdown a { line-height: 25px; }
+#nbaHeader #nbaGlobalNav .nbaNavDropdown .nbaNavSubheading { display: block; padding: 4px 16px 0px; font-weight: bold; font-size: 0.875em; line-height: 1.6; }
+#nbaHeader .nbaNavDropdown ul { padding: 0px 16px; }
+#nbaHeader #nbaGlobalNav .nbaNavDropdown li { display: block; line-height: 1.6; text-align: left; }
+#nbaHeader .nbaNavDropdown .nbaPrimary { background: none repeat scroll 0% 0% rgb(255, 255, 255); border-bottom: 1px solid rgb(220, 224, 227); padding-top: 12px; padding-bottom: 20px; }
+#nbaHeader .nbaNavDropdown .nbaSecondary { background: none repeat scroll 0% 0% rgb(242, 242, 242); position: relative; border-top: 1px solid rgb(255, 255, 255); padding-bottom: 20px; padding-top: 12px; }
+#nbaHeader .nbaTeams .nbaNavDropdown .nbaPrimary { background: none repeat scroll 0% 0% rgb(255, 255, 255); padding-bottom: 4px; }
+#nbaHeader .nbaTeams .nbaNavDropdown .nbaSecondary { padding-bottom: 4px; }
+#nbaHeader #nbaGlobalNav .nbaTeams.nbaHover .nbaNavDropdown, #nbaHeader #nbaGlobalNav .nbaTeams:hover .nbaNavDropdown { width: 440px; background: none repeat scroll 0% 0% rgb(242, 242, 242); }
+#nbaHeader .nbaTeams .nbaPrimary, #nbaHeader .nbaTeams .nbaSecondary { float: left; }
+#nbaHeader .nbaTeams .nbaNavDropdown .nbaPrimary { border-bottom: 0px none; border-right: 1px solid rgb(220, 224, 227); background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+#nbaHeader .nbaTeams .nbaNavDropdown .nbaSecondary { border-top: 0px none; border-left: 1px solid rgb(255, 255, 255); }
+#nbaHeader .nbaTeams .nbaNavDropdown ul { padding: 0px 25px; }
+#nbaHeader .nbaTeams .nbaNavDropdown .nbaSecondary ul { padding: 0px 16px 0px 25px; }
+#nbaHeader .nbaTeams .nbaNavDropdown ul ul, #nbaHeader .nbaTeams .nbaNavDropdown .nbaSecondary ul ul { padding: 0px 0px 16px; }
+#nbaHeader .nbaTeams .nbaNavDropdown ul ul li { margin-bottom: 5px; height: 25px; line-height: 25px; }
+#nbaHeader .nbaTeams .nbaNavDropdown ul ul li a { display: block; position: relative; padding-left: 33px; line-height: 25px; }
+#nbaHeader .nbaTeams .nbaNavDropdown ul ul li a:before { position: absolute; top: 0px; left: 0px; display: block; content: ""; background: url('header-sprite.png') no-repeat scroll -10000px -10000px transparent; height: 25px; width: 25px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamATL:before { background-position: -10px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamBOS:before { background-position: -42px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamBKN:before, #nbaHeader .nbaTeams ul ul li a.nbaTeamNJN:before { background-position: -555px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamCHA:before { background-position: -74px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamCHI:before { background-position: -106px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamCLE:before { background-position: -138px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamDAL:before { background-position: -170px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamDEN:before { background-position: -202px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamDET:before { background-position: -234px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamGSW:before { background-position: -266px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamHOU:before { background-position: -298px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamIND:before { background-position: -330px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamLAC:before { background-position: -362px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamLAL:before { background-position: -394px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamMEM:before { background-position: -426px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamMIA:before { background-position: -458px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamMIL:before { background-position: -490px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamMIN:before { background-position: -522px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamNOH:before { background-position: -586px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamNYK:before { background-position: -618px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamOKC:before { background-position: -650px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamORL:before { background-position: -682px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamPHI:before { background-position: -714px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamPHX:before { background-position: -746px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamPOR:before { background-position: -778px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamSAC:before { background-position: -810px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamSAS:before { background-position: -842px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamTOR:before { background-position: -874px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamUTA:before { background-position: -906px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamWAS:before { background-position: -938px -10px; }
+#nbaHeader #nbaGlobalNav .nbaTeams .nbaNavSubheading { text-transform: uppercase; padding: 0px 25px; }
+#nbaHeader #nbaGlobalNav .nbaTeams .nbaSecondary .nbaNavSubheading { text-transform: uppercase; padding: 0px 0px 0px 25px; }
+#nbaHeader .nbaTeams .nbaDivision { display: block; font-weight: bold; font-size: 0.875em; line-height: 2; }
+#nbaHeader #nbaSearch { position: absolute; bottom: 0px; left: 0px; width: 100%; height: 43px; text-align: center; z-index: 1; }
+#nbaHeader #nbaSearch form { position: relative; z-index: 2; background: url('header-sprite.png') repeat scroll -86px -44px transparent; width: 273px; height: 24px; margin: 8px auto 0px; padding: 0px; text-align: left; }
+#nbaHeader #nbaSearch input { background: none repeat scroll 0px center transparent; border: 0px none; font-size: 0.75em; font-weight: bold; position: absolute; top: 0px; left: 10px; z-index: 3; line-height: 23px; height: 23px; color: rgb(102, 102, 102); width: 230px; }
+#nbaHeader #nbaSearch input::-moz-placeholder { color: rgb(102, 102, 102); font-size: 12px; }
+#nbaHeader #nbaSearch label { position: absolute; font-size: 0.75em; font-weight: bold; left: 10px; top: 0px; z-index: 4; display: block; line-height: 24px; height: 24px; color: rgb(102, 102, 102); }
+#nbaHeader #nbaSearch .nbaSubmit { background: none repeat scroll 0% 0% transparent; border: 0px none transparent; position: absolute; top: 0px; right: 0px; height: 24px; width: 30px; display: block; text-indent: 100%; white-space: nowrap; overflow: hidden; cursor: pointer; margin: 0px; padding: 0px; }
+#nbaHeader #nbaSearch .nbaSkin { position: absolute; height: 41px; width: 1000px; z-index: 1; }
+#nbaHeader #nbaStoreNav > ul > li.nbaStore > a { display: block; height: 42px; width: 122px; text-indent: 100%; overflow: hidden; white-space: nowrap; background: url('nbastorebtn.png') no-repeat scroll 0px 0px transparent; }
+#nbaHeader #nbaStoreNav > ul > li.nbaStore > a:hover, #nbaHeader #nbaStoreNav > ul > li.nbaStore:hover > a { display: block; height: 42px; width: 122px; text-indent: 100%; overflow: hidden; white-space: nowrap; background: url('nbastorebtn.png') no-repeat scroll 0px -44px transparent; }
+#nbaHeader #nbaStoreNav { position: absolute; top: 8px; right: 27px; z-index: 10000; }
+#nbaHeader #nbaStoreNav > ul > li { float: left; display: inline-block; list-style: outside none none; margin-right: 16px; height: 40px; line-height: 38px; position: relative; }
+#nbaHeader #nbaStoreNav > ul > li > a { color: rgb(255, 255, 255); font-size: 0.75em; display: inline-block; padding: 0px; text-shadow: 0px -1px 0px rgb(0, 0, 0); }
+#nbaHeader #nbaStoreNav > ul > li:hover > a { color: rgb(0, 0, 0); text-shadow: none; position: relative; z-index: 1; }
+#nbaHeader #nbaStoreNav > ul > li:hover > a:hover { color: rgb(0, 102, 221); text-decoration: underline; }
+#nbaHeader #nbaStoreNav .nbaNavDropdown { position: absolute; left: -999em; }
+#nbaHeader #nbaStoreNav li:hover .nbaNavDropdown { left: -10px; right: auto; top: 36px; width: 193px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border-bottom: 5px solid rgb(0, 111, 162); box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5); }
+#nbaHeader #nbaStoreNav li.nbaMenuLeft:hover .nbaNavDropdown { left: auto; right: 2px; top: 40px; width: 193px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border-bottom: 5px solid rgb(0, 111, 162); box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5); }
+#nbaHeader #nbaStoreNav .nbaNavDropdown a { color: rgb(0, 0, 0); text-shadow: none; font-weight: normal; font-size: 13px; display: block; margin: 0.8em 0px; line-height: 16px; }
+#nbaHeader #nbaStoreNav .nbaNavDropdown a:hover { color: rgb(0, 102, 221); text-decoration: underline; }
+#nbaHeader .nbaNavDropdown ul { padding: 0px 16px; }
+#nbaHeader #nbaStoreNav .nbaNavDropdown li { display: block; line-height: 1.6; text-align: left; }
+#nbaHeader.nbaThird #nbaGlobalNav > ul > li > a, #nbaHeader #nbaGlobalNav .nbaNavDropdown a, .nbaLogin a { text-decoration: none; }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	#nbaHeader #nbaGlobalNav { padding-left: 106px; }
+	#nbaHeader #nbaGlobalNav > ul > li:first-child { margin-right: 14px; }
+}
+#nbaFooter { background: none repeat scroll 0% 0% rgb(0, 0, 0); color: rgb(255, 255, 255); padding: 0px 1px; }
+#nbaFooter h3 { color: rgb(255, 255, 255); font-size: 12px; padding-bottom: 12px; }
+#nbaFooter ul { list-style: outside none none; }
+#nbaFooter .nbaContainer { border-left: 1px solid rgb(51, 51, 51); border-right: 1px solid rgb(51, 51, 51); border-bottom: 1px solid rgb(9, 9, 9); background: none repeat scroll 0% 0% rgb(37, 37, 37); padding: 35px 28px; }
+#nbaFooter section { width: 969px; margin-left: -29px; padding-left: 29px; margin-bottom: 30px; border-bottom: 1px solid rgb(50, 50, 50); }
+#nbaFooter section:after { content: ""; display: block; margin-left: -30px; width: 1000px; border-bottom: 1px solid rgb(0, 0, 0); margin-top: 30px; }
+#nbaFooter .nbaRow { clear: left; margin-bottom: 35px; }
+#nbaFooter .nbaRow.nbaLast { margin-bottom: 0px; }
+#nbaFooter .nbaRow > div { float: left; width: 300px; margin-right: 20px; }
+#nbaFooter .nbaRow > .nbaSplit > div { width: 145px; margin-right: 10px; float: left; }
+#nbaFooter .nbaRow > .nbaLast, #nbaFooter .nbaRow > .nbaSplit > .nbaLast { margin-right: 0px; }
+#nbaFooter .nbaInside li { border-bottom: 1px solid rgb(2, 2, 2); border-top: 1px solid rgb(51, 51, 51); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%; padding-top: 6px; padding-bottom: 8px; color: rgb(194, 194, 194); }
+#nbaFooter .nbaInside .nbaLast { border-bottom: 0px none; }
+#nbaFooter .nbaInside .nbaFirst { border-top: 0px none; padding-top: 0px; }
+#nbaFooter .nbaNews li { border-bottom: 1px solid rgb(2, 2, 2); border-top: 1px solid rgb(51, 51, 51); padding-top: 4px; padding-bottom: 8px; color: rgb(255, 255, 255); line-height: 1.4; height: 28px; overflow: hidden; }
+#nbaFooter .nbaNews li .nbaTwoLiner { display: inline-block; height: 2.8em; overflow: hidden; color: rgb(255, 255, 255); }
+#nbaFooter .nbaNews .nbaLast { border-bottom: 0px none; }
+#nbaFooter .nbaNews .nbaFirst { border-top: 0px none; padding-top: 0px; }
+#nbaFooter .nbaSponsored li { margin-bottom: 6px; background: none repeat scroll 0% 0% rgb(59, 59, 59); height: 100px; width: 300px; overflow: hidden; }
+#nbaFooter .nbaPersonalities li { background: none repeat scroll 0% 0% rgb(26, 26, 26); margin-bottom: 5px; display: block; height: 65px; }
+#nbaFooter .nbaPersonalities li:before, #nbaFooter .nbaPersonalities li:after { content: ""; display: table; }
+#nbaFooter .nbaPersonalities li:after { clear: both; }
+#nbaFooter .nbaPersonalities .nbaContainer { border: 0px none; background: none repeat scroll 0px center transparent; padding: 0px; float: left; width: 196px; }
+#nbaFooter .nbaPersonalities .nbaContainer p { margin: 0px; padding: 0px; color: rgb(194, 194, 194); height: 3em; overflow: hidden; }
+#nbaFooter .nbaPersonalities .nbaContainer a { text-decoration: underline; }
+#nbaFooter .nbaPersonalities .nbaThumbnail { float: left; height: 64px; margin: 0px; width: 85px; }
+#nbaFooter .nbaPersonalize h4 { font-size: 0.75em; font-weight: bold; color: rgb(255, 255, 255); padding: 8px 8px 4px; }
+#nbaFooter .nbaPersonalize p { font-size: 0.75em; color: rgb(194, 194, 194); padding: 0px 8px 4px; line-height: 1.3; }
+#nbaFooter .nbaPersonalize .nbaFacebookConnect { margin: 8px 0px 0px 8px; text-indent: 120%; }
+#nbaFooter .nbaWnba h3, #nbaFooter .nbaDLeague h3 { display: inline-block; position: relative; padding-right: 25px; }
+#nbaFooter .nbaWnba h3 { padding-right: 20px; }
+#nbaFooter .nbaWnba h3:before { background: url('footer-sprite.png') repeat scroll 0px 0px transparent; height: 24px; width: 15px; position: absolute; right: 0px; display: block; content: ""; top: -4px; }
+#nbaFooter .nbaDLeague h3:before { background: url('footer-sprite.png') repeat scroll -16px 0px transparent; height: 24px; width: 21px; position: absolute; display: block; content: ""; top: -4px; right: 0px; }
+#nbaHomepage #nbaFooter .nbaDLeague h4 a, #nbaHomepage #nbaFooter .nbaWnba h4 a { font-size: 0.75em; font-weight: bold; color: rgb(255, 255, 255); padding: 8px 0px 4px; }
+#nbaHomepage #nbaFooter .nbaDLeague p, #nbaHomepage #nbaFooter .nbaWnba p { font-size: 0.75em; color: rgb(194, 194, 194); padding: 0px 0px 4px; line-height: 1.3; }
+#nbaFooter .nbaDLeague .nbaContent, #nbaFooter .nbaWnba .nbaContent { height: 84px; overflow: hidden; }
+#nbaFooter .nbaWnba .nbaBullets li, #nbaFooter .nbaDLeague .nbaBullets li { list-style: inside none disc; margin-left: 8px; line-height: 1.2; color: rgb(255, 255, 255); text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+#nbaFooter #nbaFooterNav { clear: left; }
+#nbaFooter #nbaFooterNav h3 { font-size: 12px; text-transform: uppercase; color: rgb(255, 255, 255); font-weight: bold; }
+#nbaFooter #nbaFooterNav .nbaSplit { float: left; width: 300px; margin-right: 20px; }
+#nbaFooter #nbaFooterNav .nbaSplit > ul { width: 145px; margin-right: 10px; float: left; }
+#nbaFooter #nbaFooterNav ul ul li { font-size: 12px; line-height: 1.4; }
+#nbaFooter #nbaFooterNav ul ul li a { color: rgb(194, 194, 194); font-weight: normal; font-size: 12px; }
+#nbaFooter #nbaFooterNav .nbaSplit .nbaLast, #nbaFooter #nbaFooterNav .nbaSplit.nbaLast { margin-right: 0px; }
+#nbaFooter .nbaLegal { clear: left; color: rgb(255, 255, 255); }
+#nbaFooter .nbaLegal p { font-size: 10px; line-height: 1.6; color: rgb(255, 255, 255); padding-bottom: 10px; }
+#nbaFooter .nbaLegal a { color: rgb(194, 194, 194); font-size: 10px; }
+#nbaFooter .nbaLegal .nbaAdInfo, #nbaFooter .nbaLegal .nbaAdInfo a { color: rgb(194, 194, 194); }
+#nbaFooter .nbaLegal .nbaTurnerLogo { background: url('footer-sprite.png') repeat scroll -64px 0px transparent; text-indent: 100%; overflow: hidden; white-space: nowrap; width: 67px; height: 16px; margin: 0px; padding: 0px; display: block; }
+#nbaFooter .nbaLegal .nbaAdInfo a.nbaAdChoices { display: inline-block; height: 20px; padding-right: 16px; background: url('logo_ad_choices_footer.png') no-repeat scroll right 2px transparent; }
+.ui-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
+.ui-widget { font-family: "Helvetica Neue",Helvetica Neue,Helvetica,Arial,Liberation Sans,sans-serif; font-size: 1.1em; }
+.ui-widget-content { border: 1px solid rgb(170, 170, 170); background: url('ui-bg_flat_75_ffffff_40x100.png@') repeat-x scroll 50% 50% rgb(255, 255, 255); color: rgb(34, 34, 34); }
+.ui-widget-content a { color: rgb(34, 34, 34); }
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { border: 1px solid rgb(211, 211, 211); background: url('ui-bg_glass_75_e6e6e6_1x400.png@') repeat-x scroll 50% 50% rgb(230, 230, 230); font-weight: normal; color: rgb(85, 85, 85); }
+.ui-widget :active { outline: 0px none; }
+.ui-icon { width: 16px; height: 16px; background-image: url('ui-icons_222222_256x240.png@'); }
+.ui-state-default .ui-icon { background-image: url('ui-icons_888888_256x240.png@'); }
+.ui-icon-triangle-1-s { background-position: -64px -16px; }
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl { border-top-left-radius: 4px; }
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr { border-top-right-radius: 4px; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl { border-bottom-left-radius: 4px; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br { border-bottom-right-radius: 4px; }
+.ui-selectmenu { display: inline-block; position: relative; height: 2.2em; vertical-align: middle; text-decoration: none; overflow: hidden; }
+.ui-selectmenu-icon { position: absolute; right: 6px; margin-top: -8px; top: 50%; }
+.ui-selectmenu-menu { padding: 0px; margin: 0px; position: absolute; top: 0px; display: none; z-index: 1005; }
+.ui-selectmenu-menu ul { padding: 0px; margin: 0px; list-style: outside none none; position: relative; overflow-y: auto; overflow-x: hidden; }
+.ui-selectmenu-menu li { padding: 0px; margin: 0px; display: block; border-top: 1px dotted transparent; border-bottom: 1px dotted transparent; border-right-width: 0px ! important; border-left-width: 0px ! important; font-weight: normal ! important; }
+.ui-selectmenu-menu li a, .ui-selectmenu-status { line-height: 1.4em; display: block; padding: 0.405em 2.1em 0.405em 1em; outline: 0px none; text-decoration: none; }
+.ui-selectmenu-status { line-height: 1.4em; }
+/* ::::: http://z.cdn.turner.com/nba/tmpl_asset/static/nba-cms3-desktop/1307/css/pkgCountdown-min.css ::::: */
+
+/* ::::: http://z.cdn.turner.com/nba/tmpl_asset/static/nba-cms3-homepage/1538/css/pkg-min.css ::::: */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin: 0px; padding: 0px; border: 0px none; outline: 0px none; font-size: 100%; vertical-align: baseline; background: none repeat scroll 0% 0% transparent; }
+body { line-height: 1; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+nav ul { list-style: outside none none; }
+a { margin: 0px; padding: 0px; font-size: 100%; vertical-align: baseline; background: none repeat scroll 0% 0% transparent; }
+table { border-collapse: collapse; border-spacing: 0px; }
+input, select { vertical-align: middle; }
+body { background: url('homepage-bg.jpg') repeat scroll 0px 0px rgb(146, 146, 146); font-family: "Helvetica Neue",Helvetica Neue,Helvetica,Arial,Liberation Sans,sans-serif; }
+#nbaHomepage input, #nbaHomepage textarea, #nbaHomepage button { font-family: "Helvetica Neue",Helvetica Neue,Helvetica,Arial,Liberation Sans,sans-serif; }
+#nbaHomepage p, #nbaHomepage td, #nbaHomepage div, #nbaHomepage span { color: rgb(50, 50, 50); }
+#nbaHomepage a, #nbaHomepage a:link, #nbaHomepage a:active { font-size: 12px; font-weight: bold; color: rgb(0, 0, 0); text-decoration: none; }
+#nbaHomepage a:hover { text-decoration: underline; }
+#nbaHomepage a.nbaLinkArrow_1 { font-size: 12px; font-weight: bold; color: rgb(0, 0, 0); text-decoration: none; padding-right: 10px; position: relative; display: inline-block; }
+#nbaHomepage a.nbaLinkArrow_1:hover { color: rgb(0, 102, 221); text-decoration: underline; }
+#nbaHomepage a.nbaLinkArrow_1:before { position: absolute; height: 10px; width: 7px; bottom: 0px; right: 0px; background: url('global-sprite.png') no-repeat scroll 0px 0px transparent; content: ""; display: block; }
+#nbaHomepage a.nbaLinkWatch { position: relative; display: inline-block; padding-left: 15px; padding-top: 0px; }
+#nbaHomepage a.nbaLinkWatch:before { position: absolute; content: ""; display: block; height: 12px; width: 14px; left: 0px; top: 0px; background: url('global-sprite.png') no-repeat scroll -8px 0px transparent; }
+#nbaHomepage a.nbaFacebookConnect { display: block; margin: 0px auto; width: 183px; height: 27px; text-indent: 100%; overflow: hidden; white-space: nowrap; background: url('news-sprite.png') no-repeat scroll -160px 0px transparent; font-size: 0.5em; font-weight: normal; }
+#nbaHomepage sup { vertical-align: super; font-size: 50%; }
+#nbaHomepage .nbaAd { text-align: center; }
+#nbaHomepage .nbaAd.nbaOPA { margin-bottom: 5px; }
+#nbaHomepage .nbaAd.nbaCombo { margin: 18px 25px; }
+#nbaHomepage .nbaAd.nbaCombo .nbaAd { float: left; }
+#nbaHomepage .nbaAd.nbaCombo .nbaLeft { width: 200px; margin-right: 10px; }
+#nbaHomepage .nbaAd.nbaCombo .nbaRight { width: 728px; float: right; }
+.nbaPage { width: 1000px; margin: 0px auto; }
+.nbaSectionRow { background-color: rgb(242, 242, 242); min-height: 345px; border-bottom: 5px solid rgb(0, 95, 159); margin-bottom: 8px; box-shadow: 0px 0px 5px rgb(102, 102, 102); }
+.nbaSectionRow.nbaLast { margin-bottom: 0px; }
+.nbaSectionRow.nbaNoBorder { border: 0px none; }
+.nbaSectionRow .nbaRowHeader { border-bottom: 1px solid rgb(220, 223, 226); font-size: 22px; height: 29px; padding: 11px 10px 5px 30px; background-color: rgb(255, 255, 255); font-weight: bold; }
+.nbaSectionRow .nbaRowHeader h2 { float: left; }
+#nbaHomepage .nbaSectionRow h3, #nbaHomepage .nbaSectionRow h3 a { font-size: 1em; color: rgb(0, 0, 0); }
+.nbaSectionRow h3 a:hover { color: rgb(0, 0, 0); }
+.nbaSectionRow section { background-color: rgb(242, 242, 242); float: left; height: 303px; margin: 0px 0px 1px 1px; padding: 0px 9px; width: 300px; border-top: 1px solid rgb(255, 255, 255); border-right: 1px solid rgb(220, 223, 226); position: relative; }
+.nbaSectionRow section .nbaSponsorArea { width: 88px; height: 31px; position: absolute; top: -12px; right: 0px; }
+.nbaSectionRow section .nbaSectionContent { margin: 25px 10px 11px; position: relative; }
+.nbaSectionRow .nbaFirst .nbaSectionContent { margin: 25px 0px 11px; }
+.nbaSectionRow .nbaLast .nbaSectionContent { margin: 25px 0px 15px 10px; }
+.nbaSectionRow .nbaLast .nbaSectionContent.nbaNum0 { margin: 25px 0px 11px; }
+.nbaSectionRow section .nbaSectionContent.nbaFlex { padding: 0px; }
+#nbaHomepage .nbaSectionRow section .nbaSectionContent.nbaFlex .nbaAdNotice { color: rgb(96, 96, 96); font-size: 9px; height: 9px; position: absolute; right: 0px; text-align: right; top: -12px; width: 88px; }
+.nbaSectionRow section.nbaFirst { padding: 0px 9px 0px 29px; }
+.nbaSectionRow section.nbaLast { border-right: 1px solid rgb(255, 255, 255); padding: 0px 29px 0px 9px; }
+.nbaPrettyTable_1, .nbaPrettyTable_2 { text-align: left; border-collapse: separate; }
+.nbaPrettyTable_1 thead th { border-bottom: 1px solid rgb(220, 223, 226); text-transform: uppercase; font-size: 0.8125em; padding: 4px; }
+.nbaPrettyTable_1 tbody tr:first-child td { border-top: 1px solid rgb(255, 255, 255); }
+.nbaPrettyTable_1 tbody td { padding: 4px 0px 7px; font-size: 0.6875em; }
+.nbaFlex { width: 300px; height: 250px; padding: 0px; float: left; }
+.nbaSectionRow section .nbaFlex.nbaSectionContent { margin-right: 0px; }
+.nbaSectionRow .nbaSectionContent.nbaFlex.nbaSplit { width: 145px; }
+.nbaSectionRow .nbaFlex.nbaSplit.nbaNum0 { margin-right: 2px; margin-left: 2px; }
+.nbaSectionRow .nbaFlex.nbaSplit.nbaNum1 { margin-left: 6px; }
+.nbaFlex a { font-weight: inherit; }
+.nbaFlex a:hover { color: rgb(0, 0, 0); }
+.nbaFlex .nbaFlexPanel .nbaThumbnail img { display: block; height: 124px; width: 296px; }
+.nbaFlex.nbaSplit .nbaFlexPanel .nbaThumbnail img { width: 141px; height: 96px; }
+.nbaFlex .nbaFlexPanel h3 { margin-bottom: 5px; height: 1.2em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nbaFlex .nbaFlexPanel .nbaFlexContent { position: relative; border-width: 1px; border-style: solid; border-color: rgb(220, 223, 226) rgb(220, 223, 226) rgb(211, 211, 211); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; background-color: rgb(255, 255, 255); padding: 1px; height: 222px; }
+.nbaFlex .nbaFlexPanel .nbaFlexContent h4 { font-size: 12px; padding: 8px 4px 4px 8px; line-height: 1.2; height: 1.2em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nbaFlex .nbaFlexPanel .nbaFlexContent h4 a:hover { text-decoration: underline; }
+.nbaFlex.nbaSplit .nbaFlexPanel .nbaFlexContent h4 { height: auto; white-space: normal; max-height: 2.2em; overflow: hidden; }
+.nbaFlex .nbaFlexPanel p { display: block; font-size: 12px; height: 29px; line-height: 1.2; overflow: hidden; padding: 0px 6px 0px 8px; }
+.nbaFlex.nbaSplit .nbaFlexPanel p { height: 44px; }
+.nbaFlex .nbaFlexPanel .nbaSocial { height: 26px; padding-top: 7px; background-color: rgb(244, 244, 244); text-align: center; position: absolute; width: 296px; bottom: 1px; overflow: hidden; }
+.nbaFlex.nbaSplit .nbaFlexPanel .nbaSocial { width: 141px; }
+.nbaFlex .nbaFlexPanel .nbaSocial > div { display: inline-block; }
+.nbaFlex .nbaFlexPanel .nbaSocial .nbaFbLike { margin: 0px 3px 0px 0px; overflow: hidden; width: 49px; height: 21px; }
+.nbaFlex .nbaFlexPanel .nbaSocial .nbaFbLike iframe { border: 0px none; width: 49px; height: 21px; }
+.nbaFlex .nbaFlexPanel .nbaSocial .twitter-share-button { margin: 0px; overflow: hidden; width: 57px; height: 21px; }
+.nbaFlex .nbaFlexPanel .nbaSocial .twitter-share-button iframe { border: 0px none; width: 57px; height: auto; }
+.nbaPager { list-style-type: none; }
+.nbaPagerContent { list-style-type: none; }
+.nbaPager li { display: inline; margin: 4px 6px; }
+#nbaHomepage .nbaPager li a { font-size: 12px; font-weight: bold; color: rgb(68, 68, 68); text-shadow: -1px -1px 2px rgb(255, 255, 255); }
+#nbaHomepage .nbaPager li.active a { color: rgb(0, 95, 159); }
+#nbaHomepage .nbaPager li a:hover { color: rgb(0, 95, 159); }
+.nbaPager li.previous, .nbaPager li.next, .nbaPager li.daily { background: url('stats-standings-sprite_001.png') no-repeat scroll 0px 0px transparent; height: 21px; width: 21px; margin: 4px 3px; }
+#nbaHomepage .nbaPager li.previous a, #nbaHomepage .nbaPager li.next a, #nbaHomepage .nbaPager li.daily a { text-indent: 100%; white-space: nowrap; overflow: hidden; display: block; height: 100%; }
+.nbaPager li.previous { background-position: -192px -68px; }
+.nbaPager li.previous:hover { background-position: -192px -37px; }
+.nbaPager li.previous:active { background-position: -192px -99px; }
+.nbaPager li.previous.inactive { background-position: -217px -37px; }
+.nbaPager li.previous.inactive a { cursor: default; }
+.nbaPager li.next { background-position: -216px -68px; }
+.nbaPager li.next:hover { background-position: -192px -7px; }
+.nbaPager li.next:active { background-position: -219px -99px; }
+.nbaPager li.daily { background-position: -240px -7px; height: 17px; width: 15px; }
+.nbaPager li.daily.active, .nbaPager li.daily.last.active { background-position: -240px -37px; }
+.nbaPager li.daily.last { background-position: -240px -7px; border-right: 1px solid rgb(204, 204, 204); width: 22px; margin-right: 0px; }
+.nbaPager li.first { border-left: 1px solid rgb(255, 255, 255); height: 17px; margin-left: 0px; width: inherit; padding-left: 9px; }
+#nbaHomepage .ui-selectmenu-menu li a { font-weight: normal; font-size: 12px; color: rgb(54, 54, 54); }
+.ui-selectmenu-status { font-weight: normal; font-size: 12px; color: rgb(87, 87, 87); }
+a.ui-selectmenu-dropdown { background: url('stats-standings-sprite_001.png') no-repeat scroll -29px -6px transparent; border: 0px none; height: 27px; }
+a.ui-selectmenu-dropdown .ui-selectmenu-icon { display: none; }
+.ui-widget-content.ui-selectmenu-menu-dropdown { border: 1px solid rgb(204, 204, 204); margin-top: -2px; width: 149px ! important; }
+.nbaAssist { position: absolute ! important; clip: rect(1px, 1px, 1px, 1px); }
+.nbaNoJsAssist { display: none; }
+.nbaClear:before, .nbaClear:after { content: ""; display: table; }
+.nbaClear:after { clear: both; }
+.nbaClear { display: block; }
+.nbaHide { display: none; }
+#nbaHeader { background: url('header-bg_001.jpg') no-repeat scroll 0px 0px rgb(0, 107, 181); position: relative; height: 139px; margin-bottom: 5px; box-shadow: 0px -1px 1px rgb(5, 5, 5) inset, 0px 1px 4px rgb(71, 71, 71); z-index: 3; }
+#nbaHeader .nbaSocial { height: 56px; position: absolute; top: 12px; left: 86px; }
+#nbaHeader .nbaSocial iframe { border: 0px none transparent; background-color: transparent; height: 30px; overflow: hidden; margin: 0px 0px 0px 14px; padding: 0px; }
+#nbaHeader .nbaSocial > div { float: left; margin: 0px; background: url('header-social-pipe_001.png') repeat-y scroll right top transparent; height: 35px; }
+#nbaHeader .nbaSocial .nbaLogin { width: 274px; text-align: right; font-size: 0.6875em; color: rgb(255, 255, 255); line-height: 35px; padding-right: 15px; }
+#nbaHeader .nbaSocial .Action { float: right; color: rgb(255, 255, 255); }
+#nbaHeader .nbaSocial .User { float: right; padding-right: 5px; color: rgb(255, 255, 255); }
+#nbaHeader .nbaSocial .nbaLogin a { color: rgb(255, 255, 255); font-weight: normal; font-size: inherit; }
+#nbaHeader .nbaSocial .nbaLogin a:hover { color: rgb(255, 255, 255); text-decoration: underline; }
+#nbaHeader .nbaSocial .nbaFBLike { width: 110px; }
+#nbaHeader .nbaFBLike iframe { width: 94px; margin-top: 6px; margin-right: 0px; }
+#nbaHeader .nbaSocial .nbaTwitterFollow { width: 206px; }
+#nbaHeader .nbaTwitterFollow iframe { margin-top: 6px; width: 190px; }
+#nbaHeader .nbaSocial .nbaGooglePlus { background: none repeat scroll 0px center transparent; padding: 5px 0px 0px 15px; }
+#nbaHeader .nbaLogo { position: absolute; height: 142px; width: 75px; top: 0px; left: 21px; display: block; z-index: 10001; }
+.nbaLogo a { display: block; height: 142px; width: 75px; text-indent: 100%; overflow: hidden; white-space: nowrap; background: url('nba-logo_001.png') no-repeat scroll 0px 0px transparent; }
+#nbaHeader #nbaGlobalNav { position: relative; top: 56px; width: 889px; padding-left: 110px; z-index: 10000; }
+#nbaHeader #nbaGlobalNav > ul > li { float: left; display: inline-block; list-style: outside none none; margin-right: 15px; height: 40px; line-height: 38px; position: relative; }
+#nbaHeader .nbaSocial .nbaLogin .nbaGlobal { padding-left: 22px; float: left; }
+#nbaHeader .nbaSocial .nbaLogin .nbaDleague { padding-left: 7px; float: left; }
+#nbaHeader .nbaSocial .nbaLogin .nbaWNBA { padding-left: 7px; float: left; }
+#nbaHeader .nbaSocial .nbaLogin #nbaChromeLogin { width: 274px; float: none; padding-top: 0px; }
+#nbaHeader .nbaSocial .nbaLogin .nbaGlobal > a { background: url('header-sprite_001.png') repeat scroll -9px -45px transparent; text-indent: 100%; width: 25px; overflow: hidden; white-space: nowrap; height: 25px; position: relative; top: 6px; display: block; }
+#nbaHeader .nbaSocial .nbaLogin .nbaDleague > a { background: url('dleagueheader_001.png') repeat scroll 0% 0% transparent; text-indent: 100%; width: 47px; overflow: hidden; white-space: nowrap; height: 47px; position: relative; top: -6px; display: block; }
+#nbaHeader .nbaSocial .nbaLogin .nbaWNBA > a { background: url('wnbaheader_001.png') repeat scroll 0% 0% transparent; text-indent: 100%; width: 26px; overflow: hidden; white-space: nowrap; height: 49px; position: relative; top: -7px; display: block; }
+#nbaHeader .nbaSocial .nbaLogin .nbaGlobal > a:hover { background-position: -45px -45px; }
+#nbaHeader #nbaGlobalNav > ul > li > a { color: rgb(255, 255, 255); font-size: 0.75em; display: inline-block; padding: 0px; text-shadow: 0px -1px 0px rgb(0, 0, 0); }
+#nbaHeader #nbaGlobalNav > ul > li.nbaHover:before, #nbaHeader #nbaGlobalNav > ul > li:hover:before { display: block; content: ""; width: 100%; padding: 15px 10px; background: none repeat scroll 0% 0% rgb(255, 255, 255); position: absolute; z-index: 0; top: 7px; left: -10px; border-top-left-radius: 4px; border-top-right-radius: 4px; box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5); }
+#nbaHeader #nbaGlobalNav > ul > li.nbaHover > a, #nbaHeader #nbaGlobalNav > ul > li:hover > a { color: rgb(0, 0, 0); text-shadow: none; position: relative; z-index: 1; }
+#nbaHeader #nbaGlobalNav > ul > li.nbaHover > a:hover, #nbaHeader #nbaGlobalNav > ul > li:hover > a:hover { color: rgb(0, 102, 221); text-decoration: underline; }
+#nbaHeader #nbaGlobalNav > ul > li.nbaSingleton.nbaHover:before, #nbaHeader #nbaGlobalNav > ul > li.nbaSingleton:hover:before { display: none; }
+#nbaHeader #nbaGlobalNav > ul > li.nbaSingleton.nbaHover > a, #nbaHeader #nbaGlobalNav > ul > li.nbaSingleton:hover > a { color: rgb(255, 255, 255); text-shadow: 0px -1px 0px rgb(0, 0, 0); }
+#nbaHeader #nbaGlobalNav .nbaNavDropdown { position: absolute; left: -999em; }
+#nbaHeader #nbaGlobalNav .nbaHover .nbaNavDropdown, #nbaHeader #nbaGlobalNav li:hover .nbaNavDropdown { left: -10px; right: auto; top: 36px; width: 193px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border-bottom: 5px solid rgb(0, 111, 162); box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5); }
+#nbaHeader #nbaGlobalNav .nbaHover.nbaMenuLeft .nbaNavDropdown, #nbaHeader #nbaGlobalNav li.nbaMenuLeft:hover .nbaNavDropdown { left: auto; right: -10px; top: 36px; width: 193px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border-bottom: 5px solid rgb(0, 111, 162); box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5); }
+#nbaHeader #nbaGlobalNav .nbaNavDropdown a { color: rgb(0, 0, 0); text-shadow: none; font-weight: normal; font-size: 0.8125em; display: block; margin: 0.8em 0px; line-height: 1.3; }
+#nbaHeader #nbaGlobalNav .nbaNavDropdown a:hover { color: rgb(0, 102, 221); text-decoration: underline; }
+#nbaHeader #nbaGlobalNav .nbaTeams .nbaNavDropdown a { line-height: 25px; }
+#nbaHeader #nbaGlobalNav .nbaNavDropdown .nbaNavSubheading { display: block; padding: 4px 16px 0px; font-weight: bold; font-size: 0.875em; line-height: 1.6; }
+#nbaHeader .nbaNavDropdown ul { padding: 0px 16px; }
+#nbaHeader #nbaGlobalNav .nbaNavDropdown li { display: block; line-height: 1.6; text-align: left; }
+#nbaHeader .nbaNavDropdown .nbaPrimary { background: none repeat scroll 0% 0% rgb(255, 255, 255); border-bottom: 1px solid rgb(220, 224, 227); padding-top: 12px; padding-bottom: 20px; }
+#nbaHeader .nbaNavDropdown .nbaSecondary { background: none repeat scroll 0% 0% rgb(242, 242, 242); position: relative; border-top: 1px solid rgb(255, 255, 255); padding-bottom: 20px; padding-top: 12px; }
+#nbaHeader .nbaTeams .nbaNavDropdown .nbaPrimary { background: none repeat scroll 0% 0% rgb(255, 255, 255); padding-bottom: 4px; }
+#nbaHeader .nbaTeams .nbaNavDropdown .nbaSecondary { padding-bottom: 4px; }
+#nbaHeader #nbaGlobalNav .nbaTeams.nbaHover .nbaNavDropdown, #nbaHeader #nbaGlobalNav .nbaTeams:hover .nbaNavDropdown { width: 440px; background: none repeat scroll 0% 0% rgb(242, 242, 242); }
+#nbaHeader .nbaTeams .nbaPrimary, #nbaHeader .nbaTeams .nbaSecondary { float: left; }
+#nbaHeader .nbaTeams .nbaNavDropdown .nbaPrimary { border-bottom: 0px none; border-right: 1px solid rgb(220, 224, 227); background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+#nbaHeader .nbaTeams .nbaNavDropdown .nbaSecondary { border-top: 0px none; border-left: 1px solid rgb(255, 255, 255); }
+#nbaHeader .nbaTeams .nbaNavDropdown ul { padding: 0px 25px; }
+#nbaHeader .nbaTeams .nbaNavDropdown .nbaSecondary ul { padding: 0px 16px 0px 25px; }
+#nbaHeader .nbaTeams .nbaNavDropdown ul ul, #nbaHeader .nbaTeams .nbaNavDropdown .nbaSecondary ul ul { padding: 0px 0px 16px; }
+#nbaHeader .nbaTeams .nbaNavDropdown ul ul li { margin-bottom: 5px; height: 25px; line-height: 25px; }
+#nbaHeader .nbaTeams .nbaNavDropdown ul ul li a { display: block; position: relative; padding-left: 33px; line-height: 25px; }
+#nbaHeader .nbaTeams .nbaNavDropdown ul ul li a:before { position: absolute; top: 0px; left: 0px; display: block; content: ""; background: url('header-sprite_001.png') no-repeat scroll -10000px -10000px transparent; height: 25px; width: 25px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamATL:before { background-position: -10px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamBOS:before { background-position: -42px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamBKN:before, #nbaHeader .nbaTeams ul ul li a.nbaTeamNJN:before { background-position: -555px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamCHA:before { background-position: -74px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamCHI:before { background-position: -106px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamCLE:before { background-position: -138px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamDAL:before { background-position: -170px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamDEN:before { background-position: -202px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamDET:before { background-position: -234px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamGSW:before { background-position: -266px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamHOU:before { background-position: -298px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamIND:before { background-position: -330px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamLAC:before { background-position: -362px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamLAL:before { background-position: -394px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamMEM:before { background-position: -426px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamMIA:before { background-position: -458px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamMIL:before { background-position: -490px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamMIN:before { background-position: -522px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamNOH:before { background-position: -586px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamNYK:before { background-position: -618px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamOKC:before { background-position: -650px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamORL:before { background-position: -682px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamPHI:before { background-position: -714px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamPHX:before { background-position: -746px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamPOR:before { background-position: -778px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamSAC:before { background-position: -810px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamSAS:before { background-position: -842px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamTOR:before { background-position: -874px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamUTA:before { background-position: -906px -10px; }
+#nbaHeader .nbaTeams ul ul li a.nbaTeamWAS:before { background-position: -938px -10px; }
+#nbaHeader #nbaGlobalNav .nbaTeams .nbaNavSubheading { text-transform: uppercase; padding: 0px 25px; }
+#nbaHeader #nbaGlobalNav .nbaTeams .nbaSecondary .nbaNavSubheading { text-transform: uppercase; padding: 0px 0px 0px 25px; }
+#nbaHeader .nbaTeams .nbaDivision { display: block; font-weight: bold; font-size: 0.875em; line-height: 2; }
+#nbaHeader #nbaSearch { position: absolute; bottom: 0px; left: 0px; width: 100%; height: 43px; text-align: center; z-index: 1; }
+#nbaHeader #nbaSearch form { position: relative; z-index: 2; background: url('header-sprite_001.png') repeat scroll -86px -44px transparent; width: 273px; height: 24px; margin: 8px auto 0px; padding: 0px; text-align: left; }
+#nbaHeader #nbaSearch input { background: none repeat scroll 0px center transparent; border: 0px none; font-size: 0.75em; font-weight: bold; position: absolute; top: 0px; left: 10px; z-index: 3; line-height: 23px; height: 23px; color: rgb(102, 102, 102); width: 230px; }
+#nbaHeader #nbaSearch input::-moz-placeholder { color: rgb(102, 102, 102); font-size: 12px; }
+#nbaHeader #nbaSearch label { position: absolute; font-size: 0.75em; font-weight: bold; left: 10px; top: 0px; z-index: 4; display: block; line-height: 24px; height: 24px; color: rgb(102, 102, 102); }
+#nbaHeader #nbaSearch .nbaSubmit { background: none repeat scroll 0% 0% transparent; border: 0px none transparent; position: absolute; top: 0px; right: 0px; height: 24px; width: 30px; display: block; text-indent: 100%; white-space: nowrap; overflow: hidden; cursor: pointer; margin: 0px; padding: 0px; }
+#nbaHeader #nbaSearch .nbaSkin { position: absolute; height: 41px; width: 1000px; z-index: 1; }
+#nbaHeader #nbaStoreNav > ul > li.nbaStore > a { display: block; height: 42px; width: 122px; text-indent: 100%; overflow: hidden; white-space: nowrap; background: url('nbastorebtn_001.png') no-repeat scroll 0px 0px transparent; }
+#nbaHeader #nbaStoreNav > ul > li.nbaStore > a:hover, #nbaHeader #nbaStoreNav > ul > li.nbaStore:hover > a { display: block; height: 42px; width: 122px; text-indent: 100%; overflow: hidden; white-space: nowrap; background: url('nbastorebtn_001.png') no-repeat scroll 0px -44px transparent; }
+#nbaHeader #nbaStoreNav { position: absolute; top: 8px; right: 27px; z-index: 10000; }
+#nbaHeader #nbaStoreNav > ul > li { float: left; display: inline-block; list-style: outside none none; margin-right: 16px; height: 40px; line-height: 38px; position: relative; }
+#nbaHeader #nbaStoreNav > ul > li > a { color: rgb(255, 255, 255); font-size: 0.75em; display: inline-block; padding: 0px; text-shadow: 0px -1px 0px rgb(0, 0, 0); }
+#nbaHeader #nbaStoreNav > ul > li:hover > a { color: rgb(0, 0, 0); text-shadow: none; position: relative; z-index: 1; }
+#nbaHeader #nbaStoreNav > ul > li:hover > a:hover { color: rgb(0, 102, 221); text-decoration: underline; }
+#nbaHeader #nbaStoreNav .nbaNavDropdown { position: absolute; left: -999em; }
+#nbaHeader #nbaStoreNav li:hover .nbaNavDropdown { left: -10px; right: auto; top: 36px; width: 193px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border-bottom: 5px solid rgb(0, 111, 162); box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5); }
+#nbaHeader #nbaStoreNav li.nbaMenuLeft:hover .nbaNavDropdown { left: auto; right: 2px; top: 40px; width: 193px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border-bottom: 5px solid rgb(0, 111, 162); box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5); }
+#nbaHeader #nbaStoreNav .nbaNavDropdown a { color: rgb(0, 0, 0); text-shadow: none; font-weight: normal; font-size: 13px; display: block; margin: 0.8em 0px; line-height: 16px; }
+#nbaHeader #nbaStoreNav .nbaNavDropdown a:hover { color: rgb(0, 102, 221); text-decoration: underline; }
+#nbaHeader .nbaNavDropdown ul { padding: 0px 16px; }
+#nbaHeader #nbaStoreNav .nbaNavDropdown li { display: block; line-height: 1.6; text-align: left; }
+#nbaHeader.nbaThird #nbaGlobalNav > ul > li > a, #nbaHeader #nbaGlobalNav .nbaNavDropdown a, .nbaLogin a { text-decoration: none; }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	#nbaHeader #nbaGlobalNav { padding-left: 106px; }
+	#nbaHeader #nbaGlobalNav > ul > li:first-child { margin-right: 14px; }
+}
+#nbaGameTracker { height: 45px; float: none; margin: 0px 0px 10px; padding: 0px; width: auto; border: 0px none; }
+#nbaGameTracker .nbaScrollBtn { width: 40px; height: 45px; float: left; background: linear-gradient(to bottom, rgb(229, 229, 229) 0px, rgb(193, 193, 193) 100%) repeat scroll 0% 0% transparent; }
+#nbaGameTracker .nbaScrollBtn:hover { background: linear-gradient(to bottom, rgb(229, 229, 229) 0px, rgb(211, 211, 211) 100%) repeat scroll 0% 0% transparent; }
+#nbaGameTracker .nbaScrollBtn:active { background: linear-gradient(to bottom, rgb(188, 188, 188) 0px, rgb(163, 163, 163) 100%) repeat scroll 0% 0% transparent; }
+#nbaGameTracker .nbaScrollBtn.nbaDisabled { background: linear-gradient(to bottom, rgb(215, 215, 215) 0px, rgb(201, 201, 201) 100%) repeat scroll 0% 0% transparent; cursor: default; }
+#nbaGameTracker .nbaScrollBtn span { border-bottom: 10px solid transparent; border-top: 10px solid transparent; display: block; font-size: 0px; height: 0px; line-height: 0; text-indent: -9999px; width: 0px; position: absolute; }
+#nbaGameTracker .nbaScrollBtn.nbaPrevious:hover span { border-right: 10px solid rgb(0, 128, 204); }
+#nbaGameTracker .nbaScrollBtn.nbaNext:hover span { border-left: 10px solid rgb(0, 128, 204); }
+#nbaGameTracker .nbaScrollBtn.nbaPrevious:active span { border-right: 10px solid rgb(130, 130, 130); }
+#nbaGameTracker .nbaScrollBtn.nbaNext:active span { border-left: 10px solid rgb(130, 130, 130); }
+#nbaGameTracker .nbaScrollBtn.nbaNext.nbaDisabled span { border-left: 10px solid rgb(186, 186, 186); }
+#nbaGameTracker .nbaScrollBtn.nbaPrevious { border-right: 1px solid rgb(183, 183, 183); width: 39px; float: left; }
+#nbaGameTracker .nbaScrollBtn.nbaPrevious:hover { background-color: rgb(255, 255, 255); }
+#nbaGameTracker .nbaScrollBtn.nbaPrevious span { border-right: 10px solid rgb(247, 246, 246); margin: 14px 0px 0px 14px; }
+#nbaGameTracker .nbaScrollBtn.nbaPrevious:after { border-right: 1px solid rgb(230, 230, 230); content: ""; display: block; float: right; height: 45px; top: 0px; }
+#nbaGameTracker .nbaScrollBtn.nbaNext { border: 0px none; float: right; }
+#nbaGameTracker .nbaScrollBtn.nbaNext:hover { background-color: rgb(255, 255, 255); }
+#nbaGameTracker .nbaScrollBtn.nbaNext span { border-left: 10px solid rgb(247, 246, 246); margin: 14px 0px 0px 17px; }
+#nbaGameTracker li { list-style-type: none; }
+#nbaGameTracker .nbaScrollWindow { width: 920px; overflow: hidden; float: left; height: 45px; position: relative; }
+#nbaGameTracker .nbaScrollPanel { display: block; float: left; width: 920px; background: linear-gradient(to bottom, rgb(253, 253, 253) 0px, rgb(215, 215, 215) 100%) repeat scroll 0% 0% transparent; }
+#nbaGameTracker .nbaScrollPanel .nbaGreySeparator { border-left: 3px solid rgb(149, 149, 149) ! important; margin-left: -2px; }
+#nbaGameTracker .nbaScrollPanel .nbaItem { width: 113px; height: 45px; float: left; line-height: 1; border-left: 1px solid rgb(236, 236, 236); border-right: 1px solid rgb(194, 194, 194); position: relative; background: linear-gradient(to bottom, rgb(253, 253, 253) 0px, rgb(215, 215, 215) 100%) repeat scroll 0% 0% transparent; }
+#nbaGameTracker .nbaScrollPanel .nbaItem:hover { background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+#nbaGameTracker .nbaScrollPanel .nbaItem ul { margin-left: 5px; padding: 2px 0px; }
+#nbaGameTracker .nbaScrollPanel .nbaItem .nbaName, #nbaGameTracker .nbaScrollPanel .nbaItem .nbaScore { font-size: 12px; font-family: Helvetica,Arial,sans-serif; }
+#nbaGameTracker .nbaScrollPanel .nbaItem .nbaScore { margin-left: 5px; }
+#nbaGameTracker .nbaItem.nbaHomeLead .nbaTeamTwo li { font-weight: bold; }
+#nbaGameTracker .nbaItem.nbaVisitorLead .nbaTeamOne li { font-weight: bold; }
+#nbaGameTracker .nbaScrollPanel .nbaTeam li { float: left; }
+#nbaGameTracker .nbaScrollPanel .nbaTeam { clear: both; }
+#nbaGameTracker .nbaScrollPanel .nbaItem .nbaGameDetails { clear: both; display: block; font-family: Helvetica,Arial,sans-serif; font-size: 9px; height: 7px; overflow: hidden; padding-top: 2px; }
+#nbaGameTracker .nbaScrollPanel .nbaItem .nbaGameDetails li { float: left; margin-right: 4px; font-weight: bold; }
+#nbaGameTracker .nbaScrollPanel .nbaItem:before { content: ""; display: block; margin-right: 1px; margin-top: 1px; }
+#nbaGameTracker .nbaScrollPanel .nbaItem.nbaComplete:before { border-top: 3px solid rgb(0, 107, 182); }
+#nbaGameTracker .nbaScrollPanel .nbaItem.nbaUpComing, #nbaGameTracker .nbaScrollPanel .nbaItem.nbaComplete { cursor: pointer; }
+#nbaGameTracker .nbaScrollPanel .nbaItem.nbaUpComing:before { border-top: 3px solid rgb(149, 149, 149); }
+#nbaGameTracker .nbaItem .nbaLive { display: none; }
+#nbaGameTracker .nbaItem.nbaComplete .nbaGameDetails .nbaColTwo { font-weight: bold; }
+#nbaGameTracker .nbaItem .nbaMoreInfo, #nbaGameTracker .nbaItem.nbaLive .nbaMoreInfo { position: absolute ! important; clip: rect(0px, 0px, 0px, 0px); top: -5px; }
+.nbaSectionRow section.nbaBreakingNews { position: relative; height: 38px; width: 970px; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; float: none; padding: 0px; border: 0px none; margin: 0px; }
+section.nbaBreakingNews.nbaGeneric { border-bottom: 2px solid rgb(0, 107, 182); }
+section.nbaBreakingNews.nbaGeneric h3 { background-color: rgb(0, 107, 182); display: block; height: 38px; padding: 0px; width: 30px; }
+#nbaHomepage section.nbaBreakingNews h3 { padding: 10px 30px; margin-right: 10px; color: rgb(255, 255, 255); float: left; display: inline; font-weight: normal; font-size: 19px; }
+section.nbaBreakingNews ul li { float: left; list-style-type: none; margin: 0px; padding: 10px 0px ! important; }
+section.nbaBreakingNews ul li:after { border-right: 1px solid rgb(137, 137, 137); content: ""; margin-right: 9px; padding: 0px 9px 0px 0px; }
+section.nbaBreakingNews.nbaBreaking ul li.nbaLast:after, section.nbaBreakingNews.nbaLive ul li.nbaLast:after, section.nbaBreakingNews.nbaGeneric ul li.nbaLast:after, section.nbaBreakingNews.nbaAllstarlive ul li.nbaLast:after, section.nbaBreakingNews.nbaAllstar ul li.nbaLast:after, section.nbaBreakingNews.nbaAllstarfinal ul li.nbaLast:after { border-right: 0px none; margin: 0px; padding: 0px; }
+#nbaHomepage section.nbaBreakingNews ul li a, section.nbaBreakingNews ul li .nbaPrewool { font-size: 19px; font-weight: normal; }
+#nbaHomepage section.nbaBreakingNews ul li a:hover { color: rgb(0, 0, 0); text-decoration: underline; }
+#nbaFeature { height: 536px; float: none; background-color: rgb(242, 242, 242); margin: 0px; padding: 0px; width: auto; border: 0px none; position: relative; }
+#nbaFeature .nbaOverlay { position: absolute; z-index: 3; background: none repeat scroll 0% 0% rgb(0, 0, 0); width: 100%; height: 536px; top: 0px; left: 0px; display: none; }
+#nbaFeature .nbaTPack { height: 507px; padding: 29px 30px 0px; position: relative; z-index: 2; background: none repeat scroll 0% 0% rgb(242, 242, 242); }
+#nbaFeature .nbaTPack .nbaTPanel { position: relative; }
+#nbaFeature .nbaTPack .nbaTPanel .nbaTImage { background: none repeat scroll 0% 0% rgb(0, 0, 0); display: block; }
+#nbaFeature .nbaTPack .nbaTPanel .nbaTContentBg { position: absolute; background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.8); }
+#nbaFeature .nbaTPack .nbaTPanel .nbaTPlayBtn { height: 42px; position: absolute; right: 7px; top: 50%; width: 43px; background: url('feature-sprite.png') no-repeat scroll -47px 0px transparent; z-index: 4; }
+#nbaFeature .nbaTPack .nbaTPanel .nbaTContent h3 { margin-bottom: 10px; }
+#nbaFeature .nbaTPack .nbaTPanel .nbaTContent h3 a { font-size: 36px; color: rgb(255, 255, 255); line-height: 1; font-family: Georgia,Times,serif; font-weight: normal; }
+#nbaFeature .nbaTPack .nbaTPanel .nbaTContent p { color: rgb(255, 255, 255); font-size: 14px; line-height: 1.5; font-weight: normal; }
+#nbaFeature .nbaTPack .nbaTImage:hover .nbaTPlayBtn { opacity: 0.5; }
+#nbaFeature .nbaT6 .nbaTPanel { float: left; overflow: hidden; width: 302px; height: 202px; }
+#nbaFeature .nbaT6 .panel1 { margin-bottom: 17px; }
+#nbaFeature .nbaT6 .panel2, #nbaFeature .nbaT6 .panel3 { margin-left: 17px; margin-bottom: 17px; }
+#nbaFeature .nbaT6 .panel5, #nbaFeature .nbaT6 .panel6 { margin-left: 17px; }
+#nbaFeature .nbaT6 .nbaTPanel .nbaTImage { width: 302px; height: 202px; }
+#nbaFeature .nbaT6 .nbaTPanel .nbaTMainImage { width: 302px; height: 202px; }
+#nbaFeature .nbaT6 .nbaTPanel .nbaTContentBg { height: 13px; padding: 6px 10px 8px; width: 282px; bottom: 0px; cursor: pointer; }
+#nbaFeature .nbaT6 .nbaTPanel .nbaTPlayBtn { bottom: 30px; top: inherit; }
+#nbaFeature .nbaT6 .nbaTPanel .nbaTContent p { color: rgb(183, 183, 183); font-size: 12px; line-height: 1.4; width: 236px; max-height: 35px; overflow: hidden; display: block; }
+#nbaFeature .nbaT6 .nbaTPanel .nbaTContent h3 { margin-bottom: 4px; }
+#nbaFeature .nbaT6 .nbaTPanel .nbaTContent h3 a { font-size: 12px; line-height: 1.2; font-family: "Helvetica Neue",Helvetica Neue,Helvetica,Arial,Liberation Sans,sans-serif; font-weight: bold; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 236px; }
+#nbaFeature .nbaTFooter { height: 40px; padding: 16px 0px 30px 10px; position: absolute; top: 450px; width: 925px; }
+#nbaFeature .nbaTFooter .nbaTSocial { height: 27px; width: 295px; margin-top: 7px; float: left; }
+#nbaFeature .nbaTFooter .nbaTSocial .nbaRecommendedVideos { display: none; color: rgb(255, 255, 255); height: 27px; width: 242px; background: url('feature-sprite.png') no-repeat scroll -101px -1px transparent; overflow: hidden; text-indent: 100%; white-space: nowrap; }
+#nbaFeature .nbaTFooter .nbaTAd { height: 40px; width: 621px; float: right; }
+#customChannelText { right: 10px; bottom: 3px; position: relative; float: left; margin-top: 1px; font-size: 12px; font-weight: bold; font-family: "Helvetica Neue Bold",Helvetica,Arial,"Liberation Sans",sans-serif; line-height: 15px; width: 112px; }
+#nbaFeature .nbaVideo { background: none repeat scroll 0% 0% rgb(17, 17, 17); height: 536px; width: 100%; top: 0px; left: 0px; position: absolute; z-index: 1; }
+#nbaFeature .nbaVideoContainer { height: 432px; width: 768px; float: left; margin: 12px 0px 0px 12px; padding: 0px; visibility: hidden; position: relative; }
+#nbaFeature #nbaVideoPlayer { height: 432px; }
+#nbaFeature .nbaVideoPlaylist { height: 433px; width: 207px; float: right; margin: 12px 12px 0px 0px; background: none repeat scroll 0% 0% rgb(40, 40, 40); border-top: 1px solid rgb(49, 49, 49); position: relative; }
+#nbaFeature .nbaVideoPlaylist .nbaReturn { position: relative; z-index: 2; height: 31px; background: none repeat scroll 0% 0% rgb(40, 40, 40); border-bottom: 1px solid rgb(26, 26, 26); }
+#nbaFeature .nbaReturn a { color: rgb(255, 255, 255); font-size: 0.6875em; display: inline-block; float: right; margin: 3px 4px 0px 0px; padding: 4px 7px 6px; border-top: 1px solid rgb(71, 69, 69); border-left: 1px solid rgb(36, 36, 36); background: linear-gradient(to bottom, rgb(40, 40, 40) 0px, rgb(36, 36, 36) 100%) repeat scroll 0% 0% transparent; }
+#nbaFeature .nbaReturn a span { color: rgb(255, 255, 255); padding: 0px 0px 1px 24px; font-weight: normal; display: block; line-height: 1.2; background: url('feature-sprite.png') no-repeat scroll 0px -144px transparent; }
+#nbaFeature .nbaVideoPlaylist nav { position: absolute; bottom: 0px; left: 0px; height: 26px; width: 207px; padding-top: 1px; background: none repeat scroll 0% 0% rgb(17, 17, 17); z-index: 2; }
+#nbaFeature .nbaVideoPlaylist nav a { display: block; height: 25px; float: left; border-top: 1px solid rgb(49, 49, 49); border-left: 1px solid rgb(49, 49, 49); width: 102px; background: linear-gradient(to bottom, rgb(44, 44, 44) 0px, rgb(28, 28, 28) 100%) repeat scroll 0% 0% transparent; text-align: center; }
+#nbaFeature .nbaVideoPlaylist nav a span { text-indent: 100%; white-space: nowrap; overflow: hidden; display: block; line-height: 25px; height: 25px; width: 16px; font-size: 1em; margin: 0px auto; background: url('feature-sprite.png') no-repeat scroll 0px 6px transparent; }
+#nbaFeature .nbaVideoPlaylist .nbaPrevious:hover span { background-position: 0px -68px; }
+#nbaFeature .nbaVideoPlaylist nav .nbaNext { float: right; }
+#nbaFeature .nbaVideoPlaylist .nbaNext span { background-position: 0px -31px; }
+#nbaFeature .nbaVideoPlaylist .nbaNext:hover span { background-position: 0px -104px; }
+#nbaFeature .nbaVideoPlaylist .nbaScrollWindow { height: 375px; position: relative; overflow: hidden; width: 207px; background: url('playlist-tile.png') repeat scroll 0px top transparent; }
+#nbaFeature .nbaVideoPlaylist ul { position: absolute; top: 0px; left: 0px; width: 207px; }
+#nbaFeature .nbaVideoPlaylist li { margin: 0px; list-style: outside none none; border-top: 1px solid rgb(49, 49, 49); border-bottom: 1px solid rgb(26, 26, 26); clear: left; font-size: 1em; }
+#nbaFeature .nbaVideoPlaylist .nbaLoading span { display: block; padding: 12px; color: rgb(102, 102, 102); font-size: 0.6875em; }
+#nbaFeature .nbaVideoPlaylist .nbaLoading { background: none repeat scroll 0px center transparent; border: 0px none; }
+#nbaFeature #nbaVideoFooter { padding: 13px; height: 60px; float: left; width: 974px; }
+#nbaFeature #nbaVideoFooter .nbaAd { width: 300px; height: 60px; float: left; margin-right: 14px; }
+#nbaFeature #nbaVideoFooter .nbaVideoInfo { float: left; width: 455px; height: auto; line-height: 1.3; }
+#nbaFeature #nbaVideoFooter img { height: 60px; background-color: rgb(204, 204, 204); }
+#nbaFeature #nbaVideoFooter h4 { color: rgb(255, 255, 255); font-size: 16px; float: left; }
+#nbaFeature #nbaVideoFooter p.nbaDescription { color: rgb(255, 255, 255); display: block; float: left; font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 450px; }
+#nbaFeature #nbaVideoFooter .nbaNewsAndSocial { width: 189px; float: right; padding: 0px 0px 0px 15px; line-height: 1.3; }
+#nbaFeature #nbaVideoFooter .nbaNewsAndSocial a, #nbaFeature #nbaVideoFooter .nbaNewsAndSocial a:link { color: rgb(153, 153, 153); font-weight: normal; }
+#nbaFeature #nbaVideoFooter .nbaNewsAndSocial a:hover { color: rgb(32, 83, 135); text-decoration: underline; }
+#nbaFeature #nbaVideoFooter .nbaNewsAndSocial .nbaNewsList { list-style: inside none disc; font-size: 12px; color: rgb(153, 153, 153); }
+#nbaFeature #nbaVideoFooter .nbaNewsAndSocial .nbaSocialProfile { list-style: inside none disc; font-size: 12px; margin-top: 10px; display: none; }
+#nbaFeature #nbaVideoFooter .nbaNewsAndSocial .nbaSocialProfile img { width: 50px; height: 50px; display: block; float: left; margin: 0px 8px 0px 0px; }
+#nbaFeature #nbaVideoFooter .nbaNewsAndSocial .nbaSocialProfile p { color: rgb(153, 153, 153); margin-bottom: 4px; }
+#nbaFeature #nbaVideoFooter .nbaNewsAndSocial .nbaSocialProfile a, #nbaFeature #nbaVideoFooter .nbaNewsAndSocial .nbaSocialProfile a:link { color: rgb(0, 134, 218); line-height: 1; }
+#nbaFeature #nbaVideoFooter .nbaNewsAndSocial .nbaSocialProfile a:hover { color: rgb(87, 87, 87); }
+#nbaNews .nbaHeadlineTabs { height: 35px; position: relative; padding-left: 3px; margin-top: 9px; }
+#nbaNews .nbaHeadlineTabs a { background: url('news-sprite.png') no-repeat scroll 0px -1px transparent; float: left; display: block; color: rgb(0, 0, 0); font-weight: bold; font-size: 1em; padding: 9px 0px; width: 156px; position: relative; z-index: 2; text-align: center; }
+#nbaNews .nbaHeadlineTabs .nbaActive { background-position: 0px -70px; }
+#nbaNews .nbaHeadlineTabs a:hover { color: rgb(0, 102, 221); background-position: 0px -36px; }
+#nbaNews .nbaHeadlineTabs .nbaActive:hover { color: rgb(0, 0, 0); background-position: 0px -70px; }
+#nbaNews .nbaHeadlineTabs:before { content: ""; position: absolute; bottom: 1px; height: 1px; width: 100%; background: none repeat scroll 0% 0% rgb(231, 231, 231); z-index: 1; left: 0px; }
+#nbaNews.nbaSectionRow .nbaHeadlineLists { background: none repeat scroll 0% 0% rgb(255, 255, 255); width: 339px; margin-left: 0px; min-height: 590px; padding-left: 0px; padding-right: 0px; }
+#nbaNews.nbaSectionRow .nbaHeadlineLists:before { content: ""; display: block; position: absolute; height: 4px; background: none repeat scroll 0% 0% rgb(0, 95, 159); width: 100%; margin: 0px; padding: 0px; top: -1px; left: 0px; }
+#nbaNews .nbaHeadlineList { clear: left; margin: 26px 18px 30px 27px; padding: 0px; }
+#nbaNews .nbaHeadlineList ul { list-style: outside none none; margin: 0px 0px 30px; padding: 0px; }
+#nbaNews .nbaHeadlineList li { font-family: Georgia,Times New Roman,Times,Palatino Linotype,serif; font-size: 0.875em; font-weight: normal; border-bottom: 1px solid rgb(230, 230, 230); margin-bottom: 5px; padding: 1px 0px 4px 4px; }
+#nbaNews .nbaHeadlineList li.nbaLast { border-bottom: 0px none; }
+#nbaNews .nbaHeadlineList li.nbaSingleton { min-height: 33px; text-align: left; }
+#nbaNews .nbaHeadlineList li .nbaSingleLine { height: 1.2em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block; }
+#nbaNews .nbaHeadlineList li a { font-weight: normal; font-size: 1em; }
+#nbaNews .nbaHeadlineList li a:hover { color: rgb(0, 0, 0); text-decoration: underline; }
+#nbaNews .nbaHeadlineList ul ul { margin-bottom: 0px; height: 1.2em; overflow: hidden; }
+#nbaNews .nbaHeadlineList li li { border-bottom: 0px none; margin: 0px 3px 0px 0px; padding: 3px 1px 2px 0px; float: left; font-family: "Helvetica Neue",Helvetica Neue,Helvetica,Arial,Liberation Sans,sans-serif; font-size: 0.785714em; line-height: 1; min-height: auto; }
+#nbaNews .nbaHeadlineList li li a { color: rgb(0, 102, 221); font-weight: normal; border-right: 1px solid rgb(137, 137, 137); display: inline-block; padding-right: 5px; position: relative; line-height: 1.1; }
+#nbaNews .nbaHeadlineList li li a:hover { color: rgb(0, 102, 221); }
+#nbaNews .nbaHeadlineList li li.nbaLast a { border-right: 0px none; }
+#nbaNews .nbaHeadlineList .nbaLinkWatch { padding-left: 15px; }
+#nbaNews .nbaFlexQuad { width: 640px; height: auto; border-right: 0px none; padding-bottom: 30px; padding-top: 10px; }
+#nbaNews .nbaFlexQuad .nbaSectionContent { margin-bottom: 0px; }
+#nbaPopular.nbaSectionRow section { height: 396px; }
+#nbaPopular.nbaSectionRow .nbaSectionContent > h3 { margin-bottom: 5px; margin-left: 0px; }
+#nbaPopular.nbaSectionRow .nbaLast .nbaSectionContent { margin-bottom: 12px; margin-left: 0px; }
+#nbaPopular.nbaSectionRow .nbaLast .nbaSectionContent iframe { border: 0px none; outline: 0px none; }
+#nbaPopular .nbapopslider { height: 8px; padding: 0px; background: url('popular-sprite.png') no-repeat scroll 0px 0px transparent; }
+#nbaPopular .nbaPopularTopicsList { margin-top: 25px; margin-right: 15px; }
+#nbaPopular .nbaPopularTopicsList li { list-style: outside none none; margin: 0px; padding: 12px 0px 6px; border-bottom: 1px solid rgb(206, 206, 206); border-top: 1px solid rgb(255, 255, 255); }
+#nbaPopular .nbaPopularTopicsList li.nbaFirst { border-top: 0px none; padding-top: 0px; text-align: left; }
+#nbaPopular .nbaPopularTopicsList li.nbaLast { border-bottom: 0px none; padding-bottom: 0px; }
+#nbaPopular .nbaHeadline { font-family: Georgia,Times,serif; font-size: 0.875em; }
+#nbaPopular .nbaHeadline a { font-weight: normal; display: block; font-size: 1em; white-space: nowrap; overflow: hidden; height: 1.3em; text-overflow: ellipsis; }
+#nbaPopular .nbaHeadline a:hover { text-decoration: underline; }
+#nbaPopular .nbaHeat > h3 { padding-left: 22px; position: relative; }
+#nbaPopular .nbaHeat > h3:before { display: block; position: absolute; top: -7px; left: 0px; height: 31px; width: 15px; background: url('popular-sprite.png') no-repeat scroll 0px -10px transparent; content: ""; }
+#ibox { z-index: 1000000; text-align: left; }
+#ibox_overlay { z-index: 1000000; }
+#ibox_loading { position: absolute; z-index: 1000001; }
+#ibox_wrapper { position: absolute; top: 0px; left: 0px; z-index: 1000001; }
+#ibox_content { z-index: 1000002; }
+#nbaSocialSpotlight { width: 307px; height: 290px; }
+table th { font-size: 14px; }
+#nbaStats { display: none; }
+#nbaStats .nbaRowHeader .nbaSeasonName { background: url('stats-standings-sprite_001.png') repeat scroll -289px 30px transparent; display: block; float: left; height: 30px; margin-left: 4px; width: 130px; margin-top: -4px; }
+#nbaStats .nbaRowHeader .nbaSeasonName.nbaSeasonStage1 { background-position: -289px 0px; }
+#nbaStats .nbaRowHeader .nbaSponsorship { float: right; margin-right: 20px; }
+#nbaStats .nbaLeaders .ui-selectmenu { z-index: 5; }
+#nbaStats .nbaLeaders a.ui-selectmenu-dropdown { display: block; position: absolute; top: -5px; right: 10px; }
+#nbaStats .nbaLeaders .nbaStatSelector { width: 152px; position: absolute; top: -5px; right: 10px; z-index: 4; }
+#nbaStats .nbaLeaders .nbaLeadersInfo { border-bottom: 1px solid rgb(204, 204, 204); height: 190px; position: relative; clear: both; width: 300px; left: 0px; }
+#nbaStats .nbaLeadersBg { position: absolute; bottom: -1px; background: url('200x160-secondary-team-background-logos-sprite.jpg') no-repeat scroll 1000px 1000px transparent; height: 160px; width: 200px; text-indent: 100%; overflow: hidden; white-space: nowrap; left: -20px; }
+#nbaStats .nbaLeadersBg.nbaTeamBKN, #nbaStats .nbaLeadersBg.nbaTeamNJN { background-position: -534px -13px; }
+#nbaStats .nbaLeadersBg.nbaTeamCHI { background-position: -20px -189px; }
+#nbaStats .nbaLeadersBg.nbaTeamCLE { background-position: -276px -189px; }
+#nbaStats .nbaLeadersBg.nbaTeamDAL { background-position: -534px -189px; }
+#nbaStats .nbaLeadersBg.nbaTeamDEN { background-position: -784px -189px; }
+#nbaStats .nbaLeadersBg.nbaTeamDET { background-position: -20px -366px; }
+#nbaStats .nbaLeadersBg.nbaTeamGSW { background-position: -276px -366px; }
+#nbaStats .nbaLeadersBg.nbaTeamIND { background-position: -784px -366px; }
+#nbaStats .nbaLeadersBg.nbaTeamLAC { background-position: -20px -543px; }
+#nbaStats .nbaLeadersBg.nbaTeamLAL { background-position: -276px -543px; }
+#nbaStats .nbaLeadersBg.nbaTeamMEM { background-position: -534px -543px; }
+#nbaStats .nbaLeadersBg.nbaTeamMIN { background-position: -276px -720px; }
+#nbaStats .nbaLeadersBg.nbaTeamNYK { background-position: -784px -720px; }
+#nbaStats .nbaLeadersBg.nbaTeamOKC { background-position: -20px -897px; }
+#nbaStats .nbaLeadersBg.nbaTeamORL { background-position: -276px -897px; }
+#nbaStats .nbaLeadersBg.nbaTeamPHX { background-position: -784px -897px; }
+#nbaStats .nbaLeadersBg.nbaTeamPOR { background-position: -20px -1074px; }
+#nbaStats .nbaLeadersBg.nbaTeamSAS { background-position: -534px -1074px; }
+#nbaStats .nbaLeadersBg.nbaTeamTOR { background-position: -784px -1074px; }
+#nbaStats .nbaLeadersBg.nbaTeamUTA { background-position: -20px -1251px; }
+#nbaStats .nbaLeadersLogo { left: 0px; position: absolute; top: 57px; background: url('50x50-primary-team-logos-sprite.png') no-repeat scroll 1000px 1000px transparent; height: 50px; width: 50px; text-indent: 100%; overflow: hidden; white-space: nowrap; }
+#nbaStats .nbaLeadersLogo.nbaTeamBKN, #nbaStats .nbaLeadersLogo.nbaTeamNJN { background-position: -262px -9px; }
+#nbaStats .nbaLeadersLogo.nbaTeamCHI { background-position: -347px -9px; }
+#nbaStats .nbaLeadersLogo.nbaTeamCLE { background-position: -432px -9px; }
+#nbaStats .nbaLeadersLogo.nbaTeamDAL { background-position: -517px -9px; }
+#nbaStats .nbaLeadersLogo.nbaTeamDEN { background-position: -602px -9px; }
+#nbaStats .nbaLeadersLogo.nbaTeamDET { background-position: -687px -9px; }
+#nbaStats .nbaLeadersLogo.nbaTeamGSW { background-position: -773px -9px; }
+#nbaStats .nbaLeadersLogo.nbaTeamIND { background-position: -943px -9px; }
+#nbaStats .nbaLeadersLogo.nbaTeamLAC { background-position: -7px -67px; }
+#nbaStats .nbaLeadersLogo.nbaTeamLAL { background-position: -92px -67px; }
+#nbaStats .nbaLeadersLogo.nbaTeamMEM { background-position: -178px -67px; }
+#nbaStats .nbaLeadersLogo.nbaTeamMIN { background-position: -432px -67px; }
+#nbaStats .nbaLeadersLogo.nbaTeamNYK { background-position: -602px -67px; }
+#nbaStats .nbaLeadersLogo.nbaTeamOKC { background-position: -687px -67px; }
+#nbaStats .nbaLeadersLogo.nbaTeamORL { background-position: -773px -67px; }
+#nbaStats .nbaLeadersLogo.nbaTeamPHX { background-position: -943px -67px; }
+#nbaStats .nbaLeadersLogo.nbaTeamPOR { background-position: -7px -125px; }
+#nbaStats .nbaLeadersLogo.nbaTeamSAS { background-position: -178px -125px; }
+#nbaStats .nbaLeadersLogo.nbaTeamTOR { background-position: -262px -125px; }
+#nbaStats .nbaLeadersLogo.nbaTeamUTA { background-position: -347px -125px; }
+#nbaStats .nbaLeadersPhoto { left: 0px; position: absolute; bottom: 0px; height: 115px; width: 140px; }
+#nbaStats .nbaLeaders .nbaLeadersInfo ul { list-style-type: none; }
+#nbaStats .nbaLeaders .nbaLeadersInfo .nbaLeadersDetails { left: 150px; position: absolute; top: 40px; width: 145px; word-wrap: break-word; }
+#nbaStats .nbaLeaders .nbaLeadersInfo .nbaLeadersDetails li { padding-bottom: 12px; }
+#nbaStats .nbaLeaders .nbaLeadersInfo .nbaLeadersDetails .nbaLeadersType { font-size: 15px; font-weight: bold; }
+#nbaStats .nbaLeaders .nbaLeadersInfo .nbaLeadersDetails .nbaLeadersName { font-size: 21px; font-family: Georgia,Times,serif; line-height: 1.1; padding-bottom: 9px; }
+#nbaStats .nbaLeaders .nbaLeadersInfo .nbaLeadersDetails .nbaLeadersPoints { font-size: 42px; font-weight: bold; padding-bottom: 0px; }
+#nbaStats .nbaLeaders .nbaPager { position: relative; float: left; display: block; left: 50%; }
+#nbaStats .nbaLeaders .nbaPager li { position: relative; top: 15px; float: left; display: block; right: 50%; }
+#nbaStats .nbaLeaders .nbaLeadersInfo .nbaLeadersTie { font-size: 9px; margin: 0px; padding: 0px; }
+#nbaStats .nbaLeadersList { height: 190px; width: 300px; overflow: hidden; }
+#nbaStats .nbaLeadersList > li { position: absolute; top: 0px; left: 0px; }
+#nbaStats .nbaLeadersList > li a { display: block; font-weight: inherit; position: relative; height: 190px; width: 300px; overflow: hidden; top: 0px; }
+#nbaStats .nbaLeadersList > li a:hover { color: rgb(0, 0, 0); }
+#nbaStats .nbaLeaders .nbaLeadersList > li a .nbaLeadersName:hover { text-decoration: underline; cursor: pointer; }
+#nbaStats .nbaStandings h3 { margin-bottom: 17px; }
+#nbaStats .nbaStandings a.nbaLinkArrow_1 { float: right; margin: 8px 0px 10px 10px; }
+#nbaStats .nbaPrettyTable_1 { float: left; width: 50%; }
+#nbaStats .nbaPrettyTable_1.nbaEastern tbody tr td:last-child { border-right: 1px solid rgb(220, 223, 226); padding-right: 5px; }
+#nbaStats .nbaPrettyTable_1.nbaWestern tbody tr td:first-child { border-left: 1px solid rgb(255, 255, 255); padding-left: 4px; }
+#nbaStats .nbaPrettyTable_1 tbody td.nbaTeamName { font-weight: bold; padding-left: 5px; }
+#nbaStats .nbaPrettyTable_1 thead .nbaCol3 { padding-left: 0px; }
+#nbaStats .nbaPrettyTable_1 thead .nbaCol4 { padding-right: 0px; }
+#nbaStats .nbaPrettyTable_1 thead th { text-align: left; }
+#nbaStats .nbaPrettyTable_1 thead .nbaCol4 { padding-right: 5px; }
+.nbaHomeBotAd { width: 728px; margin: 10px auto; }
+#nbaFooter { background: none repeat scroll 0% 0% rgb(0, 0, 0); color: rgb(255, 255, 255); padding: 0px 1px; }
+#nbaHomepage #nbaFooter a { color: rgb(194, 194, 194); text-decoration: none; font-weight: normal; }
+#nbaHomepage #nbaFooter a:hover { text-decoration: underline; }
+#nbaFooter h3 { color: rgb(255, 255, 255); font-size: 0.9375em; padding-bottom: 12px; }
+#nbaFooter ul { list-style: outside none none; }
+#nbaHomepage #nbaFooter h4 a { font-weight: bold; }
+#nbaHomepage #nbaFooter li { color: rgb(194, 194, 194); font-size: 0.75em; }
+#nbaHomepage #nbaFooter li a { font-size: 1em; }
+#nbaHomepage #nbaFooter .nbaContainer h4 a { font-weight: bold; }
+#nbaFooter .nbaContainer { border-left: 1px solid rgb(51, 51, 51); border-right: 1px solid rgb(51, 51, 51); border-bottom: 1px solid rgb(9, 9, 9); background: none repeat scroll 0% 0% rgb(37, 37, 37); padding: 35px 28px; }
+#nbaFooter .nbaRow { clear: left; margin-bottom: 35px; }
+#nbaFooter .nbaRow.nbaLast { margin-bottom: 0px; }
+#nbaFooter .nbaRow > div { float: left; width: 300px; margin-right: 20px; }
+#nbaFooter .nbaRow > .nbaSplit > div { width: 145px; margin-right: 10px; float: left; }
+#nbaFooter .nbaRow > .nbaLast, #nbaFooter .nbaRow > .nbaSplit > .nbaLast { margin-right: 0px; }
+#nbaFooter .nbaInside li { border-bottom: 1px solid rgb(2, 2, 2); border-top: 1px solid rgb(51, 51, 51); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 100%; padding-top: 6px; padding-bottom: 8px; color: rgb(194, 194, 194); }
+#nbaFooter .nbaInside .nbaLast { border-bottom: 0px none; }
+#nbaFooter .nbaInside .nbaFirst { border-top: 0px none; padding-top: 0px; }
+#nbaFooter .nbaNews li { border-bottom: 1px solid rgb(2, 2, 2); border-top: 1px solid rgb(51, 51, 51); padding-top: 4px; padding-bottom: 8px; color: rgb(255, 255, 255); line-height: 1.4; height: 28px; overflow: hidden; }
+#nbaFooter .nbaNews li .nbaTwoLiner { display: inline-block; height: 2.8em; overflow: hidden; color: rgb(255, 255, 255); }
+#nbaFooter .nbaNews .nbaLast { border-bottom: 0px none; }
+#nbaFooter .nbaNews .nbaFirst { border-top: 0px none; padding-top: 0px; }
+#nbaFooter .nbaSponsored li { margin-bottom: 6px; background: none repeat scroll 0% 0% rgb(59, 59, 59); height: 100px; width: 300px; overflow: hidden; }
+#nbaFooter .nbaPersonalities li { background: none repeat scroll 0% 0% rgb(26, 26, 26); margin-bottom: 5px; display: block; height: 65px; }
+#nbaFooter .nbaPersonalities li:before, #nbaFooter .nbaPersonalities li:after { content: ""; display: table; }
+#nbaFooter .nbaPersonalities li:after { clear: both; }
+#nbaFooter .nbaPersonalities .nbaContainer { border: 0px none; background: none repeat scroll 0px center transparent; padding: 0px; float: left; width: 196px; }
+#nbaFooter .nbaPersonalities .nbaContainer p { margin: 0px; padding: 0px; color: rgb(194, 194, 194); height: 3em; overflow: hidden; }
+#nbaFooter .nbaPersonalities .nbaContainer a { text-decoration: underline; }
+#nbaFooter .nbaPersonalities .nbaThumbnail { float: left; height: 64px; margin: 0px; width: 85px; }
+#nbaFooter .nbaPersonalize h4 { font-size: 0.75em; font-weight: bold; color: rgb(255, 255, 255); padding: 8px 8px 4px; }
+#nbaFooter .nbaPersonalize p { font-size: 0.75em; color: rgb(194, 194, 194); padding: 0px 8px 4px; line-height: 1.3; }
+#nbaFooter .nbaPersonalize .nbaFacebookConnect { margin: 8px 0px 0px 8px; text-indent: 120%; }
+#nbaFooter .nbaWnba h3, #nbaFooter .nbaDLeague h3 { display: inline-block; position: relative; padding-right: 25px; }
+#nbaFooter .nbaWnba h3 { padding-right: 20px; }
+#nbaFooter .nbaWnba h3:before { background: url('footer-sprite_001.png') repeat scroll 0px 0px transparent; height: 24px; width: 15px; position: absolute; right: 0px; display: block; content: ""; top: -4px; }
+#nbaFooter .nbaDLeague h3:before { background: url('footer-sprite_001.png') repeat scroll -16px 0px transparent; height: 24px; width: 21px; position: absolute; display: block; content: ""; top: -4px; right: 0px; }
+#nbaHomepage #nbaFooter .nbaDLeague h4 a, #nbaHomepage #nbaFooter .nbaWnba h4 a { font-size: 0.75em; font-weight: bold; color: rgb(255, 255, 255); padding: 8px 0px 4px; }
+#nbaHomepage #nbaFooter .nbaDLeague p, #nbaHomepage #nbaFooter .nbaWnba p { font-size: 0.75em; color: rgb(194, 194, 194); padding: 0px 0px 4px; line-height: 1.3; }
+#nbaFooter .nbaDLeague .nbaContent, #nbaFooter .nbaWnba .nbaContent { height: 84px; overflow: hidden; }
+#nbaFooter .nbaWnba .nbaBullets li, #nbaFooter .nbaDLeague .nbaBullets li { list-style: inside none disc; margin-left: 8px; line-height: 1.2; color: rgb(255, 255, 255); text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+#nbaFooter #nbaFooterNav { clear: left; }
+#nbaFooter #nbaFooterNav h3 { font-size: 1em; text-transform: uppercase; color: rgb(255, 255, 255); font-weight: bold; }
+#nbaFooter #nbaFooterNav .nbaSplit { float: left; width: 300px; margin-right: 20px; }
+#nbaFooter #nbaFooterNav .nbaSplit > ul { width: 145px; margin-right: 10px; float: left; }
+#nbaFooter #nbaFooterNav ul ul li { font-size: 1em; line-height: 1.4; }
+#nbaFooter #nbaFooterNav ul ul li a { color: rgb(194, 194, 194); font-weight: normal; font-size: 1em; }
+#nbaFooter #nbaFooterNav .nbaSplit .nbaLast, #nbaFooter #nbaFooterNav .nbaSplit.nbaLast { margin-right: 0px; }
+#nbaFooter .nbaLegal { clear: left; color: rgb(255, 255, 255); }
+#nbaFooter .nbaLegal p { font-size: 0.625em; line-height: 1.6; color: rgb(255, 255, 255); padding-bottom: 10px; }
+#nbaFooter .nbaLegal a { color: rgb(255, 255, 255); font-size: 1em; }
+#nbaFooter .nbaLegal .nbaAdInfo, #nbaFooter .nbaLegal .nbaAdInfo a { color: rgb(194, 194, 194); }
+#nbaFooter .nbaLegal .nbaTurnerLogo { background: url('footer-sprite_001.png') repeat scroll -64px 0px transparent; text-indent: 100%; overflow: hidden; white-space: nowrap; width: 67px; height: 16px; margin: 0px; padding: 0px; display: block; }
+#nbaFooter .nbaLegal .nbaAdInfo a.nbaAdChoices { display: inline-block; height: 20px; padding-right: 16px; background: url('logo_ad_choices_footer.png') no-repeat scroll right 2px transparent; }
+#nbaHomepageFooter { margin-bottom: 23px; }
+.ui-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
+.ui-widget { font-family: "Helvetica Neue",Helvetica Neue,Helvetica,Arial,Liberation Sans,sans-serif; font-size: 1.1em; }
+.ui-widget-content { border: 1px solid rgb(170, 170, 170); background: url('ui-bg_flat_75_ffffff_40x100.png') repeat-x scroll 50% 50% rgb(255, 255, 255); color: rgb(34, 34, 34); }
+.ui-widget-content a { color: rgb(34, 34, 34); }
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { border: 1px solid rgb(211, 211, 211); background: url('ui-bg_glass_75_e6e6e6_1x400.png') repeat-x scroll 50% 50% rgb(230, 230, 230); font-weight: normal; color: rgb(85, 85, 85); }
+.ui-widget :active { outline: 0px none; }
+.ui-icon { width: 16px; height: 16px; background-image: url('ui-icons_222222_256x240.png'); }
+.ui-state-default .ui-icon { background-image: url('ui-icons_888888_256x240.png'); }
+.ui-icon-triangle-1-s { background-position: -64px -16px; }
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl { border-top-left-radius: 4px; }
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr { border-top-right-radius: 4px; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl { border-bottom-left-radius: 4px; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br { border-bottom-right-radius: 4px; }
+.ui-selectmenu { display: inline-block; position: relative; height: 2.2em; vertical-align: middle; text-decoration: none; overflow: hidden; }
+.ui-selectmenu-icon { position: absolute; right: 6px; margin-top: -8px; top: 50%; }
+.ui-selectmenu-menu { padding: 0px; margin: 0px; position: absolute; top: 0px; display: none; z-index: 1005; }
+.ui-selectmenu-menu ul { padding: 0px; margin: 0px; list-style: outside none none; position: relative; overflow-y: auto; overflow-x: hidden; }
+.ui-selectmenu-menu li { padding: 0px; margin: 0px; display: block; border-top: 1px dotted transparent; border-bottom: 1px dotted transparent; border-right-width: 0px ! important; border-left-width: 0px ! important; font-weight: normal ! important; }
+.ui-selectmenu-menu li a, .ui-selectmenu-status { line-height: 1.4em; display: block; padding: 0.405em 2.1em 0.405em 1em; outline: 0px none; text-decoration: none; }
+.ui-selectmenu-status { line-height: 1.4em; }
+#accessibilityMenu { background-color: rgb(0, 58, 96); border-bottom: 3px solid rgb(187, 187, 187); color: rgb(255, 255, 255); display: none; height: 0px; overflow: hidden; position: fixed; top: 0px; width: 100%; z-index: 10000; }
+#accessibilityCursor { border-bottom: 6px solid transparent; border-left: 6px solid rgb(149, 215, 116); border-top: 6px solid transparent; display: none; height: 0px; left: 424px; position: absolute; top: 98px; width: 0px; z-index: 10000; }
+#accessibilityTooltip { background-color: rgb(149, 215, 116); border-radius: 3px; box-shadow: 2px 2px 8px 0px rgb(0, 0, 0); left: 205px; line-height: 1; padding: 7px 5px 7px 10px; position: absolute; top: 66px; z-index: 10000; display: none; }
+#accessibilityTooltip div { border-bottom: 8px solid transparent; border-left: 8px solid rgb(149, 215, 116); border-top: 8px solid transparent; display: block; float: right; height: 0px; left: 13px; position: relative; top: -2px; width: 0px; z-index: 10000; }
+#accessibilityTooltip p { display: none; }
+#accessibilityMenu ul { padding: 0px; list-style: outside none none; text-align: center; }
+#accessibilityMenu ul li { color: rgb(255, 255, 255); display: inline-block; font-size: 12px; margin: 0px 2px; padding: 5px 4px 0px 3px; }
+#accessibilityMenu #primary #quickLinks { float: left; margin-left: 5px; }
+#accessibilityMenu #primary #quickLinks li { padding: 5px 3px 0px; }
+#accessibilityMenu #primary #quickLinks li a { font-size: 13px; color: rgb(255, 255, 255); }
+#accessibilityMenu #primary { height: 26px; margin: 0px auto; padding: 1px 0px 0px; width: 974px; }
+#accessibilityMenu #primary #goto { color: rgb(255, 255, 255); float: left; font-size: 12px; font-weight: bold; margin-top: 6px; width: 40px; }
+#accessibilityMenu #primary .hotkeys { margin-left: 29px; float: left; }
+#accessibilityMenu #primary .hotkeys li a { color: rgb(255, 255, 255); font-size: 11px; }
+#accessibilityMenu ul li a { color: rgb(255, 255, 255); }
+#accessibilityMenu ul li span { border: 1px solid rgb(204, 204, 204); background-color: rgb(238, 238, 238); padding: 0px 2px; color: rgb(0, 0, 0); border-radius: 4px; font-size: 10px; }
+.fb_reset { background: none repeat scroll 0% 0% transparent; border: 0px none; border-spacing: 0px; color: rgb(0, 0, 0); cursor: auto; direction: ltr; font-family: "lucida grande",tahoma,verdana,arial,sans-serif; font-size: 11px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 1; margin: 0px; overflow: visible; padding: 0px; text-align: left; text-decoration: none; text-indent: 0px; text-shadow: none; text-transform: none; visibility: visible; white-space: normal; word-spacing: normal; }
+.fb_reset > div { overflow: hidden; }
+/* ::::: http://i.cdn.turner.com/nba/nba/.element/css/2.1/sect/allaccess/nbaAllAccess.css ::::: */
+
+#nbaAllAccess { color: rgb(68, 68, 68); font: 13px Arial,Helvetica,sans-serif; height: 465px; width: 750px; }
+#nbaCloseBtn { position: relative; left: 98%; top: 18px; cursor: pointer; z-index: 102; }
+#nbaAllAccess #nbaAATop { background: url('bgoverlaycorners.png') no-repeat scroll 0px 0px transparent; position: relative; height: 10px; z-index: 101; }
+#nbaAllAccess #nbaAAScreenWrap { background: none repeat scroll 0% 0% rgb(255, 255, 255); height: 444px; }
+#nbaAllAccess #nbaAABtm { background: url('bgoverlaycorners.png') no-repeat scroll 0px -10px transparent; height: 10px; }
+#nbaAllAccess #nbaAASysMsg { background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 2px solid rgb(211, 0, 0); color: rgb(211, 0, 0); display: none; font-size: 14px; left: 65px; padding: 10px; position: absolute; text-align: center; top: 50%; width: 600px; z-index: 15; }
+#nbaAllAccess #nbaAASysMsg .nbaSysErrHdr { color: rgb(211, 0, 0); font-size: 30px; font-weight: bold; }
+#nbaResponsysWrapper { display: none; }
+#nbaAllAccess #nbaAAHeader { padding: 0px 1px; }
+#nbaAllAccess #nbaAALogos { float: left; height: 88px; margin: 0px 0px 2px; }
+#nbaAllAccess .nbaAAGra { background: url('bgaalogo.png') no-repeat scroll 0px 0px rgb(203, 203, 203); float: right; height: 85px; padding: 0px 0px 0px 1px; display: block; }
+#nbaAllAccess #nbaAAIcons { float: right; margin: 0px; padding: 0px 35px 0px 0px; }
+#nbaAllAccess #nbaLoading { display: none; position: absolute; bottom: 206px; left: 360px; }
+#nbaAllAccess #nbaAAStatusBar, #nbaAllAccess #nbaAAStatusBar a { background: url('bgstatusmsg.png') no-repeat scroll 0px 0px transparent; clear: both; height: 33px; }
+#nbaAllAccess #nbaAALogos img, #nbaAllAccess .nbaAAGra { float: left; }
+#nbaAllAccess #nbaAABody { padding: 25px 40px 0px; }
+#nbaAllAccess .nbaAALeftCol { border-right: 1px solid rgb(187, 187, 187); float: left; width: 335px; }
+#nbaAllAccess .nbaAARightCol { float: right; width: 302px; }
+#nbaAllAccess .nbaAARow { clear: both; }
+#nbaAllAccess h1 { color: rgb(0, 0, 0); font-size: 18px; margin: 0px; }
+#nbaAllAccess p { margin: 6px 0px; padding: 0px; }
+#nbaAllAccess a, #nbaAllAccess a:visited { color: rgb(0, 102, 204); outline: 0px none; text-decoration: none; }
+#nbaAllAccess a:hover, #nbaAllAccess a:active { color: rgb(68, 68, 68); text-decoration: underline; }
+#nbaAllAccess .nbaRequired { color: rgb(68, 68, 68); font-size: 10px; left: 255px; position: absolute; }
+#nbaAllAccess form { margin: 20px 0px 0px; }
+#nbaAllAccess .nbaInputBlock { color: rgb(0, 0, 0); margin-bottom: 6px; }
+#nbaAllAccess .nbaInputBlock input { background: none repeat scroll 0% 0% rgb(238, 238, 238); border: 1px solid rgb(68, 68, 68); height: 17px; margin: 0px; padding: 3px; width: 197px; }
+#nbaAllAccess .nbaInputBlock label { color: rgb(52, 52, 52); display: block; float: left; font-size: 11px; font-weight: bold; padding: 6px 8px 0px 0px; text-align: right; width: 90px; }
+#nbaAllAccess .nbaInputBlock .nbaErrorMessage { display: none; }
+#nbaAllAccess .nbaForgotPassword { font-size: 11px; margin: 0px 0px 0px 105px; }
+#nbaAllAccess a.nbaButton { background: url('bgbutton.gif') no-repeat scroll right top transparent; color: rgb(0, 102, 204); display: inline-block; font-size: 11px; font-weight: bold; height: 23px; margin-right: 6px; padding-right: 4px; text-decoration: none; text-transform: uppercase; }
+#nbaAllAccess a.nbaButton span { background: url('bgbuttonspan.gif') no-repeat scroll 0% 0% transparent; display: block; line-height: 13px; padding: 5px 6px 5px 10px; }
+#nbaAllAccess a.nbaButton:hover { color: rgb(68, 68, 68); }
+#fb-auth { background: url('fbsprite.png') no-repeat scroll left -188px rgb(95, 120, 171); cursor: pointer; border-bottom: 1px solid rgb(26, 53, 110); border-top: 1px solid rgb(135, 154, 192); color: rgb(255, 255, 255); display: block; font-family: "lucida grande",tahoma,verdana,arial,sans-serif; font-weight: bold; margin: 1px 1px 0px 21px; padding: 4px 26px 3px; text-shadow: none; }
+#nbaAllAccess .nbaLogin .nbaAARow { padding-top: 10px; }
+#nbaAllAccess .nbaLogin .nbaAALeftCol { height: 165px; }
+#nbaAllAccess .nbaLogin .nbaInputBlock label { font-size: 12px; }
+#nbaAllAccess .nbaLogin p.nbaForgotPassword a { font-size: 11px; }
+#nbaAllAccess .nbaLogin .nbaAALeftCol .nbaButton { margin: 12px 0px 10px 98px; }
+#nbaAllAccess .nbaLogin .nbaNewUser { background: url('bgnewuser.png') repeat scroll 0% 0% transparent; margin: 0px auto; height: 64px; width: 274px; }
+#nbaAllAccess .nbaLogin .nbaNewUser h1 { float: left; margin: 20px 20px 0px; width: 100px; }
+#nbaAllAccess .nbaLogin .nbaNewUser .nbaButton { margin: 20px 0px 0px 16px; }
+#nbaAllAccess #fb-auth { margin: 20px 0px; }
+#nbaAllAccess form { margin: 12px 0px 0px; }
+.nbaSkin.kia { height: 43px ! important; background-image: url('nba_clockbg_kia.png') ! important; background-repeat: no-repeat ! important; }
+#body_Right_Kia.twok_right { height: 43px ! important; position: absolute; background-image: url('nba_clockbg_15k.png') ! important; background-repeat: no-repeat; right: 0px; top: 0px; width: 355px; }
+#nbaCountdownTime { color: rgb(255, 255, 255) ! important; margin-top: 24px; word-spacing: 23px; letter-spacing: 0px; position: relative; right: 20px; }
+#nbaCountdownTime b:last-child { position: relative; right: 5px; }
+#nbaStats { display: block; }
+#nbaStats { display: block; }
+#nbaStats { display: block; }
+#nbaStats { display: block; }
+#nbaStats { display: block; }
+#nbaStats { display: block; }
+#policy_wrapper { position: fixed; bottom: 0px; left: 0px; width: 100%; height: 50px; background: none repeat scroll 0% 0% rgb(204, 204, 204); border-top: 2px solid rgb(0, 97, 166); font-family: arial; font-size: 11px; z-index: 999; }
+#policy_wrapper #close_button, #policy_wrapper .privacy_policy { display: block; width: 100px; height: 20px; background: none repeat scroll 0% 0% rgb(0, 97, 166); border-radius: 3px; color: rgb(255, 255, 255); text-align: center; line-height: 20px; margin: 5px; float: right; padding: 5px; text-decoration: none; }
+#policy_wrapper.close_wrapper { display: none; }
+#policy_wrapper .text { padding: 5px; }
+#policy_wrapper a { color: rgb(0, 0, 0) ! important; }

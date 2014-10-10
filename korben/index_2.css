@@ -1,0 +1,140 @@
+/* ::::: https://s1-f.scribdassets.com/aggregated/css/base.css?1412913525 ::::: */
+
+/* ::::: https://s1-f.scribdassets.com/aggregated/css/embeds.css?1412913540 ::::: */
+
+body { color: rgb(0, 0, 0); background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td { margin: 0px; padding: 0px; }
+fieldset, img { border: 0px none; }
+li { list-style: outside none none; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+input, textarea, select { font-family: inherit; font-size: inherit; font-weight: inherit; }
+@font-face {
+	font-family: "Proxima Nova";
+	font-style: normal;
+	font-weight: normal;
+	src: url('proximanova-reg-webfont.eot') format("embedded-opentype"), url('proximanova-reg-webfont.woff') format("woff"), url('proximanova-reg-webfont.ttf') format("truetype"), url('proximanova-reg-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "Proxima Nova";
+	font-style: normal;
+	font-weight: bold;
+	src: url('proximanova-bold-webfont.eot') format("embedded-opentype"), url('proximanova-bold-webfont.woff') format("woff"), url('proximanova-bold-webfont.ttf') format("truetype"), url('proximanova-bold-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "Proxima Nova";
+	font-style: normal;
+	font-weight: 200;
+	src: url('proximanova-light-webfont.eot') format("embedded-opentype"), url('proximanova-light-webfont.woff') format("woff"), url('proximanova-light-webfont.ttf') format("truetype"), url('proximanova-light-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "Proxima Nova";
+	font-style: italic;
+	font-weight: normal;
+	src: url('proximanova-regit-webfont.eot') format("embedded-opentype"), url('proximanova-regit-webfont.woff') format("woff"), url('proximanova-regit-webfont.ttf') format("truetype"), url('proximanova-regit-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "Proxima Nova";
+	font-style: italic;
+	font-weight: bold;
+	src: url('proximanova-boldit-webfont.eot') format("embedded-opentype"), url('proximanova-boldit-webfont.woff') format("woff"), url('proximanova-boldit-webfont.ttf') format("truetype"), url('proximanova-boldit-webfont.svg') format("svg");
+}
+@font-face {
+	font-family: "Proxima Nova";
+	font-style: normal;
+	font-weight: 100;
+	src: url('proximanova-thin-webfont.eot') format("embedded-opentype"), url('proximanova-thin-webfont.woff') format("woff"), url('proximanova-thin-webfont.ttf') format("truetype"), url('proximanova-thin-webfont.svg') format("svg");
+}
+body { font-family: Sofia Pro,sans-serif; color: rgb(68, 68, 68); font-size: 16px; }
+a, .pseudoLink { color: rgb(26, 123, 186); outline: medium none; text-decoration: none; cursor: pointer; }
+a:hover, .pseudoLink:hover { color: rgb(106, 198, 226); }
+.clearfix:after { content: "."; display: block; height: 0px; clear: both; visibility: hidden; }
+.clearfix {  }
+.divider { margin: 0px 1px; border-top: 1px solid rgb(226, 228, 229); }
+span.sprite { display: inline-block; vertical-align: middle; }
+.sprite { background: url('icon-sprite.png') no-repeat scroll 0px 0px transparent; }
+.sprite.share, .sprite.close, .sprite.reply, .sprite.comment, .sprite.bookmark_light, .sprite.bookmark_dark, .sprite.download { position: relative; cursor: pointer; }
+.sprite.share:active, .sprite.close:active, .sprite.reply:active, .sprite.comment:active, .sprite.bookmark_light:active, .sprite.bookmark_dark:active, .sprite.download:active { top: 1px; }
+.sprite.close { width: 12px; height: 13px; background-position: -26px 0px; }
+.sprite.close.white { background-position: -52px -13px; }
+.sprite.close.white:hover { background-position: -52px -13px; }
+.sprite.close:hover { background-position: -39px 0px; }
+.lightbox { position: absolute; text-align: left; background: none no-repeat scroll 0px 0px white; box-shadow: 0px 0px 12px rgb(34, 34, 34); margin-bottom: 60px; }
+.lightbox .content { border-top: 1px solid rgb(225, 225, 225); padding: 40px; }
+.lightbox .title { font-size: 36px; font-family: Livory,serif; line-height: 40px; padding: 30px 40px; background: none repeat scroll 0% 0% rgb(249, 249, 249); }
+.lightbox .wrapper { overflow: hidden; position: relative; }
+.lightbox .close_button { position: absolute; top: 0px; right: 0px; float: right; margin-top: 15px; margin-right: 15px; }
+#share_lb.lightbox { width: 500px; }
+.autogen_class_views_shared_carousels_carousel { position: relative; }
+.autogen_class_views_embeds_content #content_embed_container { z-index: 1; }
+.autogen_class_views_embeds_content #content_embed_container #document_content { overflow: hidden; position: absolute; top: 0px; bottom: 30px; left: 0px; right: 0px; border-width: 1px 1px medium; border-style: solid solid none; border-color: rgb(229, 229, 229) rgb(229, 229, 229) -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; }
+.autogen_class_views_embeds_content #content_embed_container #document_content iframe { padding: 0px; margin: 0px; position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; width: 100%; height: 100%; min-width: 340px; }
+.autogen_class_views_embeds_content #toolbar { position: absolute; bottom: 0px; left: 0px; right: 0px; height: 29px; min-width: 340px; padding: 0px; overflow: hidden; z-index: 5000; background: none repeat scroll 0% 0% rgb(243, 241, 234); border: 1px solid rgb(229, 229, 229); box-shadow: 0px 0px 4px -1px rgb(211, 213, 214) inset; text-align: center; }
+.autogen_class_views_embeds_content #toolbar .padding_wrapper { padding: 0px 200px; }
+.autogen_class_views_embeds_content #toolbar a.logo { display: block; float: left; width: 82px; height: 25px; overflow: hidden; margin: 2px 15px 0px 1px; }
+.autogen_class_views_embeds_content #toolbar a.logo div { top: 0px; width: 82px; height: 25px; background: url('embedbuttonscribdlogo.png') no-repeat scroll left top transparent; }
+.autogen_class_views_embeds_content #toolbar .fullscreen { padding-left: 31px; }
+.autogen_class_views_embeds_content #toolbar .fullscreen div { width: 30px; background: url('embedbuttonfullscreen.png') no-repeat scroll left top transparent; }
+.autogen_class_views_embeds_content #toolbar .exit_fullscreen { padding-left: 31px; }
+.autogen_class_views_embeds_content #toolbar .exit_fullscreen div { width: 30px; background: url('embedbuttonexitfullscreen.png') no-repeat scroll left top transparent; }
+.autogen_class_views_embeds_content #toolbar .download, .autogen_class_views_embeds_content #toolbar .share, .autogen_class_views_embeds_content #toolbar .embed_code, .autogen_class_views_embeds_content #toolbar .buy_button, .autogen_class_views_embeds_content #toolbar .barnes_noble_buy_button, .autogen_class_views_embeds_content #toolbar .amazon_buy_button { margin-left: 0px; margin-right: 24px; padding-left: 31px; }
+.autogen_class_views_embeds_content #toolbar .download div, .autogen_class_views_embeds_content #toolbar .share div, .autogen_class_views_embeds_content #toolbar .embed_code div, .autogen_class_views_embeds_content #toolbar .buy_button div, .autogen_class_views_embeds_content #toolbar .barnes_noble_buy_button div, .autogen_class_views_embeds_content #toolbar .amazon_buy_button div { width: 30px; }
+.autogen_class_views_embeds_content #toolbar .download span, .autogen_class_views_embeds_content #toolbar .share span, .autogen_class_views_embeds_content #toolbar .embed_code span, .autogen_class_views_embeds_content #toolbar .buy_button span, .autogen_class_views_embeds_content #toolbar .barnes_noble_buy_button span, .autogen_class_views_embeds_content #toolbar .amazon_buy_button span { line-height: 28px; }
+.autogen_class_views_embeds_content #toolbar .download div { background: url('embedbuttondownload.png') no-repeat scroll left top transparent; }
+.autogen_class_views_embeds_content #toolbar .share div { background: url('embedbuttonshare.png') no-repeat scroll left top transparent; }
+.autogen_class_views_embeds_content #toolbar .embed_code div { background: url('embedbuttonembed.png') no-repeat scroll left top transparent; }
+.autogen_class_views_embeds_content #toolbar .zoom_in, .autogen_class_views_embeds_content #toolbar .zoom_out { padding-left: 31px; }
+.autogen_class_views_embeds_content #toolbar .zoom_in div, .autogen_class_views_embeds_content #toolbar .zoom_out div { width: 30px; }
+.autogen_class_views_embeds_content #toolbar .zoom_in div { background: url('embedbuttonzoomin.png') no-repeat scroll left top transparent; }
+.autogen_class_views_embeds_content #toolbar .zoom_out div { background: url('embedbuttonzoomout.png') no-repeat scroll left top transparent; }
+.autogen_class_views_embeds_content #toolbar .expandable_button { font-size: 12px; font-family: Helvetica,Arial,sans-serif; font-weight: bold; color: rgb(70, 75, 78); display: block; height: 21px; position: relative; }
+.autogen_class_views_embeds_content #toolbar .expandable_button.exit_fullscreen {  }
+.autogen_class_views_embeds_content #toolbar .expandable_button span { position: relative; }
+.autogen_class_views_embeds_content #toolbar .expandable_button div { position: absolute; left: 0px; top: 2px; height: 25px; }
+.autogen_class_views_embeds_content #toolbar .expandable_button:hover { text-decoration: none; background-position: 0px -25px; }
+.autogen_class_views_embeds_content #toolbar .expandable_button:hover div { background-position: 0px -25px; }
+.autogen_class_views_embeds_content #toolbar .expandable_button:active { background-position: right -50px; text-decoration: none; }
+.autogen_class_views_embeds_content #toolbar .expandable_button:active span { top: 1px; }
+.autogen_class_views_embeds_content #toolbar .expandable_button:active div { background-position: 0px -50px; }
+.autogen_class_views_embeds_content #toolbar #buttons_left, .autogen_class_views_embeds_content #toolbar #buttons_right { position: absolute; top: 0px; list-style-type: none; }
+.autogen_class_views_embeds_content #toolbar #buttons_left li, .autogen_class_views_embeds_content #toolbar #buttons_right li { margin: 0px; padding: 0px; font-size: 14px; }
+.autogen_class_views_embeds_content #toolbar #buttons_left li.divider, .autogen_class_views_embeds_content #toolbar #buttons_right li.divider { width: 0px; height: 21px; border-left: 1px solid rgb(211, 213, 214); margin: 3px 5px; }
+.autogen_class_views_embeds_content #toolbar #buttons_left { left: 0px; }
+.autogen_class_views_embeds_content #toolbar #buttons_left li { float: left; }
+.autogen_class_views_embeds_content #toolbar #buttons_right { right: 0px; }
+.autogen_class_views_embeds_content #toolbar #buttons_right li { float: right; }
+.autogen_class_views_embeds_content #toolbar li#pages { margin-right: 5px; }
+.autogen_class_views_embeds_content #toolbar li#pages form { display: inline-block; }
+.autogen_class_views_embeds_content #toolbar li#pages form input { width: 25px; height: 21px; margin-top: 3px; line-height: 21px; border: 1px solid rgb(211, 213, 214); border-radius: 3px; box-shadow: 0px 1px 2px -1px rgb(211, 213, 214) inset; outline: medium none; background: none repeat scroll 0% 0% rgb(255, 255, 255); font-size: 15px; font-family: Helvetica; color: rgb(70, 75, 78); text-align: center; }
+.autogen_class_views_embeds_content #toolbar li#pages .of, .autogen_class_views_embeds_content #toolbar li#pages .total { color: rgb(70, 75, 78); height: 27px; line-height: 27px; font-family: Georgia; }
+.autogen_class_views_embeds_content #toolbar li#pages .of { font-size: 12px; margin-left: 6px; margin-right: 4px; }
+.autogen_class_views_embeds_content #toolbar li#pages .total { font-size: 15px; margin: 0px; }
+#embed_code_lb h2 { color: rgb(70, 75, 78); font-family: Georgia; font-weight: normal; margin-bottom: 5px; }
+#embed_code_lb .embed_code_container textarea { width: 300px; height: 75px; display: block; clear: both; margin-bottom: 12px; }
+#embed_code_lb hr { margin: 10px 0px; background: none repeat scroll 0% 0% transparent; border-bottom: 1px dashed rgb(211, 213, 214); }
+#embed_code_lb .doc_url_container input { width: 222px; height: 20px; }
+#embed_code_lb .copy_button_container { float: right; left: -4px; position: relative; width: 72px; height: 27px; }
+#embed_code_lb .copy_button { background: url('embedbuttoncopy.png') repeat scroll 0% 0% transparent; width: auto; }
+.recommendations_container { position: absolute; bottom: 29px; left: 0px; right: 0px; padding: 0px; z-index: 5000; min-height: 29px; }
+.recommendations_container .document_list { position: relative; }
+.recommendations_container .document_list .list_content { position: relative; overflow: hidden; margin: 0px; }
+.recommendations_container .document_list .sliding_content { font-size: 0px; white-space: nowrap; position: absolute; top: 0px; left: 0px; }
+.recommendations_container .recommendations_page { display: none; background-color: white; padding-top: 10px; text-align: left; }
+.recommendations_container .recommendations_page .list_title { font-size: 14px; margin: 0px 0px 10px 5px; float: left; color: rgb(142, 163, 171); }
+.recommendations_container .recommendations_page .list_title a { font-weight: normal; padding: 0px; }
+.recommendations_container .recommendations_page .document_list { margin-left: 5px; }
+.recommendations_container .recommendations_page .pagination { float: right; font-size: 13px; }
+.recommendations_container .recommendations_nag { text-align: center; font-size: 12px; cursor: pointer; background: none repeat scroll 0% 0% rgb(62, 119, 147); }
+.recommendations_container .recommendations_nag:hover { background: none repeat scroll 0% 0% rgb(77, 146, 180); }
+.recommendations_container .recommendations_nag div { height: 28px; overflow: hidden; text-overflow: ellipsis; width: 70%; margin: 0px auto; }
+.recommendations_container .recommendations_nag .open_recommendations { display: none; }
+.recommendations_container .recommendations_nag .closed_recommendations { display: inline-block; }
+.recommendations_container .recommendations_nag a { color: rgb(255, 255, 255); line-height: 28px; }
+.recommendations_container .recommendations_nag .sprite.close.white { position: absolute; right: 25px; top: 7px; }
+.recommendations_container .recommendations_nag .right { margin-right: 45px; }
+.social_button { display: inline-block; }
+.social_button.fb_sb { position: relative; top: -2px; overflow: hidden; }
+.fb_reset { background: none repeat scroll 0% 0% transparent; border: 0px none; border-spacing: 0px; color: rgb(0, 0, 0); cursor: auto; direction: ltr; font-family: "lucida grande",tahoma,verdana,arial,sans-serif; font-size: 11px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 1; margin: 0px; overflow: visible; padding: 0px; text-align: left; text-decoration: none; text-indent: 0px; text-shadow: none; text-transform: none; visibility: visible; white-space: normal; word-spacing: normal; }
+.fb_reset > div { overflow: hidden; }
+.fb_iframe_widget { display: inline-block; position: relative; }
+.fb_iframe_widget span { display: inline-block; position: relative; text-align: justify; }
+.fb_iframe_widget iframe { position: absolute; }
