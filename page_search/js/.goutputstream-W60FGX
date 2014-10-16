@@ -1,0 +1,22 @@
+
+d = 100 ;
+n = 0 ;
+var im = new Array(43) ;
+
+function init(){
+ for (var i=21; i<im.length;i++){ 
+  im[i] = new Image();
+  im[i].src= "image/image"+i+".png" ; 
+  }
+}
+function anime() {
+ document.monImage.src= im[n].src ;
+ n++;
+ if (n == im.length) n=0;
+}
+
+
+
+/*
+
+ iter, réfléchissons ensemble, si vous le voulez bien. Je sens que c�

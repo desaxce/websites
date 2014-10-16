@@ -1,0 +1,49 @@
+
+d = 100 ;
+n = 0 ;
+var im = new Array(43) ;
+
+function init(){
+ for (var i=21; i<im.length;i++){ 
+  im[i] = new Image();
+  im[i].src= "image/image"+i+".png" ; 
+  }
+}
+function anime() {
+ document.monImage.src= im[n].src ;
+ n++;
+ if (n == im.length) n=0;
+}
+
+
+
+/*
+
+ 
+Welcome to Wikipedia,
+the free encyclopedia that anyone can edit.
+4,526,746 articles in English
+	
+
+    Arts
+    Biography
+    Geography
+
+	
+
+    History
+    Mathematics
+    Science
+
+	
+
+    Society
+    Technology
+    All portals
+
+From today's featured article
+Cover of the official guidebook for the 1906 season
+
+Belle Vue Zoological Gardens was a large zoo, amusement park, exhibition hall complex and speedway stadium in Belle Vue, Manchester, England, opened in 1836. The brainchild of John Jennison, the park was intended to entertain the genteel middle classes, with formal gardens and dancing on open-air platforms during the summer, but they soon became one of the most popular attractions in Northern England. Jennison set out a small amusements area in Belle Vue during the 1870s, which was expanded in the early 20th century to become what was advertised as the "showground of the world". Popular rides included the 60 mph (97 km/h) Bobs roller coaster and the Scenic Railway. Grand firework displays were given from 1852 and there was an annual Christmas circus from 1922. The Kings Hall, opened in 1910, housed the Hallé Orchestra for several years and later hosted concerts by artists such as Jimi Hendrix, The Who, The Rolling Stones, Leonard Cohen, Johnny Cash and Led Zeppelin. At its peak Belle Vue occupied 165 acres (0.67 km2) and attracted more than two million visitors a year. The zoo closed in September 1977 after its owners decided they could no longer afford annual losses of £100,000. (Full article...)
+
+Recently featured: Four Freedoms (Norman Rockwell) 
