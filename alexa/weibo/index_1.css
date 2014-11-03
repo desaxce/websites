@@ -1,0 +1,101 @@
+/* ::::: http://img.t.sinajs.cn/t5/style/css/module/base/frame.css?version=8f446b3f6a95af28 ::::: */
+
+body, button, input, select, textarea { font: 12px/1.125 Arial,Helvetica,sans-serif; }
+body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, th, td, p, blockquote, pre, form, fieldset, legend, input, button, textarea, hr { margin: 0px; padding: 0px; }
+fieldset, img { border: 0px none; }
+q::before, q::after { content: ""; }
+a:focus, input, textarea { outline-style: none; }
+input[type="text"], input[type="password"], textarea { outline-style: none; }
+address, caption, cite, code, dfn, em, i, th, var, b { font-style: normal; font-weight: normal; }
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+a { color: rgb(10, 140, 210); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.clearfix::after { content: "."; display: block; height: 0px; clear: both; visibility: hidden; }
+.clearfix { display: inline-block; }
+.clearfix { display: block; }
+.W_fl { float: left; }
+.W_input, .W_inputStp { border: 1px solid rgb(204, 204, 204); border-radius: 2px; height: 28px; padding: 0px 0px 0px 2px; vertical-align: middle; color: rgb(128, 128, 128); box-shadow: 0px 1px 1px 0px rgb(234, 234, 234) inset; }
+:root .W_input, :root .W_inputStp {  }
+.W_input_focus, .W_input:focus, .W_inputStp:focus { border-color: rgb(255, 185, 65) ! important; box-shadow: 1px 1px 1px 0px rgb(221, 221, 221) inset; color: rgb(51, 51, 51); }
+@media not all, not all, not all, not all {
+}
+.W_btn_e span, .W_btn_e_disable span, .W_btn_f span, .W_btn_f_disable span, .W_btn_g span, .W_btn_g_disable span { text-align: center; white-space: nowrap; display: inline-block; border-style: solid; border-width: 1px; border-radius: 2px; height: 26px; line-height: 25px; vertical-align: middle; }
+.W_btn_e span, .W_btn_e_disable span { min-width: 68px; padding: 0px 14px; }
+.W_btn_e:hover, .W_btn_e_disable:hover, .W_btn_f:hover, .W_btn_f_disable:hover, .W_btn_g:hover, .W_btn_g_disable:hover, .W_btn_g_current { text-decoration: none; }
+.W_btn_e, .W_btn_f { display: inline-block; border-width: 1px; border-style: solid; border-radius: 2px; overflow: hidden; vertical-align: middle; cursor: pointer; border-color: rgb(217, 217, 217); background-color: rgb(242, 242, 242); }
+.W_btn_e span, .W_btn_f span { vertical-align: middle; border-color: rgb(255, 255, 255); color: rgb(51, 51, 51); }
+.W_btn_e:hover, .W_btn_f:hover, .W_btn_g { border-width: 1px; border-style: solid; border-color: rgb(255, 155, 1); background-color: rgb(255, 160, 10); color: rgb(255, 255, 255); border-radius: 2px; display: inline-block; overflow: hidden; vertical-align: middle; cursor: pointer; }
+.W_btn_e:hover span, .W_btn_f:hover span, .W_btn_g:hover span { border-width: 1px; border-style: solid; border-color: rgb(255, 206, 130); color: rgb(255, 255, 255); text-align: center; }
+.W_btn_e:hover, .W_btn_f:hover, .W_btn_g:hover, .W_btn_e:hover span, .W_btn_f:hover span, .W_btn_g:hover span { text-decoration: none; background: -moz-linear-gradient(center top , rgb(255, 184, 71) 0%, rgb(255, 162, 16) 100%) repeat scroll 0% 0% transparent; }
+.W_btn_a_disable, .W_btn_a_disable:hover, .W_btn_b_disable, .W_btn_b_disable:hover, .W_btn_c_disable, .W_btn_c_disable:hover, .W_btn_d_disable, .W_btn_d_disable:hover, .W_btn_v_disable, .W_btn_v_disable:hover, .W_btn_e_disable, .W_btn_e_disable:hover, .W_btn_f_disable, .W_btn_f_disable:hover, .W_btn_g_disable, .W_btn_g_disable:hover { display: inline-block; border-width: 1px; border-style: solid; border-radius: 2px; overflow: hidden; vertical-align: middle; cursor: pointer; }
+.W_btn_e_disable span, .W_btn_e_disable:hover span, .W_btn_f_disable span, .W_btn_f_disable:hover span, .W_btn_g_disable span, .W_btn_g_disable:hover span { color: rgb(204, 204, 204); cursor: default; text-decoration: none; text-align: center; white-space: nowrap; display: inline-block; border-style: solid; border-width: 1px; border-radius: 2px; height: 26px; line-height: 25px; vertical-align: middle; }
+.W_btn_a_disable, .W_btn_a_disable:hover, .W_btn_b_disable, .W_btn_b_disable:hover, .W_btn_c_disable, .W_btn_c_disable:hover, .W_btn_d_disable, .W_btn_d_disable:hover, .W_btn_v_disable, .W_btn_v_disable:hover, .W_btn_e_disable, .W_btn_e_disable:hover, .W_btn_f_disable, .W_btn_f_disable:hover, .W_btn_g_disable, .W_btn_g_disable:hover { border-color: rgb(217, 217, 217); background: none repeat scroll 0% 0% rgb(242, 242, 242); }
+.W_btn_a_disable span, .W_btn_a_disable:hover span, .W_btn_b_disable span, .W_btn_b_disable:hover span, .W_btn_c_disable span, .W_btn_c_disable:hover span, .W_btn_d_disable span, .W_btn_d_disable:hover span, .W_btn_v_disable span, .W_btn_v_disable:hover span, .W_btn_e_disable span, .W_btn_e_disable:hover span, .W_btn_f_disable span, .W_btn_f_disable:hover span, .W_btn_g_disable span, .W_btn_g_disable:hover span { border-color: rgb(255, 255, 255); background: none repeat scroll 0% 0% rgb(242, 242, 242); color: rgb(204, 204, 204); cursor: default; text-decoration: none; }
+@media �screen,screen	 {
+}
+@media not all, not all, not all, not all {
+}
+.WB_global_personcard fieldset, img { border: 0px none; }
+.WB_global_personcard .clearfix::after { content: "."; display: block; height: 0px; clear: both; visibility: hidden; }
+@media �screen,screen	 {
+}
+@media �screen,screen	 {
+}
+/* ::::: http://img.t.sinajs.cn/t5/style/css/module/register/quick_register.css?version=8f446b3f6a95af28 ::::: */
+
+.W_reg_form .info_list { margin: 0px 0px 15px; position: relative; }
+.W_reg_form .tit { float: left; line-height: 30px; text-align: right; }
+.W_reg_form .inp .W_input { width: 196px; }
+.W_reg_form .active {  }
+.W_reg_form .active * {  }
+.W_reg_form .active input.W_input { width: 62px; margin-left: 5px; }
+.W_reg_form .active a, .W_reg_form .active .W_input { vertical-align: middle; }
+.W_reg_form .active .W_btn_e span, .W_reg_form .active .W_btn_e_disable span { padding: 0px 2px 0px 0px; width: 120px; }
+.W_reg_form .foreign_tel { width: 190px; height: 28px; padding: 0px 0px 0px 2px; background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+.W_reg_form .foreign_tel .tel_forenum { float: left; margin: 0px 5px 0px 0px; font-size: 14px; line-height: 28px; }
+.W_reg_form .foreign_tel .tel_num { width: 147px; height: 28px; font-size: 14px; border: 0px none; background: none repeat scroll 0% 0% transparent; color: rgb(128, 128, 128); }
+.quick_register .W_reg_form .info_list { margin: 0px 15px 0px 0px; line-height: normal; }
+.quick_register .W_reg_form .W_input_focus2 { border-color: rgb(255, 185, 65) ! important; box-shadow: 1px 1px 1px 0px rgb(221, 221, 221) inset; }
+.quick_register .W_reg_form .btn_reg_red, .quick_register .W_reg_form .btn_reg_red span { display: inline-block; cursor: pointer; }
+.quick_register .W_reg_form .btn_reg_red { border: 1px solid rgb(230, 65, 65); border-radius: 2px; box-shadow: 0px 1px rgba(0, 0, 0, 0.3); }
+.quick_register .W_reg_form .btn_reg_red span { height: 26px; line-height: 26px; border: 1px solid rgb(235, 103, 103); color: rgb(255, 255, 255); background: none repeat scroll 0% 0% rgb(230, 65, 65); font-size: 20px; text-align: center; font-family: "Microsoft yahei"; }
+.quick_register .W_reg_form .btn_reg_red:hover { text-decoration: none; }
+.quick_register .W_reg_form .btn_reg_red:hover span { background: -moz-linear-gradient(center top , rgb(249, 89, 89) 0%, rgb(240, 77, 77) 50%, rgb(231, 66, 66) 100%) repeat scroll 0% 0% transparent; }
+.quick_register { width: 980px; margin: 0px auto; }
+.quick_register .box { background: url('invite_regbg.png') no-repeat scroll center top transparent; overflow: visible; }
+.quick_register .inner { height: 103px; background-position: right bottom; }
+.quick_register .W_reg_form { margin: 13px 0px 0px 120px; position: relative; }
+.quick_register .W_reg_form .info_list, .quick_register .W_reg_form .info_list .tit, .quick_register .W_reg_form .info_list .inp { float: left; overflow: hidden; }
+.quick_register .W_reg_form .tit { line-height: 30px; }
+.quick_register .W_reg_form .info_list .W_input { background: none repeat scroll 0% 0% transparent; }
+.quick_register .W_reg_form .inp .W_input { width: 135px; }
+.quick_register .W_reg_form .reg_box { float: left; font-size: 14px; padding-left: 20px; height: 30px; line-height: 30px; }
+.quick_register .W_reg_form .btn_reg_red { margin-right: 15px; vertical-align: top; }
+.quick_register .W_reg_form .btn_reg_red.animate { position: absolute; left: 512px; top: 0px; }
+.quick_register .W_reg_form .btn_reg_red span { width: 130px; }
+.quick_register .W_reg_form .cell_phone .W_input, .quick_register .W_reg_form .active .W_input, .quick_register .W_reg_form .verify .W_input { background-color: rgb(255, 255, 255); }
+.quick_register .W_reg_form .active {  }
+.quick_register .W_reg_form .active .W_btn_e, .quick_register .W_reg_form .active .W_btn_e_disable { margin-right: 10px; }
+.quick_register .W_reg_form .active .W_btn_e span, .quick_register .W_reg_form .active .W_btn_e_disable span, .quick_register .W_reg_form .active .W_btn_e:hover span, .quick_register .W_reg_form .active .W_btn_e_disable:hover span { width: 120px; padding: 0px; }
+.quick_register .W_reg_form .active input.W_input { width: 100px; }
+.quick_register_new .box { background: url('invite_regbg_1.png') no-repeat scroll 0% 0% transparent; position: relative; }
+.quick_register_new .W_reg_form { margin: 15px 0px 0px 30px; }
+.quick_register_new .W_reg_form .btn_reg_red.animate { left: 568px; }
+.quick_register_new .W_reg_form .reg_box { float: right; padding-right: 30px; }
+.quick_register_new .W_reg_form .reg_box a:hover {  }
+.quick_register_new .tit_info { font-size: 14px; padding: 15px 0px 0px 30px; }
+.quick_register_new .reg_tit { height: 25px; width: 242px; margin-right: 15px; background: url('reg_tit.png') no-repeat scroll 0% 0% transparent; }
+.quick_register_new .tit_info * { display: inline-block; vertical-align: middle; }
+.quick_register_new .withVertical { border-right: 1px solid rgb(204, 204, 204); padding-right: 15px; line-height: 20px; margin-top: 5px; }
+.quick_register_new .hasAction .info_list { position: absolute; float: none; }
+.quick_register_new .foreign_tel .tel_num { box-shadow: none; }
+.quick_register_new .tit_info a { font-family: "SimSun"; }
+.quick_register_new .reg_box a { font-family: "SimSun"; position: relative; z-index: 2; }
+.quick_register_new .W_reg_form .tit { font-size: 14px; }
+.quick_register_new .W_reg_form .info_list { margin-right: 5px; }
+.quick_register_new .W_reg_form .active .W_btn_e, .quick_register_new .W_reg_form .active .W_btn_e_disable { margin-right: 15px; }
+.quick_register_new .withVertical { font-size: 14px; }
+.quick_register_new .W_reg_form .active, .quick_register .W_reg_form .active input.W_input { font-size: 14px; margin: 0px; }
+.quick_register_new .W_reg_form .active .W_btn_e { font-size: 12px; }
+.quick_register_new .W_reg_form .info_list .W_input { background: none repeat scroll 0% 0% rgb(255, 255, 255); }

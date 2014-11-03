@@ -1,0 +1,529 @@
+body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select { margin: 0px; padding: 0px; }
+body { font: 12px "宋体","Arial Narrow",HELVETICA; background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+a { color: rgb(23, 44, 69); text-decoration: none; }
+a:hover { color: rgb(205, 2, 0); text-decoration: underline; }
+li { list-style: outside none none; }
+img { border: 0px none; vertical-align: middle; }
+table { border-collapse: collapse; border-spacing: 0px; }
+p { word-wrap: break-word; }
+.noborder { border: 0px none; }
+.Q-bold { font-weight: bold ! important; }
+.layout::after, .hd::after, .bd::after, .ft::after, .cf::after, .Q-tList::after, .Q-tList ul::after, .Q-tList ol::after, .Q-pList::after, .Q-pList ul::after, .Q-tpList::after, .Q-tpList ul::after, .Q-tpWrap::after { content: ""; display: table; clear: both; }
+.layout, .hd, .bd, .ft, .cf, .Q-tList, .Q-tList ul, .Q-tList ol, .Q-pList, .Q-pList ul, .Q-tpList, .Q-tpList ul, .Q-tpWrap {  }
+@media screen {
+	.fl, .layout .fl, .chief { float: left; display: inline; }
+	.fr, .layout .fr, .extra { float: right; display: inline; }
+	.fn { font-weight: bold; }
+	.layout { width: 1000px; margin: 0px auto; }
+	.leftArea { width: 660px; float: left; }
+	.rightArea { width: 318px; border-top: 1px solid rgb(109, 170, 234); background: none repeat scroll 0% 0% rgb(255, 255, 255); float: right; }
+	.mt12 { margin-top: 12px; }
+	#guess { position: absolute; top: -9999px; left: -9999px; }
+	#toTop, .mininavInner .loginSmartTop, .mininavInner .loginSmartBottom, .adEdu .hd, .leftTech .ft, .leftHisMil .ft, .leftAuto .ft, .rightHouse .ft, .rightXingzuo .ft, .rightWenhua .ft, .leftLady .ft, .leftBlog .ft, .leftEdu .ft, .leftKid .ft, .leftSociety .ft, .leftGame .ft, .leftRushidao .ft, .leftGongyi .ft, .leftMeishi .ft, .leftLive .ft, .txDynamic .ft, .mininav, .rightAikanTab .hd .aikanTimeGreen, .rightAikanTab .hd .aikanTimeBlue, .rightAikan .aikanGreen, .rightAikan .aikanBlue, .rightAikan .aikanLine, .rightAikanTitle, .leftNews .hd .newsTab h2#newsDifangH2, .financeSearch button, .myBookIcon, .myVideoIcon, .myConstellationIcon, .leftFinance .myFinanceBox .myFinanceIcon, .leftVideoNews .hd, .leftLive .bd .txtArea dd .price, .nav, .soso .searchBtn button, .soso .search .searchMenu .searchSelectedUp, .soso .search .searchMenu .searchSelected, .soso .search .searchSmart li.searchSmartTip .smartX, .financeSearch #search_btn, #picFocusScroll .prev, #picFocusScroll .prev:hover, #picFocusScroll .next, #picFocusScroll .next:hover, .leftDajiaaikan .hd .more, .leftDajiaaikan .hd .more:hover, .rightAikanTitle .refresh, .rightAikanTitle .refresh:hover { background-image: url('qqbg_1.6.1.png'); background-repeat: no-repeat; }
+	.mininavInner .mininavLeft .mobileIcon, .mininavInner .mininavLeft .mobileIcon:hover, .mininavInner .mininavLeft .ipadIcon, .mininavInner .mininavLeft .ipadIcon:hover, .mininavInner .mininavLeft .qqHelp, .mininavInner .mininavLeft .qqHelp:hover, .nav div .navMore, .nav div .navMore:hover, .adEdu .hd .adEduTab li, .adEdu .bd li, .leftAreaContent .ft li, #qqHelpContent, .vico, .tico, .picico, .zhiboico { background-image: url('icobg_1.4.png'); background-repeat: no-repeat; }
+	.layoutLeft { width: 700px; height: 971px; float: left; overflow: hidden; }
+	.layoutRight { width: 280px; height: 971px; float: right; }
+	.imgArea { width: 108px; height: 70px; float: left; }
+	.imgArea img { width: 108px; height: 70px; }
+	.txtArea { width: 182px; float: right; padding: 5px 15px 0px 0px; overflow: hidden; }
+	.txtArea h3 { width: 100%; line-height: 26px; font-size: 14px; float: left; }
+	.txtArea h3 a { color: rgb(59, 99, 159); }
+	.txtArea dt { width: 100%; line-height: 26px; font-size: 14px; font-weight: bold; }
+	.txtArea dd { width: 100%; line-height: 22px; color: rgb(140, 140, 140); display: none; }
+	.soso { width: 1000px; height: 48px; margin: 0px auto; padding: 23px 0px 19px; }
+	.soso .logo { float: left; display: inline; margin-left: 160px; }
+	.soso .logo .qqlogo { display: block; width: 134px; height: 44px; background-image: url('qqlogo_1x.png'); background-repeat: no-repeat; }
+	.soso .search { float: left; padding: 5px 0px 0px 42px; }
+	.soso .searchTxtHover { float: left; width: 290px; height: 35px; border-width: 1px 0px 1px 1px; border-style: solid none solid solid; border-color: rgb(50, 151, 216) -moz-use-text-color rgb(50, 151, 216) rgb(50, 151, 216); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; position: relative; z-index: 20; background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+	.soso .search .searchMenu { float: left; }
+	.soso .search .searchMenu .searchSelected { color: rgb(168, 168, 168); cursor: pointer; font-size: 14px; font-weight: bold; height: 35px; line-height: 35px; padding: 0px 10px; width: 48px; background-position: -877px -199px; }
+	.soso .search .searchMenu .searchTab { display: none; position: absolute; top: 35px; left: -1px; width: 58px; border-right: 1px solid rgb(50, 151, 216); border-width: 0px 1px 1px; border-style: none solid solid; border-color: -moz-use-text-color rgb(50, 151, 216) rgb(50, 151, 216); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; background: none repeat scroll 0% 0% rgb(255, 255, 255); height: 258px; z-index: 20; }
+	.soso .search .searchSmart { position: absolute; top: 35px; left: 60px; width: 318px; border: 1px solid rgb(205, 205, 205); background: none repeat scroll 0% 0% rgb(255, 255, 255); visibility: hidden; z-index: 11; }
+	.soso .search .searchSmart ul { width: 100%; float: left; }
+	.soso .search input { float: left; border: 0px none; background: none repeat scroll 0% 0% rgb(255, 255, 255); color: rgb(51, 51, 51); font-size: 14px; line-height: 22px; width: 175px; height: 25px; margin: 0px; outline: medium none; padding: 4px; }
+	.soso .search .sosoLogo { float: right; margin: 5px 6px 0px 0px; }
+	.soso .searchBtn { float: left; }
+	.soso .searchBtn button { background: url('sogousearchbtn.png') no-repeat scroll 0% 0% transparent; border: 0px none; color: rgb(255, 255, 255); cursor: pointer; float: left; font-size: 16px; height: 37px; text-indent: -9999px; width: 90px; }
+	.soso .searchTxtHover .radius { width: 1px; height: 1px; overflow: hidden; background: none repeat scroll 0% 0% rgb(204, 229, 245); position: absolute; top: -2px; left: -1px; }
+	.navBeta .erweima { width: 103px; height: 145px; border: 1px solid rgb(219, 219, 219); padding: 0px; font-size: 12px; position: absolute; top: 0px; right: -115px; background: url('erweimanews1.1.png') no-repeat scroll 0% 0% transparent; }
+	.navBeta .erweima .shutDown { width: 18px; height: 18px; display: block; float: right; cursor: pointer; padding: 0px; margin: 0px; overflow: hidden; }
+	.navBeta .erweima .shutDown:hover { background: none repeat scroll 0% 0% transparent; padding: 0px; margin: 0px; }
+	.navBeta .erweima .erweimaPic { width: 103px; height: 80px; float: left; padding: 0px; margin: 4px 0px 0px; text-align: center; }
+	.navBeta .erweima .erweimaPic a { margin: 0px; padding: 0px; }
+	.navBeta .erweima .erweimaPic a:hover { background: none repeat scroll 0% 0% transparent; margin: 0px; padding: 0px; }
+	.navBeta .erweima .ft { width: 100%; padding: 5px 0px 0px; float: left; line-height: 17px; color: rgb(107, 107, 107); text-align: center; }
+	.navBeta .erweima .ft a { color: rgb(107, 107, 107); margin: 0px; padding: 0px; }
+	.navBeta .erweima .ft a:hover { background: none repeat scroll 0% 0% transparent; margin: 0px; padding: 0px; }
+	#erweimaNewsBeta { width: 103px; padding: 0px; position: absolute; top: 18px; left: 0px; }
+	#erweimaVBeta { width: 103px; padding: 0px; position: absolute; top: 18px; left: 0px; }
+	#erweimaWeishiBeta { width: 103px; padding: 0px; position: absolute; top: 18px; left: 0px; }
+	.adScroll { width: 280px; height: 75px; overflow: hidden; }
+	.leftAreaContent .hd { width: 100%; height: 29px; border-top: 1px solid rgb(200, 220, 242); }
+	.leftAreaContent .hd h2 { color: rgb(8, 115, 192); font-size: 14px; margin-top: 8px; float: left; text-indent: 5px; }
+	#newsQuanguoH2, #newsDifangH2 { text-indent: 0px; }
+	.leftAreaContent .hd h2 a { color: rgb(8, 115, 192); }
+	.leftAreaContent .bd { width: 320px; padding: 16px 0px 8px; }
+	.leftAreaContent .ft { width: 320px; background: none repeat scroll 0% 0% transparent; }
+	.leftAreaContent .ft ul { width: 100%; float: left; }
+	.leftAreaContent .ft li { width: 100%; float: left; height: 26px; line-height: 26px; color: rgb(116, 128, 143); font-size: 14px; background: none repeat scroll 0% 0% transparent; overflow: hidden; }
+	.leftAreaContent .ft ul.nostyle li { text-indent: 0px; background: none repeat scroll 0% 0% transparent; }
+	.leftAreaContent .ft ul.vlist li { width: 291px; height: 28px; line-height: 28px; padding-left: 19px; background: url('iconnew.png') no-repeat scroll left -42px transparent; }
+	.leftLive, .leftMeishi, .leftEnt, .leftSports, .leftFinance, .leftGongyi { width: 320px; background: none repeat scroll 0% 0% rgb(255, 255, 255); overflow: hidden; }
+	#arealife .hd, #gongyi .hd { border-top: 1px solid rgb(109, 170, 234); }
+	.kidArea { width: 60px; height: 78px; float: left; display: inline; margin-right: 20px; overflow: hidden; }
+	.kidArea img { width: 60px; height: 60px; overflow: hidden; }
+	.kidArea p { width: 60px; height: 15px; text-align: center; margin-top: 3px; overflow: hidden; }
+	.rightAreaContent .hd { width: 100%; height: 35px; overflow: hidden; }
+	.rightAreaContent .hd h2 { color: rgb(8, 115, 192); font-size: 14px; margin-top: 8px; text-indent: 15px; float: left; }
+	.rightAreaContent .hd h2 a { color: rgb(8, 115, 192); }
+	.rightAreaContent .ft { width: 320px; background: none repeat scroll 0% 0% transparent; }
+	.rightAreaContent .ft li { width: 100%; height: 26px; line-height: 26px; color: rgb(157, 169, 180); font-size: 14px; text-indent: 15px; overflow: hidden; }
+	#pronav { position: relative; border: 1px solid rgb(210, 225, 241); width: 278px; height: 226px; font-size: 14px; }
+	.rightProduct { width: 248px; padding-right: 30px; background: url('productnavbg1.5.png') no-repeat scroll 248px top transparent; }
+	.rightProduct .productLine01 { width: 238px; padding-left: 10px; height: 26px; padding-top: 10px; }
+	.rightProduct .productLine02 { width: 238px; padding-left: 10px; height: 26px; padding-top: 11px; background: none repeat scroll 0% 0% rgb(245, 248, 252); }
+	.rightProduct .productLine03 { width: 238px; padding-left: 10px; height: 50px; padding-top: 8px; line-height: 22px; }
+	.rightProduct .productLine04 { width: 238px; padding-left: 10px; height: 48px; padding-top: 8px; line-height: 22px; background: none repeat scroll 0% 0% rgb(245, 248, 252); }
+	.rightProduct .productLine05 { width: 238px; padding-left: 10px; height: 29px; padding-top: 10px; }
+	.rightProduct div a { margin-right: 10px; }
+	.rightProduct .productFloatLayout { position: absolute; top: -1px; right: 279px; width: 14px; height: 228px; }
+	.rightProduct .productFloatLayout .productFloat { float: right; text-align: right; border-width: 1px 0px 1px 1px; border-style: solid none solid solid; border-color: rgb(210, 225, 241) -moz-use-text-color rgb(210, 225, 241) rgb(210, 225, 241); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; width: 0px; height: 226px; overflow: hidden; display: none; }
+	.rightProduct .productFloatLayout .productFloat .productLine01 { padding-left: 0px; width: 350px; background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+	.rightProduct .productFloatLayout .productFloat .productLine02 { padding-left: 0px; width: 350px; }
+	.rightProduct .productFloatLayout .productFloat .productLine03 { padding-left: 0px; width: 350px; background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+	.rightProduct .productFloatLayout .productFloat .productLine04 { padding-left: 0px; width: 350px; }
+	.rightProduct .productFloatLayout .productFloat .productLine05 { padding-left: 0px; width: 350px; background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+	.rightProduct .productFloatLayout .productFloatBtn { float: right; width: 14px; height: 37px; overflow: hidden; margin-right: -1px; cursor: pointer; background: url('productnavbg1.4.png') no-repeat scroll right top transparent; }
+	.rightZixuangu { position: relative; width: 278px; height: 189px; float: right; overflow: hidden; border: 1px solid rgb(210, 225, 241); }
+	.rightZixuangu .hd .financeSearch { float: right; display: inline; margin: 10px 14px 0px 0px; }
+	.rightZixuangu .hd .financeSearch input { border-width: 1px 0px 1px 1px; border-style: solid none solid solid; border-color: rgb(212, 212, 212) -moz-use-text-color rgb(212, 212, 212) rgb(212, 212, 212); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; color: rgb(160, 160, 160); width: 103px; height: 19px; line-height: 19px; font-size: 12px; padding-left: 4px; float: left; }
+	.rightZixuangu .hd .financeSearch #search_btn { background-position: -600px -160px; border: 0px none; margin: 0px; padding: 0px; height: 21px; width: 35px; float: left; text-indent: -9999px; cursor: pointer; }
+	.rightZixuangu .bd { padding: 13px 0px 0px 14px; }
+	.rightZixuangu .financeTab { width: 100%; height: 22px; overflow: hidden; }
+	.rightZixuangu .financeTab li { float: left; width: 47px; height: 22px; line-height: 22px; text-align: center; border-right: 1px solid rgb(221, 231, 242); cursor: pointer; color: rgb(59, 99, 159); overflow: hidden; }
+	.rightZixuangu .financeTab li.selected { background: none repeat scroll 0% 0% rgb(69, 143, 206); color: rgb(255, 255, 255); }
+	.rightZixuangu .financeTab li a { color: rgb(59, 99, 159); }
+	.rightZixuangu .financeTab li.selected a { color: rgb(255, 255, 255); }
+	.rightZixuangu .financeTab li.selected a:hover { text-decoration: none; }
+	.rightZixuangu .financeContent { width: 100%; margin-top: 5px; }
+	.rightZixuangu .financeContent .imgArea { width: 145px; height: 70px; overflow: hidden; }
+	.rightZixuangu .financeContent .imgArea img { width: 143px; height: 68px; overflow: hidden; }
+	.rightZixuangu .financeContent .txtArea { width: 110px; padding: 1px 0px 0px 9px; }
+	.rightZixuangu .financeContent .txtArea dt { width: 132px; font-size: 12px; line-height: 14px; font-weight: normal; margin-top: 2px; overflow: hidden; }
+	.rightZixuangu .financeContent .txtArea dd { font: bold 20px/38px Tahoma; color: rgb(65, 169, 141); display: block; }
+	.rightZixuangu .financeContent .txtArea dd.s { font: 12px/14px Tahoma; }
+	.rightZixuangu .ft { width: 100%; }
+	.rightZixuangu .ft li { text-indent: 0px; color: rgb(157, 169, 180); }
+	.rightZixuangu .ft li .zixuangu { float: left; }
+	.rightZixuangu .myZhang { color: rgb(241, 78, 78); font-family: Arial; margin-left: 2px; }
+	.rightZixuangu .myDie { color: rgb(46, 157, 36); font-family: Arial; margin-left: 2px; }
+	.rightZixuangu .myPing { color: rgb(13, 81, 156); font-family: Arial; margin-left: 2px; }
+	.rightZixuangu .myFinanceBox { position: absolute; bottom: 38px; left: -1px; width: 280px; border-bottom: 2px solid rgb(242, 242, 242); background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+	.rightZixuangu .myFinanceBoxInner { width: 278px; border: 1px solid rgb(207, 220, 234); padding: 8px 0px; }
+	.rightZixuangu .myFinanceBox .myFinanceIcon { width: 11px; height: 9px; overflow: hidden; background-position: -700px -230px; position: absolute; bottom: -8px; }
+	.rightZixuangu .myFinanceBoxInner table { margin: 0px auto; width: 80%; }
+	.rightZixuangu .myFinanceBoxInner td { font-size: 12px; height: 21px; text-align: left; vertical-align: middle; }
+	.rightZixuangu .myFinanceBoxInner td a { color: rgb(13, 81, 156); }
+	#mymsg a { color: rgb(45, 55, 75); }
+	#myz a { color: rgb(45, 55, 75); }
+	#myz a .myZhang { color: rgb(241, 78, 78); }
+	#myd a { color: rgb(45, 55, 75); }
+	#myd a .myDie { color: rgb(46, 157, 36); }
+	#myp a { color: rgb(45, 55, 75); }
+	#myp a .myPing { color: rgb(13, 81, 156); }
+	.rightXingzuoyunshi { width: 278px; height: 194px; float: right; border: 1px solid rgb(210, 225, 241); overflow: hidden; }
+	.rightXingzuoyunshi .bd { width: 240px; height: 50px; padding: 0px 19px; }
+	.rightXingzuoyunshi .bd .bdLeft { width: 50px; height: 50px; float: left; text-align: center; }
+	.rightXingzuoyunshi .bd .bdLeft .astroIcon { width: 50px; height: 50px; display: block; background: url('astroicon.png') no-repeat scroll left top transparent; }
+	.rightXingzuoyunshi .bd .bdRight { width: 180px; float: right; }
+	.rightXingzuoyunshi .bd .bdRight .yunshiLayout { width: 100%; float: left; margin-top: 6px; }
+	.rightXingzuoyunshi .bd .bdRight .yunshiLayout p { width: 65px; float: left; height: 18px; line-height: 18px; }
+	.rightXingzuoyunshi .bd .bdRight .yunshiLayout .yunshiBg { width: 80px; height: 13px; float: left; margin-top: 1px; background: url('yunshi.png') no-repeat scroll left top transparent; }
+	.rightXingzuoyunshi .bd .bdRight .yunshiLayout .yunshiBg .yunshi { width: 80%; height: 13px; float: left; background: url('yunshi.png') no-repeat scroll left bottom transparent; }
+	.rightXingzuoyunshi .ft { width: 240px; height: 85px; padding: 0px 19px; overflow: hidden; }
+	.rightXingzuoyunshi .ft p { width: 100%; font-size: 14px; height: 72px; line-height: 24px; color: rgb(50, 63, 90); overflow: hidden; }
+	.rightXingzuoyunshi .ft p a { color: rgb(59, 99, 159); }
+	.leftVideoNews { width: 310px; height: 397px; }
+	.leftVideoNews .hd { height: 32px; border-top: 1px solid rgb(200, 220, 242); background: url('newshd.png') repeat-x scroll center top transparent; }
+	.leftVideoNews .bd { width: 290px; padding: 12px 10px 7px; }
+	.leftVideoNews .bd .videoArea { width: 135px; }
+	.leftVideoNews .bd .videoArea img { width: 135px; height: 80px; float: left; }
+	.leftVideoNews .bd .videoArea p { width: 100%; height: 18px; line-height: 18px; float: left; text-align: center; margin-top: 5px; overflow: hidden; }
+	.leftVideoNews .ft { width: 310px; }
+	.leftView { width: 310px; height: 240px; overflow: hidden; }
+	.leftView .hd { height: 32px; border-top: 1px solid rgb(200, 220, 242); }
+	.leftView .ft { width: 100%; border: 0px none; padding-top: 5px; }
+	.leftView .ft h3 { text-align: center; width: 100%; height: 28px; line-height: 28px; float: left; font-size: 16px; overflow: hidden; }
+	.leftView .ft h3 a { color: rgb(59, 99, 159); }
+	.leftView .ft ul { width: 306px; }
+	.leftNews { width: 370px; height: 971px; overflow: hidden; position: relative; z-index: 2; }
+	.leftNews .diaocha { width: 370px; height: 30px; line-height: 30px; background: none repeat scroll 0% 0% rgb(255, 255, 255); font-size: 16px; position: absolute; left: 0px; bottom: 0px; z-index: 3; }
+	.leftNews .hd { height: 33px; }
+	.leftNews .hd #newsH2 { float: left; margin-top: 1px; line-height: 30px; }
+	.leftNews .hd .newsTab { float: left; height: 33px; overflow: hidden; margin-top: -1px; }
+	.leftNews .hd .newsTab h2 { float: left; color: rgb(8, 115, 192); font-weight: bold; width: auto; text-align: center; height: 30px; line-height: 28px; margin-top: 0px; padding: 3px 18px 0px; overflow: hidden; }
+	.leftNews .hd .newsTab h2#newsDifangH2 { background: url('tabbg04_0702.png') repeat-x scroll left top rgb(255, 255, 255); }
+	.leftNews .hd .newsTab h2.selected { width: auto; line-height: 32px; font-weight: bold; background: url('tabbg02_0702.png') repeat-x scroll 0% 0% transparent ! important; border-left: 1px solid rgb(255, 255, 255); border-right: 1px solid rgb(255, 255, 255); padding: 1px 17px 0px; }
+	.leftNews .hd .weather { float: right; color: rgb(102, 102, 102); padding: 8px 15px 2px 2px; height: 22px; position: relative; }
+	.weatherMoreProviceDefault, .weatherMoreCityDefault, .weatherMoreSet, .weatherMoreBtn .weatherMoreSubmit, .weatherMoreBtn .weatherMoreCancel, #weatherMoreNewsCheckbox { background-image: url('weathermorebg.png'); background-repeat: no-repeat; }
+	.weatherMore { position: absolute; top: 31px; right: 0px; z-index: 10; width: 370px; height: 162px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border-bottom: 10px solid rgb(255, 255, 255); display: none; }
+	.weather .weatherMore .face { background: none repeat scroll 0% 0% rgb(255, 255, 255); border: 1px solid rgb(209, 223, 234); position: absolute; width: 368px; height: 160px; top: 0px; left: 0px; }
+	.weather .weatherMore .front { z-index: 9; }
+	.weather .weatherMore .back { z-index: 8; }
+	.weatherMoreTitle { width: 348px; height: 32px; line-height: 26px; float: left; padding: 10px 10px 0px; }
+	.weatherMoreTitle .fl { font-size: 18px; color: rgb(45, 55, 75); }
+	.weatherMoreTitle .weatherMoreReset { float: right; color: rgb(140, 151, 168); }
+	.weatherMoreSelectLayout { width: 100%; float: left; padding: 5px 0px; }
+	.weatherMoreProviceLayout { width: 100px; height: 27px; float: left; position: relative; display: inline; margin-left: 20px; }
+	.weatherMoreProviceDefault { width: 100px; height: 27px; line-height: 27px; text-indent: 9px; cursor: pointer; color: rgb(45, 55, 75); background-position: left -100px; }
+	.weatherMoreProviceSelect { width: 98px; height: 156px; line-height: 26px; border: 1px solid rgb(198, 198, 198); position: absolute; z-index: 11; left: 0px; top: 26px; background: none repeat scroll 0% 0% rgb(255, 255, 255); overflow-x: hidden; overflow-y: auto; display: none; }
+	.weatherMoreProviceSelect ul { width: 80px; float: left; }
+	.weatherMoreProviceSelect li { width: 100%; float: left; height: 26px; line-height: 26px; background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+	.weatherMoreProviceSelect li a { width: 100%; float: left; height: 26px; line-height: 26px; display: block; color: rgb(45, 55, 75); text-indent: 8px; background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+	.weatherMoreProviceSelect li a:hover { background: none repeat scroll 0% 0% rgb(241, 241, 241); color: rgb(45, 55, 75); text-decoration: none; }
+	.weatherMoreCityLayout { width: 166px; height: 27px; float: left; position: relative; display: inline; margin-left: 14px; }
+	.weatherMoreCityDefault { width: 166px; height: 27px; line-height: 27px; text-indent: 9px; cursor: pointer; color: rgb(45, 55, 75); background-position: left -150px; }
+	.weatherMoreCitySelect { width: 164px; max-height: 156px; line-height: 26px; border: 1px solid rgb(198, 198, 198); position: absolute; z-index: 11; left: 0px; top: 26px; background: none repeat scroll 0% 0% rgb(255, 255, 255); overflow-x: hidden; overflow-y: auto; display: none; }
+	.weatherMoreCitySelect ul { width: 164px; float: left; }
+	.weatherMoreNews { width: 100%; float: left; padding: 5px 0px; height: 21px; line-height: 21px; text-align: center; }
+	#weatherMoreNewsCheckbox { padding-left: 20px; line-height: 20px; width: 110px; margin: 0px auto; cursor: pointer; background-position: left -246px; }
+	.weatherMoreNews .weatherMoreNewsYes { background-position: left -296px ! important; }
+	.weatherMoreBtn { width: 100%; float: left; padding: 5px 0px; text-align: center; }
+	.weatherMoreBtn input { width: 78px; height: 28px; line-height: 28px; text-align: center; border: 0px none; font-size: 12px; cursor: pointer; }
+	.weatherMoreBtn .weatherMoreSubmit { color: rgb(255, 255, 255); background-position: left top; }
+	.weatherMoreBtn .weatherMoreCancel { color: rgb(27, 27, 27); background-position: left -50px; }
+	.weatherMoreSet { width: 64px; height: 15px; float: right; cursor: pointer; margin-top: 2px; background: none repeat scroll 0% 0% transparent; }
+	.weatherMoreSet a { color: rgb(119, 147, 186); }
+	.weatherMoreAir { width: 344px; height: 26px; float: left; padding: 0px 12px; color: rgb(76, 108, 156); }
+	.weatherMoreFuture { width: 368px; height: 91px; float: left; border-top: 1px dotted rgb(228, 233, 240); background: none repeat scroll 0% 0% rgb(250, 251, 255); }
+	.weatherMoreFutureCon { width: 122px; float: left; border-right: 1px dotted rgb(195, 205, 217); margin-top: 10px; text-align: center; cursor: pointer; }
+	.weatherMoreFutureCon p { color: rgb(0, 0, 0); }
+	.weatherMoreFutureCon .weatherMoreMath { color: rgb(0, 0, 0); font-family: Arial; }
+	.weatherMoreFutureCon .weatherMoreMathLow { color: rgb(153, 153, 153); font-family: Arial; }
+	.weatherMoreFutureCon .weatherMoreSign { color: rgb(153, 153, 153); }
+	.weatherMoreFuture .noborder { border: 0px none; }
+	.weatherMoreIcon { width: 35px; height: 35px; margin: 0px auto; }
+	#weatherTemperature { width: 24px; margin-top: 1px; line-height: 16px; cursor: pointer; }
+	#weatherIcon { float: right; width: 16px; height: 16px; margin: 0px 8px; cursor: pointer; }
+	#ipWeather { margin-top: 1px; line-height: 16px; cursor: pointer; }
+	.leftNews .ft { border: 0px none; padding-top: 1px; }
+	.leftNews .ft ul { width: 100%; float: left; margin-top: 5px; }
+	#djakRefreshLayout { width: 12px; height: 12px; float: right; }
+	.picFocus { width: 1000px; height: 184px; border-top: 1px solid rgb(109, 170, 234); overflow: hidden; position: relative; }
+	.picFocus .hd { width: 100%; height: 31px; float: left; }
+	.picFocus .hd h2 { float: left; color: rgb(8, 115, 192); font-size: 14px; margin-top: 6px; text-indent: 5px; }
+	.picFocus .hd h2 a { color: rgb(8, 115, 192); }
+	.picFocus .hd .btn { float: right; padding: 17px 7px 0px 0px; }
+	.picFocus .hd .btn div { cursor: pointer; width: 6px; height: 6px; margin-right: 5px; display: inline; overflow: hidden; float: left; background: url('picfocusdefault.png') no-repeat scroll 0% 0% transparent; }
+	.picFocus .hd .btn .current { width: 6px; height: 6px; overflow: hidden; float: left; background: url('picfocuscurrent.png') no-repeat scroll 0% 0% transparent; }
+	.picFocus .bd { width: 1000px; height: 144px; float: left; display: inline; margin-top: 9px; position: relative; overflow: hidden; }
+	.picFocus .bd ul { width: 3024px; position: absolute; top: 0px; left: 0px; overflow: hidden; }
+	.picFocus .bd li { float: left; width: 160px; padding-right: 8px; }
+	.picFocus .bd li img { width: 160px; height: 100px; display: block; overflow: hidden; }
+	.picFocus .bd li a:hover { background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+	.picFocus .bd li p { width: 100%; height: 20px; margin-top: 8px; text-align: center; overflow: hidden; }
+	.picFocus .bd li p a { color: rgb(45, 55, 75); }
+	.picFocus .bd li p a:hover { color: rgb(205, 2, 0); }
+	.picFocus .bd .prev { opacity: 0.7; width: 40px; height: 40px; background: url('focusbtnlefthover2.png') no-repeat scroll 0% 0% transparent; position: absolute; top: 34px; left: 0px; cursor: pointer; overflow: hidden; }
+	.picFocus .bd #visualup.default { background: url('focusbtnleftdefault.png') no-repeat scroll 0% 0% transparent; }
+	.picFocus .bd .prev:hover { opacity: 0.8; background: url('focusbtnlefthover2.png') no-repeat scroll 0% 0% transparent; }
+	.picFocus .bd .next { opacity: 0.7; width: 40px; height: 40px; background: url('focusbtnrighthover2.png') no-repeat scroll 0% 0% transparent; position: absolute; top: 34px; right: 0px; cursor: pointer; overflow: hidden; }
+	.picFocus .bd #visualdown.default { background: url('focusbtnrightdefault.png') no-repeat scroll 0% 0% transparent; }
+	.picFocus .bd .next:hover { opacity: 0.8; background: url('focusbtnrighthover2.png') no-repeat scroll 0% 0% transparent; }
+	.txDynamic { height: 208px; overflow: hidden; }
+	.txDynamic .hd { width: 305px; padding: 8px 15px 7px 0px; float: left; }
+	.txDynamic .hd h2 { color: rgb(8, 115, 192); font-size: 14px; float: left; text-indent: 5px; }
+	.txDynamic .hd h2 a { color: rgb(8, 115, 192); }
+	.txDynamic .hd .more { color: rgb(45, 55, 75); float: right; margin-top: 2px; }
+	.txDynamic .bd { width: 310px; padding: 3px 10px 9px 0px; float: left; }
+	.txDynamic .bd li { width: 100%; height: 26px; line-height: 26px; font-size: 14px; overflow: hidden; }
+	.footernew { color: rgb(81, 81, 81); font-size: 12px; height: 100px; line-height: 24px; margin: 12px auto 0px; overflow: hidden; text-align: center; width: 1000px; }
+	.footheight { height: 70px; overflow: hidden; }
+	.footernew a { color: rgb(81, 81, 81); text-decoration: none; }
+	.footernew a.lchot { color: rgb(189, 10, 1); }
+	.footernew a:hover { color: rgb(189, 10, 1); text-decoration: underline; }
+	.footernew a:visited { color: rgb(81, 81, 81); }
+	.footernew div { margin: 0px auto; width: 546px; }
+	.footernew p { border: 1px solid rgb(210, 210, 210); float: left; font-size: 12px; height: 50px; line-height: 20px; margin: 6px; padding: 0px; width: 120px; overflow: hidden; }
+	.footernew .fl { float: left; padding: 3px; }
+	.footernew .fr { float: right; padding: 5px 3px 0px; width: 72px; }
+	#fankui { width: 54px; height: 54px; display: block; position: fixed; right: 25px; bottom: 163px; background: url('fankuiicon.png') no-repeat scroll 0% 0% transparent; opacity: 0.3; }
+	#fankui:hover { opacity: 1; }
+	#homeSet { width: 54px; height: 54px; display: block; position: fixed; right: 25px; bottom: 104px; background: url('sethome.png') no-repeat scroll 0% 0% transparent; opacity: 0.3; }
+	#homeSet:hover { opacity: 1; }
+	#toTop { width: 54px; height: 54px; display: block; position: fixed; right: 25px; bottom: 45px; background-position: -700px -110px; opacity: 0.3; }
+	#toTop:hover { opacity: 1; }
+	.layoutBg { width: 100%; height: 4250px; position: absolute; top: 0px; left: 0px; z-index: 8888; display: none; background: url('alphabg.png') repeat scroll 0% 0% transparent; }
+	.adLeft { width: 660px; float: left; }
+	.adLeft700 { width: 700px; float: left; }
+	.adRight { width: 320px; float: right; }
+	.adRight280 { width: 280px; float: right; }
+	.adRight .adScroll .jbBox { width: 280px; height: 75px; display: block; background: url('bkysp20140623.png') no-repeat scroll center center transparent; position: relative; }
+	.adRight .adScroll .jbBox .linkA { width: 150px; height: 75px; display: block; position: absolute; left: 0px; top: 0px; }
+	.adRight .adScroll .jbBox .linkB { width: 130px; height: 75px; display: block; position: absolute; left: 150px; top: 0px; }
+	.adRight .adScroll .jbBox a:focus { outline: medium none; }
+	.leftDajiaaikan { width: 310px; height: 333px; }
+	.leftDajiaaikan .hd { height: 33px; border-top: 1px solid rgb(200, 220, 242); position: relative; }
+	.adRight .adScroll .gyBox { background: url('shzyhxjzg141011.png') no-repeat scroll 0% 0% transparent; display: block; height: 75px; width: 280px; }
+	.leftDajiaaikan .hd .more { width: 13px; height: 12px; display: block; background-position: -60px -260px; position: absolute; top: 10px; right: 10px; }
+	.leftDajiaaikan .hd .more:hover { background-position: -90px -260px; }
+	.leftDajiaaikan .hd .djakRefreshBtn { width: 12px; height: 12px; display: block; background: url('qqbg_1.5.5.png') no-repeat scroll left -260px transparent; position: absolute; top: 10px; right: 33px; }
+	.leftDajiaaikan .hd .djakRefreshBtn:hover { background: url('qqbg_1.5.5.png') no-repeat scroll -30px -260px transparent; }
+	.leftDajiaaikan .hd .aikanloading { position: absolute; top: 10px; right: 33px; }
+	#qq-tabs5 { position: relative; background: url('tabbg01_0702.png') no-repeat scroll 0px 0px transparent; border-top: 0px none; overflow: hidden; }
+	#qq-tabs5 #jrrb { position: absolute; top: 0px; left: 0px; }
+	#qq-tabs5 #yszy { position: absolute; top: 0px; left: 85px; }
+	#qq-tabs5 a { display: block; color: rgb(8, 115, 192); text-indent: 0px; font-weight: bold; font-size: 14px; width: 85px; margin: 0px 0px 0px -1px; padding-top: 9px; height: 21px; line-height: 16px; text-align: center; z-index: 2; }
+	#qq-tabs5 a.selected { display: block; width: 83px; color: rgb(8, 115, 192); font-weight: bold; background: url('tabbg02_0702.png') no-repeat scroll 0% 0% transparent; z-index: 3; border-left: 1px solid rgb(255, 255, 255); border-right: 1px solid rgb(255, 255, 255); }
+	#newsInfoQuanguo { overflow: hidden; }
+	#newsInfoQuanguo .ft { width: 100%; }
+	#newsInfoQuanguo .ft ul { overflow: hidden; }
+	#newsInfoQuanguo .ft ul li { width: 100%; text-indent: 0px; font-size: 16px; height: 30px; line-height: 30px; background: none repeat scroll 0% 0% transparent; }
+	#newsInfoQuanguo .ft ul li .qm_i_2 { background-position: left -48px; }
+	#newsInfoQuanguo .ft ul li .qm_i_3 { background-position: left -98px; }
+	#newsInfoQuanguo .ft .newsMoreBtn { width: 350px; height: 22px; overflow: hidden; text-align: center; font-size: 12px; color: rgb(97, 134, 181); margin-top: 4px; display: none; line-height: 22px; }
+	#newsInfoQuanguo .ft .newsMoreBtn a { background: none repeat scroll 0% 0% rgb(245, 248, 252); border: 1px solid rgb(234, 241, 250); color: rgb(97, 134, 181); display: block; width: 348px; height: 20px; line-height: 20px; }
+	#newsInfoQuanguo .ft .newsMoreBtn a:hover { background: none repeat scroll 0% 0% rgb(240, 245, 252); border: 1px solid rgb(225, 234, 247); color: rgb(76, 110, 163); }
+	#newsInfoQuanguo .ft .newsMoreBtn2 { width: 370px; height: 22px; line-height: 22px; text-align: center; color: rgb(59, 99, 159); font-size: 14px; margin-top: 4px; display: none; }
+	#newsInfoQuanguo .ft .newsMoreBtn2 a { color: rgb(59, 99, 159); padding-right: 15px; background: url('newsmorebtn2.png') no-repeat scroll right center transparent; }
+	#newsInfoQuanguo .ft .newsMoreBtn3 { width: 370px; height: 22px; line-height: 22px; text-align: center; color: rgb(122, 148, 181); font-size: 14px; margin-top: 4px; display: none; }
+	#newsInfoQuanguo .ft .newsContent { width: 100%; }
+	#newsInfoQuanguo .ft .newsContent .imgArea { width: 108px; height: 70px; float: left; padding: 0px; margin-top: 17px; overflow: hidden; }
+	#newsInfoQuanguo .ft .newsContent .imgArea img { width: 108px; height: 70px; float: left; }
+	#newsInfoQuanguo .ft .newsContent .txtArea { width: 228px; height: 70px; line-height: 30px; float: right; padding: 0px 22px 0px 0px; margin-top: 17px; overflow: hidden; }
+	#newsInfoQuanguo .ft .newsContent h3 { width: 100%; height: 70px; line-height: 30px; font-size: 16px; font-weight: bold; float: left; color: rgb(59, 99, 159); }
+	#newsInfoQuanguo .ft .newsContent h3 a { color: rgb(59, 99, 159); }
+	#newsContent04, #newsContent05 { display: none; }
+	.navBeta { width: 987px; height: 57px; padding: 8px 5px 0px 8px; line-height: 22px; font-size: 14px; margin: 0px auto; background: url('chanelnavbeta2.jpg') no-repeat scroll 0% 0% transparent; position: relative; z-index: 18; }
+	.navBeta .navBetaInner { width: 987px; height: 57px; margin: 0px; padding: 0px; overflow: hidden; }
+	.navBeta a { color: rgb(255, 255, 255); padding: 3px; margin: 0px 4px 0px 3px; }
+	.navBeta a:hover { text-decoration: none; color: rgb(13, 81, 156); background: none repeat scroll 0% 0% rgb(202, 225, 238); }
+	.navBeta div { float: left; padding: 0px 6px 0px 15px; width: 126px; height: 25px; text-align: left; }
+	.navBeta .navMoreLayout { width: 51px; display: inline; padding: 0px; margin: -32px 0px 0px 926px; position: relative; }
+	.navBeta .navMore { position: absolute; top: 0px; right: 0px; width: 51px; padding: 0px; text-indent: 8px; color: rgb(255, 255, 255); background: url('navmoredown.png') no-repeat scroll 39px 10px transparent; }
+	.navBeta .navMore ul { width: 51px; float: left; padding-bottom: 5px; background: none repeat scroll 0% 0% rgb(70, 159, 225); display: none; }
+	.navBeta .navMore li { width: 51px; height: 24px; line-height: 24px; }
+	.navBeta .navMore li a { width: 51px; height: 24px; line-height: 24px; display: block; color: rgb(255, 255, 255); background: none repeat scroll 0% 0% rgb(70, 159, 225); margin: 0px; padding: 0px; }
+	.navBeta .navMore li a:hover { color: rgb(13, 81, 156); background: none repeat scroll 0% 0% rgb(205, 234, 255); }
+	.loginGray { padding-top: 5px; }
+	.loginGray a.login, .loginGray a.login:hover, .loginGray a.weiboLogin, .loginGray a.weiboLogin:hover, .loginGray a.qzoneLogin, .loginGray a.qzoneLogin:hover, .loginGray a.mailLogin, .loginGray a.mailLogin:hover, .loginGray a.pengyouLogin, .loginGray a.pengyouLogin:hover, .loginGray a.dingyueLogin, .loginGray a.dingyueLogin:hover, .loginGray .weibo, .loginGray .weibo:hover, .loginGray .qzone, .loginGray .qzone:hover, .loginGray .mail, .loginGray .mail:hover, .loginGray .pengyou, .loginGray .pengyou:hover, .loginGray .dingyue, .loginGray .dingyue:hover, .loginGray a.ilikeLogin, .loginGray a.ilikeLogin:hover, .loginGray .ilike, .loginGray .ilike:hover { background-image: url('logingrayicon.png'); background-repeat: no-repeat; }
+	.loginGray .loginGraySmartTop { background-image: url('qqbg_1.6.1.png'); background-repeat: no-repeat; }
+	.loginGray .login { display: block; width: 35px; height: 35px; border: 1px solid rgb(237, 237, 237); float: left; background-position: -155px -1px; }
+	.loginGray .login:hover { border: 1px solid rgb(196, 219, 237); }
+	.loginGray .logined { display: block; width: 35px; height: 35px; border: 1px solid rgb(237, 237, 237); float: left; }
+	.loginGray .logined img { width: 33px; height: 33px; margin: 1px; }
+	.loginGray .weibo { display: block; width: 17px; height: 24px; float: left; text-indent: 17px; background-position: left -7px; }
+	.loginGray .weibo:hover { color: rgb(255, 255, 255); background-color: rgb(69, 143, 206); background-position: left -48px; }
+	.loginGray .qzone { display: block; width: 25px; height: 24px; float: left; text-indent: 22px; background-position: -33px -7px; }
+	.loginGray .qzone:hover { color: rgb(255, 255, 255); background-color: rgb(69, 143, 206); background-position: -33px -48px; }
+	.loginGray .mail { display: block; width: 21px; height: 24px; float: left; text-indent: 19px; background-position: -73px -7px; }
+	.loginGray .mail:hover { color: rgb(255, 255, 255); background-color: rgb(69, 143, 206); background-position: -73px -48px; }
+	.loginGray .dingyue { display: block; width: 22px; height: 24px; float: left; text-indent: 20px; background-position: -111px -7px; }
+	.loginGray .dingyue:hover { color: rgb(255, 255, 255); background-color: rgb(69, 143, 206); background-position: -111px -48px; }
+	.loginGray .loginGraySmartBox { width: 131px; background: none repeat scroll 0% 0% rgb(255, 255, 255); position: absolute; top: 37px; z-index: 100; }
+	.loginGray .loginGraySmartTop { width: 131px; height: 11px; background: url('logingraytop.png') no-repeat scroll 60px top transparent; position: absolute; left: 0px; z-index: 202; }
+	.loginGray .loginGraySmartContent { width: 129px; border: 1px solid rgb(194, 194, 194); background: none repeat scroll 0% 0% rgb(255, 255, 255); position: absolute; top: 10px; z-index: 201; }
+	.loginGray .loginGraySmartInner { width: 115px; padding: 0px 7px; }
+	.loginGray .loginGraySmartInner ul { width: 100%; padding: 2px 0px; }
+	.loginGray .loginGraySmartInner li { width: 100%; height: 33px; line-height: 33px; color: rgb(102, 102, 102); border-top: 1px dashed rgb(221, 221, 221); text-indent: 7px; }
+	.loginGray .loginGraySmartInner li a { color: rgb(102, 102, 102); }
+	.loginGray .loginGraySmartInner li a:hover { text-decoration: none; }
+	.loginGray .loginGraySmartInner li a:hover span { color: rgb(205, 2, 0); }
+	.loginGray .loginGraySmartInner li a .txtRight { width: 40px; float: right; padding-right: 15px; text-align: right; color: rgb(227, 100, 100); font-family: Tahoma; }
+	.loginGray .loginGraySmartInner li a:hover .txtRight { font-weight: bold; }
+	.loginGray .weiboGrayNum, .loginGray .qzoneGrayNum, .loginGray .mailGrayNum, .loginGray .dingyueGrayNum { position: absolute; width: 16px; height: 14px; line-height: 14px; background: url('loginnumbg.png') no-repeat scroll 0% 0% transparent; text-align: center; display: none; }
+	.loginGray .weiboGrayNum div, .loginGray .qzoneGrayNum div, .loginGray .mailGrayNum div, .loginGray .dingyueGrayNum div { font-family: Tahoma; font-size: 8px; color: rgb(255, 255, 255); }
+	.loginGray .weiboGrayNum { top: 4px; right: -1px; }
+	.loginGray .qzoneGrayNum { top: 4px; right: 2px; }
+	.loginGray .mailGrayNum { top: 4px; right: 1px; }
+	.loginGray .dingyueGrayNum { top: 4px; right: 1px; }
+	.loginGray .userVipHead { display: none; width: 14px; height: 16px; background: url('member.png') no-repeat scroll 0% 0% transparent; position: absolute; right: 2px; bottom: 2px; }
+	.loginGray .userVip { display: none; padding: 1px 0px 1px 18px; background: url('member.png') no-repeat scroll 0% 0% transparent; }
+	#loginGrayIcon, #loginGrayIconLogin { position: relative; margin: 0px 8px; z-index: 200; }
+	#dingyueGrayIcon, #dingyueGrayIconLogin { position: relative; padding: 7px 8px 6px; z-index: 200; }
+	#mailGrayIcon, #mailGrayIconLogin { position: relative; padding: 7px 8px 6px; z-index: 200; }
+	#qzoneGrayIcon, #qzoneGrayIconLogin { position: relative; padding: 7px 8px 6px; z-index: 200; }
+	#weiboGrayIcon, #weiboGrayIconLogin { position: relative; padding: 7px 8px 6px; z-index: 200; }
+	#loginGrayTitle { border-top: 0px none; color: rgb(33, 107, 170); overflow: hidden; }
+	#loginGrayTitle a { color: rgb(33, 107, 170); }
+	#loginGrayTitle a:hover { color: rgb(205, 2, 0); }
+	#dingyueGrayTitle, #mailGrayTitle, #qzoneGrayTitle, #weiboGrayTitle { color: rgb(32, 107, 171); border-top: 0px none; }
+	.contentLayout { width: 1000px; margin: 12px auto 0px; }
+	.contentLayout::after { content: ""; display: table; clear: both; }
+	.contentMod { width: 320px; height: 294px; float: left; border-top: 1px solid rgb(109, 170, 234); margin-right: 20px; }
+	.contentModBig { width: 660px; }
+	.contentMod .hd { width: 100%; height: 29px; border-top: 1px solid rgb(255, 255, 255); position: relative; z-index: 11; }
+	.contentMod .hd h2 { color: rgb(8, 115, 192); font-size: 14px; margin-top: 6px; float: left; text-indent: 5px; }
+	.contentMod .hd h2 a { color: rgb(8, 115, 192); }
+	.contentMod .hd .orderLayout { position: absolute; top: 5px; right: 15px; z-index: 20; display: none; }
+	.contentMod .hd .orderLayout p { float: right; font-size: 14px; color: rgb(70, 151, 230); cursor: pointer; padding-right: 12px; background: url('hdhovericon.png') no-repeat scroll right center transparent; }
+	.contentMod .bd { width: 100%; }
+	.contentMod .bd .contentLeft { width: 320px; float: left; padding: 17px 0px 0px; }
+	.contentMod .bd .contentLeft ul { width: 100%; float: left; margin-top: 10px; }
+	.contentMod .bd .contentRight { width: 320px; float: right; padding: 17px 0px 0px; display: none; }
+	.contentMod .bd .contentRight ul { width: 100%; float: left; margin-top: 2px; }
+	.contentMod .bd ul li { width: 100%; float: left; height: 26px; line-height: 26px; color: rgb(129, 145, 163); font-size: 14px; overflow: hidden; }
+	#book .bd .contentLeft { padding: 7px 0px 0px; }
+	#book .bd .contentRight { padding: 13px 0px 0px; }
+	#book .bd .imgArea { width: 85px; height: 110px; float: left; display: inline; margin: 0px 10px; overflow: hidden; }
+	#book .bd .imgArea img { width: 85px; height: 110px; float: left; }
+	#book .bd .contentLeft ul { height: 130px; margin-top: 6px; overflow: hidden; }
+	#book .bd .contentRight ul { margin-top: 6px; }
+	#kid .bd .contentLeft { padding: 12px 0px 0px; }
+	#kid .bd .contentLeft ul { height: 156px; margin-top: 6px; overflow: hidden; }
+	#astro .bd .contentRight ul { margin-top: 8px; }
+	#fashion .contentRight ul, #games .contentRight ul, #fashion .contentRight ul, #tech .contentRight ul, #kid .contentRight ul { margin-top: 10px; }
+	#house .houseSearch { width: 100%; height: 35px; float: left; margin-top: 5px; }
+	#house .houseSearch h4 { font-size: 14px; float: left; color: rgb(126, 136, 157); line-height: 26px; }
+	#house .houseSearch .houseSearchInput { float: left; padding-left: 12px; }
+	#house .contentRight p { width: 100%; float: left; font-size: 14px; line-height: 30px; color: rgb(59, 99, 159); }
+	#house .contentRight p a { color: rgb(59, 99, 159); }
+	#auto .autoProductTab { width: 272px; float: left; font-size: 14px; color: rgb(59, 99, 159); margin-top: 20px; }
+	#auto .autoProductTab a { color: rgb(59, 99, 159); padding-bottom: 7px; text-align: center; float: left; font-weight: normal; border-bottom: 1px solid rgb(228, 228, 228); background: url('autolowpriceborder.png') no-repeat scroll right 1px transparent; }
+	#auto .autoPriceMore { float: left; padding: 0px 10px 7px; color: rgb(59, 99, 159); font-size: 14px; margin-top: 20px; }
+	#auto .autoPriceCon { width: 320px; height: 100px; float: left; background: url('autopricenum2.png') no-repeat scroll 5px 19px transparent; }
+	#auto .autoPriceCon ul { margin-top: 10px; }
+	#auto .autoPriceCon li { width: 135px; padding-left: 25px; overflow: hidden; }
+	#rufodao .contentRight p { width: 100%; float: left; font-size: 14px; line-height: 24px; color: rgb(59, 99, 159); margin-top: 10px; }
+	#rufodao .contentRight p a { color: rgb(59, 99, 159); }
+	#edu .eduSearch { width: 100%; height: 24px; float: left; margin-top: 2px; }
+	#edu .eduSearch h4 { font-size: 14px; float: left; line-height: 24px; font-weight: normal; }
+	#edu .eduSearch .txt { float: left; width: 112px; height: 18px; padding: 2px; border-width: 1px 0px 1px 1px; border-style: solid none solid solid; border-color: rgb(186, 197, 203) -moz-use-text-color rgb(186, 197, 203) rgb(186, 197, 203); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; }
+	#edu .eduSearch .btn { width: 34px; height: 24px; border: 1px solid rgb(197, 211, 218); text-indent: -9999px; float: left; background: url('housesearchbtn.png') no-repeat scroll center center transparent; cursor: pointer; }
+	#edu .eduSearch #select { width: 80px; height: 24px; float: left; margin: 0px 4px 0px 10px; }
+	#edu .eduNav p { width: 100%; float: left; font-size: 14px; line-height: 24px; color: rgb(59, 99, 159); margin-top: 10px; }
+	#edu .eduNav p a { color: rgb(59, 99, 159); }
+	#edu .pBottom p { width: 100%; float: left; font-size: 14px; line-height: 24px; color: rgb(59, 99, 159); margin-top: 2px; }
+	#edu .pBottom p a { color: rgb(59, 99, 159); }
+	#qq-contents7 { width: 100%; }
+	#today li .cBlue { color: rgb(121, 139, 165); }
+	#games .bd .comicUl { margin-top: 0px; }
+	.fleft { float: left; }
+	.fright { float: right; }
+	.undis { display: none; }
+	.dis { display: block; }
+	.qm_c_1 { color: rgb(189, 10, 1) ! important; }
+	.qm_c_2 { color: rgb(45, 55, 75); }
+	.qm_c_3 { color: rgb(59, 99, 159); }
+	.qm_i_1, .qm_i_2, .qm_i_3, .qm_i_4 { background-image: url('iconnew.png'); background-repeat: no-repeat; }
+	.qm_i_2 { padding-left: 19px; background-position: left -49px; }
+	.qm_i_3 { padding-left: 19px; background-position: left -99px; }
+}
+#newsInfoQuanguo .ft ul li, #newsInfo .newsContent ul li { height: 32px; line-height: 32px; }
+#newsInfoQuanguo .ft .newsContent .imgArea, #newsInfoQuanguo .ft .newsContent .txtArea, #newsInfo .newsContent .imgArea, #newsInfo .newsContent .txtArea { margin-top: 7px; }
+.leftNews .diaocha { bottom: -1px; padding-bottom: 1px; height: auto; line-height: 32px; }
+.leftNews .ft ul, #newsInfo .newsContent ul { margin-top: 3px; }
+#newsInfoQuanguo .ft .newsMoreBtn, #newsInfoQuanguo .ft .newsMoreBtn2, #newsInfoQuanguo .ft .newsMoreBtn3 { margin-top: 0px; padding-top: 6px; margin-bottom: 4px; }
+#today { height: 252px; }
+#today li, #djakContent li { height: 28px; line-height: 28px; }
+.layoutLeft, .leftNews, .layoutRight { height: 970px; }
+#vnews { height: 400px; }
+.leftVideoNews .bd { padding: 12px 0px 7px; }
+.rightXingzuoyunshi { height: auto; padding-bottom: 6px; }
+.rightXingzuoyunshi .ft { height: 90px; }
+.rightXingzuoyunshi .ft p { line-height: 26px; margin-top: 10px; height: 82px; }
+#productNav a { color: rgb(41, 76, 127); font-family: "arial"; }
+.navBeta .navBetaInner, .navBeta .navMoreLayout { font-family: "STHeiti","Microsoft YaHei","宋体","arial"; }
+.rightProduct { background: url('productnavbg1.5.516.png') no-repeat scroll right top transparent; }
+.rightProduct .productLine03 { height: 60px; line-height: 28px; padding-top: 4px; }
+.rightProduct .productLine04 { height: 59px; line-height: 28px; padding-top: 3px; }
+#pronav { height: 238px; }
+.rightProduct .productLine05 { height: 29px; padding-top: 9px; }
+.rightProduct .productFloatLayout .productFloat, .rightProduct .productFloatLayout { height: 238px; }
+#auto .contentRight, #house .contentRight { padding: 19px 0px 0px; }
+#edu .pBottom p { line-height: 28px; }
+#book .bd .contentRight { padding: 5px 0px 0px; }
+#book .bd .imgArea { margin: 0px 20px 0px auto; }
+.contentMod .bd ul li { height: 28px; line-height: 28px; }
+.contentMod .bd .contentLeft ul { margin-top: 8px; }
+.contentMod .bd .contentRight { padding: 9px 0px 0px; }
+.contentMod .bd .contentRight .imgArea { padding-top: 8px; }
+.contentMod .bd .contentRight .txtArea { padding: 13px 15px 0px 0px; }
+.leftAreaContent .ft li { line-height: 28px; height: 28px; }
+.contentMod { height: 303px; }
+#book .bd .contentLeft ul { height: 145px; margin-top: 6px; }
+#fashion .contentRight ul, #games .contentRight ul, #fashion .contentRight ul, #tech .contentRight ul, #kid .contentRight ul { margin-top: 8px; }
+#kid .bd .contentLeft ul { margin-top: 5px; height: 170px; }
+.txDynamic .bd li { height: 28px; line-height: 28px; }
+.weatherMore { width: 350px; }
+.weather .weatherMore .face { width: 348px; }
+.weatherMoreTitle { width: 328px; }
+.weatherMoreAir { width: 324px; }
+.weatherMoreFuture { width: 348px; }
+.weatherMoreFutureCon { width: 115px; }
+#newsInfoQuanguo .ft .newsMoreBtn { width: 350px; }
+.leftNews, #newsInfoQuanguo .ft .newsMoreBtn2, #newsInfoQuanguo .ft .newsMoreBtn3 { width: 350px; }
+#newsInfoQuanguo .ft ul li, #newsInfo .newsContent ul li, #newsSjb ul li { height: 28px; line-height: 28px; font-size: 14px; }
+#newsInfoQuanguo .ft .newsContent h3, #newsInfo .newsContent h3, #newsSjb h3 { line-height: 26px; font-size: 14px; }
+#newsInfoQuanguo .ft .newsContent .txtArea, #newsInfo .newsContent .txtArea, #newsSjb .txtArea { width: 208px; }
+#newsInfoQuanguo .ft .newsContent .imgArea, #newsInfoQuanguo .ft .newsContent .txtArea, #newsInfo .newsContent .imgArea, #newsInfo .newsContent .txtArea, #newsSjb .imgArea, #newsSjb .txtArea { margin-top: 11px; margin-bottom: 4px; }
+#newsInfoQuanguo .ft .newsMoreBtn, #newsInfoQuanguo .ft .newsMoreBtn2, #newsInfoQuanguo .ft .newsMoreBtn3 { margin-bottom: 0px; }
+#newsInfoQuanguo .ft ul li .qm_i_2 { background-position: left -49px; }
+#newsInfoQuanguo .ft ul li .qm_i_3 { background-position: left -99px; }
+.leftNews .diaocha { line-height: 28px; font-size: 14px; width: 350px; }
+.leftVideoNews, .leftDajiaaikan, .leftView { width: 330px; }
+.leftVideoNews .bd { width: 310px; }
+.leftVideoNews .bd .videoArea, .leftVideoNews .bd .videoArea img { width: 145px; }
+.leftVideoNews .ft { width: 330px; }
+.leftAreaContent .ft ul.vlist li { width: 311px; }
+.leftView .ft h3 { font-size: 14px; }
+.leftView .ft ul { width: 326px; }
+@media not all, not all {
+	.soso .logo .qqlogo { background: url('qqlogo_2x.png') no-repeat scroll 0px 0px / 134px 44px transparent; }
+	#loginGrayLayout { background: url('logonbtn20140629.png') no-repeat scroll 0px 0px / 35px 35px transparent; border: 1px solid rgb(237, 237, 237); }
+	#loginGrayLayout:hover { border: 1px solid rgb(196, 219, 237); }
+	#searchBtn { background: url('sogoubtn20140629.png') no-repeat scroll 0px 0px / 90px 37px transparent; }
+	.loginGray .weibo { background: url('weibobtn20140629.png') no-repeat scroll 0px 0px / 17px 24px transparent; }
+	.loginGray .weibo:hover { background: url('weibobtnhover20140629.png') no-repeat scroll 0px 0px / 17px 24px transparent; }
+	.loginGray .qzone { background: url('qzonebtn20140629.png') no-repeat scroll 0px 0px / 25px 24px transparent; }
+	.loginGray .qzone:hover { background: url('qzonebtnhover20140629.png') no-repeat scroll 0px 0px / 25px 24px transparent; }
+	.loginGray .mail { background: url('mailbtn20140629.png') no-repeat scroll 0px 0px / 21px 24px transparent; }
+	.loginGray .mail:hover { background: url('mailbtnhover20140629.png') no-repeat scroll 0px 0px / 21px 24px transparent; }
+	.loginGray .dingyue { background: url('dingyuebtn20140629.png') no-repeat scroll 0px 0px / 22px 24px transparent; }
+	.loginGray .dingyue:hover { background: url('dingyuebtnhover20140629.png') no-repeat scroll 0px 0px / 22px 24px transparent; }
+	.rightProduct { background: url('productnavbg1.5.629.png') no-repeat scroll right top / auto 237px transparent; }
+}
+#tuangouTxt {  }
+.navBeta { padding: 8px 0px 0px 12px; width: 988px; background: url('chanelnavbeta2_141013.jpg') no-repeat scroll 0% 0% transparent; }
+.navBeta div { padding: 0px 10px; }
+.navBeta a {  }
+.navBeta .navBetaInner { width: 988px; }
+.navBeta .navBetaInner, .navBeta .navMoreLayout { font-family: "STHeiti","Microsoft YaHei","宋体","arial"; }
+.navBeta .navMoreLayout {  }
+.autoLowPriceTitle { width: 100%; float: left; height: 26px; line-height: 26px; font-size: 14px; color: rgb(8, 80, 178); }
+.autoLowPriceTitle .jiangjiachexi { width: 90px; float: left; height: 26px; line-height: 26px; font-size: 14px; overflow: hidden; }
+.autoLowPriceTitle .youhuifudu { width: 90px; float: left; height: 26px; line-height: 26px; font-size: 14px; overflow: hidden; }
+.autoLowPriceTitle .jiage { width: 70px; float: left; height: 26px; line-height: 26px; font-size: 14px; overflow: hidden; text-align: center; }
+.autoLowPriceTitle .huodongshijian { width: 70px; float: left; height: 26px; line-height: 26px; font-size: 14px; overflow: hidden; text-align: center; }
+#autoLowPriceUl { width: 100%; height: 78px; float: left; line-height: 26px; font-size: 14px; overflow: hidden; }
+#autoLowPriceUl .name { width: 90px; float: left; height: 26px; line-height: 26px; font-size: 14px; overflow: hidden; }
+#autoLowPriceUl .p1 { width: 77px; float: left; height: 26px; line-height: 26px; font-size: 14px; color: rgb(92, 184, 0); overflow: hidden; padding-left: 13px; background: url('autolowpriceicon.png') no-repeat scroll left center transparent; }
+#autoLowPriceUl .p1 a { color: rgb(92, 184, 0); }
+#autoLowPriceUl .p2 { width: 70px; float: left; height: 26px; line-height: 26px; font-size: 14px; overflow: hidden; text-align: center; }
+#autoLowPriceUl .p3 { width: 70px; float: left; height: 26px; line-height: 26px; font-size: 14px; overflow: hidden; text-align: center; }
+/* ::::: http://mat1.gtimg.com/www/css/qq2012/hot_word_sogou.css ::::: */
+
+.absolute { position: absolute; }
+#followMe { position: absolute; z-index: 999; top: 0px; left: 0px; width: 100%; }
+.f_shadow { position: absolute; z-index: 1000; background: url('alphabg_01.png') repeat scroll 0% 0% transparent; }
+.follow_bottom { top: 1573px; height: 1000px; width: 100%; }
+.follow_t { position: absolute; width: 100%; height: 1572px; top: 0px; left: 0px; }
+.follow_t .f_shadow_l { height: 1573px; left: 0px; top: 0px; }
+.follow_t .f_shadow_r { height: 1573px; right: 0px; top: 0px; }
+.follow_t .follow_m { width: 1002px; height: 1572px; position: absolute; top: 0px; left: 50%; margin-left: -501px; z-index: 1000; }
+.follow_b_01 { top: 0px; left: 0px; width: 629px; height: 274px; }
+.follow_b_02 { top: 0px; right: 0px; width: 373px; height: 274px; }
+.follow_b_02_btns { position: absolute; z-index: 2000; top: 0px; right: 0px; width: 373px; height: 274px; display: none; }
+.follow_b_03 { top: 274px; left: 0px; width: 373px; height: 257px; }
+.follow_b_03_btns { position: absolute; z-index: 2000; top: 274px; left: 0px; width: 373px; height: 257px; display: none; }
+.follow_b_04 { top: 274px; right: 0px; width: 629px; height: 257px; }
+.follow_b_05 { top: 531px; left: 0px; width: 353px; height: 499px; }
+.follow_b_06 { top: 531px; right: 0px; width: 649px; height: 499px; }
+.follow_b_06_btns { position: absolute; z-index: 2000; top: 531px; right: 0px; width: 649px; height: 499px; display: none; }
+.follow_b_07 { top: 1030px; left: 0px; width: 358px; height: 195px; }
+.follow_b_08 { top: 1030px; right: 0px; width: 644px; height: 195px; }
+.follow_b_08_btns { position: absolute; z-index: 2000; top: 1030px; right: 0px; width: 644px; height: 195px; display: none; }
+.follow_b_09 { top: 1225px; left: 0px; width: 664px; height: 348px; }
+.follow_b_09_btns { position: absolute; z-index: 2000; top: 1225px; left: 0px; width: 664px; height: 348px; display: none; }
+.follow_b_10 { top: 1225px; right: 0px; width: 338px; height: 348px; }
+#follow1.current { background: url('guide_k_01.png') repeat scroll 0% 0% transparent; }
