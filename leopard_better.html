@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<style>	img { vertical-align: text-top;	} </style>
+		<title> Page de test </title>
+	</head>
+	
+	<body>
+		<script>
+		var picture = ''
+		for (var i = 0; i < 100; ++i) {
+			picture += '<img src="images/tile_leopard_'+i+'.jpg" width="7%" height="7%">'
+			if (i%10==9) 
+				picture += '<br>' // CR-LF
+		}
+		picture = $(picture)
+		.load(function() {
+			$('body').append(picture);
+		});
+		</script>
+	</body>
+</html>
+
+

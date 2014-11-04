@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type">
+<title>Access Denied</title>
+<style type="text/css">
+body {
+    background-color: white;
+    color: black;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+	margin: 25px;
+}
+.notification {
+    color: #084A7F;
+    font-size: 24px;
+    line-height: 30px;
+}
+.title {
+    color: black;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: left;
+}
+</style>
+</head>
+<body>
+<body>
+	<div>
+		<span class="notification">
+			<img src="http://sterne.rd.francetelecom.fr/denied.gif"  height="100" width="100" align="BOTTOM">
+			Access Denied
+		</span>
+
+	</div>
+	<br / >
+	<div>
+	  <p class="title">Your request has been blocked because of its content categorization: "Suspicious;Content Servers"</p><br / >
+	  The requested URL is not allowed by your administrator at this time.
+	  <br /><br />
+	  For a possible authorization or assistance, please contact the 13 helpdesk (le13@orange.com).</td>
+	</div>
+</body></html>

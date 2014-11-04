@@ -1,0 +1,6 @@
+@font-face {
+	font-family: "HiraginoSansGBW6swf-font-1";
+	src: url('undefined');
+}
+body { margin: 0px; overflow: hidden; background-color: rgb(255, 255, 255); }
+#viewer { position: fixed ! important; left: 0px; top: 0px; bottom: 0px; right: 0px; overflow: hidden; }

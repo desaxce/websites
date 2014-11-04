@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" class="client-js ve-not-available" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta charset="UTF-8">
+<title>HTTP/2 - Wikipedia, the free encyclopedia</title>
+<meta name="generator" content="MediaWiki 1.25wmf5">
+<link rel="alternate" href="android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/HTTP/2">
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=HTTP/2&amp;action=edit">
+<link rel="edit" title="Edit this page" href="http://en.wikipedia.org/w/index.php?title=HTTP/2&amp;action=edit">
+<link rel="apple-touch-icon" href="http://bits.wikimedia.org/apple-touch/wikipedia.png">
+<link rel="shortcut icon" href="wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="http://en.wikipedia.org/w/opensearch_desc.php" title="Wikipedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="http://en.wikipedia.org/w/api.php?action=rsd">
+<link rel="alternate" hreflang="x-default" href="http://en.wikipedia.org/wiki/HTTP/2">
+<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="http://en.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="canonical" href="http://en.wikipedia.org/wiki/HTTP/2">
+
+<meta name="ResourceLoaderDynamicStyles" content="">
+
+
+
+
+
+<link rel="dns-prefetch" href="http://meta.wikimedia.org/">
+<!--[if lt IE 7]><style type="text/css">body{behavior:url("/w/static-1.25wmf5/skins/Vector/csshover.min.htc")}</style><![endif]-->
+
+<link rel="stylesheet" type="text/css" href="index.css" media="all">
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-HTTP_2 skin-vector action-view vector-animateLayout">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><div id="centralNotice"></div><!-- CentralNotice --></div>
+						<h1 id="firstHeading" class="firstHeading" lang="en"><span dir="auto">HTTP/2</span></h1>
+						<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-navigation">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" dir="ltr" class="mw-content-ltr" lang="en"><table class="metadata plainlinks ambox ambox-content ambox-POV" role="presentation">
+<tbody><tr>
+<td class="mbox-image">
+<div style="width: 52px;"><img alt="Unbalanced scales.svg" src="45px-unbalanced_scales.svg.png" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Unbalanced_scales.svg/68px-Unbalanced_scales.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Unbalanced_scales.svg/90px-Unbalanced_scales.svg.png 2x" data-file-width="400" data-file-height="354" width="45" height="40"></div>
+</td>
+<td class="mbox-text"><span class="mbox-text-span">The <b><a href="http://en.wikipedia.org/wiki/Wikipedia:Neutral_point_of_view" title="Wikipedia:Neutral point of view">neutrality</a> of this article is <a href="http://en.wikipedia.org/wiki/Wikipedia:NPOV_dispute" title="Wikipedia:NPOV dispute">disputed</a></b>. <span class="hide-when-compact">Relevant discussion may be found on the <a href="http://en.wikipedia.org/wiki/Talk:HTTP/2#.23" title="Talk:HTTP/2">talk page</a>. Please do not remove this message until the <a href="http://en.wikipedia.org/wiki/Wikipedia:NPOV_dispute#What_is_an_NPOV_dispute.3F" title="Wikipedia:NPOV dispute">dispute is resolved</a>.</span> <small><i>(August 2014)</i></small></span></td>
+</tr>
+</tbody></table>
+<p><b>HTTP/2</b> (originally named <b>HTTP 2.0</b>) is the next planned version of the <a href="http://en.wikipedia.org/wiki/HTTP" title="HTTP" class="mw-redirect">HTTP</a> network protocol used by the <a href="http://en.wikipedia.org/wiki/World_Wide_Web" title="World Wide Web">World Wide Web</a>. It is based on <a href="http://en.wikipedia.org/wiki/SPDY" title="SPDY">SPDY</a>. HTTP/2 is being developed by the Hypertext Transfer Protocol Bis (httpbis) working group of the <a href="http://en.wikipedia.org/wiki/Internet_Engineering_Task_Force" title="Internet Engineering Task Force">Internet Engineering Task Force</a><sup id="cite_ref-charter_1-0" class="reference"><a href="#cite_note-charter-1"><span>[</span>1<span>]</span></a></sup> (<a href="http://en.wiktionary.org/wiki/bis" class="extiw" title="wikt:bis">bis</a> means "repeat" or "twice"). HTTP/2 would be the first new version of the HTTP protocol since HTTP 1.1, which was standardized in <a class="external mw-magiclink-rfc" rel="nofollow" href="http://tools.ietf.org/html/rfc2616">RFC 2616</a> in 1999. The Working Group plans on presenting HTTP/2 to <a href="http://en.wikipedia.org/wiki/Internet_Engineering_Steering_Group" title="Internet Engineering Steering Group">IESG</a> for consideration as a Proposed Standard in December 2014.<sup id="cite_ref-ms1_2-0" class="reference"><a href="#cite_note-ms1-2"><span>[</span>2<span>]</span></a></sup></p>
+<p>The standardization effort comes as an answer to the rise of <a href="http://en.wikipedia.org/wiki/SPDY" title="SPDY">SPDY</a>, an HTTP compatible protocol launched by <a href="http://en.wikipedia.org/wiki/Google" title="Google">Google</a><sup id="cite_ref-extremetech_3-0" class="reference"><a href="#cite_note-extremetech-3"><span>[</span>3<span>]</span></a></sup> and supported in <a href="http://en.wikipedia.org/wiki/Google_Chrome" title="Google Chrome">Chrome</a>, <a href="http://en.wikipedia.org/wiki/Opera_(web_browser)" title="Opera (web browser)">Opera</a>, <a href="http://en.wikipedia.org/wiki/Firefox" title="Firefox">Firefox</a>, <a href="http://en.wikipedia.org/wiki/Internet_Explorer_11" title="Internet Explorer 11">Internet Explorer 11</a> and <a href="http://en.wikipedia.org/wiki/Amazon_Silk" title="Amazon Silk">Amazon Silk</a> browsers.<sup id="cite_ref-4" class="reference"><a href="#cite_note-4"><span>[</span>4<span>]</span></a></sup></p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+<span class="toctoggle">&nbsp;[<a href="#" id="togglelink">hide</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Goals"><span class="tocnumber">1</span> <span class="toctext">Goals</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Differences_with_HTTP_1.1"><span class="tocnumber">2</span> <span class="toctext">Differences with HTTP 1.1</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#Genesis_in_and_later_differences_from_SPDY"><span class="tocnumber">3</span> <span class="toctext">Genesis in and later differences from SPDY</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Encryption"><span class="tocnumber">4</span> <span class="toctext">Encryption</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Development_milestones"><span class="tocnumber">5</span> <span class="toctext">Development milestones</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Browser_support"><span class="tocnumber">6</span> <span class="toctext">Browser support</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#References"><span class="tocnumber">8</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#External_links"><span class="tocnumber">9</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="Goals">Goals</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=HTTP/2&amp;action=edit&amp;section=1" title="Edit section: Goals">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The working group charter mentions several goals and issues of concern:<sup id="cite_ref-charter_1-1" class="reference"><a href="#cite_note-charter-1"><span>[</span>1<span>]</span></a></sup></p>
+<ul>
+<li>Negotiation mechanism that allows clients and servers to elect to use HTTP 1.1, 2.0, or potentially other non-HTTP protocols.</li>
+<li>Maintain high-level similarity with HTTP 1.1 (for example with <a href="http://en.wikipedia.org/wiki/HTTP_method" title="HTTP method" class="mw-redirect">methods</a>, <a href="http://en.wikipedia.org/wiki/HTTP_status_code" title="HTTP status code" class="mw-redirect">status codes</a>, <a href="http://en.wikipedia.org/wiki/List_of_HTTP_header_fields" title="List of HTTP header fields">header fields</a>, and <a href="http://en.wikipedia.org/wiki/URI" title="URI" class="mw-redirect">URIs</a>, and most header fields)</li>
+<li>Decrease <a href="http://en.wikipedia.org/wiki/Latency_(engineering)" title="Latency (engineering)">latency</a> to improve page load speed in <a href="http://en.wikipedia.org/wiki/Web_browser" title="Web browser">web browsers</a> by considering:
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Data_compression" title="Data compression">Data compression</a> of <a href="http://en.wikipedia.org/wiki/HTTP_header" title="HTTP header" class="mw-redirect">HTTP headers</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Server_push" title="Server push" class="mw-redirect">Server push</a> technologies</li>
+<li>Fixing the <a href="http://en.wikipedia.org/wiki/Head-of-line_blocking" title="Head-of-line blocking">head-of-line blocking</a> problem in HTTP 1</li>
+<li>Loading page elements in parallel over a single <a href="http://en.wikipedia.org/wiki/Transmission_Control_Protocol" title="Transmission Control Protocol">TCP</a> connection</li>
+</ul>
+</li>
+<li>Support common existing use cases of HTTP, such as desktop web browsers, mobile web browsers, web APIs, <a href="http://en.wikipedia.org/wiki/Web_server" title="Web server">web servers</a> at various scales, <a href="http://en.wikipedia.org/wiki/Proxy_server" title="Proxy server">proxy servers</a>, <a href="http://en.wikipedia.org/wiki/Reverse_proxy" title="Reverse proxy">reverse proxy</a> servers, <a href="http://en.wikipedia.org/wiki/Firewall_(computing)" title="Firewall (computing)">firewalls</a>, and <a href="http://en.wikipedia.org/wiki/Content_delivery_network" title="Content delivery network">content delivery networks</a></li>
+</ul>
+<h2><span class="mw-headline" id="Differences_with_HTTP_1.1">Differences with HTTP 1.1</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=HTTP/2&amp;action=edit&amp;section=2" title="Edit section: Differences with HTTP 1.1">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>The proposed changes do not require any changes to how existing web applications work, but new applications can take advantage of new features for increased speed.<sup id="cite_ref-Chapter_12._HTTP_2.0_5-0" class="reference"><a href="#cite_note-Chapter_12._HTTP_2.0-5"><span>[</span>5<span>]</span></a></sup></p>
+<p>HTTP/2 leaves most of HTTP 1.1's high level syntax, such as <a href="http://en.wikipedia.org/wiki/HTTP_method" title="HTTP method" class="mw-redirect">methods</a>, <a href="http://en.wikipedia.org/wiki/HTTP_status_code" title="HTTP status code" class="mw-redirect">status codes</a>, <a href="http://en.wikipedia.org/wiki/List_of_HTTP_header_fields" title="List of HTTP header fields">header fields</a>, and <a href="http://en.wikipedia.org/wiki/URI" title="URI" class="mw-redirect">URIs</a>, the same. The element that is modified is how the data is framed and transported between the client and the server.<sup id="cite_ref-Chapter_12._HTTP_2.0_5-1" class="reference"><a href="#cite_note-Chapter_12._HTTP_2.0-5"><span>[</span>5<span>]</span></a></sup></p>
+<p>Websites that are efficient minimize the number of requests required to render an entire page by <a href="http://en.wikipedia.org/wiki/Minify" title="Minify" class="mw-redirect">minifying</a> (reducing the amount of code and packing smaller pieces of code into bundles, without reducing its ability to function) resources such as images and scripts. However, minification is not necessarily convenient nor efficient, and may still require separate HTTP connections to get the page and the minified resources. HTTP/2 allows the server to "push" content, that is, to respond with data for more queries than the client requested. This allows the server to supply data it knows a web browser will need to render a web page, without waiting for the browser to examine the first response, and without the overhead of an additional request cycle.<sup id="cite_ref-Pratt_6-0" class="reference"><a href="#cite_note-Pratt-6"><span>[</span>6<span>]</span></a></sup></p>
+<p>Additional performance improvements in the first draft of HTTP/2 (which is a copy of <a href="http://en.wikipedia.org/wiki/SPDY" title="SPDY">SPDY</a>) come from <a href="http://en.wikipedia.org/wiki/Multiplexing" title="Multiplexing">multiplexing</a> of requests and responses to avoid the <a href="http://en.wikipedia.org/wiki/Head-of-line_blocking" title="Head-of-line blocking">head-of-line blocking</a> problem in HTTP 1 (even when <a href="http://en.wikipedia.org/wiki/HTTP_pipelining" title="HTTP pipelining">HTTP pipelining</a> is used), header <a href="http://en.wikipedia.org/wiki/Data_compression" title="Data compression">compression</a>, and prioritization of requests.<sup id="cite_ref-7" class="reference"><a href="#cite_note-7"><span>[</span>7<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Genesis_in_and_later_differences_from_SPDY">Genesis in and later differences from SPDY</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=HTTP/2&amp;action=edit&amp;section=3" title="Edit section: Genesis in and later differences from SPDY">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="http://en.wikipedia.org/wiki/SPDY" title="SPDY">SPDY</a> (pronounced speedy) is a research project spearheaded by Google that is also an applicable protocol, designed for the transportation of information and other content on the web. SPDY primarily focuses on reducing latency. SPDY uses the same TCP pipe but different protocols to accomplish this reduction. The basic changes made to HTTP 1.1 to create SPDY include: "true request pipelining without FIFO restrictions, message framing mechanism to simplify client and server development, mandatory compression (including headers), priority scheduling, and even bi-directional communication".<sup id="cite_ref-Grigorik_8-0" class="reference"><a href="#cite_note-Grigorik-8"><span>[</span>8<span>]</span></a></sup></p>
+<p>The httpbis working group considered Google's SPDY protocol, <a href="http://en.wikipedia.org/wiki/Microsoft" title="Microsoft">Microsoft</a>'s <a href="http://en.wikipedia.org/wiki/Microsoft_SM" title="Microsoft SM">HTTP Speed+Mobility</a> proposal (SPDY based),<sup id="cite_ref-extremetech_3-1" class="reference"><a href="#cite_note-extremetech-3"><span>[</span>3<span>]</span></a></sup> and Network-Friendly HTTP Upgrade.<sup id="cite_ref-9" class="reference"><a href="#cite_note-9"><span>[</span>9<span>]</span></a></sup> In July 2012 <a href="http://en.wikipedia.org/wiki/Facebook" title="Facebook">Facebook</a> provided feedback on each of the proposals and recommended HTTP 2.0 be based on SPDY.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10"><span>[</span>10<span>]</span></a></sup> The initial draft of HTTP 2.0 was published in November 2012 and is based on a straight copy of <a href="http://en.wikipedia.org/wiki/SPDY" title="SPDY">SPDY</a>.<sup id="cite_ref-11" class="reference"><a href="#cite_note-11"><span>[</span>11<span>]</span></a></sup></p>
+<p>The biggest difference between HTTP and SPDY, is that each user action in SPDY is given a "stream ID", meaning there is a single TCP channel connecting the user to the server. SPDY splits requests into either control or data, which is a “parse binary protocol with two types of "frames".<sup id="cite_ref-Grigorik_8-1" class="reference"><a href="#cite_note-Grigorik-8"><span>[</span>8<span>]</span></a></sup> SPDY has shown evident improvement from HTTP, with a new page load speedup ranging from 11.81% to 47.7%.<sup id="cite_ref-12" class="reference"><a href="#cite_note-12"><span>[</span>12<span>]</span></a></sup></p>
+<p>HTTP/2 uses SPDY as a jumping-off point; though SPDY is an improvement on HTTP 1.1, it does have some limitations. SPDY communicates separately with each host, which means that multiplexing happens only at one host at a time, no matter how many connections are open. This means that SPDY can only download things from one host at a time. The improvement HTTP 2.0 makes on this is that it allows multiplexing to happen at different hosts at the same time. This makes downloading multiple web pages or content from the Internet significantly faster.<sup id="cite_ref-13" class="reference"><a href="#cite_note-13"><span>[</span>13<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Encryption">Encryption</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=HTTP/2&amp;action=edit&amp;section=4" title="Edit section: Encryption">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>In February 2014, engineers from Ericsson and AT&amp;T posted a controversial draft called <i>Explicit Trusted Proxy in HTTP 2.0</i> that suggested HTTP 2.0 proxies could get permission to decrypt user traffic.</p>
+<p>The proposal assumes Internet users will provide permission for sites to decipher their encoded data, claiming the end result is reduction in traffic and enhanced performance.<sup id="cite_ref-14" class="reference"><a href="#cite_note-14"><span>[</span>14<span>]</span></a></sup></p>
+<p>Earlier, encryption method <a href="http://en.wikipedia.org/wiki/TLS_1.2" title="TLS 1.2" class="mw-redirect">TLS 1.2</a> or greater was planned to be mandatory as part of the protocol.<sup id="cite_ref-15" class="reference"><a href="#cite_note-15"><span>[</span>15<span>]</span></a></sup> However, in lieu of consensus for mandatory TLS, an optional unencrypted mode exists in addition to required support of an encrypted mode. Some implementations, such as Firefox,<sup id="cite_ref-mozillawiki_16-0" class="reference"><a href="#cite_note-mozillawiki-16"><span>[</span>16<span>]</span></a></sup> have stated that they will only support HTTP/2 when it is used over an encrypted connection.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17"><span>[</span>17<span>]</span></a></sup></p>
+<h2><span class="mw-headline" id="Development_milestones">Development milestones</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=HTTP/2&amp;action=edit&amp;section=5" title="Edit section: Development milestones">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="wikitable">
+<tbody><tr>
+<th>Status</th>
+<th>Date</th>
+<th>Milestone<sup id="cite_ref-charter_1-2" class="reference"><a href="#cite_note-charter-1"><span>[</span>1<span>]</span></a></sup></th>
+</tr>
+<tr>
+<td>Done</td>
+<td>Dec 20, 2007<sup id="cite_ref-mont1_18-0" class="reference"><a href="#cite_note-mont1-18"><span>[</span>18<span>]</span></a></sup><sup id="cite_ref-19" class="reference"><a href="#cite_note-19"><span>[</span>19<span>]</span></a></sup></td>
+<td>First HTTP 1.1 Revision Internet Draft</td>
+</tr>
+<tr>
+<td>Done</td>
+<td>January 23, 2008<sup id="cite_ref-20" class="reference"><a href="#cite_note-20"><span>[</span>20<span>]</span></a></sup></td>
+<td>First HTTP Security Properties Internet Draft</td>
+</tr>
+<tr>
+<td>Done</td>
+<td>Early 2012<sup id="cite_ref-21" class="reference"><a href="#cite_note-21"><span>[</span>21<span>]</span></a></sup></td>
+<td>Call for Proposals for HTTP 2.0</td>
+</tr>
+<tr>
+<td>Done</td>
+<td>Oct 14, 2012 - Nov 25, 2012<sup id="cite_ref-22" class="reference"><a href="#cite_note-22"><span>[</span>22<span>]</span></a></sup><sup id="cite_ref-23" class="reference"><a href="#cite_note-23"><span>[</span>23<span>]</span></a></sup></td>
+<td>Working Group Last Call for HTTP 1.1 Revision</td>
+</tr>
+<tr>
+<td>Done</td>
+<td>Nov 28, 2012<sup id="cite_ref-24" class="reference"><a href="#cite_note-24"><span>[</span>24<span>]</span></a></sup><sup id="cite_ref-25" class="reference"><a href="#cite_note-25"><span>[</span>25<span>]</span></a></sup></td>
+<td>First WG draft of HTTP 2.0, based upon draft-mbelshe-httpbis-spdy-00</td>
+</tr>
+<tr>
+<td>Held/Eliminated</td>
+<td></td>
+<td>Working Group Last Call for HTTP Security Properties</td>
+</tr>
+<tr>
+<td>Done</td>
+<td>Sep 2013<sup id="cite_ref-26" class="reference"><a href="#cite_note-26"><span>[</span>26<span>]</span></a></sup><sup id="cite_ref-27" class="reference"><a href="#cite_note-27"><span>[</span>27<span>]</span></a></sup></td>
+<td>Submit HTTP 1.1 Revision to <a href="http://en.wikipedia.org/wiki/Internet_Engineering_Steering_Group" title="Internet Engineering Steering Group">IESG</a> for consideration as a Proposed Standard</td>
+</tr>
+<tr>
+<td>Done</td>
+<td>June 2014<sup id="cite_ref-28" class="reference"><a href="#cite_note-28"><span>[</span>28<span>]</span></a></sup><sup id="cite_ref-mont1_18-1" class="reference"><a href="#cite_note-mont1-18"><span>[</span>18<span>]</span></a></sup></td>
+<td>Publish HTTP 1.1 Revision as RFC <a href="http://tools.ietf.org/html/rfc7230" class="extiw" title="rfc:7230">7230</a>, <a href="http://tools.ietf.org/html/rfc7231" class="extiw" title="rfc:7231">7231</a>, <a href="http://tools.ietf.org/html/rfc7232" class="extiw" title="rfc:7232">7232</a>, <a href="http://tools.ietf.org/html/rfc7233" class="extiw" title="rfc:7233">7233</a>, <a href="http://tools.ietf.org/html/rfc7234" class="extiw" title="rfc:7234">7234</a>, <a href="http://tools.ietf.org/html/rfc7235" class="extiw" title="rfc:7235">7235</a></td>
+</tr>
+<tr>
+<td>Done</td>
+<td>Aug 1, 2014 - Sep 1, 2014<sup id="cite_ref-ms1_2-1" class="reference"><a href="#cite_note-ms1-2"><span>[</span>2<span>]</span></a></sup><sup id="cite_ref-29" class="reference"><a href="#cite_note-29"><span>[</span>29<span>]</span></a></sup></td>
+<td>Working Group Last call for HTTP/2</td>
+</tr>
+<tr>
+<td>Planned</td>
+<td>Oct 1, 2014<sup id="cite_ref-ms1_2-2" class="reference"><a href="#cite_note-ms1-2"><span>[</span>2<span>]</span></a></sup></td>
+<td><a href="http://en.wikipedia.org/wiki/Internet_Engineering_Task_Force" title="Internet Engineering Task Force">IETF</a> Last Call for HTTP/2</td>
+</tr>
+<tr>
+<td>Planned</td>
+<td>Dec 4, 2014<sup id="cite_ref-ms1_2-3" class="reference"><a href="#cite_note-ms1-2"><span>[</span>2<span>]</span></a></sup></td>
+<td>Submit HTTP/2 to IESG for consideration as a Proposed Standard</td>
+</tr>
+<tr>
+<td>Planned</td>
+<td>Jan 2015<sup id="cite_ref-ms1_2-4" class="reference"><a href="#cite_note-ms1-2"><span>[</span>2<span>]</span></a></sup></td>
+<td>Submit HTTP/2 to <a href="http://en.wikipedia.org/wiki/Request_for_Comments" title="Request for Comments">RFC</a> Editor</td>
+</tr>
+<tr>
+<td>Planned</td>
+<td>Feb 2015<sup id="cite_ref-ms1_2-5" class="reference"><a href="#cite_note-ms1-2"><span>[</span>2<span>]</span></a></sup></td>
+<td>Publish HTTP/2 as an RFC</td>
+</tr>
+</tbody></table>
+<h2><span class="mw-headline" id="Browser_support">Browser support</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=HTTP/2&amp;action=edit&amp;section=6" title="Edit section: Browser support">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Internet_Explorer" title="Internet Explorer">Internet Explorer</a> supports HTTP/2 from IE 11 on <a href="http://en.wikipedia.org/wiki/Windows_10" title="Windows 10">Windows 10</a> Technical Preview. Currently only HTTP/2 over TLS is implemented.<sup id="cite_ref-30" class="reference"><a href="#cite_note-30"><span>[</span>30<span>]</span></a></sup></li>
+<li><a href="http://en.wikipedia.org/wiki/Firefox" title="Firefox">Firefox</a> will enable HTTP/2 by default in version 34.<sup id="cite_ref-31" class="reference"><a href="#cite_note-31"><span>[</span>31<span>]</span></a></sup> Only HTTP/2 over TLS is implemented.<sup id="cite_ref-mozillawiki_16-1" class="reference"><a href="#cite_note-mozillawiki-16"><span>[</span>16<span>]</span></a></sup></li>
+<li>Current version of <a href="http://en.wikipedia.org/wiki/Google_Chrome" title="Google Chrome">Chrome</a> supports HTTP/2, but not enabled by default. To turn on HTTP/2 support, a command line flag "--enable-spdy4" needs to be specified when launching Chrome.<sup id="cite_ref-32" class="reference"><a href="#cite_note-32"><span>[</span>32<span>]</span></a></sup> Only HTTP/2 over TLS is implemented.<sup id="cite_ref-33" class="reference"><a href="#cite_note-33"><span>[</span>33<span>]</span></a></sup></li>
+</ul>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=HTTP/2&amp;action=edit&amp;section=7" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/HTTP_pipelining" title="HTTP pipelining">HTTP pipelining</a></li>
+<li><a href="http://en.wikipedia.org/wiki/SPDY" title="SPDY">SPDY</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=HTTP/2&amp;action=edit&amp;section=8" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist columns references-column-width" style="-moz-column-width: 30em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-charter-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-charter_1-0"><span class="cite-accessibility-label">Jump up to: </span><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-charter_1-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-charter_1-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="https://datatracker.ietf.org/wg/httpbis/charter/">"Hypertext Transfer Protocol Bis (httpbis) - Charter"</a>. IETF. 2012.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.btitle=Hypertext+Transfer+Protocol+Bis+%28httpbis%29+-+Charter&amp;rft.date=2012&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fdatatracker.ietf.org%2Fwg%2Fhttpbis%2Fcharter%2F&amp;rft.pub=IETF&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-ms1-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-ms1_2-0"><span class="cite-accessibility-label">Jump up to: </span><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-ms1_2-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-ms1_2-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-ms1_2-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-ms1_2-4"><sup><i><b>e</b></i></sup></a> <a href="#cite_ref-ms1_2-5"><sup><i><b>f</b></i></sup></a></span> <span class="reference-text"><span class="citation web">Raymor, Brian (August 7, 2014). <a rel="nofollow" class="external text" href="http://msopentech.com/blog/2014/08/06/wait-for-it-http2-begins-working-group-last-call/">"Wait for it – HTTP/2 begins Working Group Last Call!"</a>. Microsoft Open Technologies<span class="reference-accessdate">. Retrieved 2014-09-07</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.aulast=Raymor%2C+Brian&amp;rft.au=Raymor%2C+Brian&amp;rft.btitle=Wait+for+it+%E2%80%93+HTTP%2F2+begins+Working+Group+Last+Call%21&amp;rft.date=August+7%2C+2014&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fmsopentech.com%2Fblog%2F2014%2F08%2F06%2Fwait-for-it-http2-begins-working-group-last-call%2F&amp;rft.pub=Microsoft+Open+Technologies&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-extremetech-3"><span class="mw-cite-backlink">^ <a href="#cite_ref-extremetech_3-0"><span class="cite-accessibility-label">Jump up to: </span><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-extremetech_3-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web">Sebastian Anthony (March 28, 2012). <a rel="nofollow" class="external text" href="http://www.extremetech.com/computing/124153-sm-vs-spdy-microsoft-and-google-battle-over-the-future-of-http-2-0">"S&amp;M vs. SPDY: Microsoft and Google battle over the future of HTTP 2.0"</a>. ExtremeTech.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.aulast=Sebastian+Anthony&amp;rft.au=Sebastian+Anthony&amp;rft.btitle=S%26M+vs.+SPDY%3A+Microsoft+and+Google+battle+over+the+future+of+HTTP+2.0&amp;rft.date=March+28%2C+2012&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.extremetech.com%2Fcomputing%2F124153-sm-vs-spdy-microsoft-and-google-battle-over-the-future-of-http-2-0&amp;rft.pub=ExtremeTech&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-4"><span class="mw-cite-backlink"><b><a href="#cite_ref-4"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://blog.restlet.com/2011/10/06/can-the-rise-of-spdy-threaten-http/">"Can the rise of SPDY threaten HTTP?"</a>. Restlet. 2011.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.btitle=Can+the+rise+of+SPDY+threaten+HTTP%3F&amp;rft.date=2011&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fblog.restlet.com%2F2011%2F10%2F06%2Fcan-the-rise-of-spdy-threaten-http%2F&amp;rft.pub=Restlet&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-Chapter_12._HTTP_2.0-5"><span class="mw-cite-backlink">^ <a href="#cite_ref-Chapter_12._HTTP_2.0_5-0"><span class="cite-accessibility-label">Jump up to: </span><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Chapter_12._HTTP_2.0_5-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://chimera.labs.oreilly.com/books/1230000000545/ch12.html">"Chapter 12. HTTP 2.0"</a>. O'Reilly Media, Inc<span class="reference-accessdate">. Retrieved 19 March 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.btitle=Chapter+12.+HTTP+2.0&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fchimera.labs.oreilly.com%2Fbooks%2F1230000000545%2Fch12.html&amp;rft.pub=O%27Reilly+Media%2C+Inc.&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-Pratt-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-Pratt_6-0"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web">Pratt, Michael. <a rel="nofollow" class="external text" href="http://apiux.com/2013/07/23/http2-0-initial-draft-released">"Apiux"</a><span class="reference-accessdate">. Retrieved 19 March 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.aufirst=Michael&amp;rft.aulast=Pratt&amp;rft.au=Pratt%2C+Michael&amp;rft.btitle=Apiux&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fapiux.com%2F2013%2F07%2F23%2Fhttp2-0-initial-draft-released&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-7"><span class="mw-cite-backlink"><b><a href="#cite_ref-7"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.infoq.com/news/2012/11/http20-first-draft">http://www.infoq.com/news/2012/11/http20-first-draft</a></span></li>
+<li id="cite_note-Grigorik-8"><span class="mw-cite-backlink">^ <a href="#cite_ref-Grigorik_8-0"><span class="cite-accessibility-label">Jump up to: </span><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Grigorik_8-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web">Grigorik, Ilya. <a rel="nofollow" class="external text" href="https://www.igvita.com/2011/04/07/life-beyond-http-11-googles-spdy/">"Life beyond HTTP 1.1: Google's SPDY"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.aufirst=Ilya&amp;rft.au=Grigorik%2C+Ilya&amp;rft.aulast=Grigorik&amp;rft.btitle=Life+beyond+HTTP+1.1%3A+Google%27s+SPDY&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fwww.igvita.com%2F2011%2F04%2F07%2Flife-beyond-http-11-googles-spdy%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-9"><span class="mw-cite-backlink"><b><a href="#cite_ref-9"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="https://tools.ietf.org/html/draft-tarreau-httpbis-network-friendly-00">Proposal for a Network-Friendly HTTP Upgrade</a>, March 29, 2012</span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://lists.w3.org/Archives/Public/ietf-http-wg/2012JulSep/0251.html">HTTP2 Expression of Interest</a>, Doug Beaver, 15 Jul 2012</span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web">Dio Synodinos (2012-11-30). <a rel="nofollow" class="external text" href="http://www.infoq.com/news/2012/11/http20-first-draft">"HTTP 2.0 First Draft Published"</a>. InfoQ.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.au=Dio+Synodinos&amp;rft.aulast=Dio+Synodinos&amp;rft.btitle=HTTP+2.0+First+Draft+Published&amp;rft.date=2012-11-30&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.infoq.com%2Fnews%2F2012%2F11%2Fhttp20-first-draft&amp;rft.pub=InfoQ&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-12"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://www.chromium.org/spdy/spdy-whitepaper">"SPDY: An experimental protocol for a faster web"</a>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.btitle=SPDY%3A+An+experimental+protocol+for+a+faster+web&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.chromium.org%2Fspdy%2Fspdy-whitepaper&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-13"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="https://http2.github.io/http2-spec/">"Hypertext Transfer Protocol Version 2"</a>. HTTPbis Working Group. 2014-10-21<span class="reference-accessdate">. Retrieved 2014-10-23</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.btitle=Hypertext+Transfer+Protocol+Version+2&amp;rft.date=2014-10-21&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fhttp2.github.io%2Fhttp2-spec%2F&amp;rft.pub=HTTPbis+Working+Group&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-14"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web">Chirgwin, Richard. <a rel="nofollow" class="external text" href="http://www.theregister.co.uk/2014/02/24/saving_private_spying_cryptobusting_proxy_proposal_surfaces_at_ietf/">"Saving private spying: IETF Draft reveals crypto-busting proxy proposal"</a>. The Register<span class="reference-accessdate">. Retrieved 19 March 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.au=Chirgwin%2C+Richard&amp;rft.aufirst=Richard&amp;rft.aulast=Chirgwin&amp;rft.btitle=Saving+private+spying%3A+IETF+Draft+reveals+crypto-busting+proxy+proposal&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fwww.theregister.co.uk%2F2014%2F02%2F24%2Fsaving_private_spying_cryptobusting_proxy_proposal_surfaces_at_ietf%2F&amp;rft.pub=The+Register&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-15"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web">Belshe, M. <a rel="nofollow" class="external text" href="https://http2.github.io/http2-spec/#TLSUsage">"Hypertext Transfer Protocol Version 2, Use of TLS Features"</a><span class="reference-accessdate">. Retrieved 2014-03-27</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.au=Belshe%2C+M.&amp;rft.aufirst=M.&amp;rft.aulast=Belshe&amp;rft.btitle=Hypertext+Transfer+Protocol+Version+2%2C+Use+of+TLS+Features&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fhttp2.github.io%2Fhttp2-spec%2F%23TLSUsage&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-mozillawiki-16"><span class="mw-cite-backlink">^ <a href="#cite_ref-mozillawiki_16-0"><span class="cite-accessibility-label">Jump up to: </span><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-mozillawiki_16-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="https://wiki.mozilla.org/Networking/http2">"Networking/http2"</a>. MozillaWiki<span class="reference-accessdate">. Retrieved 2014-09-07</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.btitle=Networking%2Fhttp2&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fwiki.mozilla.org%2FNetworking%2Fhttp2&amp;rft.pub=MozillaWiki&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://http2.github.io/faq/#does-http2-require-encryption">"HTTP/2 Frequently Asked Questions"</a><span class="reference-accessdate">. Retrieved 2014-09-08</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.btitle=HTTP%2F2+Frequently+Asked+Questions&amp;rft.genre=book&amp;rft_id=%2F%2Fhttp2.github.io%2Ffaq%2F%23does-http2-require-encryption&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-mont1-18"><span class="mw-cite-backlink">^ <a href="#cite_ref-mont1_18-0"><span class="cite-accessibility-label">Jump up to: </span><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-mont1_18-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><span class="citation web">Nottingham, Mark (7 June 2014). <a rel="nofollow" class="external text" href="https://www.mnot.net/blog/2014/06/07/rfc2616_is_dead">"RFC2616 is Dead"</a><span class="reference-accessdate">. Retrieved 20 September 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.aulast=Nottingham%2C+Mark&amp;rft.au=Nottingham%2C+Mark&amp;rft.btitle=RFC2616+is+Dead&amp;rft.date=7+June+2014&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fwww.mnot.net%2Fblog%2F2014%2F06%2F07%2Frfc2616_is_dead&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://tools.ietf.org/html/draft-ietf-httpbis-p1-messaging-00">"HTTP/1.1, part 1: URIs, Connections, and Message Parsing - draft-ietf-httpbis-p1-messaging-00"</a>. December 20, 2007<span class="reference-accessdate">. Retrieved 20 September 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.btitle=HTTP%2F1.1%2C+part+1%3A+URIs%2C+Connections%2C+and+Message+Parsing+-+draft-ietf-httpbis-p1-messaging-00&amp;rft.date=December+20%2C+2007&amp;rft.genre=book&amp;rft_id=%2F%2Ftools.ietf.org%2Fhtml%2Fdraft-ietf-httpbis-p1-messaging-00&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://tools.ietf.org/html/draft-ietf-httpbis-security-properties-00">"Security Requirements for HTTP - draft-ietf-httpbis-security-properties-00.txt"</a>. January 23, 2008<span class="reference-accessdate">. Retrieved 20 September 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.btitle=Security+Requirements+for+HTTP+-+draft-ietf-httpbis-security-properties-00.txt&amp;rft.date=January+23%2C+2008&amp;rft.genre=book&amp;rft_id=%2F%2Ftools.ietf.org%2Fhtml%2Fdraft-ietf-httpbis-security-properties-00&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web">Nottingham, Mark (24 Jan 2012). <a rel="nofollow" class="external text" href="http://lists.w3.org/Archives/Public/ietf-http-wg/2012JanMar/0098.html">"Rechartering HTTPbis"</a><span class="reference-accessdate">. Retrieved 20 September 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.aulast=Nottingham%2C+Mark&amp;rft.au=Nottingham%2C+Mark&amp;rft.btitle=Rechartering+HTTPbis&amp;rft.date=24+Jan+2012&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Flists.w3.org%2FArchives%2FPublic%2Fietf-http-wg%2F2012JanMar%2F0098.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-22"><span class="mw-cite-backlink"><b><a href="#cite_ref-22"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web">Nottingham, Mark (14 Oct 2012). <a rel="nofollow" class="external text" href="http://lists.w3.org/Archives/Public/ietf-http-wg/2012OctDec/0103.html">"Working Group Last Call for HTTP/1.1 p1 and p2"</a><span class="reference-accessdate">. Retrieved 20 September 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.aulast=Nottingham%2C+Mark&amp;rft.au=Nottingham%2C+Mark&amp;rft.btitle=Working+Group+Last+Call+for+HTTP%2F1.1+p1+and+p2&amp;rft.date=14+Oct+2012&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Flists.w3.org%2FArchives%2FPublic%2Fietf-http-wg%2F2012OctDec%2F0103.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-23"><span class="mw-cite-backlink"><b><a href="#cite_ref-23"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web">Nottingham, Mark (23 Oct 2012). <a rel="nofollow" class="external text" href="http://lists.w3.org/Archives/Public/ietf-http-wg/2012OctDec/0139.html">"Second Working Group Last Call for HTTP/1.1 p4 to p7"</a><span class="reference-accessdate">. Retrieved 20 September 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.aulast=Nottingham%2C+Mark&amp;rft.au=Nottingham%2C+Mark&amp;rft.btitle=Second+Working+Group+Last+Call+for+HTTP%2F1.1+p4+to+p7&amp;rft.date=23+Oct+2012&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Flists.w3.org%2FArchives%2FPublic%2Fietf-http-wg%2F2012OctDec%2F0139.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://tools.ietf.org/html/draft-ietf-httpbis-http2-00">"SPDY Protocol - draft-ietf-httpbis-http2-00"</a>. HTTPbis Working Group. November 28, 2012<span class="reference-accessdate">. Retrieved 20 September 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.btitle=SPDY+Protocol+-+draft-ietf-httpbis-http2-00&amp;rft.date=November+28%2C+2012&amp;rft.genre=book&amp;rft_id=%2F%2Ftools.ietf.org%2Fhtml%2Fdraft-ietf-httpbis-http2-00&amp;rft.pub=HTTPbis+Working+Group&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-25"><span class="mw-cite-backlink"><b><a href="#cite_ref-25"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web">Nottingham, Mark (30 Nov 2012). <a rel="nofollow" class="external text" href="http://lists.w3.org/Archives/Public/ietf-http-wg/2012OctDec/0447.html">"First draft of HTTP/2"</a><span class="reference-accessdate">. Retrieved 20 September 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.aulast=Nottingham%2C+Mark&amp;rft.au=Nottingham%2C+Mark&amp;rft.btitle=First+draft+of+HTTP%2F2&amp;rft.date=30+Nov+2012&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Flists.w3.org%2FArchives%2FPublic%2Fietf-http-wg%2F2012OctDec%2F0447.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="https://datatracker.ietf.org/doc/rfc7230/">"Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing"</a>. <a rel="nofollow" class="external text" href="http://web.archive.org/web/20140813234916/http://datatracker.ietf.org/doc/rfc7230/">Archived</a> from the original on 2014-08-13<span class="reference-accessdate">. Retrieved 20 September 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.btitle=Hypertext+Transfer+Protocol+%28HTTP%2F1.1%29%3A+Message+Syntax+and+Routing&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fdatatracker.ietf.org%2Fdoc%2Frfc7230%2F&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-27"><span class="mw-cite-backlink"><b><a href="#cite_ref-27"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://lists.w3.org/Archives/Public/ietf-http-wg/2013OctDec/0247.html">"Last Call: &lt;draft-ietf-httpbis-p1-messaging-24.txt&gt; (Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing) to Proposed Standard"</a>. The IESG. 21 Oct 2013<span class="reference-accessdate">. Retrieved 20 September 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.btitle=Last+Call%3A+%3Cdraft-ietf-httpbis-p1-messaging-24.txt%3E+%28Hypertext+Transfer+Protocol+%28HTTP%2F1.1%29%3A+Message+Syntax+and+Routing%29+to+Proposed+Standard&amp;rft.date=21+Oct+2013&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Flists.w3.org%2FArchives%2FPublic%2Fietf-http-wg%2F2013OctDec%2F0247.html&amp;rft.pub=The+IESG&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-28"><span class="mw-cite-backlink"><b><a href="#cite_ref-28"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="http://tools.ietf.org/html/rfc7230">"Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing"</a>. Internet Engineering Task Force<span class="reference-accessdate">. Retrieved 20 September 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.btitle=Hypertext+Transfer+Protocol+%28HTTP%2F1.1%29%3A+Message+Syntax+and+Routing&amp;rft.genre=book&amp;rft_id=%2F%2Ftools.ietf.org%2Fhtml%2Frfc7230&amp;rft.pub=Internet+Engineering+Task+Force&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-29"><span class="mw-cite-backlink"><b><a href="#cite_ref-29"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web">Nottingham, Mark (1 Aug 2014). <a rel="nofollow" class="external text" href="http://lists.w3.org/Archives/Public/ietf-http-wg/2014JulSep/1563.html">"Working Group Last Call: draft-ietf-httpbis-http2-14 and draft-ietf-httpbis-header-compression-09"</a>. HTTP Working Group<span class="reference-accessdate">. Retrieved 2014-09-07</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.aulast=Nottingham%2C+Mark&amp;rft.au=Nottingham%2C+Mark&amp;rft.btitle=Working+Group+Last+Call%3A+draft-ietf-httpbis-http2-14+and+draft-ietf-httpbis-header-compression-09&amp;rft.date=1+Aug+2014&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Flists.w3.org%2FArchives%2FPublic%2Fietf-http-wg%2F2014JulSep%2F1563.html&amp;rft.pub=HTTP+Working+Group&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-30"><span class="mw-cite-backlink"><b><a href="#cite_ref-30"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web">Rob Trace, David Walp (October 8, 2014). <a rel="nofollow" class="external text" href="http://blogs.msdn.com/b/ie/archive/2014/10/08/http-2-the-long-awaited-sequel.aspx">"HTTP/2: The Long-Awaited Sequel"</a>. Microsoft<span class="reference-accessdate">. Retrieved 8 October 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.aulast=Rob+Trace%2C+David+Walp&amp;rft.au=Rob+Trace%2C+David+Walp&amp;rft.btitle=HTTP%2F2%3A+The+Long-Awaited+Sequel&amp;rft.date=October+8%2C+2014&amp;rft.genre=book&amp;rft_id=http%3A%2F%2Fblogs.msdn.com%2Fb%2Fie%2Farchive%2F2014%2F10%2F08%2Fhttp-2-the-long-awaited-sequel.aspx&amp;rft.pub=Microsoft&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-31"><span class="mw-cite-backlink"><b><a href="#cite_ref-31"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web">Patrick McManus (2014-10-03). <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1047594#c22">"Bug 1047594 - Enable http/2 (and alpn) by default"</a>. Bugzilla@Mozilla<span class="reference-accessdate">. Retrieved 8 October 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.aulast=Patrick+McManus&amp;rft.au=Patrick+McManus&amp;rft.btitle=Bug+1047594+-+Enable+http%2F2+%28and+alpn%29+by+default&amp;rft.date=2014-10-03&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fbugzilla.mozilla.org%2Fshow_bug.cgi%3Fid%3D1047594%23c22&amp;rft.pub=Bugzilla%40Mozilla&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-32"><span class="mw-cite-backlink"><b><a href="#cite_ref-32"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web"><a rel="nofollow" class="external text" href="https://www.chromium.org/spdy/http2">"HTTP-2 - The Chromium Projects"</a>. The Chromium Projects<span class="reference-accessdate">. Retrieved 8 October 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.btitle=HTTP-2+-+The+Chromium+Projects&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fwww.chromium.org%2Fspdy%2Fhttp2&amp;rft.pub=The+Chromium+Projects&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span></span></li>
+<li id="cite_note-33"><span class="mw-cite-backlink"><b><a href="#cite_ref-33"><span class="cite-accessibility-label">Jump up </span>^</a></b></span> <span class="reference-text"><span class="citation web">Nottingham, Mark (4 January 2014). <a rel="nofollow" class="external text" href="https://www.mnot.net/blog/2014/01/04/strengthening_http_a_personal_view">"Strengthening HTTP: A Personal View"</a><span class="reference-accessdate">. Retrieved 8 October 2014</span>.</span><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AHTTP%2F2&amp;rft.aulast=Nottingham%2C+Mark&amp;rft.au=Nottingham%2C+Mark&amp;rft.btitle=Strengthening+HTTP%3A+A+Personal+View&amp;rft.date=4+January+2014&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fwww.mnot.net%2Fblog%2F2014%2F01%2F04%2Fstrengthening_http_a_personal_view&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display: none;">&nbsp;</span></span> (section "Enter Snowden")</span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="http://en.wikipedia.org/w/index.php?title=HTTP/2&amp;action=edit&amp;section=9" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><span class="official website"><span class="url"><a rel="nofollow" class="external text" href="http://http2.github.io/">Official website</a></span></span></li>
+<li><a rel="nofollow" class="external text" href="http://tools.ietf.org/html/draft-ietf-httpbis-http2-15">Hypertext Transfer Protocol version 2</a> (draft-ietf-httpbis-http2-15)</li>
+<li><a rel="nofollow" class="external text" href="http://tools.ietf.org/html/draft-ietf-httpbis-header-compression-09">HPACK - Header Compression for HTTP/2</a> (draft-ietf-httpbis-header-compression-09)</li>
+<li><a rel="nofollow" class="external text" href="http://tools.ietf.org/html/draft-mbelshe-httpbis-spdy-00">SPDY Protocol</a> (draft-mbelshe-httpbis-spdy-00)</li>
+<li><a rel="nofollow" class="external text" href="http://tools.ietf.org/html/draft-montenegro-httpbis-speed-mobility-01">HTTP Speed+Mobility</a> (draft-montenegro-httpbis-speed-mobility-01)</li>
+<li><a rel="nofollow" class="external text" href="http://tools.ietf.org/html/draft-tarreau-httpbis-network-friendly-00">Proposal for a Network-Friendly HTTP Upgrade</a> (draft-tarreau-httpbis-network-friendly-00)</li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1138
+CPU time usage: 1.220 seconds
+Real time usage: 1.290 seconds
+Preprocessor visited node count: 1645/1000000
+Preprocessor generated node count: 7272/1500000
+Post‐expand include size: 42628/2048000 bytes
+Template argument size: 119/2048000 bytes
+Highest expansion depth: 7/40
+Expensive parser function count: 4/500
+Lua time usage: 0.191/10.000 seconds
+Lua memory usage: 3.16 MB/50 MB
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:35651791-0!*!0!!en!4!* and timestamp 20141029182123 and revision id 631642278
+ -->
+</div>									<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="http://en.wikipedia.org/w/index.php?title=HTTP/2&amp;oldid=631642278">http://en.wikipedia.org/w/index.php?title=HTTP/2&amp;oldid=631642278</a>"					</div>
+													<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="http://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="http://en.wikipedia.org/wiki/Category:Hypertext_Transfer_Protocol" title="Category:Hypertext Transfer Protocol">Hypertext Transfer Protocol</a></li><li><a href="http://en.wikipedia.org/wiki/Category:Application_layer_protocols" title="Category:Application layer protocols">Application layer protocols</a></li><li><a href="http://en.wikipedia.org/wiki/Category:World_Wide_Web" title="Category:World Wide Web">World Wide Web</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="http://en.wikipedia.org/wiki/Category:NPOV_disputes_from_August_2014" title="Category:NPOV disputes from August 2014">NPOV disputes from August 2014</a></li><li><a href="http://en.wikipedia.org/wiki/Category:All_NPOV_disputes" title="Category:All NPOV disputes">All NPOV disputes</a></li></ul></div></div>												<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-createaccount"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=HTTP%2F2&amp;type=signup" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="http://en.wikipedia.org/w/index.php?title=Special:UserLogin&amp;returnto=HTTP%2F2" title="You're encouraged to log in; however, it's not mandatory. [Alt+Shift+o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li id="ca-nstab-main" class="selected"><span><a href="http://en.wikipedia.org/wiki/HTTP/2" title="View the content page [Alt+Shift+c]" accesskey="c">Article</a></span></li>
+															<li id="ca-talk"><span><a href="http://en.wikipedia.org/wiki/Talk:HTTP/2" title="Discussion about the content page [Alt+Shift+t]" accesskey="t">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 tabindex="0" id="p-variants-label"><span>Variants</span><a tabindex="-1" href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="http://en.wikipedia.org/wiki/HTTP/2">Read</a></span></li>
+															<li id="ca-edit"><span><a href="http://en.wikipedia.org/w/index.php?title=HTTP/2&amp;action=edit" title="You can edit this page. Please use the preview button before saving [Alt+Shift+e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="http://en.wikipedia.org/w/index.php?title=HTTP/2&amp;action=history" title="Past versions of this page [Alt+Shift+h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div style="" id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 tabindex="0" id="p-cactions-label"><span>More</span><a tabindex="-1" href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="http://en.wikipedia.org/w/index.php" id="searchform">
+														<div id="simpleSearch">
+															<input autocomplete="off" tabindex="1" name="search" placeholder="Search" title="Search Wikipedia [Alt+Shift+f]" accesskey="f" id="searchInput" type="search"><input value="Special:Search" name="title" type="hidden"><input name="go" value="Go" title="Go to a page with this exact name if one exists" id="searchButton" class="searchButton" type="submit">								</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page"></a></div>
+						<div class="portal first" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+
+			<div class="body">
+									<ul>
+													<li id="n-mainpage-description"><a href="http://en.wikipedia.org/wiki/Main_Page" title="Visit the main page [Alt+Shift+z]" accesskey="z">Main page</a></li>
+													<li id="n-contents"><a href="http://en.wikipedia.org/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li>
+													<li id="n-featuredcontent"><a href="http://en.wikipedia.org/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li>
+													<li id="n-currentevents"><a href="http://en.wikipedia.org/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li>
+													<li id="n-randompage"><a href="http://en.wikipedia.org/wiki/Special:Random" title="Load a random article [Alt+Shift+x]" accesskey="x">Random article</a></li>
+													<li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li>
+													<li id="n-shoplink"><a href="http://shop.wikimedia.org/" title="Visit the Wikimedia Shop">Wikimedia Shop</a></li>
+											</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-interaction" aria-labelledby="p-interaction-label">
+			<h3 id="p-interaction-label">Interaction</h3>
+
+			<div class="body">
+									<ul>
+													<li id="n-help"><a href="http://en.wikipedia.org/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li>
+													<li id="n-aboutsite"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li>
+													<li id="n-portal"><a href="http://en.wikipedia.org/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li>
+													<li id="n-recentchanges"><a href="http://en.wikipedia.org/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [Alt+Shift+r]" accesskey="r">Recent changes</a></li>
+													<li id="n-contactpage"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact page</a></li>
+											</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+
+			<div class="body">
+									<ul>
+													<li id="t-whatlinkshere"><a href="http://en.wikipedia.org/wiki/Special:WhatLinksHere/HTTP/2" title="List of all English Wikipedia pages containing links to this page [Alt+Shift+j]" accesskey="j">What links here</a></li>
+													<li id="t-recentchangeslinked"><a href="http://en.wikipedia.org/wiki/Special:RecentChangesLinked/HTTP/2" title="Recent changes in pages linked from this page [Alt+Shift+k]" accesskey="k">Related changes</a></li>
+													<li id="t-upload"><a href="http://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [Alt+Shift+u]" accesskey="u">Upload file</a></li>
+													<li id="t-specialpages"><a href="http://en.wikipedia.org/wiki/Special:SpecialPages" title="A list of all special pages [Alt+Shift+q]" accesskey="q">Special pages</a></li>
+													<li id="t-permalink"><a href="http://en.wikipedia.org/w/index.php?title=HTTP/2&amp;oldid=631642278" title="Permanent link to this revision of the page">Permanent link</a></li>
+													<li id="t-info"><a href="http://en.wikipedia.org/w/index.php?title=HTTP/2&amp;action=info" title="More information about this page">Page information</a></li>
+													<li id="t-wikibase"><a href="http://www.wikidata.org/wiki/Q739120" title="Link to connected data repository item [Alt+Shift+g]" accesskey="g">Wikidata item</a></li>
+						<li id="t-cite"><a href="http://en.wikipedia.org/w/index.php?title=Special:CiteThisPage&amp;page=HTTP%2F2&amp;id=631642278" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-coll-print_export" aria-labelledby="p-coll-print_export-label">
+			<h3 id="p-coll-print_export-label">Print/export</h3>
+
+			<div class="body">
+									<ul>
+													<li id="coll-create_a_book"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=HTTP%2F2">Create a book</a></li>
+													<li id="coll-download-as-rdf2latex"><a href="http://en.wikipedia.org/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=HTTP%2F2&amp;oldid=631642278&amp;writer=rdf2latex">Download as PDF</a></li>
+													<li id="t-print"><a href="http://en.wikipedia.org/w/index.php?title=HTTP/2&amp;printable=yes" title="Printable version of this page [Alt+Shift+p]" accesskey="p">Printable version</a></li>
+											</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-lang" aria-labelledby="p-lang-label"><span original-title="Language settings" aria-haspopup="true" role="button" tabindex="0" class="uls-settings-trigger"></span>
+			<h3 id="p-lang-label">Languages</h3>
+
+			<div class="body">
+									<ul>
+													<li class="interlanguage-link interwiki-es"><a href="http://es.wikipedia.org/wiki/HTTP_2.0" title="HTTP 2.0 – Spanish" hreflang="es" lang="es">Español</a></li>
+													<li class="interlanguage-link interwiki-hu"><a href="http://hu.wikipedia.org/wiki/HTTP_2.0" title="HTTP 2.0 – Hungarian" hreflang="hu" lang="hu">Magyar</a></li>
+													<li class="interlanguage-link interwiki-ja"><a href="http://ja.wikipedia.org/wiki/HTTP/2" title="HTTP/2 – Japanese" hreflang="ja" lang="ja">日本語</a></li>
+													<li class="interlanguage-link interwiki-zh"><a href="http://zh.wikipedia.org/wiki/HTTP/2" title="HTTP/2 – Chinese" hreflang="zh" lang="zh">中文</a></li>
+													
+											</ul>
+				<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a action="edit" href="http://www.wikidata.org/wiki/Q739120#sitelinks-wikipedia" text="Edit links" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last modified on 29 October 2014 at 18:21.<br></li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" style="display: none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="http://wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="http://wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="http://www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="http://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="http://en.wikipedia.org/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="http://en.wikipedia.org/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="http://en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-mobileview"><a href="http://en.m.wikipedia.org/w/index.php?title=HTTP/2&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+															<a href="http://wikimediafoundation.org/"><img src="wikimedia-button.png" srcset="//bits.wikimedia.org/images/wikimedia-button-1.5x.png 1.5x, //bits.wikimedia.org/images/wikimedia-button-2x.png 2x" alt="Wikimedia Foundation" width="88" height="31"></a>
+													</li>
+											<li id="footer-poweredbyico">
+															<a href="http://www.mediawiki.org/"><img src="poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31"></a>
+													</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		
+
+<div class="suggestions" style="display: none; font-size: 13px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div>
+
+	
+
+</body>
+</html>

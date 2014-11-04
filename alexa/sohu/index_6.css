@@ -1,0 +1,34 @@
+#container a { cursor: pointer; }
+#container a .normal { position: absolute; }
+#container a .hover { display: block; width: 100%; height: 100%; position: relative; }
+#container a .mask { font-weight: bold; display: block; position: absolute; bottom: 3px; height: 26px; opacity: 0.85; color: rgb(51, 51, 51); font-size: 12px; text-align: center; width: 100%; background-color: rgb(255, 255, 255); line-height: 26px; }
+#container a .line { display: block; position: absolute; bottom: 0px; height: 3px; width: 100%; background-color: rgb(0, 230, 238); }
+#container a.narrow .mask, #container a.narrow .line { display: none ! important; }
+#container a:link .hover { display: none; }
+#container a:link .normal { display: block; }
+#container a.narrow:hover .hover { display: block; background-color: rgb(44, 151, 223); z-index: 2; }
+#container a.narrow:hover .normal { display: none; }
+#container a.block1, #container a.little {  }
+#container a.block1 .hover, #container a.little .hover {  }
+#container .little .hover .mid { display: block; text-align: center; }
+#container .little .hover .mid, #container .block1 .hover .mid {  }
+#container .narrow:hover .hover .mid {  }
+#container a:hover .mask { color: rgb(255, 255, 255); background-color: rgb(44, 151, 223); opacity: 1; }
+#container .block3 { font-size: 12px; line-height: 12px; }
+#container .little {  }
+html { color: rgb(0, 0, 0); background-color: transparent; }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td { margin: 0px; padding: 0px; }
+fieldset, img { border: 0px none; }
+q::before, q::after { content: ""; }
+body { margin: 0px; padding: 0px; }
+.bd-logo, .bd-logo2, .bd-logo3, .bd-logo4 { text-decoration: none; cursor: pointer; display: block; overflow: hidden; position: absolute; bottom: 0px; right: 0px; z-index: 2147483647; }
+.bd-logo { height: 18px; width: 18px; background: url('bg.png') no-repeat scroll 0px 0px transparent; }
+.bd-logo:hover { background-position: -70px 0px; }
+.cf::before, .cf::after { content: " "; display: table; }
+.cf::after { clear: both; }
+body { margin: 0px; padding: 0px; }
+.container { position: relative; }
+a { display: inline-block; position: absolute; background: none repeat scroll 0% 0% rgb(255, 255, 255); text-align: center; overflow: hidden; color: rgb(255, 255, 255); font-family: "微软雅黑"; text-decoration: none; }
+.little { font-size: 12px; }
+.block3 { font-size: 12px; }
+.container { border: 1px solid rgb(0, 0, 0); overflow: hidden; }
