@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript">
+		$(function() {
+			$.ajax({
+				url: 'fieau.txt',
+				contentType: "gzip; charset=UTF-8",
+				headers: {"Range" : "bytes=0-30"},
+				success: function(data) { $('#results').html(data);}
+			});
+		});
+		</script>
+	</head>
+
+	<body>
+			<div id="results"></div>
+	<body>
+</html>

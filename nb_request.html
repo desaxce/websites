@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Test page... </title>	
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script>
+		</script>
+	</head>
+
+	<body>
+		<script>
+
+			$.ajaxSetup({
+				cache: false
+			});
+			function img_loader(i) {
+				var img = $("<img src=jquery/1.jpg?_="+(new Date()).getTime()+" width=7% height=7%>")
+				.load(function() {
+					$("body").append(img);	
+				});
+			}
+			img_loader(0);
+		</script>
+	</body>
+</html>
+
