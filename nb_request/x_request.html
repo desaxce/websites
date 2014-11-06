@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title> Test page... </title>	
+		<title> Leopard </title>	
 		<script src="js/jquery-2.1.1.min.js"></script>
 		<script>
 		</script>
@@ -9,17 +9,15 @@
 
 	<body>
 		<script>
-
-			$.ajaxSetup({
-				cache: false
-			});
 			function img_loader(i) {
-				var img = $("<img src=jquery/1.jpg?_="+(new Date()).getTime()+" width=7% height=7%>")
+				var img = $("<img src=jquery/?-"+i+.jpg width=7% height=7%>")
 				.load(function() {
 					$("body").append(img);	
 				});
 			}
-			img_loader(0);
+			for (var i = 0; i < ?; ++i) {
+				img_loader(i);
+			}
 		</script>
 	</body>
 </html>
