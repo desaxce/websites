@@ -148,8 +148,6 @@ a.yt-uix-button { text-decoration: none; box-sizing: border-box; }
 .yt-uix-button-menu li { margin: 0px; padding: 0px; }
 .yt-uix-button-menu .yt-uix-button-menu-item { display: block; margin: 0px; padding: 0px 25px; color: rgb(51, 51, 51); font-size: 13px; text-decoration: none; white-space: nowrap; word-wrap: normal; line-height: 25px; cursor: pointer; }
 .yt-uix-button-menu .yt-uix-button-menu-item.selected, .yt-uix-button-menu .yt-uix-button-menu-item-highlight .yt-uix-button-menu-item, .yt-uix-button-menu .yt-uix-button-menu-item:hover { background-color: rgb(51, 51, 51); color: rgb(255, 255, 255); }
-.yt-uix-expander-head { cursor: pointer; -moz-user-select: none; }
-.yt-uix-expander .yt-uix-expander-collapsed-body, .yt-uix-expander-collapsed .yt-uix-expander-body { display: none; }
 .yt-uix-button-subscription-container { max-width: 100%; white-space: nowrap; display: inline-block; }
 .yt-uix-button.yt-uix-button-subscribe-branded, .yt-uix-button.yt-uix-button-subscribed-branded { padding: 0px 8px 0px 5.5px; height: 24px; max-width: 100%; }
 .yt-uix-button-subscribe-branded, .yt-uix-button-subscribe-branded[disabled], .yt-uix-button-subscribe-branded[disabled]:hover, .yt-uix-button-subscribe-branded[disabled]:active, .yt-uix-button-subscribe-branded[disabled]:focus { color: rgb(254, 254, 254); background-color: rgb(230, 33, 23); }
@@ -268,19 +266,7 @@ a.yt-uix-button { text-decoration: none; box-sizing: border-box; }
 .expanded-shelf-content-item.fluid.yt-lockup-tile .yt-lockup-thumbnail { width: 196px; }
 .expanded-shelf-content-list { margin-bottom: -12px; margin-right: -15px; }
 .expanded-shelf-content-item { font-size: 13px; margin-bottom: 12px; margin-right: 15px; }
-.multirow-shelf { font-size: 0px; }
-.multirow-shelf .shelf-content { margin-bottom: -12px; }
-.multirow-shelf .shelf-content .yt-shelf-grid-item { margin-bottom: 12px; }
-.multirow-shelf { padding-right: 0px; margin-right: -10px; }
 .ie7 .multirow-shelf .yt-uix-expander.yt-uix-expander-collapsed .yt-shelf-grid-item, .ie8 .multirow-shelf .yt-uix-expander.yt-uix-expander-collapsed .yt-shelf-grid-item, .content-snap-width-1 .multirow-shelf .yt-uix-expander.yt-uix-expander-collapsed .yt-shelf-grid-item:nth-child(-n+6), .content-snap-width-1 .branded-page-v2-secondary-column-hidden .multirow-shelf .yt-uix-expander.yt-uix-expander-collapsed .yt-shelf-grid-item:nth-child(-n+8), .content-snap-width-2 .multirow-shelf .yt-uix-expander.yt-uix-expander-collapsed .yt-shelf-grid-item:nth-child(-n+8), .content-snap-width-2 .branded-page-v2-secondary-column-hidden .multirow-shelf .yt-uix-expander.yt-uix-expander-collapsed .yt-shelf-grid-item:nth-child(-n+10), .content-snap-width-3 .multirow-shelf .yt-uix-expander.yt-uix-expander-collapsed .yt-shelf-grid-item:nth-child(-n+10), .content-snap-width-3 .branded-page-v2-secondary-column-hidden .multirow-shelf .yt-uix-expander.yt-uix-expander-collapsed .yt-shelf-grid-item:nth-child(-n+12) { display: inline-block; }
-.multirow-shelf .yt-uix-expander.yt-uix-expander-collapsed .shelf-content { margin-right: -8px; }
-.multirow-shelf .yt-shelf-grid-item .shmoovie-content-cell, .multirow-shelf .yt-shelf-grid-item .yt-lockup { display: block; }
-.multirow-shelf .yt-uix-expander.yt-uix-expander-collapsed .shelf-content { display: block; position: relative; }
-.multirow-shelf .yt-uix-expander.yt-uix-expander-collapsed .yt-shelf-grid-item { display: none; }
-.yt-uix-expander-collapsed .multirow-shelf-collapser, .multirow-shelf-expander { display: none; }
-.yt-uix-expander-collapsed .multirow-shelf-expander, .multirow-shelf-collapser { display: inline; }
-.multirow-shelf .yt-uix-expander-head.hidden-expander { display: none; }
-.multirow-shelf .yt-uix-expander-head { position: relative; z-index: 1; margin-right: 10px; text-align: right; color: rgb(22, 122, 198); font-size: 12px; font-weight: bold; }
 .shelf-item .branded-page-module-title { overflow: visible; display: inline-block; }
 .browse-list-item-container .branded-page-module-title .video-thumb { margin-right: 5px; }
 .shelf-item .branded-page-module-title .branded-page-module-title-text { margin-top: 1px; vertical-align: bottom; display: inline-block; }
@@ -294,7 +280,6 @@ a.yt-uix-button { text-decoration: none; box-sizing: border-box; }
 .yt-uix-expander-ellipsis::before { background-color: inherit; content: "‌"; position: absolute; width: 100%; top: 0px; }
 .yt-uix-expander-ellipsis.yt-ui-ellipsis-10::before { height: 13em; }
 .webkit .yt-uix-expander-ellipsis.yt-ui-ellipsis-10::before { height: 12.35em; }
-.yt-uix-expander-collapsed .yt-ui-ellipsis { overflow: hidden; }
 .yt-uix-expander-ellipsis .yt-ui-ellipsis::before, .yt-uix-expander-ellipsis > .yt-uix-expander-head, .yt-uix-expander-ellipsis.yt-uix-expander-collapsed .yt-ui-ellipsis .yt-uix-expander-head { display: none; }
 .yt-uix-expander-ellipsis.yt-uix-expander-collapsed .yt-ui-ellipsis::before, .yt-uix-expander-ellipsis.yt-uix-expander-collapsed > .yt-uix-expander-head { display: inline; }
 ul.shows-genres li::after { content: ", "; }
@@ -816,3 +801,9 @@ html[data-player-size="fullscreen"] .html5-video-player:not(.ytp-block-autohide)
 .yt-keyboard-shortcuts:nth-child(n+2) { margin-left: 30px; }
 .yt-picker { margin-right: 20px; }
 #yt-picker-country-footer, #yt-picker-language-footer, #yt-picker-safetymode-footer { color: rgb(102, 102, 102); margin-top: 5px; padding: 10px; background: none repeat scroll 0% 0% rgb(255, 255, 255); border-radius: 3px; box-shadow: 0px 1px 2px rgb(204, 204, 204); }
+.gssb_c { border: 0px none; position: absolute; z-index: 989; }
+.gssb_e { border-width: 1px; border-style: solid; border-right: 1px solid rgb(204, 204, 204); border-color: rgb(217, 217, 217) rgb(204, 204, 204) rgb(204, 204, 204); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); cursor: default; }
+.gssb_f { visibility: hidden; white-space: nowrap; }
+.gssb_k { border: 0px none; display: block; position: absolute; top: 0px; z-index: 988; }
+.gssb_c { z-index: 2000000007; }
+.gssb_k { z-index: 2000000006; }
