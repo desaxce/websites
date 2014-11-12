@@ -1,7 +1,7 @@
-id	20141103151102
+id	20141112120120
 type	
 title	http2 - Recherche Google
 chars	UTF-8
 icon	favicon.ico
-source	https://www.google.fr/#q=http2
+source	https://www.google.fr/?gws_rd=ssl#q=http2
 comment	

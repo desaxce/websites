@@ -1,0 +1,6 @@
+html, body { margin: 0px; padding: 0px; }
+html:before, html:after, body:before, body:after { content: ""; background: none repeat scroll 0% 0% rgb(0, 0, 0); position: fixed; display: block; z-index: 2147483647; }
+html:before { height: 1px; left: 0px; right: 0px; top: 0px; }
+html:after { width: 1px; top: 0px; right: 0px; bottom: 0px; }
+body:before { height: 1px; right: 0px; bottom: 0px; left: 0px; }
+body:after { width: 1px; top: 0px; bottom: 0px; left: 0px; }

@@ -1,4 +1,4 @@
-.sw_ddbl, .sw_ddbk, .sw_ddw, .sw_ddgy, .sw_ddgn, .sw_poi, .sw_poia, .sw_play, .sw_playh, .sw_playa, .sw_playd, .sw_playp, .sw_st, .sw_sth, .sw_ste, .sw_st2, .sw_sth2, .sw_plus, .sw_minus, .sw_tpcg, .sw_tpcbl, .sw_tpcw, .sw_tpcbk, .sw_arw, .sw_arwh, .sb_pagN, .sb_pagP, .sw_up, .sw_down, .b_expandToggle, .sw_calc, .sw_fbarw, .sw_fbtmb, .sw_twr, .sw_twrt, .sw_twf, .b_fLogo, .b_cm, .sw_rmore, .sw_tpo, .sw_tpoa, .sw_tpoh { background-image: url('sw_mg_l_4d_lg.png'); background-repeat: no-repeat; }
+.sw_ddbl, .sw_ddbk, .sw_ddw, .sw_ddgy, .sw_ddgn, .sw_poi, .sw_poia, .sw_play, .sw_playh, .sw_playa, .sw_playd, .sw_playp, .sw_st, .sw_sth, .sw_ste, .sw_st2, .sw_sth2, .sw_plus, .sw_minus, .sw_tpcg, .sw_tpcbl, .sw_tpcw, .sw_tpcbk, .sw_arw, .sw_arwh, .sb_pagN, .sb_pagP, .sw_up, .sw_down, .b_expandToggle, .sw_calc, .sw_fbi, .sw_twi, .sw_fbarw, .sw_fbtmb, .sw_twr, .sw_twrt, .sw_twf, .b_fLogo, .b_cm, .sw_rmore, .sw_tpo, .sw_tpoa, .sw_tpoh { background-image: url('sw_mg_l_4d_lg.png'); background-repeat: no-repeat; }
 .sw_ddbl, .sw_ddbk, .sw_ddw, .sw_ddgy, .sw_ddgn { background-position: -266px -32px; height: 4px; width: 7px; }
 .sw_ddgn { background-position: -256px -32px; }
 .sb_pagP, .sb_pagN { background-position: -233px 0px; height: 30px; width: 30px; }
@@ -48,10 +48,8 @@ label, .b_ad .b_adlabel, .c_tlbxTrgIcn { display: block; }
 .b_footer { width: 100%; }
 .c_tlbxTrg { width: 15px; height: 14px; margin: -1px 6px -3px 2px; }
 .c_tlbxTrgIcn { margin: 4px 0px 2px 3px; }
-.b_imagePair::after, .b_vlist2col::after, .b_gridList::after { clear: left; }
-.b_imagePair.reverse::after, .b_overhangR::after { clear: right; }
-.b_clear, #b_results > li::after, .b_clearfix::after { clear: both; }
-#b_results > li::after, .b_clearfix::after, .b_imagePair::after, .b_vlist2col::after, .b_gridList::after, .b_overhangR::after { content: "."; display: block; height: 0px; visibility: hidden; }
+.b_clear, #b_results > li:after, .b_clearfix:after { clear: both; }
+#b_results > li:after, .b_clearfix:after, .b_imagePair:after, .b_vlist2col:after, .b_gridList:after, .b_overhangR:after { content: "."; display: block; height: 0px; visibility: hidden; }
 .b_vlist2col ul, .b_gridList ul, .b_float, .b_footer, .b_float_img, .b_pag li, .b_mhdr h2 { float: left; }
 h4, .sa_uc > .b_vList > li > table td, .b_smBottom, #b_context .b_ad h2, .b_attribution, .b_factrow, .b_secondaryFocus, .b_focusTextLarge, .b_focusTextMedium, .b_focusTextSmall, .b_focusTextExtraSmall, .b_snippet { padding-bottom: 2px; }
 h2, .b_focusLabel, label { padding-bottom: 3px; }
@@ -74,7 +72,7 @@ th { text-align: left; }
 .b_footerRight { margin: 13px 0px 0px 50px; }
 .b_footerRight div { margin-bottom: 11px; }
 .b_footerRight .b_fLogo { margin-bottom: 13px; }
-input, textarea, h4, h5 { font-family: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; font-size-adjust: inherit; font-stretch: inherit; font-feature-settings: inherit; font-language-override: inherit; font-kerning: inherit; font-synthesis: inherit; font-variant: inherit; font-size: 100%; }
+input, textarea, h4, h5 { font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-size-adjust: inherit; font-stretch: inherit; -moz-font-feature-settings: inherit; -moz-font-language-override: inherit; font-size: 100%; }
 body, .b_no h4, h2 .b_secondaryText, h2 .b_alert { font: 13px Arial,Helvetica,sans-serif; }
 h1, h2, h3 { font: 13px/1.2em "Segoe UI",Arial,Helvetica,sans-serif; }
 h2, h3, .b_no h1 { font-size: 18px; }
@@ -98,7 +96,7 @@ h1 strong, h2 strong, h3 strong, .b_xlText strong, .b_focusTextSmall strong { fo
 .b_logo { width: 73px; height: 29px; vertical-align: top; text-indent: -999px; float: right; margin-top: 6px; }
 #b_header .b_searchboxForm { padding: 0px 0px 0px 5px; }
 #b_header .b_searchbox { margin-right: 11px; }
-#b_header .b_active a::after { content: none; }
+#b_header .b_active a:after { content: none; }
 #b_header { border-bottom: 1px solid rgb(238, 238, 238); height: 120px; }
 #sb_form { position: relative; top: -46px; background-color: rgb(255, 255, 255); padding: 15px 0px; }
 #b_header .b_logo { margin-top: 2px; }
@@ -122,8 +120,8 @@ h1 strong, h2 strong, h3 strong, .b_xlText strong, .b_focusTextSmall strong { fo
 .b_scopebar { background-color: rgb(255, 255, 255); }
 .b_searchboxForm .b_searchboxSubmit { background-color: rgb(51, 102, 187); border-color: rgb(51, 102, 187); }
 .b_searchboxForm, .sa_as { background-color: rgb(255, 255, 255); }
-.sw_pref, .b_active a::after { border-color: rgb(255, 255, 255); }
-.b_active a::after { border-bottom-color: rgb(255, 255, 255); }
+.sw_pref, .b_active a:after { border-color: rgb(255, 255, 255); }
+.b_active a:after { border-bottom-color: rgb(255, 255, 255); }
 .b_searchboxForm { border-color: rgb(205, 205, 205); }
 .b_scopebar, .b_scopebar a, .b_scopebar a:visited, .id_button, .id_button:visited { color: rgb(119, 119, 119); }
 .id_button:hover, .b_idOpen a#id_l, a#bep.openfo, a#id_rh.openfo { color: rgb(64, 64, 64); background-color: rgb(238, 238, 238); }
@@ -136,7 +134,7 @@ h1 strong, h2 strong, h3 strong, .b_xlText strong, .b_focusTextSmall strong { fo
 .b_scopebar li, .b_scopebar a, .b_logo, .b_searchboxForm, #id_h .id_button, .id_avatar, .rwds_bep_head, .sw_pref { display: inline-block; }
 .b_scopebar a { padding: 0px 15px; }
 .b_active a, .b_searchboxForm { position: relative; }
-.b_active a::after { content: " "; border-width: 0px 9px 9px; border-style: solid; display: inline-block; position: absolute; left: 50%; top: 23px; margin: 0px 0px 0px -9px; }
+.b_active a:after { content: " "; border-width: 0px 9px 9px; border-style: solid; display: inline-block; position: absolute; left: 50%; top: 23px; margin: 0px 0px 0px -9px; }
 .b_logoArea { width: 90px; margin: -2px 10px 0px 0px; float: left; }
 .b_searchboxForm { padding: 0px 5px; border-width: 1px; border-style: solid; }
 .b_searchbox { width: 560px; margin: 0px 0px 0px 12px; border-width: 0px 1px 0px 0px; border-style: none solid none none; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; padding: 0px 9px 0px 0px; max-height: 28px; outline: medium none; border-color: rgb(204, 204, 204); box-sizing: content-box; position: relative; height: 28px; }
@@ -153,7 +151,7 @@ h1 strong, h2 strong, h3 strong, .b_xlText strong, .b_focusTextSmall strong { fo
 #b_tween { margin-top: -28px; }
 #b_tween > span { line-height: 30px; }
 #b_tween .ftrH { line-height: 30px; height: 30px; }
-input { font-family: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; font-size-adjust: inherit; font-stretch: inherit; font-feature-settings: inherit; font-language-override: inherit; font-kerning: inherit; font-synthesis: inherit; font-variant: inherit; font-size: 100%; }
+input { font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; font-size-adjust: inherit; font-stretch: inherit; -moz-font-feature-settings: inherit; -moz-font-language-override: inherit; font-size: 100%; }
 .b_searchboxForm { font: 18px "Segoe UI",Arial,Helvetica,sans-serif; }
 .b_scopebar, .id_button { line-height: 30px; }
 .sa_hd, .b_scopebar { text-transform: uppercase; }
@@ -162,7 +160,7 @@ a, #b_header a, #b_header a:hover, #id_h a, #id_h a:hover, .b_toggle, .b_toggle:
 #id_h { display: none; float: right; margin-right: 20px; position: relative; }
 #id_d { right: 25px; }
 .b_scopebar { display: inline-flex; float: left; }
-.b_navbar::after { clear: both; content: "."; display: block; height: 0px; visibility: hidden; }
+.b_navbar:after { clear: both; content: "."; display: block; height: 0px; visibility: hidden; }
 .b_topbar { background-color: rgb(255, 255, 255); margin-bottom: 10px; }
 #b_context, .b_contextWidth { width: 415px; }
 .b_navbar { width: 1145px; }

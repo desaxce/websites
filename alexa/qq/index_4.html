@@ -1,17 +1,41 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <title>Shumway viewer</title>
 
-<title>162新版-定向（280x320）</title>
-
-
+    
+    <script src="viewer.js"></script>
+    <script src="shumway-min.js"></script>
+  
 <link rel="stylesheet" type="text/css" href="index_4.css" media="all">
 </head>
-<body>
-<iframe style="width: 280px; height: 320px;" marginheight="0" marginwidth="0" src="index_5.html" scrolling="no" frameborder="0"></iframe> 
-
+<body contextmenu="shumwayMenu">
+    <div style="position: relative;" id="viewer"><canvas height="75" width="700"></canvas></div>
+    <script>
+      runViewer();
+      var urls=window.location.href.split("?reload")
+      var url=urls[0];
+      var t=parseInt(urls[1])||0;
+      if(t<3){
+       setTimeout(function(){
+        if(document.getElementById("viewer").children.length<1){
+          
+          if(t){
+            window.location.href=url+"?reload"+(t+1)
+          }else{
+            window.location.href+="?reload1"
+          }
+          
+        }
+       },12000+1000*t)
+      }
+    </script>
+  
 
 </body>
 </html>

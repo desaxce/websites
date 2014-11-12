@@ -1,9 +1,8 @@
-/* ::::: http://img.t.sinajs.cn/t5/style/css/module/base/frame.css?version=8f446b3f6a95af28 ::::: */
+/* ::::: http://img.t.sinajs.cn/t5/style/css/module/base/frame.css?version=fbfbfbcb9cac9bbd ::::: */
 
 body, button, input, select, textarea { font: 12px/1.125 Arial,Helvetica,sans-serif; }
 body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, th, td, p, blockquote, pre, form, fieldset, legend, input, button, textarea, hr { margin: 0px; padding: 0px; }
 fieldset, img { border: 0px none; }
-q::before, q::after { content: ""; }
 a:focus, input, textarea { outline-style: none; }
 input[type="text"], input[type="password"], textarea { outline-style: none; }
 address, caption, cite, code, dfn, em, i, th, var, b { font-style: normal; font-weight: normal; }
@@ -11,7 +10,7 @@ a { text-decoration: none; }
 a:hover { text-decoration: underline; }
 a { color: rgb(10, 140, 210); text-decoration: none; }
 a:hover { text-decoration: underline; }
-.clearfix::after { content: "."; display: block; height: 0px; clear: both; visibility: hidden; }
+.clearfix:after { content: "."; display: block; height: 0px; clear: both; visibility: hidden; }
 .clearfix { display: inline-block; }
 .clearfix { display: block; }
 .W_fl { float: left; }
@@ -37,12 +36,11 @@ a:hover { text-decoration: underline; }
 @media not all, not all, not all, not all {
 }
 .WB_global_personcard fieldset, img { border: 0px none; }
-.WB_global_personcard .clearfix::after { content: "."; display: block; height: 0px; clear: both; visibility: hidden; }
 @media �screen,screen	 {
 }
 @media �screen,screen	 {
 }
-/* ::::: http://img.t.sinajs.cn/t5/style/css/module/register/quick_register.css?version=8f446b3f6a95af28 ::::: */
+/* ::::: http://img.t.sinajs.cn/t5/style/css/module/register/quick_register.css?version=fbfbfbcb9cac9bbd ::::: */
 
 .W_reg_form .info_list { margin: 0px 0px 15px; position: relative; }
 .W_reg_form .tit { float: left; line-height: 30px; text-align: right; }

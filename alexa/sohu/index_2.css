@@ -1,5 +1,10 @@
-html { overflow: hidden; }
-body { margin: 0px; padding: 0px; }
-.j_bottomlogo { position: absolute; bottom: 0px; right: 0px; height: 18px; width: 75px; overflow: hidden; background: url('rbehwljyraeiaaaaaaacetyayqwaaecuwp__w4aaaks951.png') no-repeat scroll right bottom transparent; z-index: 5; }
-.j_bottomlogo a { display: block; height: 18px; width: 75px; line-height: 100px; }
-.j_bottomlogo a:hover { background: url('rbehvfjyrdaiaaaaaaahorfcogsaaecrwp_uyqaaae5174.png') no-repeat scroll 0px 0px transparent; }
+* { margin: 0px; padding: 0px; }
+li, ul { list-style-type: none; }
+.advertise { width: 158px; height: 234px; position: relative; overflow: hidden; border: 1px solid rgb(224, 36, 40); }
+.advertise img { float: left; border: medium none; }
+.adLogo, .adMenu li { background: url('160-236_01.png') no-repeat scroll 0% 0% transparent; text-indent: -999em; overflow: hidden; }
+.adLogo { left: 0px; bottom: 0px; position: absolute; width: 20px; height: 24px; background-position: 0px -12px; }
+.adCont { height: 210px; width: 160px; overflow: hidden; }
+.adMenu { text-align: center; width: 115px; position: absolute; left: 35px; bottom: 8px; }
+.adMenu li { width: 12px; height: 11px; text-indent: -999em; cursor: pointer; float: left; margin: 0px 4px; }
+.adMenu .adMenuIn { background-position: -13px 0px; }

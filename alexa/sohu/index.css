@@ -32,10 +32,8 @@ a:hover { color: rgb(204, 0, 0); text-decoration: underline; }
 .PTGA .list14 { margin: 0px auto; float: right; }
 .red, .red a { color: rgb(204, 0, 0) ! important; text-decoration: none; }
 .red a:hover { color: rgb(204, 0, 0) ! important; text-decoration: underline; }
-.blue, .blue a { color: rgb(42, 82, 199) ! important; text-decoration: none; }
 .white { background: none repeat scroll 0% 0% rgb(255, 255, 255); }
 .list14 li span.red { color: rgb(204, 0, 0); text-decoration: underline; }
-.list12 li span.blue { color: rgb(42, 82, 199); text-decoration: underline; }
 .unline, .unline a { text-decoration: underline; }
 .left { float: left; }
 .right { float: right; }

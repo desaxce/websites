@@ -8,7 +8,7 @@ table { border-collapse: collapse; border-spacing: 0px; }
 p { word-wrap: break-word; }
 .noborder { border: 0px none; }
 .Q-bold { font-weight: bold ! important; }
-.layout::after, .hd::after, .bd::after, .ft::after, .cf::after, .Q-tList::after, .Q-tList ul::after, .Q-tList ol::after, .Q-pList::after, .Q-pList ul::after, .Q-tpList::after, .Q-tpList ul::after, .Q-tpWrap::after { content: ""; display: table; clear: both; }
+.layout:after, .hd:after, .bd:after, .ft:after, .cf:after, .Q-tList:after, .Q-tList ul:after, .Q-tList ol:after, .Q-pList:after, .Q-pList ul:after, .Q-tpList:after, .Q-tpList ul:after, .Q-tpWrap:after { content: ""; display: table; clear: both; }
 .layout, .hd, .bd, .ft, .cf, .Q-tList, .Q-tList ul, .Q-tList ol, .Q-pList, .Q-pList ul, .Q-tpList, .Q-tpList ul, .Q-tpWrap {  }
 @media screen {
 	.fl, .layout .fl, .chief { float: left; display: inline; }
@@ -29,22 +29,27 @@ p { word-wrap: break-word; }
 	.txtArea h3 { width: 100%; line-height: 26px; font-size: 14px; float: left; }
 	.txtArea h3 a { color: rgb(59, 99, 159); }
 	.txtArea dt { width: 100%; line-height: 26px; font-size: 14px; font-weight: bold; }
+	.txtArea dt a { color: rgb(59, 99, 159); }
 	.txtArea dd { width: 100%; line-height: 22px; color: rgb(140, 140, 140); display: none; }
+	.txtArea dd a { color: rgb(59, 99, 159); }
+	.txtArea dd a:hover { color: rgb(205, 2, 0); }
 	.soso { width: 1000px; height: 48px; margin: 0px auto; padding: 23px 0px 19px; }
 	.soso .logo { float: left; display: inline; margin-left: 160px; }
 	.soso .logo .qqlogo { display: block; width: 134px; height: 44px; background-image: url('qqlogo_1x.png'); background-repeat: no-repeat; }
 	.soso .search { float: left; padding: 5px 0px 0px 42px; }
-	.soso .searchTxtHover { float: left; width: 290px; height: 35px; border-width: 1px 0px 1px 1px; border-style: solid none solid solid; border-color: rgb(50, 151, 216) -moz-use-text-color rgb(50, 151, 216) rgb(50, 151, 216); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; position: relative; z-index: 20; background: none repeat scroll 0% 0% rgb(255, 255, 255); }
+	.soso .searchTxt { float: left; width: 290px; height: 35px; border-width: 1px 0px 1px 1px; border-style: solid none solid solid; border-color: rgb(193, 196, 203) -moz-use-text-color rgb(193, 196, 203) rgb(193, 196, 203); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; position: relative; z-index: 20; background: none repeat scroll 0% 0% rgb(255, 255, 255); }
 	.soso .search .searchMenu { float: left; }
 	.soso .search .searchMenu .searchSelected { color: rgb(168, 168, 168); cursor: pointer; font-size: 14px; font-weight: bold; height: 35px; line-height: 35px; padding: 0px 10px; width: 48px; background-position: -877px -199px; }
 	.soso .search .searchMenu .searchTab { display: none; position: absolute; top: 35px; left: -1px; width: 58px; border-right: 1px solid rgb(50, 151, 216); border-width: 0px 1px 1px; border-style: none solid solid; border-color: -moz-use-text-color rgb(50, 151, 216) rgb(50, 151, 216); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; background: none repeat scroll 0% 0% rgb(255, 255, 255); height: 258px; z-index: 20; }
+	.soso .search .searchMenu .searchTab li { width: 58px; height: 28px; line-height: 28px; color: rgb(168, 168, 168); font-size: 14px; font-weight: bold; text-indent: 10px; cursor: pointer; }
+	.soso .search .searchMenu .searchTab li.selected { background: none repeat scroll 0% 0% rgb(237, 243, 252); color: rgb(105, 148, 193); }
 	.soso .search .searchSmart { position: absolute; top: 35px; left: 60px; width: 318px; border: 1px solid rgb(205, 205, 205); background: none repeat scroll 0% 0% rgb(255, 255, 255); visibility: hidden; z-index: 11; }
 	.soso .search .searchSmart ul { width: 100%; float: left; }
 	.soso .search input { float: left; border: 0px none; background: none repeat scroll 0% 0% rgb(255, 255, 255); color: rgb(51, 51, 51); font-size: 14px; line-height: 22px; width: 175px; height: 25px; margin: 0px; outline: medium none; padding: 4px; }
 	.soso .search .sosoLogo { float: right; margin: 5px 6px 0px 0px; }
 	.soso .searchBtn { float: left; }
 	.soso .searchBtn button { background: url('sogousearchbtn.png') no-repeat scroll 0% 0% transparent; border: 0px none; color: rgb(255, 255, 255); cursor: pointer; float: left; font-size: 16px; height: 37px; text-indent: -9999px; width: 90px; }
-	.soso .searchTxtHover .radius { width: 1px; height: 1px; overflow: hidden; background: none repeat scroll 0% 0% rgb(204, 229, 245); position: absolute; top: -2px; left: -1px; }
+	.soso .searchTxt .radius { width: 1px; height: 1px; overflow: hidden; background: none repeat scroll 0% 0% rgb(244, 244, 244); position: absolute; top: -2px; left: -1px; }
 	.navBeta .erweima { width: 103px; height: 145px; border: 1px solid rgb(219, 219, 219); padding: 0px; font-size: 12px; position: absolute; top: 0px; right: -115px; background: url('erweimanews1.1.png') no-repeat scroll 0% 0% transparent; }
 	.navBeta .erweima .shutDown { width: 18px; height: 18px; display: block; float: right; cursor: pointer; padding: 0px; margin: 0px; overflow: hidden; }
 	.navBeta .erweima .shutDown:hover { background: none repeat scroll 0% 0% transparent; padding: 0px; margin: 0px; }
@@ -110,6 +115,8 @@ p { word-wrap: break-word; }
 	.rightZixuangu .financeContent .imgArea img { width: 143px; height: 68px; overflow: hidden; }
 	.rightZixuangu .financeContent .txtArea { width: 110px; padding: 1px 0px 0px 9px; }
 	.rightZixuangu .financeContent .txtArea dt { width: 132px; font-size: 12px; line-height: 14px; font-weight: normal; margin-top: 2px; overflow: hidden; }
+	.rightZixuangu .financeContent .txtArea dt a { color: rgb(55, 69, 98); }
+	.rightZixuangu .financeContent .txtArea dt a:hover { text-decoration: underline; color: rgb(205, 2, 0); }
 	.rightZixuangu .financeContent .txtArea dd { font: bold 20px/38px Tahoma; color: rgb(65, 169, 141); display: block; }
 	.rightZixuangu .financeContent .txtArea dd.s { font: 12px/14px Tahoma; }
 	.rightZixuangu .ft { width: 100%; }
@@ -258,6 +265,8 @@ p { word-wrap: break-word; }
 	.adLeft700 { width: 700px; float: left; }
 	.adRight { width: 320px; float: right; }
 	.adRight280 { width: 280px; float: right; }
+	.tuangouDl dt { line-height: 24px ! important; height: 48px ! important; }
+	.tuangouDl dd { line-height: 24px ! important; height: 24px ! important; margin-top: 2px; }
 	.adRight .adScroll .jbBox { width: 280px; height: 75px; display: block; background: url('bkysp20140623.png') no-repeat scroll center center transparent; position: relative; }
 	.adRight .adScroll .jbBox .linkA { width: 150px; height: 75px; display: block; position: absolute; left: 0px; top: 0px; }
 	.adRight .adScroll .jbBox .linkB { width: 130px; height: 75px; display: block; position: absolute; left: 150px; top: 0px; }
@@ -265,11 +274,23 @@ p { word-wrap: break-word; }
 	.leftDajiaaikan { width: 310px; height: 333px; }
 	.leftDajiaaikan .hd { height: 33px; border-top: 1px solid rgb(200, 220, 242); position: relative; }
 	.adRight .adScroll .gyBox { background: url('shzyhxjzg141011.png') no-repeat scroll 0% 0% transparent; display: block; height: 75px; width: 280px; }
+	.adRight .adScroll { position: relative; }
 	.leftDajiaaikan .hd .more { width: 13px; height: 12px; display: block; background-position: -60px -260px; position: absolute; top: 10px; right: 10px; }
 	.leftDajiaaikan .hd .more:hover { background-position: -90px -260px; }
 	.leftDajiaaikan .hd .djakRefreshBtn { width: 12px; height: 12px; display: block; background: url('qqbg_1.5.5.png') no-repeat scroll left -260px transparent; position: absolute; top: 10px; right: 33px; }
 	.leftDajiaaikan .hd .djakRefreshBtn:hover { background: url('qqbg_1.5.5.png') no-repeat scroll -30px -260px transparent; }
 	.leftDajiaaikan .hd .aikanloading { position: absolute; top: 10px; right: 33px; }
+	.leftDajiaaikan .bd { width: 100%; float: left; padding: 8px 0px; }
+	.leftDajiaaikan .bd .imgArea { width: 108px; height: 72px; float: left; }
+	.leftDajiaaikan .bd .imgArea img { width: 108px; height: 72px; float: left; }
+	.leftDajiaaikan .bd .txtArea { width: 172px; padding-top: 0px; }
+	.leftDajiaaikan .bd .txtArea dl { width: 100%; float: left; }
+	.leftDajiaaikan .bd .txtArea dt { float: left; font-weight: bold; line-height: 22px; }
+	.leftDajiaaikan .bd .txtArea dd { float: left; margin-top: 6px; color: rgb(178, 178, 178); display: block; }
+	.leftDajiaaikan .bd .txtArea dd .times { color: rgb(102, 102, 102); margin-right: 12px; }
+	.leftDajiaaikan .bd .txtArea dd a { color: rgb(45, 55, 75); }
+	.leftDajiaaikan .ft { width: 100%; float: left; }
+	.leftDajiaaikan .ft li { height: 26px; line-height: 26px; text-indent: 0px; background: none repeat scroll 0% 0% transparent; }
 	#qq-tabs5 { position: relative; background: url('tabbg01_0702.png') no-repeat scroll 0px 0px transparent; border-top: 0px none; overflow: hidden; }
 	#qq-tabs5 #jrrb { position: absolute; top: 0px; left: 0px; }
 	#qq-tabs5 #yszy { position: absolute; top: 0px; left: 85px; }
@@ -349,7 +370,7 @@ p { word-wrap: break-word; }
 	#loginGrayTitle a:hover { color: rgb(205, 2, 0); }
 	#dingyueGrayTitle, #mailGrayTitle, #qzoneGrayTitle, #weiboGrayTitle { color: rgb(32, 107, 171); border-top: 0px none; }
 	.contentLayout { width: 1000px; margin: 12px auto 0px; }
-	.contentLayout::after { content: ""; display: table; clear: both; }
+	.contentLayout:after { content: ""; display: table; clear: both; }
 	.contentMod { width: 320px; height: 294px; float: left; border-top: 1px solid rgb(109, 170, 234); margin-right: 20px; }
 	.contentModBig { width: 660px; }
 	.contentMod .hd { width: 100%; height: 29px; border-top: 1px solid rgb(255, 255, 255); position: relative; z-index: 11; }
@@ -376,10 +397,13 @@ p { word-wrap: break-word; }
 	#house .houseSearch { width: 100%; height: 35px; float: left; margin-top: 5px; }
 	#house .houseSearch h4 { font-size: 14px; float: left; color: rgb(126, 136, 157); line-height: 26px; }
 	#house .houseSearch .houseSearchInput { float: left; padding-left: 12px; }
+	#house .houseSearch .houseSearchInput #smartbox_1 { float: left; width: 166px; height: 22px; padding: 2px; border: 1px solid rgb(186, 197, 203); }
+	#house .houseSearch .houseSearchInput #smartbox_search_1 { float: left; width: 42px; height: 28px; border: 0px none; text-indent: -9999px; margin-left: 6px; background: url('housesearchbtn.png') no-repeat scroll 0% 0% transparent; cursor: pointer; }
 	#house .contentRight p { width: 100%; float: left; font-size: 14px; line-height: 30px; color: rgb(59, 99, 159); }
 	#house .contentRight p a { color: rgb(59, 99, 159); }
 	#auto .autoProductTab { width: 272px; float: left; font-size: 14px; color: rgb(59, 99, 159); margin-top: 20px; }
 	#auto .autoProductTab a { color: rgb(59, 99, 159); padding-bottom: 7px; text-align: center; float: left; font-weight: normal; border-bottom: 1px solid rgb(228, 228, 228); background: url('autolowpriceborder.png') no-repeat scroll right 1px transparent; }
+	#auto .autoProductTab .selected { font-weight: bold; border-bottom: 1px solid rgb(109, 170, 234); }
 	#auto .autoPriceMore { float: left; padding: 0px 10px 7px; color: rgb(59, 99, 159); font-size: 14px; margin-top: 20px; }
 	#auto .autoPriceCon { width: 320px; height: 100px; float: left; background: url('autopricenum2.png') no-repeat scroll 5px 19px transparent; }
 	#auto .autoPriceCon ul { margin-top: 10px; }
@@ -468,6 +492,7 @@ p { word-wrap: break-word; }
 .leftAreaContent .ft ul.vlist li { width: 311px; }
 .leftView .ft h3 { font-size: 14px; }
 .leftView .ft ul { width: 326px; }
+.leftDajiaaikan .bd .txtArea { width: 192px; }
 @media not all, not all {
 	.soso .logo .qqlogo { background: url('qqlogo_2x.png') no-repeat scroll 0px 0px / 134px 44px transparent; }
 	#loginGrayLayout { background: url('logonbtn20140629.png') no-repeat scroll 0px 0px / 35px 35px transparent; border: 1px solid rgb(237, 237, 237); }
@@ -503,6 +528,9 @@ p { word-wrap: break-word; }
 #autoLowPriceUl .p3 { width: 70px; float: left; height: 26px; line-height: 26px; font-size: 14px; overflow: hidden; text-align: center; }
 /* ::::: http://mat1.gtimg.com/www/css/qq2012/hot_word_sogou.css ::::: */
 
+.search { position: relative; z-index: 99; }
+#smartbox_result_1 { background: none repeat scroll 0px 0px rgb(255, 255, 255); border-color: rgb(143, 167, 199); border-style: solid; border-width: 1px; display: none; font: 12px/1.75 "瀹嬩綋",arial,sans-serif; left: 0px; position: absolute; text-align: left; top: 22px; }
+#smartbox_result_1 { background: none repeat scroll 0px 0px rgb(255, 255, 255); border-color: rgb(143, 167, 199); border-style: solid; border-width: 1px; display: none; font: 12px/1.75 "瀹嬩綋",arial,sans-serif; left: 0px; position: absolute; text-align: left; top: 22px; }
 .absolute { position: absolute; }
 #followMe { position: absolute; z-index: 999; top: 0px; left: 0px; width: 100%; }
 .f_shadow { position: absolute; z-index: 1000; background: url('alphabg_01.png') repeat scroll 0% 0% transparent; }

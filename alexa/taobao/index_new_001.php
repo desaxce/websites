@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="gbk" />
 	<meta name="spm-id" content="a215z.7106357" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="逾8億產品任您揀，隨時淘您所想。淘寶網提供大量優惠產品，滿足您的生活所需，一站式網上購物體驗，方便又慳錢。">
 	<meta name="keywords" content="團購，網上購物，時裝，結婚 ，集運，傢俬家居用品，寵物用品，著數">
     <title>淘宝海外全球站首页</title>
@@ -19,10 +21,10 @@
     <!-- assets引用 -->
     <!--761868-->
 <!-- S GLOBAL CSS -->
-<link rel="stylesheet" href="http://g.tbcdn.cn/tb/global/3.3.2/global-min.css">
+<link rel="stylesheet" href="http://g.tbcdn.cn/tb/global/3.3.6/global-min.css">
 <link rel="stylesheet" href="http://a.tbcdn.cn/??app/tms/others/global/searchbox_new.css?t=20131015.css">
 <!-- E GLOBAL CSS --><!-- S GLOBAL JS -->
-<script src="http://g.tbcdn.cn/??kissy/k/1.3.0/kissy-min.js,tb/global/3.3.2/global-min.js"></script>
+<script src="http://g.tbcdn.cn/??kissy/k/1.3.0/kissy-min.js,tb/global/3.3.6/global-min.js"></script>
 <script src="http://a.tbcdn.cn/??app/tms/others/global/search_new.js,app/tms/others/global/locache.js?t=20131015"></script>
 <!-- E GLOBAL JS -->    <link rel="stylesheet" href="http://g.tbcdn.cn/tb/press/2.2.0/layouts/990-20-50-10.css" />
 <link rel="stylesheet" href="http://atp.alicdn.com/tmse/1/dpl/??tb-global-overlay/v3/tb-global-overlay.css,hw-global-homepage/v17/modules/hw-tw-nav/hw-tw-nav.css,hw-global-homepage/v17/modules/hw-hk-homepage-first/hw-hk-homepage-first.css,hw-global-homepage/v17/modules/sm-space-10/sm-space-10.css,hw-global-homepage/v17/modules/hw-hk-homepage-login/hw-hk-homepage-login.css,hw-global-homepage/v17/modules/sm-space-30/sm-space-30.css,hw-global-homepage/v17/modules/hw-hk-homepage-woman/hw-hk-homepage-woman.css,hw-global-homepage/v17/modules/hw-hk-homepage-sale/hw-hk-homepage-sale.css,hw-global-homepage/v17/modules/hw-hk-house-new/hw-hk-house-new.css,hw-global-homepage/v17/modules/sm-space-20/sm-space-20.css,hw-global-homepage/v17/modules/hw-hk-homepage-bottom/hw-hk-homepage-bottom.css,hw-global-homepage/v17/hw-global-homepage.css" />
@@ -31,6 +33,10 @@
 
 <style>
 .sm-rgn {}
+.skin-default .sm-rgn {
+  color: #404040;
+}
+
 </style>
 <style>
  #page {} 
@@ -151,16 +157,13 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
     }
 
   </style>
+  
+
+  
   <!-- 引用海外通告 -->
 <!-- 首页引用普通+Flash顶通 -->
 <div class="top-banner-tw" data-spm="267607">
   
-        <a href="http://1111.sea.taobao.com/?spm=1.6952269.a2148am.1"><img src="http://gtms02.alicdn.com/tps/i2/TB1m9_ZGFXXXXa3XXXXmtvf6pXX-1190-90.png" alt="双11预热"></a>
-    <style>
-      .top-banner-tw {width: 100%;text-align:center;_margin-top:-1px;}
-      .top-banner-tw img {vertical-align: middle}
-      #decSaleTopBanner{ display:none;}
-    </style>
       
 </div><!--blank -->  <div class="layout layout-hd" style="position:relative;">
   <div class="logo" style="padding-top:13px;">
@@ -739,11 +742,9 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
 			<div class="slide-up">
 				<div class="slide-box J_SlideBox">
 					<ol class="slide-list clearfix">
-																		<li><a href="http://1111.sea.taobao.com" target="_blank"><img src="http://gtms03.alicdn.com/tps/i3/TB1Im6VGFXXXXX9XpXXwu0bFXXX.png" width="520" height="280" alt="雙11預熱"></a></li>
-												<li><a href="http://sea.taobao.com/market/act/1111gblpurchasecard.php" target="_blank"><img data-ks-lazyload-custom="http://gtms01.alicdn.com/tps/i1/TB1XIQkGpXXXXaxXVXXXK5zTVXX-520-280.png" width="520" height="280" alt="澳大利亚支付优惠"></a></li>
-												<li><a href="http://sea.taobao.com/market/superdeals/ju201405.php" target="_blank"><img data-ks-lazyload-custom="http://gtms02.alicdn.com/tps/i2/TB1KHn0GFXXXXaTXXXXSutbFXXX.jpg" width="520" height="280" alt="海外团购"></a></li>
-												<li><a href="http://www.taobao.com/market/dapei/dpz4.php?spm=a213z.1224559.1998121398.560.P0aWfh&ad_id=&am_id=13012976794821b670f0&cm_id=&pm_id=" target="_blank"><img data-ks-lazyload-custom="http://gtms03.alicdn.com/tps/i3/TB1kJS0GFXXXXXOXFXXXK5zTVXX-520-280.png" width="520" height="280" alt="深秋邂逅搭配"></a></li>
-												<li><a href="http://www.taobao.com/market/global/transit-usca.php" target="_blank"><img data-ks-lazyload-custom="http://gtms04.alicdn.com/tps/i4/TB1iYCXGFXXXXc3XFXXvKyzTVXX-520-280.jpg" width="520" height="280" alt="官方集运"></a></li>
+																		<li><a href="http://1111.sea.taobao.com" target="_blank"><img src="http://gtms01.alicdn.com/tps/i1/TB1yAKbGXXXXXX6aXXXSutbFXXX.jpg" width="520" height="280" alt=""></a></li>
+												<li><a href="http://www.taobao.com/market/dapei/dpz5.php?spm=a217t.1184423.1998023443-b.1.VekdyI&ad_id=&am_id=1301299171af14f1d075&cm_id=&pm_id=" target="_blank"><img data-ks-lazyload-custom="http://gtms04.alicdn.com/tps/i4/TB1KoDVGFXXXXXyXpXXvKyzTVXX-520-280.jpg" width="520" height="280" alt="深秋邂逅搭配"></a></li>
+												<li><a href="http://miiee.taobao.com/themes/theme_349.htm" target="_blank"><img data-ks-lazyload-custom="http://gtms01.alicdn.com/tps/i1/TB166zwGFXXXXX_aXXXvKyzTVXX-520-280.jpg" width="520" height="280" alt="时髦语录"></a></li>
 											</ol>
 				</div>
 			</div>
@@ -752,69 +753,29 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
 		       <ul class="slide-donw-list">
 		       			        		         <li>
 		         	<div>
-	         			<a href="http://s.taobao.com/search?initiative_id=staobaoz_20141027&tab=all&q=%BA%AB%CA%BD%BA%FB%B5%FB%B7%A2%B9%BF&stats_click=search_radio_all%253A1&filter=reserve_price%5B6%2C%5D">
-		            <img src="http://gtms03.alicdn.com/tps/i3/TB1qP9YGFXXXXbXXFXXg4E80FXX-110-110.jpg" alt="">
-		            <span>韓國蝴蝶髮箍</span>
+	         			<a href="http://s.taobao.com/search?nofestival=0&q=%D0%DE%C9%ED%D3%E3%CE%B2%C8%B9&tab=all&source=suggest&filter=reserve_price%5B25%2C%5D&cat=50103017&fs=0&ppath=412%3A800000066&cps=yes&stats_click=search_radio_all%253A1&initiative_id=staobaoz_20140923&spm=a230r.1.1997074097.d4917629">
+		            <img src="http://gtms04.alicdn.com/tps/i4/TB1ORv9GpXXXXauXFXXg4E80FXX-110-110.jpg" alt="">
+		            <span>修身鱼尾裙</span>
 			          </a>
-			          			          <p>售價: <span>&yen; 6元起</span></p>
+			          			          <p>售價: <span>&yen; 25元起</span></p>
 			          			          <img class="slide-float-img" src="" alt="">
 		         	</div>
 		         </li>
 		       		         <li>
 		         	<div>
-	         			<a href="http://s.taobao.com/search?initiative_id=staobaoz_20141027&tab=all&q=%D4%B2%CD%B7%B7%AB%B2%BC%D0%A1%B0%D7%D0%AC&stats_click=search_radio_all%253A1&filter=reserve_price%5B36%2C%5D">
-		            <img src="http://gtms02.alicdn.com/tps/i2/TB1N2iWGFXXXXbFXVXXg4E80FXX-110-110.jpg" alt="">
-		            <span>帆布小白鞋</span>
+	         			<a href="http://s.taobao.com/search?initiative_id=staobaoz_20140924&tab=all&q=%CA%D6%BB%FA%B3%E4%B5%E7%CF%DF&stats_click=search_radio_all%253A1&filter=reserve_price%5B8%2C%5D">
+		            <img src="http://gtms03.alicdn.com/tps/i3/TB10OglGpXXXXaXXpXXg4E80FXX-110-110.jpg" alt="">
+		            <span>手机充电线</span>
 			          </a>
-			          			          <p>售價: <span>&yen; 36元起</span></p>
+			          			          <p>售價: <span>&yen; 8元起</span></p>
 			          			          <img class="slide-float-img" src="" alt="">
 		         	</div>
 		         </li>
 		       		         <li>
 		         	<div>
-	         			<a href="http://s.taobao.com/search?initiative_id=staobaoz_20141027&tab=all&q=%D3%A4%B6%F9%B7%A2%CA%CE%CD%B7%B4%F8&stats_click=search_radio_all%253A1&filter=reserve_price%5B3%2C%5D">
-		            <img src="http://gtms01.alicdn.com/tps/i1/TB1Lmu1GFXXXXbPXpXXg4E80FXX-110-110.jpg" alt="">
-		            <span>嬰兒髮飾頭帶</span>
-			          </a>
-			          			          <p>售價: <span>&yen; 3元起</span></p>
-			          			          <img class="slide-float-img" src="" alt="">
-		         	</div>
-		         </li>
-		       		         <li>
-		         	<div>
-	         			<a href="http://s.taobao.com/search?initiative_id=staobaoz_20141027&tab=all&q=%C1%A2%CC%E5%D7%B0%CA%CE%C7%BD%CC%F9&stats_click=search_radio_all%253A1&filter=reserve_price%5B2%2C%5D">
-		            <img src="http://gtms04.alicdn.com/tps/i4/TB1fySZGFXXXXaNXFXXg4E80FXX-110-110.jpg" alt="">
-		            <span>立體裝飾牆贴</span>
-			          </a>
-			          			          <p>售價: <span>&yen; 2元起</span></p>
-			          			          <img class="slide-float-img" src="" alt="">
-		         	</div>
-		         </li>
-		       		         <li>
-		         	<div>
-	         			<a href="http://s.taobao.com/search?initiative_id=staobaoz_20141016&tab=all&q=%D5%EB%D6%AF%C3%AB%CF%DF%B1%B3%D0%C4&stats_click=search_radio_all%253A1&filter=reserve_price%5B68%2C%5D">
-		            <img src="http://gtms03.alicdn.com/tps/i3/TB10CO1GFXXXXbIXpXXg4E80FXX-110-110.jpg" alt="">
-		            <span>針織背心</span>
-			          </a>
-			          			          <p>售價: <span>&yen; 68元起</span></p>
-			          			          <img class="slide-float-img" src="" alt="">
-		         	</div>
-		         </li>
-		       		         <li>
-		         	<div>
-	         			<a href="http://s.taobao.com/search?initiative_id=staobaoz_20141027&tab=all&q=%C3%A8%CD%B7%D3%A5+%CC%A8%B5%C6&stats_click=search_radio_all%253A1&filter=reserve_price%5B40%2C%5D">
-		            <img src="http://gtms01.alicdn.com/tps/i1/TB1H4C.GFXXXXctXXXXg4E80FXX-110-110.jpg" alt="">
-		            <span>創意貓頭鷹檯燈</span>
-			          </a>
-			          			          <p>售價: <span>&yen; 40元起</span></p>
-			          			          <img class="slide-float-img" src="" alt="">
-		         	</div>
-		         </li>
-		       		         <li>
-		         	<div>
-	         			<a href="http://s.taobao.com/search?initiative_id=staobaoz_20141016&tab=all&q=%CC%AB%BF%D5%C3%DE%CE%C0%D2%C2%C5%AE+%BA%AB%B9%FA&suggest=0_2&stats_click=search_radio_all%253A1&filter=reserve_price%5B29%2C%5D">
-		            <img src="http://gtms02.alicdn.com/tps/i2/TB1EsHqGFXXXXXaXXXXg4E80FXX-110-110.jpg" alt="">
-		            <span>太空棉衛衣</span>
+	         			<a href="http://s.taobao.com/search?nofestival=0&q=%B4%B4%D2%E2%CB%AB%BC%E7%B0%FC&tab=all&source=suggest&filter=reserve_price%5B29%2C%5D&fs=0&spm=1.7274553&initiative_id=tbindexz_20140930&spm=a230r.1.1997074097.d4917629">
+		            <img src="http://gtms01.alicdn.com/tps/i1/TB19KfOGpXXXXc8XVXXg4E80FXX-110-110.jpg" alt="">
+		            <span>创意双肩包</span>
 			          </a>
 			          			          <p>售價: <span>&yen; 29元起</span></p>
 			          			          <img class="slide-float-img" src="" alt="">
@@ -822,31 +783,51 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
 		         </li>
 		       		         <li>
 		         	<div>
-	         			<a href="http://s.taobao.com/search?initiative_id=staobaoz_20141027&tab=all&q=%BF%A8%CD%A8+%C3%DE%CD%E0&stats_click=search_radio_all%253A1&filter=reserve_price%5B10%2C%5D">
-		            <img src="http://gtms02.alicdn.com/tps/i2/TB15uHXGFXXXXbnXXXXg4E80FXX-110-110.jpg" alt="">
-		            <span>卡通圖案棉袜</span>
+	         			<a href="http://s.taobao.com/search?initiative_id=staobaoz_20141110&tab=all&q=%B1%A3%C5%AF%B6%B9%B6%B9%D0%AC&stats_click=search_radio_all%253A1&filter=reserve_price%5B39%2C%5D">
+		            <img src="http://gtms04.alicdn.com/tps/i4/TB1o9TsGXXXXXbCaXXXg4E80FXX-110-110.jpg" alt="">
+		            <span>保暖平底鞋</span>
 			          </a>
-			          			          <p>售價: <span>&yen; 10元起</span></p>
+			          			          <p>售價: <span>&yen; 39元起</span></p>
 			          			          <img class="slide-float-img" src="" alt="">
 		         	</div>
 		         </li>
 		       		         <li>
 		         	<div>
-	         			<a href="http://s.taobao.com/search?initiative_id=staobaoz_20141027&tab=all&q=%C8%D5%CA%BD%C0%C1%C8%CB%C9%B3%B7%A2&stats_click=search_radio_all%253A1&filter=reserve_price%5B52%2C%5D">
-		            <img src="http://gtms01.alicdn.com/tps/i1/TB1ETqZGFXXXXadXFXXg4E80FXX-110-110.jpg" alt="">
-		            <span>日式懶人梳化</span>
+	         			<a href="http://s.taobao.com/search?initiative_id=staobaoz_20141110&tab=all&q=%B8%F1%D7%D3%C0%AD%B8%CB%CF%E4&stats_click=search_radio_all%253A1&filter=reserve_price%5B150%2C%5D">
+		            <img src="http://gtms03.alicdn.com/tps/i3/TB1mg.NGXXXXXctXVXXg4E80FXX-110-110.jpg" alt="">
+		            <span>可愛格子行李箱</span>
 			          </a>
-			          			          <p>售價: <span>&yen; 52元起</span></p>
+			          			          <p>售價: <span>&yen; 150元起</span></p>
 			          			          <img class="slide-float-img" src="" alt="">
 		         	</div>
 		         </li>
 		       		         <li>
 		         	<div>
-	         			<a href="http://s.taobao.com/search?filter=reserve_price%5B49%2C%5D&initiative_id=staobaoz_20141027&tab=all&q=%B8%B4%B9%C5%B2%A8%B5%E3%C1%AC%D2%C2%C8%B9+%C7%EF&stats_click=search_radio_all%253A1">
-		            <img src="http://gtms04.alicdn.com/tps/i4/TB1ISGWGFXXXXacXVXXg4E80FXX-110-110.jpg" alt="">
-		            <span>復古波點連身裙</span>
+	         			<a href="http://s.taobao.com/search?initiative_id=staobaoz_20141110&tab=all&q=%D1%A7%D4%BA%B7%E7+%C3%AB%D2%C2+%B6%CC%BF%EE&stats_click=search_radio_all%253A1&filter=reserve_price%5B55%2C%5D">
+		            <img src="http://gtms02.alicdn.com/tps/i2/TB1BDbMGXXXXXc8aXXXg4E80FXX-110-110.jpg" alt="">
+		            <span>學院短款毛衣</span>
 			          </a>
-			          			          <p>售價: <span>&yen; 49元起</span></p>
+			          			          <p>售價: <span>&yen; 55元起</span></p>
+			          			          <img class="slide-float-img" src="" alt="">
+		         	</div>
+		         </li>
+		       		         <li>
+		         	<div>
+	         			<a href="http://s.taobao.com/search?filter=reserve_price%5B107%2C%5D&initiative_id=staobaoz_20141110&tab=all&q=%BF%CD%CC%FC%B5%D8%CC%BA&stats_click=search_radio_all%253A1">
+		            <img src="http://gtms01.alicdn.com/tps/i1/TB1wh7EGFXXXXcRXVXXg4E80FXX-110-110.jpg" alt="">
+		            <span>客廳地毯</span>
+			          </a>
+			          			          <p>售價: <span>&yen; 107元起</span></p>
+			          			          <img class="slide-float-img" src="" alt="">
+		         	</div>
+		         </li>
+		       		         <li>
+		         	<div>
+	         			<a href="http://s.taobao.com/search?cat=50008165&initiative_id=staobaoz_20141110&tab=all&q=%CF%E0%BB%FA+T%D0%F4&cps=yes&stats_click=search_radio_all%253A1&filter=reserve_price%5B5%2C%5D">
+		            <img src="http://gtms04.alicdn.com/tps/i4/TB1ZVH8GXXXXXc8XFXXg4E80FXX-110-110.jpg" alt="">
+		            <span>兒童相機圖案T恤</span>
+			          </a>
+			          			          <p>售價: <span>&yen; 5元起</span></p>
 			          			          <img class="slide-float-img" src="" alt="">
 		         	</div>
 		         </li>
@@ -858,8 +839,8 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
 			</div>
 		</div>
 		<div class="first-content-banner">
-						<a href="http://sea.taobao.com/market/superdeals/ju201405.php" class="banner-up"><img src="http://gtms03.alicdn.com/tps/i3/TB1xGDYGFXXXXaKXpXXSutbFXXX.jpg" alt=""></a>
-			<a href="http://miiee.taobao.com/themes/theme_349.htm" class="banner-bottom"><img src="http://gtms02.alicdn.com/tps/i2/TB1rBHQGFXXXXclXXXXJwlwTXXX-200-260.jpg" alt=""></a>
+						<a href="http://sea.taobao.com/market/superdeals/ju201405.php?spm=a214x.7330545.0.1.oRCT0V&pt=fu" class="banner-up"><img src="http://gtms04.alicdn.com/tps/i4/TB1rKxvGXXXXXaiXVXXSutbFXXX.jpg" alt=""></a>
+			<a href="http://miiee.taobao.com/themes/theme_hk-24.htm" class="banner-bottom"><img src="http://gtms03.alicdn.com/tps/i3/TB1vj2vFVXXXXaiaXXXJwlwTXXX-200-260.jpg" alt=""></a>
 		</div>
 	</div>
 </div>
@@ -1236,7 +1217,7 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
 			<div class="tbtx-inner">
 				<div class="left-banner">
 					
-						<a class="tbtx-img-wrap" href="http://miiee.taobao.com/themes/theme_hk-24.htm?spm=5022.7093121.451896.1&&banner=global" title="秋日帽子配衬法则" target="_blank"><img src="http://gtms04.alicdn.com/tps/i4/TB16TY3GFXXXXb4XFXXuPOuFXXX-239-438.jpg" alt="秋日帽子配衬法则"></a>
+						<a class="tbtx-img-wrap" href="http://miiee.taobao.com/themes/theme_hk-25.htm?spm=5022.7093121.451896.1&&banner=global" title="休闲包袋" target="_blank"><img src="http://gtms03.alicdn.com/tps/i3/TB1KmfpGXXXXXaQaXXXxCKf9FXX-339-621.png" alt="休闲包袋"></a>
 					
 
 					
@@ -1251,22 +1232,22 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
 					<div class="tbtx-top-products">
 						
 							<div class="top-producat top-producat-1">
-								<a href="http://miiee.taobao.com/hklist.htm?spm=5022.7093121.451896.3&tid=290838&sort=0&cid=8107002&banner=global#categories-nav" target="_blank" class="tbtx-img-wrap"><img src="http://gtms01.alicdn.com/tps/i1/TB1XVnaGFXXXXbQXXXXuZ2CPFXX-480-480.jpg" alt=""></a>
+								<a href="http://miiee.taobao.com/hklist.htm?spm=5022.7093121.451896.3&tid=302418&sort=0&cid=8107002&banner=global#categories-nav" target="_blank" class="tbtx-img-wrap"><img src="http://gtms03.alicdn.com/tps/i3/TB1zjocGXXXXXcgXVXXuZ2CPFXX-480-480.jpg" alt=""></a>
 
 								<div class="product-title">
-									<a href="http://miiee.taobao.com/hklist.htm?spm=5022.7093121.451896.4&tid=290838&sort=0&cid=8107002&banner=global#categories-nav" target="_blank">Grey sweatshirt</a>
+									<a href="http://miiee.taobao.com/hklist.htm?spm=5022.7093121.451896.4&tid=302418&sort=0&cid=8107002&banner=global#categories-nav" target="_blank">Baseball jacket</a>
 								</div>
 								<div class="product-price">
-									售價: <span class="start-price">￥ 1445</span> 起
+									售價: <span class="start-price">￥ 109</span> 起
 								</div>
 							</div>
 						
 						
 							<div class="top-producat top-producat-2">
-								<a href="http://miiee.taobao.com/hklist.htm?spm=5022.7093121.451896.5&tid=282333&cid=8107001&banner=global" target="_blank" class="tbtx-img-wrap"><img src="http://gtms01.alicdn.com/tps/i1/TB1Vx8FGFXXXXbkXFXXuKmIIXXX-250-480.jpg" alt=""></a>
+								<a href="http://miiee.taobao.com/hklist.htm?spm=5022.7093121.451896.5&tid=271615&cid=8107001&banner=global" target="_blank" class="tbtx-img-wrap"><img src="http://gtms01.alicdn.com/tps/i1/TB1Vx8FGFXXXXbkXFXXuKmIIXXX-250-480.jpg" alt=""></a>
 
 								<div class="product-title">
-									<a href="http://miiee.taobao.com/hklist.htm?spm=5022.7093121.451896.6&tid=282333&cid=8107001&banner=global" target="_blank">Patchwork jeans</a>
+									<a href="http://miiee.taobao.com/hklist.htm?spm=5022.7093121.451896.6&tid=271615&cid=8107001&banner=global" target="_blank">Patchwork jeans</a>
 								</div>
 								<div class="product-price">
 									售價: <span class="start-price">￥ 499</span> 起
@@ -1285,8 +1266,8 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
 										<a href="http://miiee.taobao.com/hklist.htm?spm=5022.7093121.451896.10&tid=266943&sort=0&cid=8107002&banner=global" target="_blank" class="top-link-title">爆米花戒指</a>
 									</div>
 																	<div class="top-link-item">
-										<a href="http://miiee.taobao.com/hklist.htm?spm=5022.7093121.451896.11&tid=194480&sort=0&cid=8107002&banner=global" target="_blank" class="tbtx-img-wrap"><img src="http://gtms03.alicdn.com/tps/i3/TB128kjGXXXXXbyXFXXuZ2CPFXX-480-480.jpg" alt=""></a>
-										<a href="http://miiee.taobao.com/hklist.htm?spm=5022.7093121.451896.12&tid=194480&sort=0&cid=8107002&banner=global" target="_blank" class="top-link-title">融化系項鍊</a>
+										<a href="http://miiee.taobao.com/hklist.htm?spm=5022.7093121.451896.11&tid=301127&sort=0&cid=8107002&banner=global" target="_blank" class="tbtx-img-wrap"><img src="http://gtms03.alicdn.com/tps/i3/TB1hmk0GXXXXXc5XFXXuZ2CPFXX-480-480.jpg" alt=""></a>
+										<a href="http://miiee.taobao.com/hklist.htm?spm=5022.7093121.451896.12&tid=301127&sort=0&cid=8107002&banner=global" target="_blank" class="top-link-title">Pattern pin</a>
 									</div>
 																
 							</div>
@@ -1511,6 +1492,7 @@ with(document)with(body)with(insertBefore(createElement("script"),firstChild))se
 <script src="http://atp.alicdn.com/tmse/1/dpl/??tb-global-overlay/v3/tb-global-overlay.js,hw-global-homepage/v17/modules/hw-tw-nav/hw-tw-nav.js,hw-global-homepage/v17/modules/hw-hk-homepage-first/hw-hk-homepage-first.js,hw-global-homepage/v17/modules/sm-space-10/sm-space-10.js,hw-global-homepage/v17/modules/hw-hk-homepage-login/hw-hk-homepage-login.js,hw-global-homepage/v17/modules/sm-space-30/sm-space-30.js,hw-global-homepage/v17/modules/hw-hk-homepage-woman/hw-hk-homepage-woman.js,hw-global-homepage/v17/modules/hw-hk-homepage-sale/hw-hk-homepage-sale.js,hw-global-homepage/v17/modules/hw-hk-house-new/hw-hk-house-new.js,hw-global-homepage/v17/modules/sm-space-20/sm-space-20.js,hw-global-homepage/v17/modules/sm-rgn/sm-rgn.js,hw-global-homepage/v17/modules/hw-hk-homepage-bottom/hw-hk-homepage-bottom.js"></script>
 
 <script>KISSY.use("node",function(a){window.renderCallback=function(b,d){var c=a.one(b),e=c.attr("data-name");c.one(".tb-module").hasClass("tb-finish")||a.use(e,function(a,c){new c(b,d)})};a.each(a.all(".J_Module"),function(b){renderCallback(b,a.one(b).one(".tb-module")[0])})});</script><script src="http://a.tbcdn.cn/app/tms/others/global/direct-promo.js"></script>
+
 <style>
   .footer_2014{
     width: 1190px;

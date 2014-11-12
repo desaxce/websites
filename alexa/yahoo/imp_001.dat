@@ -1,0 +1,9 @@
+document.write('<scr','ipt id="yax_meta" type="text/x-yax-meta">','{"fdb_url": "https://emea.af.beap.bc.yahoo.com/af?bv=1.0.0&bs=(152rstb65(gid$908080cc-6a5b-11e4-b227-6c3be5be6ef4,st$1415790222686162,li$9799769,cr$29291714,dmn$www.sfr.fr,srv$2,exp$1415795022686162,ct$26,v$1.0,adv$820302,pbid$321217))&al=(type${type},cmnt${cmnt},subo${subo})&r=79280", "fdb_on": "1", "fdb_exp": "1415795022686", "fdb_intl": "en", "error": "" }</scr', 'ipt>');
+document.write('<scr', 'ipt type="text/javascript">', '(function(){ var w= window, sf = (w && w.$sf && w.$sf.ext), di = document.getElementById("yax_meta"); if (sf && typeof sf.msg == "function" && di){ sf.msg({cmd:"fdb", data: di}); }})(); </scr', 'ipt>');
+document.write('<a target=\"_blank\" href=\"https://ads.yahoo.com/clk?3,eJytjd0KgkAUhJ-mO4ld179l6eLoZhi6dRGZ3i3mv2akJL19Lgi9QB8zh8MwMJgwbEtkFTotCJU5QpJhg0oiMzNHhoYYYxiZlkkRdmwtbePOy70wAe7R0HBBERbvHFZKCEBJcXbU3fPsfl4TiJP6Cn-BP-Z5Xv9A7ULJHbh1-jig1v3V2vnEwYgOogkvaSXiYIoufic8XEdNQJasifRjJ-LF.bUXv4GdplXT9Bw3BDa6v6h4bT-yGoZtNvRfeThX7g==,\"><img border=\"0\" alt=\"\" height=\"250\" width=\"300\" src=\"https://content-ssl.yieldmanager.com/atoms/b4/db/49/2f/b4db492fb3d6ca0f4589d312c14cd787.gif\"></img></a><img src=\"https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&c=19&mc=imp&pli=11486498&PluID=0&ord=1415790222&rtu=-1\" height=\"1\" width=\"1\" alt=\"\">');
+var rm_data = new Object();
+rm_data.creative_id = 29291714;
+rm_data.offer_type = 16;
+rm_data.entity_id = 820302;
+
+if (window.rm_crex_data) {rm_crex_data.push(29291714);}

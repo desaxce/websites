@@ -1,21 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="q.js" async=""></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="Description" content="拍拍网为你的网购提供男女服装、美容、家居、家电、3C数码、话费充值、游戏点卡充值等优质商品，更提供先收货后付款、先行赔付、假一赔三、七天无理由退换货等安全交易保障服务!">
+	<title>拍拍网：拍出惊喜</title>
+	
 
-  <title></title>
-  <meta charset="utf-8">
-  
-  
-  
- 
+
 <link rel="stylesheet" type="text/css" href="index_1.css" media="all">
 </head>
 <body>
-<div id="adarea">
-<iframe scrolling="no" src="index_2.html" marginwidth="0" marginheight="0" style="width: 760px; height: 100px;" id="js_dsp_22" frameborder="0"></iframe>
-</div>
 
+<code id="css" style="display: none;">
+	/**  @todo 这里输入样式， 把下面的样式替换成构建给的样式 **/
+*{margin:0;padding:0;}
+li,ul{list-style-type:none;}
+.clearfix:after{content:" "; clear:both; height:0; visibility:hidden; display:block;}
+.clearfix{*zoom:1;}
+.advertise{width:158px;height:234px;position:relative;overflow:hidden;border:1px solid #e02428;}
+.advertise img{float:left;border:none;}
+.adLogo,.adMenu li{background:url(a_1.png) no-repeat;text-indent:-999em;overflow:hidden;}
+.adLogo{left:0;bottom:0;position:absolute;width:20px;height:24px;background-position:0 -12px;}
+.adCont{height:210px;width:160px;overflow:hidden;}
+.adMenu{text-align:center;width:115px;position:absolute;left:35px;bottom:8px;}
+.adMenu li{width:12px;height:11px;text-indent:-999em;cursor:pointer;float:left;margin:0 4px;}
+.adMenu .adMenuIn{background-position:-13px 0;}
+</code>
+
+<script type="text/html" id="tpl">
+	<% var pollconf = pageconf.pollconf, len = pollconf.actualPages; %>
+	<div class="advertise _js_pos_container"  id="container">
+		<a href="<%=pageconf.logoLink%>" target="_blank" title="拍拍官网" class="adLogo">拍拍官网</a>
+
+		<div class="adMenu" style="margin-top: -10.5px;">
+			<ul class="__js_numlist">
+				<%  for (var i = 0; i < len; i++) { %>
+				<li class="" gdtoid="<%=i%>">1</li>
+				<% } %>
+			</ul>
+		</div>
+		<div class="adCont">
+			<ul class="adList clerfix">
+				<% for (var i = 0; i < len; i++) {  %>
+					<li class="__js_crtcnt"  gdtoid="<%=i%>">
+						<% for(var j=0; j<pollconf.perpage; j++ ) { var index = i*pollconf.perpage+j; var da = data[index]; if(!da) {break;} %>
+							<a  <%=da.olink%> target="_blank"><img  src="<%=da.img%>"  width="<%=pageconf.imgw%>" height="<%=pageconf.imgh%>" /></a>
+						<% } %>
+					</li>
+				<% }  %>
+			</ul>
+		</div>
+	</div>
+</script>
+<script>
+
+	document.domain = "qq.com";
+	function getParameter(name, cancelBubble) {
+		var r = new RegExp("(\\?|#|&)" + name + "=([^&#]*)(&|#|$)");
+		var m = location.href.match(r);
+		// if ((!m || m == "") && ! cancelBubble) m = top.location.href.match(r);
+		return (!m ? "": m[2]);
+	}
+
+	function $(id) {
+		return document.getElementById(id);
+	}
+
+	var pformat = {
+		ptag : /^[\d_]+$/,
+		pid  : /^\d+$/
+	}
+
+	function getposparam(field) {
+		var param = getParameter(field), format;
+		format = pformat[field];
+		( format && (!format.test(param)) || !format ) && (param = '')
+		return param;
+	}
+
+	function setLogo(style, url) {
+		style = style.replace(/background:url\(([^\)]+)\)/, 'background:url('+ url +')')
+		return style;
+	}
+
+	var ptag = getposparam("ptag") || "12838010_106449_46_12838013";
+	var conf = {
+		cssText : $("css").innerHTML,
+		pagestyle : '',
+
+		tpl : $("tpl").innerHTML,
+
+		pageadcount : 5,  // @todo ， 一共需要多少个广告
+		pollconf : {
+			polltime : 5000,
+			pollnum  : 5,    // @todo, 一共有多少帧
+			perpage : 1,     // @todo 每帧有多少个广告
+			hightlightcn : 'adMenuIn',
+			numtag : "li"
+		},
+
+		imgw : 158,  // @todo 广告图片的宽
+		imgh : 207, // @todo 广告图片的高
+
+		posw: 160,   //　@todo  广告牌的宽
+		posh: 236,   //　@todo  广告牌的宽
+		logoImg : "",
+
+		gDefaultAds : 'http://static.paipaiimg.com/js/adAlterData2.js',   // @todo 打底广告使用url
+		logoLink : 'http://re.paipai.com/tws/etgcl/click?fu=http%3A%2F%2Fre.paipai.com%2F&pps=etg.' + ptag
+	};
+	conf.logoImg = conf.posw + "-" + conf.posh + "_01.png";
+	conf.cssText = setLogo(conf.cssText, "/qzone/biz/res/tmpl/images/waicai/" + conf.logoImg);
+
+
+</script>
+
+<iframe src="index_2.html" style="position: static ! important; display: block ! important; margin: 0px ! important; padding: 0px ! important; visibility: visible ! important; float: none ! important; border-width: 0px ! important; width: 160px ! important; height: 236px ! important;" allowtransparency="true" marginwidth="0" marginheight="0" scrolling="no" width="160" frameborder="0" height="236"></iframe><script type="text/javascript" id="gdt-8000406085931585_1">
+	var posid = getposparam("pid");
+	if(posid) {
+		$('gdt').id = "gdt-" + posid;
+		var TencentGDT = TencentGDT || [];
+		TencentGDT.push({
+			posid: posid,
+			width: conf.posw,
+			height: conf.posh,
+			type: 'ecc',
+			pollstyle : 505
+		});
+		(function() {
+			var doc=document, h=doc.getElementsByTagName('head')[0], s=doc.createElement('script');
+			s.async=true; s.src='http://qzs.qq.com/qzone/biz/res/q.js';
+			h && h.insertBefore(s,h.firstChild)
+		})()
+	}
+</script>
 
 
 </body>
