@@ -5,6 +5,7 @@ html { line-height: 1; }
 ol, ul { list-style: outside none none; }
 table { border-collapse: collapse; border-spacing: 0px; }
 caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+q::before, q::after, blockquote::before, blockquote::after { content: none; }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
 a { color: rgb(24, 99, 161); }
 a:visited { color: rgb(117, 21, 144); }
@@ -16,9 +17,9 @@ aside.sidebar a:focus { color: rgb(1, 129, 235); }
 aside.sidebar a:hover { color: rgb(1, 129, 235); }
 aside.sidebar a:active { color: rgb(1, 87, 159); }
 a { transition: color 0.3s ease 0s; }
-html { background: url('line-tile.png') repeat scroll left top rgb(37, 37, 37); }
-body > div { background: url('noise.png') repeat scroll left top rgb(242, 242, 242); border-bottom: 1px solid rgb(191, 191, 191); }
-body > div > div { background: url('noise.png') repeat scroll left top rgb(248, 248, 248); border-right: 1px solid rgb(224, 224, 224); }
+html { background: url('') repeat scroll left top rgb(37, 37, 37); }
+body > div { background: url('') repeat scroll left top rgb(242, 242, 242); border-bottom: 1px solid rgb(191, 191, 191); }
+body > div > div { background: url('') repeat scroll left top rgb(248, 248, 248); border-right: 1px solid rgb(224, 224, 224); }
 .heading, body > header h1, h1, h2, h3, h4, h5, h6 { font-family: "PT Serif","Georgia","Helvetica Neue",Arial,sans-serif; }
 .sans, body > header h2, article header p.meta, article > footer, #content .blog-index footer, html .gist .gist-file .gist-meta, #blog-archives a.category, #blog-archives time, aside.sidebar section, body > footer { font-family: "PT Sans","Helvetica Neue",Arial,sans-serif; }
 .serif, body, #content .blog-index a[rel="full-article"] { font-family: "PT Serif",Georgia,Times,"Times New Roman",serif; }
@@ -35,12 +36,18 @@ h1, h2, h3, h4, h5, h6 { text-rendering: optimizelegibility; margin-bottom: 1em;
 h2, section h1 { font-size: 1.5em; }
 p, article blockquote, ul, ol { margin-bottom: 1.5em; }
 ul { list-style-type: disc; }
+ol { list-style-type: decimal; }
 ul, ul ul, ul ol, ol, ol ul, ol ol { margin-left: 1.3em; }
+q::before { content: "“"; }
+q::after { content: "”"; }
+article blockquote cite::before { content: "—"; padding-right: 0.3em; padding-left: 0.3em; color: rgb(170, 170, 170); }
 @media only screen and (min-width: 992px) {
 }
+.pullquote-right::before, .pullquote-left::before { padding: 0px; border: medium none; content: attr(data-pullquote); float: right; width: 45%; margin: 0.5em 0px 1em 1.5em; position: relative; top: 7px; font-size: 1.4em; line-height: 1.45em; }
+.pullquote-left::before { float: left; margin: 0.5em 1.5em 1em 0px; }
 .force-wrap, article a, aside.sidebar a { white-space: pre-wrap; word-wrap: break-word; }
 .group, body > header, body > nav, body > footer, body #content > article, body #content > div > article, body #content > div > section, body div.pagination, aside.sidebar, #main, #content, .sidebar {  }
-.group:after, body > header:after, body > nav:after, body > footer:after, body #content > article:after, body #content > div > section:after, body div.pagination:after, #main:after, #content:after, .sidebar:after { content: ""; display: table; clear: both; }
+.group::after, body > header::after, body > nav::after, body > footer::after, body #content > article::after, body #content > div > section::after, body div.pagination::after, #main::after, #content::after, .sidebar::after { content: ""; display: table; clear: both; }
 body { max-width: 1200px; position: relative; margin: 0px auto; }
 body > header, body > nav, body > footer, body #content > article, body #content > div > article, body #content > div > section { padding-left: 18px; padding-right: 18px; }
 @media only screen and (min-width: 480px) {
@@ -66,6 +73,7 @@ body > header { font-size: 1em; padding-top: 1.5em; padding-bottom: 1.5em; }
 #content { overflow: hidden; }
 #content > div, #content > article { width: 100%; }
 aside.sidebar { float: none; padding: 0px 18px 1px; background-color: rgb(247, 247, 247); border-top: 1px solid rgb(224, 224, 224); }
+.flex-content, article img, article video, article .flash-video, aside.sidebar img { max-width: 100%; height: auto; }
 .toggle-sidebar, .no-sidebar .toggle-sidebar { display: none; }
 @media only screen and (min-width: 750px) {
 }
@@ -97,7 +105,7 @@ body > header { background: none repeat scroll 0% 0% rgb(51, 51, 51); }
 body > header h1 { display: inline-block; margin: 0px; }
 body > header h1 a, body > header h1 a:visited, body > header h1 a:hover { color: rgb(242, 242, 242); text-decoration: none; }
 body > header h2 { margin: 0.2em 0px 0px; font-size: 1em; color: rgb(170, 170, 170); font-weight: normal; }
-body > nav { position: relative; background: url('noise.png') repeat scroll 0% 0%, linear-gradient(rgb(224, 224, 224), rgb(204, 204, 204), rgb(176, 176, 176)) repeat scroll 0% 0% transparent; border-top: 1px solid rgb(242, 242, 242); border-bottom: 1px solid rgb(140, 140, 140); padding-top: 0.35em; padding-bottom: 0.35em; }
+body > nav { position: relative; background: url('') repeat scroll 0% 0%, linear-gradient(rgb(224, 224, 224), rgb(204, 204, 204), rgb(176, 176, 176)) repeat scroll 0% 0% transparent; border-top: 1px solid rgb(242, 242, 242); border-bottom: 1px solid rgb(140, 140, 140); padding-top: 0.35em; padding-bottom: 0.35em; }
 body > nav form { background-clip: padding-box; margin: 0px; padding: 0px; }
 body > nav form .search { padding: 0.3em 0.5em 0px; font-size: 0.85em; font-family: "PT Sans","Helvetica Neue",Arial,sans-serif; line-height: 1.1em; width: 95%; border-radius: 0.5em; background-clip: padding-box; box-shadow: 0px 1px rgb(209, 209, 209); background-color: rgb(242, 242, 242); border: 1px solid rgb(179, 179, 179); color: rgb(136, 136, 136); }
 body > nav form .search:focus { color: rgb(68, 68, 68); border-color: rgb(128, 177, 223); box-shadow: 0px 0px 4px rgb(128, 177, 223), 0px 0px 3px rgb(128, 177, 223) inset; background-color: rgb(255, 255, 255); outline: medium none; }
@@ -131,6 +139,12 @@ body > nav ul { display: none; }
 }
 @media only screen and (min-width: 992px) {
 }
+.maskImage a[rel="subscribe-rss"], .maskImage a[rel="subscribe-rss"]::after { width: 22px; height: 22px; }
+.maskImage a[rel="subscribe-rss"]::after { content: ""; position: absolute; top: -1px; left: 0px; background-color: rgb(171, 171, 171); }
+.maskImage a[rel="subscribe-rss"]:hover::after { background-color: rgb(158, 158, 158); }
+.maskImage a[rel="subscribe-email"], .maskImage a[rel="subscribe-email"]::after { width: 28px; height: 22px; }
+.maskImage a[rel="subscribe-email"]::after { content: ""; position: absolute; top: -1px; left: 0px; background-color: rgb(171, 171, 171); }
+.maskImage a[rel="subscribe-email"]:hover::after { background-color: rgb(158, 158, 158); }
 article { padding-top: 1em; }
 article header { position: relative; padding-top: 2em; padding-bottom: 1em; margin-bottom: 1em; background: url('undefined') repeat-x scroll left bottom transparent; }
 article header h1 { margin: 0px; }
@@ -141,6 +155,7 @@ article header p.meta { text-transform: uppercase; position: absolute; top: 0px;
 @media only screen and (min-width: 768px) {
 	article header { margin-bottom: 1.5em; padding-bottom: 1em; background: url('undefined') repeat-x scroll left bottom transparent; }
 }
+article img, article video, article .flash-video { border-radius: 0.3em; box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15); box-sizing: border-box; border: 0.5em solid rgb(255, 255, 255); }
 .blog-index article + article { background: url('undefined') repeat-x scroll left top transparent; }
 #content .blog-index { padding-top: 0px; padding-bottom: 0px; }
 #content .blog-index article { padding-top: 2em; }
@@ -148,21 +163,22 @@ article header p.meta { text-transform: uppercase; position: absolute; top: 0px;
 #content .blog-index article h1 { font-size: 2.2em; }
 #content .blog-index article h1 a { color: inherit; }
 #content .blog-index article h1 a:hover { color: rgb(1, 129, 235); }
+.separator, article > footer .byline + time::before, article > footer time + time::before, article > footer .comments::before, article > footer .byline ~ .categories::before { content: "•"; padding: 0px 0.4em 0px 0.2em; display: inline-block; }
 #content div.pagination { text-align: center; font-size: 0.95em; position: relative; background: url('undefined') repeat-x scroll left top transparent; padding-top: 1.5em; padding-bottom: 1.5em; }
 #content div.pagination a { text-decoration: none; color: rgb(170, 170, 170); }
 #content div.pagination a.prev { position: absolute; left: 0px; }
 #content div.pagination a:hover { color: rgb(1, 129, 235); }
-#content div.pagination a[href*="archive"]:before, #content div.pagination a[href*="archive"]:after { content: "—"; padding: 0px 0.3em; }
+#content div.pagination a[href*="archive"]::before, #content div.pagination a[href*="archive"]::after { content: "—"; padding: 0px 0.3em; }
 .highlight, html .gist .gist-file .gist-syntax .gist-highlight { border: 1px solid rgb(5, 35, 43) ! important; }
 .highlight table td.code, html .gist .gist-file .gist-syntax .gist-highlight table td.code { width: 100%; }
-.highlight .line-numbers, html .gist .gist-file .gist-syntax .highlight .line_numbers { text-align: right; font-size: 13px; line-height: 1.45em; background: url('noise.png') repeat scroll left top rgb(7, 54, 66) ! important; border-right: 1px solid rgb(0, 35, 44) ! important; box-shadow: -1px 0px rgb(8, 62, 75) inset; text-shadow: 0px -1px rgb(2, 16, 20); padding: 0.8em ! important; border-radius: 0px; }
+.highlight .line-numbers, html .gist .gist-file .gist-syntax .highlight .line_numbers { text-align: right; font-size: 13px; line-height: 1.45em; background: url('') repeat scroll left top rgb(7, 54, 66) ! important; border-right: 1px solid rgb(0, 35, 44) ! important; box-shadow: -1px 0px rgb(8, 62, 75) inset; text-shadow: 0px -1px rgb(2, 16, 20); padding: 0.8em ! important; border-radius: 0px; }
 .highlight .line-numbers span, html .gist .gist-file .gist-syntax .highlight .line_numbers span { color: rgb(88, 110, 117) ! important; }
 figure.code, .gist-file, pre { box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.06); }
 figure.code .highlight pre, .gist-file .highlight pre, pre .highlight pre { box-shadow: none; }
 .gist .highlight *::-moz-selection, figure.code .highlight *::-moz-selection { background: none repeat scroll 0% 0% rgb(56, 103, 116); color: inherit; text-shadow: 0px 1px rgb(0, 43, 54); }
-pre { background: url('noise.png') repeat scroll left top rgb(0, 43, 54); border-radius: 0.4em; border: 1px solid rgb(5, 35, 43); line-height: 1.45em; font-size: 13px; margin-bottom: 2.1em; padding: 0.8em 1em; color: rgb(147, 161, 161); overflow: auto; }
+pre { background: url('') repeat scroll left top rgb(0, 43, 54); border-radius: 0.4em; border: 1px solid rgb(5, 35, 43); line-height: 1.45em; font-size: 13px; margin-bottom: 2.1em; padding: 0.8em 1em; color: rgb(147, 161, 161); overflow: auto; }
 p code, li code { display: inline-block; background: none repeat scroll 0% 0% rgb(255, 255, 255); font-size: 0.8em; line-height: 1.5em; color: rgb(85, 85, 85); border: 1px solid rgb(221, 221, 221); border-radius: 0.4em; padding: 0px 0.3em; margin: -1px 0px; }
-.pre-code, html .gist .gist-file .gist-syntax .highlight pre, .highlight code { font-family: Menlo,Monaco,"Andale Mono","lucida console","Courier New",monospace ! important; overflow-y: hidden; display: block; padding: 0.8em; overflow-x: auto; line-height: 1.45em; background: url('noise.png') repeat scroll left top rgb(0, 43, 54) ! important; color: rgb(147, 161, 161) ! important; }
+.pre-code, html .gist .gist-file .gist-syntax .highlight pre, .highlight code { font-family: Menlo,Monaco,"Andale Mono","lucida console","Courier New",monospace ! important; overflow-y: hidden; display: block; padding: 0.8em; overflow-x: auto; line-height: 1.45em; background: url('') repeat scroll left top rgb(0, 43, 54) ! important; color: rgb(147, 161, 161) ! important; }
 .pre-code span, html .gist .gist-file .gist-syntax .highlight pre span, .highlight code span { color: rgb(147, 161, 161) ! important; }
 .pre-code span, html .gist .gist-file .gist-syntax .highlight pre span, .highlight code span { font-style: normal ! important; font-weight: normal ! important; }
 .pre-code .cp, html .gist .gist-file .gist-syntax .highlight pre .cp, .highlight code .cp { color: rgb(88, 110, 117) ! important; font-style: italic ! important; }
@@ -193,9 +209,12 @@ aside.sidebar:hover a:hover { color: rgb(1, 129, 235); }
 @media only screen and (min-width: 768px) {
 	.toggle-sidebar { outline: medium none; position: absolute; right: -10px; top: 0px; bottom: 0px; display: inline-block; text-decoration: none; color: rgb(206, 206, 206); width: 9px; cursor: pointer; }
 	.toggle-sidebar:hover { background: -moz-linear-gradient(left center , rgba(224, 224, 224, 0.5), rgba(224, 224, 224, 0)) repeat scroll 0% 0% transparent; }
-	.toggle-sidebar:after { position: absolute; right: -11px; top: 0px; width: 20px; font-size: 1.2em; line-height: 1.1em; padding-bottom: 0.15em; border-bottom-right-radius: 0.3em; text-align: center; background: url('noise.png') repeat scroll left top rgb(248, 248, 248); border-bottom: 1px solid rgb(224, 224, 224); border-right: 1px solid rgb(224, 224, 224); content: "»"; text-indent: -1px; }
+	.toggle-sidebar::after { position: absolute; right: -11px; top: 0px; width: 20px; font-size: 1.2em; line-height: 1.1em; padding-bottom: 0.15em; border-bottom-right-radius: 0.3em; text-align: center; background: url('') repeat scroll left top rgb(248, 248, 248); border-bottom: 1px solid rgb(224, 224, 224); border-right: 1px solid rgb(224, 224, 224); content: "»"; text-indent: -1px; }
+	.collapse-sidebar .toggle-sidebar::after { text-shadow: 0px 1px rgb(255, 255, 255); content: "«"; left: 0px; right: 0px; text-align: center; text-indent: 0px; border: 0px none; background: none repeat scroll 0% 0% transparent; }
 }
-body > footer { font-size: 0.8em; color: rgb(136, 136, 136); text-shadow: 0px 1px rgb(217, 217, 217); background: url('noise.png') repeat scroll 0% 0%, linear-gradient(rgb(224, 224, 224), rgb(204, 204, 204), rgb(176, 176, 176)) repeat scroll 0% 0% transparent; border-top: 1px solid rgb(242, 242, 242); position: relative; padding-top: 1em; padding-bottom: 1em; margin-bottom: 3em; border-bottom-left-radius: 0.4em; border-bottom-right-radius: 0.4em; z-index: 1; }
+#pinboard_linkroll .pin-tag::after { content: ","; }
+#pinboard_linkroll .pin-tag:last-child::after { content: ""; }
+body > footer { font-size: 0.8em; color: rgb(136, 136, 136); text-shadow: 0px 1px rgb(217, 217, 217); background: url('') repeat scroll 0% 0%, linear-gradient(rgb(224, 224, 224), rgb(204, 204, 204), rgb(176, 176, 176)) repeat scroll 0% 0% transparent; border-top: 1px solid rgb(242, 242, 242); position: relative; padding-top: 1em; padding-bottom: 1em; margin-bottom: 3em; border-bottom-left-radius: 0.4em; border-bottom-right-radius: 0.4em; z-index: 1; }
 body > footer a { color: rgb(107, 107, 107); }
 body > footer a:visited { color: rgb(107, 107, 107); }
 body > footer a:hover { color: rgb(72, 72, 72); }
@@ -206,25 +225,25 @@ body > footer p:last-child { margin-bottom: 0px; }
 	font-family: "PT Serif";
 	font-style: normal;
 	font-weight: 400;
-	src: local("PT Serif"), local("PTSerif-Regular"), url('sdri4fy9boijubgq53yzcfeszw2xoq-xsnqo47m55da.woff') format("woff");
+	src: local("PT Serif"), local("PTSerif-Regular"), url('') format("woff2"), url('') format("woff");
 }
 @font-face {
 	font-family: "PT Serif";
 	font-style: normal;
 	font-weight: 700;
-	src: local("PT Serif Bold"), local("PTSerif-Bold"), url('qabk9ixt-lftj_dqzv7xpibn6udyhwbl620a-irfubk.woff') format("woff");
+	src: local("PT Serif Bold"), local("PTSerif-Bold"), url('') format("woff2"), url('') format("woff");
 }
 @font-face {
 	font-family: "PT Serif";
 	font-style: italic;
 	font-weight: 400;
-	src: local("PT Serif Italic"), local("PTSerif-Italic"), url('03apdn7fff3h6ngcgalqzbsxeywm7fgeyasgu71clg0.woff') format("woff");
+	src: local("PT Serif Italic"), local("PTSerif-Italic"), url('') format("woff2"), url('') format("woff");
 }
 @font-face {
 	font-family: "PT Serif";
 	font-style: italic;
 	font-weight: 700;
-	src: local("PT Serif Bold Italic"), local("PTSerif-BoldItalic"), url('foydq9xjp--nfyix2tbz9qfharv2pggt5kf0an0s4mm.woff') format("woff");
+	src: local("PT Serif Bold Italic"), local("PTSerif-BoldItalic"), url('') format("woff2"), url('') format("woff");
 }
 /* ::::: https://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic ::::: */
 
@@ -232,23 +251,23 @@ body > footer p:last-child { margin-bottom: 0px; }
 	font-family: "PT Sans";
 	font-style: normal;
 	font-weight: 400;
-	src: local("PT Sans"), local("PTSans-Regular"), url('lkf8nhxswg5ybwegxk8ubq.woff') format("woff");
+	src: local("PT Sans"), local("PTSans-Regular"), url('') format("woff2"), url('') format("woff");
 }
 @font-face {
 	font-family: "PT Sans";
 	font-style: normal;
 	font-weight: 700;
-	src: local("PT Sans Bold"), local("PTSans-Bold"), url('0xxgqssc1g4rdrdjjkzrnbsxeywm7fgeyasgu71clg0.woff') format("woff");
+	src: local("PT Sans Bold"), local("PTSans-Bold"), url('') format("woff2"), url('') format("woff");
 }
 @font-face {
 	font-family: "PT Sans";
 	font-style: italic;
 	font-weight: 400;
-	src: local("PT Sans Italic"), local("PTSans-Italic"), url('pipmhy90p7jtyjpxuz2cld8e0i7kzn-epnyo3hzu7kw.woff') format("woff");
+	src: local("PT Sans Italic"), local("PTSans-Italic"), url('') format("woff2"), url('') format("woff");
 }
 @font-face {
 	font-family: "PT Sans";
 	font-style: italic;
 	font-weight: 700;
-	src: local("PT Sans Bold Italic"), local("PTSans-BoldItalic"), url('lillydvubyemzyzn7gblkhhcuogz7vygh680lgh-uxm.woff') format("woff");
+	src: local("PT Sans Bold Italic"), local("PTSans-BoldItalic"), url('') format("woff2"), url('') format("woff");
 }
